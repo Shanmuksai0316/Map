@@ -4,7 +4,6 @@ namespace App\Providers\Filament;
 
 use App\Filament\CollegeMgmt\Pages\Auth\OtpLogin;
 use App\Filament\CollegeMgmt\Pages\Dashboard;
-use Filament\Navigation\NavigationGroup;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -51,10 +50,11 @@ class CollegeMgmtPanelProvider extends PanelProvider
             ->darkMode(false)  // Light theme only per client requirement
             ->font('DM Sans')
             ->navigationGroups([
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Operations')
                     ->icon('heroicon-o-cog-6-tooth')
-                    ->collapsed(false),
+                    ->collapsed(true)
+                    ->collapsible(true),
             ])
             ->colors([
                 // Primary - Military Green (Client Brand Color)
@@ -67,10 +67,15 @@ class CollegeMgmtPanelProvider extends PanelProvider
                 'info' => Color::hex('#0284C7'),     // Blue
                 'gray' => Color::Slate,
             ])
-            ->discoverResources(in: app_path('Filament/CollegeMgmt/Resources'), for: 'App\\Filament\\CollegeMgmt\\Resources')
-            ->discoverPages(in: app_path('Filament/CollegeMgmt/Pages'), for: 'App\\Filament\\CollegeMgmt\\Pages')
+            ->resources([
+                \App\Filament\CollegeMgmt\Resources\StudentResource::class,
+                \App\Filament\CollegeMgmt\Resources\OutPassResource::class,
+                \App\Filament\CollegeMgmt\Resources\TicketResource::class,
+                \App\Filament\CollegeMgmt\Resources\AttendanceSessionResource::class,
+            ])
             ->pages([
                 Dashboard::class,
+                \App\Filament\CollegeMgmt\Pages\ReportCenter::class,
                 SharedProfile::class,
             ])
             ->discoverWidgets(in: app_path('Filament/CollegeMgmt/Widgets'), for: 'App\\Filament\\CollegeMgmt\\Widgets')

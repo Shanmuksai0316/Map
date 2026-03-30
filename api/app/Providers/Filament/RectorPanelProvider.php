@@ -4,7 +4,6 @@ namespace App\Providers\Filament;
 
 use App\Filament\Rector\Pages\Auth\OtpLogin;
 use App\Filament\Rector\Pages\Dashboard;
-use Filament\Navigation\NavigationGroup;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -43,22 +42,22 @@ class RectorPanelProvider extends PanelProvider
             ->darkMode(false)  // Light theme only per client requirement
             ->font('DM Sans')
             ->navigationGroups([
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Dashboard')
                     ->collapsed(false),
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Approvals')
                     ->icon('heroicon-o-check-circle')
                     ->collapsed(true),
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Requests')
                     ->icon('heroicon-o-inbox-arrow-down')
                     ->collapsed(true),
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Communications')
                     ->icon('heroicon-o-chat-bubble-left-right')
                     ->collapsed(true),
-                NavigationGroup::make()
+                \Filament\Navigation\NavigationGroup::make()
                     ->label('Reports')
                     ->icon('heroicon-o-chart-bar')
                     ->collapsed(true),

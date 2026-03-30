@@ -9,7 +9,7 @@ class Dashboard extends BaseDashboard
 {
     protected static ?string $navigationIcon = 'heroicon-o-home';
 
-    protected static ?string $title = 'College Management Dashboard';
+    protected static ?string $title = 'Dashboard';
 
     // Removed mount() method - access control is handled by panel configuration and middleware
     // If needed, we can add it back, but Filament's BaseDashboard may not have mount()
