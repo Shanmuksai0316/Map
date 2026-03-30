@@ -1,0 +1,131 @@
+name: UAT Bug Report
+description: Report a bug found during User Acceptance Testing
+title: "[UAT] "
+labels: ["bug", "uat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing MAP-HMS! Please provide as much detail as possible to help us reproduce and fix the issue.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How critical is this issue?
+      options:
+        - S1 - Blocker (prevents core functionality)
+        - S2 - Major (significant impact on workflow)
+        - S3 - Minor (small impact, workaround available)
+        - S4 - Nit (cosmetic or very minor issue)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where was this issue found?
+      options:
+        - Local Demo (localhost:8001)
+        - Staging
+        - Production
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which module is affected?
+      options:
+        - Authentication & Navigation
+        - Dashboard
+        - Students, Rooms & Beds
+        - Out-Pass
+        - Attendance
+        - Checklists
+        - Tickets
+        - Notices
+        - Gate & Visitors
+        - Exports/Reports
+        - Security & Access Control
+        - Observability & Ops
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: test-id
+    attributes:
+      label: Test ID (if applicable)
+      description: Reference the test ID from UAT_Tracking_v1.3.csv
+      placeholder: e.g., "2.3" or "5.1"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide detailed steps to reproduce the issue
+      placeholder: |
+        1. Login as Campus Manager
+        2. Navigate to Dashboard
+        3. Click on "Tickets" widget
+        4. Observe the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should have happened?
+      placeholder: The tickets widget should display the list of tickets with proper data
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happened?
+      placeholder: The widget shows "Loading..." indefinitely with no data displayed
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Logs
+      description: Attach screenshots, error messages, or relevant logs
+      placeholder: |
+        - Screenshot of the error
+        - Browser console errors
+        - Server logs (if available)
+
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Is this a regression?
+      description: Was this functionality working in a previous version?
+      options:
+        - Yes - This worked before
+        - No - This is a new issue
+        - Unknown - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround (if any)
+      description: Is there a way to work around this issue?
+      placeholder: Refreshing the page temporarily fixes the issue
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other relevant information
+      placeholder: This issue occurs consistently on Chrome but not Firefox

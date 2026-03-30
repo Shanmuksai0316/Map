@@ -1,0 +1,49 @@
+appId: com.maphms.student
+name: "Student Dashboard Navigation Test"
+tags:
+  - student-app
+  - dashboard
+  - navigation
+env:
+  phone: "8888888800"
+  otp: "123456"
+---
+# Student Dashboard Test
+# Tests dashboard elements and navigation
+
+# Login first
+- runFlow:
+    file: "../flows/student-otp-login.yaml"
+    env:
+      phone: ${phone}
+      otp: ${otp}
+
+# Verify all dashboard cards are visible
+- assertVisible: "My Profile"
+- assertVisible: "Out-pass"
+- assertVisible: "Leave"
+- assertVisible: "Attendance"
+- assertVisible: "Complaints"
+- assertVisible: "Tickets"
+- assertVisible: "Notices"
+- takeScreenshot: "student/dashboard/01_all_cards_visible"
+
+# Test bottom navigation tabs
+- runFlow:
+    when:
+      visible: "(Home|Dashboard|Attendance|Notices|Profile)"
+    commands:
+      - tapOn: "Attendance"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/dashboard/02_attendance_tab"
+      - tapOn: "Notices"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/dashboard/03_notices_tab"
+      - tapOn: "(Home|Dashboard)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/dashboard/04_home_tab"
+
+# Verify dashboard loads correctly after navigation
+- assertVisible: "(Welcome|Dashboard|Quick Actions)"
+- takeScreenshot: "student/dashboard/05_dashboard_restored"
+

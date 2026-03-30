@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="70.0">
+    <testcase id="Laundry Manager Full Test Suite" name="Laundry Manager Full Test Suite" classname="Laundry Manager Full Test Suite" time="70.0" status="ERROR">
+      <properties>
+        <property name="tags" value="laundry-manager, laundry, staff"/>
+      </properties>
+      <failure>Assertion is false: "(Requests|Pending|Ready|Processing|No requests)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

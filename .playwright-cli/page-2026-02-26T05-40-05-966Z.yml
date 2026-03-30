@@ -1,0 +1,67 @@
+- generic [ref=e1]:
+  - iframe [ref=e1230]:
+    
+  - generic [ref=e1232]: Screen reader support enabled.
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link [ref=e1622] [cursor=pointer]:
+          - img [ref=e11]
+        - textbox [ref=e1623]: Student Bulk Upload Intake
+        - button [ref=e1624] [cursor=pointer]
+        - checkbox [ref=e1625] [cursor=pointer]
+      - generic [ref=e24]:
+        - button [disabled] [ref=e1626]
+        - link [ref=e1627] [cursor=pointer]
+        - button [disabled] [ref=e1628]
+        - button [disabled] [ref=e1629]
+        - button [ref=e1630] [cursor=pointer]
+        - button [ref=e1631] [cursor=pointer]
+        - button [ref=e1632] [cursor=pointer]:
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - generic [ref=e69]: Published
+        - button [ref=e1633] [cursor=pointer]
+        - button [ref=e1634] [cursor=pointer]:
+          - img [ref=e84]
+    - tablist [ref=e88]:
+      - tab [ref=e1635] [cursor=pointer]:
+        - generic [ref=e90]: Questions
+      - tab [selected] [ref=e1636] [cursor=pointer]:
+        - generic [ref=e93]: Responses
+      - tab [ref=e1637] [cursor=pointer]:
+        - generic [ref=e95]: Settings
+  - generic [ref=e1594]:
+    - generic [ref=e1596]:
+      - generic [ref=e1597]: 0 responses
+      - generic [ref=e1598]:
+        - button [ref=e1638] [cursor=pointer]:
+          - generic [ref=e1608]: Link to Sheets
+        - button [ref=e1639] [cursor=pointer]
+    - generic [ref=e1672]: Loading responses…
+  - button [ref=e1673] [cursor=pointer]
+  - iframe [ref=e1226]:
+    
+  - generic [ref=e1228]: .
+  - generic [ref=e1582]: Banner hidden
+  - dialog "Select destination for responses" [ref=e1676]:
+    - generic [ref=e1677]:
+      - heading "Select destination for responses" [level=1] [ref=e1678]
+      - button "Close" [ref=e1680] [cursor=pointer]:
+        - img [ref=e1683]
+    - radiogroup [ref=e1687]:
+      - generic [ref=e1688]:
+        - generic [ref=e1690]:
+          - radio "Create a new spreadsheet" [checked] [ref=e1692] [cursor=pointer]
+          - generic [ref=e1698]: Create a new spreadsheet
+        - textbox "Spreadsheet title" [ref=e1704]: Student Bulk Upload Intake (Responses)
+        - link "Learn More" [ref=e1706] [cursor=pointer]:
+          - /url: //support.google.com/drive?p=forms_response
+      - generic [ref=e1709]:
+        - radio "Select existing spreadsheet" [ref=e1711] [cursor=pointer]
+        - generic [ref=e1716]: Select existing spreadsheet
+    - generic [ref=e1717]:
+      - button "Cancel" [ref=e1718] [cursor=pointer]:
+        - generic [ref=e1721]: Cancel
+      - button "Create" [active] [ref=e1722] [cursor=pointer]:
+        - generic [ref=e1725]: Create

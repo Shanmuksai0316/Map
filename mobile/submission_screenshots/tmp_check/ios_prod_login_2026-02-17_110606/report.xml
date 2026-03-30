@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="iPhone 17 Pro Max - iOS 26.2 - A2FCDB57-C92E-4D6E-AEC5-9322175CF4C7" tests="1" failures="1" time="48.0">
+    <testcase id="test-student-prod-login" name="test-student-prod-login" classname="test-student-prod-login" time="48.0" status="ERROR">
+      <properties/>
+      <failure>Assertion is false: "(OTP|Enter OTP|Verify|6-digit|Enter 6-digit|Verification)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

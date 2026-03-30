@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="29.0">
+    <testcase id="Student Footer Deterministic Verify" name="Student Footer Deterministic Verify" classname="Student Footer Deterministic Verify" time="29.0" status="ERROR">
+      <failure>Assertion is false: "My Attendance" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

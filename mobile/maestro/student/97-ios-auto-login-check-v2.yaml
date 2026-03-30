@@ -1,0 +1,35 @@
+appId: com.maphms.student
+name: "iOS Auto Login Check v2"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- waitForAnimationToEnd
+
+- assertVisible: "Verification Code"
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- takeScreenshot: "autologinv2/01_otp_entered"
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- assertVisible: "My Profile"
+- takeScreenshot: "autologinv2/02_dashboard"

@@ -1,0 +1,212 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "Expand sidebar" [ref=e6] [cursor=pointer]:
+          - generic [ref=e7]: Expand sidebar
+          - img [ref=e8]
+        - button "User menu" [ref=e13] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e14]
+      - main [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - heading "Tenant Onboarding Wizard" [level=1] [ref=e718]
+            - generic [ref=e721]:
+              - generic [ref=e722]:
+                - generic [ref=e723]:
+                  - generic [ref=e724]:
+                    - generic [ref=e725]: Onboarding Progress
+                    - generic [ref=e726]: 33%
+                  - generic [ref=e727]:
+                    - generic [ref=e728]: ✔ Tenant Info
+                    - generic [ref=e729]: ✔ Hostels
+                    - generic [ref=e730]: • Staff
+                    - generic [ref=e731]: • Rooms
+                    - generic [ref=e732]: • Amenities
+                    - generic [ref=e733]: • Confirmation
+                - generic [ref=e734]:
+                  - button "Save Draft" [ref=e735] [cursor=pointer]:
+                    - generic [ref=e736]: Save Draft
+                  - button "Save & Exit" [ref=e737] [cursor=pointer]:
+                    - generic [ref=e738]: Save & Exit
+              - generic [ref=e739]:
+                - generic [ref=e740]: Validation summary
+                - list [ref=e741]:
+                  - listitem [ref=e742]: Assign a Campus Manager in Step 3.
+                  - listitem [ref=e743]: Configure rooms in Step 4.
+              - generic [ref=e744]:
+                - generic [ref=e747]:
+                  - list [ref=e748]:
+                    - listitem [ref=e749]:
+                      - button "Tenant Information Create the tenant and its single campus" [disabled] [ref=e750]:
+                        - img [ref=e752]
+                        - generic [ref=e754]:
+                          - generic [ref=e755]: Tenant Information
+                          - generic [ref=e756]: Create the tenant and its single campus
+                    - listitem [ref=e757]:
+                      - button "Hostel Details Add hostel information and address" [disabled] [ref=e758]:
+                        - img [ref=e760]
+                        - generic [ref=e762]:
+                          - generic [ref=e763]: Hostel Details
+                          - generic [ref=e764]: Add hostel information and address
+                    - listitem [ref=e765]:
+                      - button "Staff Assignment Assign Campus Manager (tenant-level) and hostel staff per hostel" [disabled] [ref=e766]:
+                        - img [ref=e768]
+                        - generic [ref=e770]:
+                          - generic [ref=e771]: Staff Assignment
+                          - generic [ref=e772]: Assign Campus Manager (tenant-level) and hostel staff per hostel
+                    - listitem [ref=e773]:
+                      - button "Hostel Configuration Configure floors, rooms, and beds for each hostel" [disabled] [ref=e774]:
+                        - img [ref=e776]
+                        - generic [ref=e778]:
+                          - generic [ref=e779]: Hostel Configuration
+                          - generic [ref=e780]: Configure floors, rooms, and beds for each hostel
+                    - listitem [ref=e781]:
+                      - button "Amenities Select available amenities for the hostel(s)" [disabled] [ref=e782]:
+                        - img [ref=e784]
+                        - generic [ref=e786]:
+                          - generic [ref=e787]: Amenities
+                          - generic [ref=e788]: Select available amenities for the hostel(s)
+                    - listitem [ref=e789]:
+                      - button "Confirmation Review all details and activate tenant" [disabled] [ref=e790]:
+                        - img [ref=e792]
+                        - generic [ref=e794]:
+                          - generic [ref=e795]: Confirmation
+                          - generic [ref=e796]: Review all details and activate tenant
+                  - 'tabpanel "Tenant Details Tenant Name* ONB Auto 1771849162 Tenant Code* MAP-AUTO1771849162 Must begin with \"MAP\". Uppercase letters, numbers, and hyphens only. Logo (Optional) Choose File Drag & Drop your files or Browse PNG/JPG, ≤ 1MB. Compress the image if over 1MB. If upload still fails, try a smaller file or skip and add logo later. Campus Details Campus Name* ONB Auto Campus 1771849162 Subdomain* onbauto1771849162 .mapservices.in Will be used as: yoursubdomain.mapservices.in Rector Information Primary contact for the college Rector Name* Rector 1771849162 Rector Phone* 9876549162 10-digit mobile number for OTP login Rector Email rector1771849162@example.com College Management Administrative contact Name* Mgmt 1771849162 Phone* 9866549162 10-digit mobile number for OTP login Email mgmt1771849162@example.com" [ref=e797]':
+                    - generic [ref=e798]:
+                      - generic [ref=e800]:
+                        - heading "Tenant Details" [level=3] [ref=e804]
+                        - generic [ref=e807]:
+                          - generic [ref=e810]:
+                            - generic [ref=e813]:
+                              - text: Tenant Name
+                              - superscript [ref=e814]: "*"
+                            - textbox "Tenant Name*" [ref=e818]:
+                              - /placeholder: St. Xavier's College
+                              - text: ONB Auto 1771849162
+                          - generic [ref=e821]:
+                            - generic [ref=e824]:
+                              - text: Tenant Code
+                              - superscript [ref=e825]: "*"
+                            - generic [ref=e826]:
+                              - textbox "Tenant Code*" [ref=e829]:
+                                - /placeholder: MAP-STXAV
+                                - text: MAP-AUTO1771849162
+                              - generic [ref=e830]: Must begin with "MAP". Uppercase letters, numbers, and hyphens only.
+                          - generic [ref=e833]:
+                            - generic [ref=e836]: Logo (Optional)
+                            - generic [ref=e837]:
+                              - group "Logo (Optional)" [ref=e838]:
+                                - generic [ref=e840]:
+                                  - button "Drag & Drop your files or Browse" [ref=e841]
+                                  - generic [ref=e843]: Drag & Drop your files or Browse
+                                  - list [ref=e845]
+                                  - alert [ref=e846]
+                              - generic [ref=e847]: PNG/JPG, ≤ 1MB. Compress the image if over 1MB. If upload still fails, try a smaller file or skip and add logo later.
+                      - generic [ref=e849]:
+                        - heading "Campus Details" [level=3] [ref=e853]
+                        - generic [ref=e856]:
+                          - generic [ref=e859]:
+                            - generic [ref=e862]:
+                              - text: Campus Name
+                              - superscript [ref=e863]: "*"
+                            - textbox "Campus Name*" [ref=e867]:
+                              - /placeholder: St. Xavier's Campus
+                              - text: ONB Auto Campus 1771849162
+                          - generic [ref=e870]:
+                            - generic [ref=e873]:
+                              - text: Subdomain
+                              - superscript [ref=e874]: "*"
+                            - generic [ref=e875]:
+                              - generic [ref=e876]:
+                                - textbox "Subdomain*" [ref=e878]:
+                                  - /placeholder: stxaviers
+                                  - text: onbauto1771849162
+                                - generic [ref=e880]: .mapservices.in
+                              - generic [ref=e881]: "Will be used as: yoursubdomain.mapservices.in"
+                      - generic [ref=e883]:
+                        - generic [ref=e886]:
+                          - heading "Rector Information" [level=3] [ref=e887]
+                          - paragraph [ref=e888]: Primary contact for the college
+                        - generic [ref=e894]:
+                          - generic [ref=e897]:
+                            - generic [ref=e900]:
+                              - text: Rector Name
+                              - superscript [ref=e901]: "*"
+                            - textbox "Rector Name*" [ref=e905]: Rector 1771849162
+                          - generic [ref=e908]:
+                            - generic [ref=e911]:
+                              - text: Rector Phone
+                              - superscript [ref=e912]: "*"
+                            - generic [ref=e913]:
+                              - textbox "Rector Phone*" [ref=e916]:
+                                - /placeholder: "9876543210"
+                                - text: "9876549162"
+                              - generic [ref=e917]: 10-digit mobile number for OTP login
+                          - generic [ref=e920]:
+                            - generic [ref=e923]: Rector Email
+                            - textbox "Rector Email" [ref=e927]: rector1771849162@example.com
+                      - generic [ref=e929]:
+                        - generic [ref=e932]:
+                          - heading "College Management" [level=3] [ref=e933]
+                          - paragraph [ref=e934]: Administrative contact
+                        - generic [ref=e940]:
+                          - generic [ref=e943]:
+                            - generic [ref=e946]:
+                              - text: Name
+                              - superscript [ref=e947]: "*"
+                            - textbox "Name*" [ref=e951]: Mgmt 1771849162
+                          - generic [ref=e954]:
+                            - generic [ref=e957]:
+                              - text: Phone
+                              - superscript [ref=e958]: "*"
+                            - generic [ref=e959]:
+                              - textbox "Phone*" [ref=e962]:
+                                - /placeholder: "9876543210"
+                                - text: "9866549162"
+                              - generic [ref=e963]: 10-digit mobile number for OTP login
+                          - generic [ref=e966]:
+                            - generic [ref=e969]: Email
+                            - textbox "Email" [ref=e973]: mgmt1771849162@example.com
+                  - option "Select an option"
+                  - option "Boys Hostel" [selected]
+                  - option "Girls Hostel"
+                  - option "Co-Ed Hostel"
+                  - button "Next" [ref=e976] [cursor=pointer]:
+                    - generic [ref=e977]: Next
+                - generic [ref=e979]:
+                  - button "Activate Tenant" [disabled]:
+                    - generic: Activate Tenant
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e275]:
+      - button "Expand sidebar" [ref=e278] [cursor=pointer]:
+        - generic [ref=e279]: Expand sidebar
+        - img [ref=e280]
+      - navigation [ref=e282]:
+        - list [ref=e283]:
+          - listitem [ref=e284]:
+            - list [ref=e285]:
+              - listitem [ref=e286]:
+                - link [ref=e287] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e288]
+          - listitem [ref=e290]:
+            - button [ref=e293] [cursor=pointer]:
+              - img [ref=e294]
+          - listitem [ref=e296]:
+            - button [ref=e299] [cursor=pointer]:
+              - img [ref=e300]
+          - listitem [ref=e302]:
+            - button [ref=e305] [cursor=pointer]:
+              - img [ref=e306]
+          - listitem [ref=e309]:
+            - button [ref=e312] [cursor=pointer]:
+              - img [ref=e313]
+  - generic:
+    - status

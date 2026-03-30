@@ -1,0 +1,135 @@
+- generic [ref=e1]:
+  - iframe [ref=e263]:
+    
+  - generic [ref=e265]: Screen reader support enabled.
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Forms Home" [ref=e7] [cursor=pointer]:
+          - img [ref=e11]
+        - textbox "Document title" [ref=e21]: Student Bulk Upload Intake
+        - button "Move to folder" [ref=e402] [cursor=pointer]
+        - checkbox "Star" [ref=e268] [cursor=pointer]
+        - generic "Saving…, Every change you make is automatically saved in Drive.,Last edit was seconds ago" [ref=e418]: Saving…
+      - generic [ref=e24]:
+        - button "Customize Theme" [ref=e26] [cursor=pointer]
+        - link "Preview" [ref=e32] [cursor=pointer]
+        - button "Undo" [ref=e38] [cursor=pointer]
+        - button "Redo" [ref=e44] [cursor=pointer]
+        - button "Copy responder link" [ref=e50] [cursor=pointer]
+        - button "Share" [ref=e56] [cursor=pointer]
+        - button "Publish" [ref=e63] [cursor=pointer]:
+          - generic [ref=e66]: Publish
+        - button "More" [ref=e68] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e79] [cursor=pointer]':
+          - img [ref=e81]
+    - tablist [ref=e85]:
+      - tab "Questions" [selected] [ref=e86] [cursor=pointer]:
+        - generic [ref=e87]: Questions
+      - tab "Responses" [ref=e88] [cursor=pointer]:
+        - generic [ref=e90]: Responses
+      - tab "Settings" [ref=e91] [cursor=pointer]:
+        - generic [ref=e92]: Settings
+  - generic [ref=e98]:
+    - generic [ref=e100]:
+      - button "Add question" [ref=e102] [cursor=pointer]
+      - button "Import questions" [ref=e108] [cursor=pointer]
+      - button "Add title and description" [ref=e114] [cursor=pointer]
+      - button "Add image" [ref=e120] [cursor=pointer]
+      - button "Add video" [ref=e126] [cursor=pointer]
+      - button "Add section" [ref=e132] [cursor=pointer]
+    - generic [ref=e139]:
+      - generic [ref=e143]:
+        - generic [ref=e146]:
+          - textbox "Form title" [ref=e148]
+          - toolbar "Formatting options":
+            - button "Bold" [ref=e150] [cursor=pointer]:
+              - generic [ref=e153]: 
+            - button "Italic" [ref=e154] [cursor=pointer]:
+              - generic [ref=e157]: 
+            - button "Underline" [ref=e158] [cursor=pointer]:
+              - generic [ref=e161]: 
+            - button "Insert link" [ref=e162] [cursor=pointer]:
+              - generic [ref=e165]: 
+            - button "Remove formatting" [ref=e166] [cursor=pointer]:
+              - generic [ref=e169]: 
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic: Form description
+            - textbox "Form description" [ref=e174]
+          - toolbar "Formatting options":
+            - button "Bold" [ref=e176] [cursor=pointer]:
+              - generic [ref=e179]: 
+            - button "Italic" [ref=e180] [cursor=pointer]:
+              - generic [ref=e183]: 
+            - button "Underline" [ref=e184] [cursor=pointer]:
+              - generic [ref=e187]: 
+            - button "Insert link" [ref=e188] [cursor=pointer]:
+              - generic [ref=e191]: 
+            - button "Numbered list" [ref=e192] [cursor=pointer]:
+              - generic [ref=e195]: 
+            - button "Bulleted list" [ref=e196] [cursor=pointer]:
+              - generic [ref=e199]: 
+            - button "Remove formatting" [ref=e200] [cursor=pointer]:
+              - generic [ref=e203]: 
+      - generic [ref=e210]:
+        - generic [ref=e213]:
+          - generic [ref=e217]:
+            - textbox "Question" [ref=e219]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e221] [cursor=pointer]:
+                - generic [ref=e224]: 
+              - button "Italic" [ref=e225] [cursor=pointer]:
+                - generic [ref=e228]: 
+              - button "Underline" [ref=e229] [cursor=pointer]:
+                - generic [ref=e232]: 
+              - button "Insert link" [ref=e233] [cursor=pointer]:
+                - generic [ref=e236]: 
+              - button "Remove formatting" [ref=e237] [cursor=pointer]:
+                - generic [ref=e240]: 
+          - button "Add inline image" [ref=e284] [cursor=pointer]
+          - generic [ref=e290]:
+            - generic [ref=e291]: Question Type
+            - listbox "Question types" [ref=e292] [cursor=pointer]:
+              - option "Short answer" [selected] [ref=e422]:
+                - generic [ref=e296]: Short answer
+              - option "Paragraph":
+                - generic [ref=e300]: Paragraph
+              - option "Multiple choice":
+                - generic [ref=e305]: Multiple choice
+              - option "Checkboxes":
+                - generic [ref=e309]: Checkboxes
+              - option "Dropdown":
+                - generic [ref=e313]: Dropdown
+              - option "File upload":
+                - generic [ref=e317]: File upload
+              - option "Linear scale":
+                - generic [ref=e321]: Linear scale
+              - option "Rating":
+                - generic [ref=e325]: Rating
+              - option "Multiple choice grid":
+                - generic [ref=e329]: Multiple choice grid
+              - option "Checkbox grid":
+                - generic [ref=e333]: Checkbox grid
+              - option "Date":
+                - generic [ref=e337]: Date
+              - option "Time":
+                - generic [ref=e341]: Time
+        - generic [ref=e241]:
+          - generic [ref=e426]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e428]
+          - generic [ref=e373]:
+            - button "Duplicate question" [ref=e375] [cursor=pointer]
+            - button "Delete question" [ref=e381] [cursor=pointer]
+            - generic [ref=e387]:
+              - generic [ref=e389]: Required
+              - checkbox "Required" [checked] [active] [ref=e390] [cursor=pointer]
+            - button "More options" [ref=e394] [cursor=pointer]
+  - button "Help and feedback" [ref=e252] [cursor=pointer]
+  - iframe [ref=e257]:
+    
+  - generic [ref=e259]: .
+  - generic [ref=e399]: Banner hidden
+  - generic [ref=e432]: Question types magically update based on your question.
+  - generic [ref=e435]: Question types magically update based on your question.

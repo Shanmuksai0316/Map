@@ -1,0 +1,125 @@
+appId: com.mapmars.hmsstaff
+name: "Sports Manager Role Smoke Test"
+tags:
+  - sports-manager
+  - smoke
+  - staff
+  - role-test
+
+---
+
+# ============================================
+# Sports Manager Role - Test Credentials
+# Phone: 7676000129 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Enter Your Number|Get OTP|Login|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "sports-manager/01_app_launched"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter Your Number|10-digit)"
+    optional: true
+- inputText: "7676000129"
+- hideKeyboard
+
+- takeScreenshot: "sports-manager/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle OTP sent success dialog
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+# Retry Get OTP if still on login screen
+- runFlow:
+    when:
+      visible: "(Send OTP|Get OTP)"
+    commands:
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Success|OTP sent successfully)"
+          commands:
+            - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|OTP|6-digit|Enter 6-digit)"
+    timeout: 20000
+
+- takeScreenshot: "sports-manager/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login|Continue)"
+    optional: true
+
+# Wait for Sports Manager Dashboard
+- extendedWaitUntil:
+    visible: "(Good Morning|Good Afternoon|Good Evening|Sports Manager|Active Requests|Courts|Court Setup)"
+    timeout: 20000
+
+- takeScreenshot: "sports-manager/04_dashboard"
+
+# ============================================
+# Verify Sports Manager-specific UI Elements
+# ============================================
+
+# Check for Sports Manager dashboard tiles
+- assertVisible:
+    text: "(Profile|Active Requests|List of Courts|Court Setup)"
+
+- takeScreenshot: "sports-manager/05_dashboard_verified"
+
+# Test navigation to Active Requests
+- runFlow:
+    when:
+      visible: "Active Requests"
+    commands:
+      - tapOn: "Active Requests"
+      - extendedWaitUntil:
+          visible: "(All Sports|Total Active Request|Active Request|Requests|Pending|Active|No requests|KARTA)"
+          timeout: 10000
+      - takeScreenshot: "sports-manager/06_requests_screen"
+      - back
+
+# Test navigation to List of Courts
+- runFlow:
+    when:
+      visible: "List of Courts"
+    commands:
+      - tapOn: "List of Courts"
+      - extendedWaitUntil:
+          visible: "(List of Courts|No Courts Found|Add court|Courts|Available|Booked|No courts|KARTA)"
+          timeout: 10000
+      - takeScreenshot: "sports-manager/07_courts_screen"
+      - back
+
+- takeScreenshot: "sports-manager/08_test_complete"

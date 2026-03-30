@@ -1,0 +1,121 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Assigned Staff" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: View
+              - heading "View Assigned Staff" [level=1] [ref=e24]
+            - generic [ref=e28]:
+              - generic [ref=e31]:
+                - generic [ref=e34]: Full Name
+                - textbox "Full Name" [disabled] [ref=e38]: Campus Manager MAP-CLI1771835152
+              - generic [ref=e41]:
+                - generic [ref=e44]: Mobile Number
+                - generic [ref=e45]:
+                  - textbox "Mobile Number" [disabled] [ref=e48]:
+                    - /placeholder: "9876543210"
+                    - text: "9800750003"
+                  - generic [ref=e49]: 10-digit Indian mobile number - used for OTP login
+              - generic [ref=e52]:
+                - generic [ref=e55]: Role
+                - combobox [disabled] [ref=e60]
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e62]:
+      - generic [ref=e64]:
+        - link "Super Admin logo" [ref=e66] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e67]
+        - button "Collapse sidebar" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: Collapse sidebar
+          - img [ref=e70]
+      - navigation [ref=e72]:
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - link "Dashboard" [ref=e77] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e78]
+                  - generic [ref=e80]: Dashboard
+          - listitem [ref=e81]:
+            - generic [ref=e82] [cursor=pointer]:
+              - img [ref=e83]
+              - generic [ref=e85]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e86]:
+                - generic [ref=e87]: Tenant Management
+                - img [ref=e88]
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - link "New Tenant Onboarding" [ref=e92] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e96]: New Tenant Onboarding
+              - listitem [ref=e97]:
+                - link "All Tenants" [ref=e98] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e103]: All Tenants
+              - listitem [ref=e104]:
+                - link "Archived Tenants" [ref=e105] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e109]: Archived Tenants
+          - listitem [ref=e110]:
+            - generic [ref=e111] [cursor=pointer]:
+              - img [ref=e112]
+              - generic [ref=e114]: Staff Management
+              - button "Staff Management" [expanded] [ref=e115]:
+                - generic [ref=e116]: Staff Management
+                - img [ref=e117]
+            - list [ref=e119]:
+              - listitem [ref=e120]:
+                - link "All Staff" [ref=e121] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e125]: All Staff
+              - listitem [ref=e126]:
+                - link "Assigned Staff" [ref=e127] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e132]: Assigned Staff
+              - listitem [ref=e133]:
+                - link "Unassigned Staff" [ref=e134] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e139]: Unassigned Staff
+              - listitem [ref=e140]:
+                - link "Archived Staff" [ref=e141] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e145]: Archived Staff
+          - listitem [ref=e146]:
+            - generic [ref=e147] [cursor=pointer]:
+              - img [ref=e148]
+              - generic [ref=e151]: Operations
+              - button "Operations" [ref=e152]:
+                - generic [ref=e153]: Operations
+                - img [ref=e154]
+          - listitem [ref=e156]:
+            - generic [ref=e157] [cursor=pointer]:
+              - img [ref=e158]
+              - generic [ref=e160]: Reports
+              - button "Reports" [expanded] [ref=e161]:
+                - generic [ref=e162]: Reports
+                - img [ref=e163]
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - link "Report Center" [ref=e167] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e170]: Report Center
+  - generic:
+    - status

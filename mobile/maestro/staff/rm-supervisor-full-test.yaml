@@ -1,0 +1,145 @@
+# MAP HMS Staff App - RM Supervisor Role Full Test Suite
+# Tests Repairs & Maintenance Supervisor functionality per US-SUP-01, US-SUP-02
+#
+# Prerequisites:
+# - Staff app installed (com.mapmars.hmsstaff)
+# - Demo token generated for RM Supervisor role
+#
+# Usage:
+#   maestro test rm-supervisor-full-test.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=rm_supervisor"
+
+appId: com.mapmars.hmsstaff
+name: "RM Supervisor Full Test Suite"
+tags:
+  - rm-supervisor
+  - repairs
+  - maintenance
+  - tickets
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=130%7COQvI3sR339RiR1YIveiJVrRGnR5vz5zjv3MNyDux2e51f2a9&role=rm_supervisor&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=359&userName=Krishna+RM&userPhone=%2B919876543692&userEmail=rm1%40stxaviers.edu"
+      phone: "7200658181"
+      otp: "123456"
+      dashboardRegex: "(rm supervisor|Actions|Checklist|Requests|Notice Board|Profile)"
+
+- takeScreenshot: "rm_supervisor/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD TESTS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(rm supervisor|Actions|Checklist|Requests|Notice Board|Profile)"
+    timeout: 15000
+
+- takeScreenshot: "rm_supervisor/02_dashboard"
+
+# Verify RM Supervisor dashboard components
+- assertVisible: "(Checklist|Requests|Notice Board|Profile)"
+
+- takeScreenshot: "rm_supervisor/03_dashboard_verified"
+
+# ============================================
+# PART 3: REQUESTS/TICKETS TAB (US-SUP-02)
+# ============================================
+
+# Navigate to Requests tab
+- tapOn: "(Requests|Tickets)"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "rm_supervisor/04_requests"
+
+# Verify Requests/Tickets screen
+- assertVisible: "(Requests|Tickets|Open|In Progress|No requests)"
+
+# Test ticket detail if available
+- runFlow:
+    when:
+      visible: "(Open|Ticket|Room)"
+    commands:
+      - tapOn:
+          text: "(Open|Ticket)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "rm_supervisor/05_ticket_detail"
+      # Verify ticket detail elements (US-SUP-02 - includes parts cost)
+      - assertVisible: "(Status|Assign|Comment|Photo|Parts|Cost|Resolve)"
+      - back
+
+# ============================================
+# PART 4: TICKET LIFECYCLE (US-SUP-02)
+# ============================================
+
+# Test status transitions: Open→In‑Progress→Resolved→Closed
+- runFlow:
+    when:
+      visible: "(In Progress|Start|Accept)"
+    commands:
+      - takeScreenshot: "rm_supervisor/06_status_transitions"
+
+# ============================================
+# PART 5: CREATE TICKET WORKFLOW (US-SUP-02)
+# ============================================
+
+# Look for create ticket button
+- runFlow:
+    when:
+      visible: "(Create|\\+|New Ticket)"
+    commands:
+      - tapOn:
+          text: "(Create|New Ticket)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "rm_supervisor/07_create_ticket"
+      # Verify create form with RM-specific fields
+      - assertVisible: "(Description|Room|Photo|Parts|Cost|Submit)"
+      - back
+
+# ============================================
+# PART 6: PARTS COST NOTE (US-SUP-02)
+# ============================================
+
+# Verify parts cost tracking for RM
+- runFlow:
+    when:
+      visible: "(Parts|Cost|Materials)"
+    commands:
+      - tapOn:
+          text: "(Parts|Cost)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "rm_supervisor/08_parts_cost"
+      - back
+
+# ============================================
+# PART 7: FINAL VERIFICATION
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Dashboard"
+    commands:
+      - tapOn: "Dashboard"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "rm_supervisor/09_final_dashboard"
+
+# Verify still logged in
+- assertVisible: "(Checklist|Requests|Notice Board|Profile)"

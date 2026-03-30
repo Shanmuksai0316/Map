@@ -1,0 +1,28 @@
+appId: com.maphms.student
+name: "iOS SendOTP Coordinate Validation"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: "1"
+- hideKeyboard
+- takeScreenshot: "coordval/01_before_send"
+
+- tapOn:
+    point: "50%,65%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "coordval/02_after_send"
+
+- runFlow:
+    when:
+      visible: "Error"
+    commands:
+      - takeScreenshot: "coordval/03_error_dialog"

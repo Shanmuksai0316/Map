@@ -1,0 +1,55 @@
+appId: com.maphms.student
+name: "Student Footer Deterministic Verify"
+---
+- launchApp
+
+# Ensure footer is present
+- extendedWaitUntil:
+    visible:
+      id: "footer-tab-home"
+    timeout: 60000
+
+# Normalize to Home first
+- tapOn:
+    id: "footer-tab-home"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "VIDYARTHI"
+    timeout: 15000
+- takeScreenshot: "student/footer-verify/00_home"
+
+# Attendance
+- tapOn:
+    id: "footer-tab-attendance"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "My Attendance"
+    timeout: 15000
+- takeScreenshot: "student/footer-verify/01_attendance"
+
+# Social Media
+- tapOn:
+    id: "footer-tab-socialmedia"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "Share this application"
+    timeout: 15000
+- takeScreenshot: "student/footer-verify/02_social"
+
+# Profile
+- tapOn:
+    id: "footer-tab-profile"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "Request Account Deletion"
+    timeout: 15000
+- takeScreenshot: "student/footer-verify/03_profile"
+
+# Back Home
+- tapOn:
+    id: "footer-tab-home"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "VIDYARTHI"
+    timeout: 15000
+- takeScreenshot: "student/footer-verify/04_home_back"

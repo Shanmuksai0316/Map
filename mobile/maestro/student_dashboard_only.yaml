@@ -1,0 +1,19 @@
+# Run when the app is already logged in (dashboard visible).
+# Usage: maestro test maestro/student_dashboard_only.yaml
+appId: com.maphms.student
+name: Student app - dashboard only (already logged in)
+
+---
+- launchApp:
+    clearState: false
+
+- assertVisible: "VIDYARTHI"
+- assertVisible: "My Profile"
+- assertVisible: "Requests"
+- assertVisible: "Emergency"
+- assertVisible: "Leave"
+# Scroll to bring lower tiles into view
+- scroll
+- assertVisible: "Parcels"
+- assertVisible: "Notice Board"
+- assertVisible: "Laundry"

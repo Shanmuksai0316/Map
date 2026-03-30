@@ -1,0 +1,198 @@
+appId: com.mapmars.hmsstaff
+name: "Campus Manager - Comprehensive E2E Test"
+tags:
+  - campus-manager
+  - e2e
+  - comprehensive
+  - staff
+
+---
+
+# ============================================
+# Campus Manager E2E Test
+# Uses test credentials: 8888888888 / OTP: 123456
+# Tests all Campus Manager features
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Login)"
+    timeout: 30000
+
+- takeScreenshot: "cm/01_app_launched"
+
+# Login with test credentials
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|10-digit)"
+    optional: true
+- inputText: "8888888888"
+- hideKeyboard
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle Test Mode dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+# Enter OTP
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|6-digit)"
+    timeout: 15000
+- inputText: "123456"
+- hideKeyboard
+- tapOn:
+    text: "(Verify & Login|Verify)"
+    optional: true
+
+# Handle Tenant Selection
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant)"
+    commands:
+      - tapOn: "Demo College Hostel"
+
+# Wait for Campus Manager Dashboard
+- extendedWaitUntil:
+    visible: "(Campus Manager|Good Morning|Good Afternoon|Good Evening)"
+    timeout: 30000
+
+- takeScreenshot: "cm/02_dashboard"
+
+# ============================================
+# VERIFY DASHBOARD COMPONENTS
+# ============================================
+
+- assertVisible: "Campus Manager"
+- assertVisible: "Quick Actions"
+- takeScreenshot: "cm/03_dashboard_verified"
+
+# Verify stats cards
+- assertVisible: "(Active Hostels|Residents|Open Requests|Completed Today)"
+- takeScreenshot: "cm/04_stats_cards"
+
+# ============================================
+# TEST CHECKLISTS FEATURE
+# ============================================
+
+- tapOn: "Checklists"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+- takeScreenshot: "cm/05_checklists"
+
+# Go back to dashboard by tapping home/dashboard if available
+- runFlow:
+    when:
+      visible: "(Home|Dashboard|Back)"
+    commands:
+      - tapOn:
+          text: "(Home|Dashboard|Back)"
+          optional: true
+
+# Relaunch app to get back to dashboard
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Quick Actions)"
+    timeout: 15000
+
+# ============================================
+# TEST REQUESTS FEATURE
+# ============================================
+
+- tapOn: "Requests"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+- takeScreenshot: "cm/06_requests"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Quick Actions)"
+    timeout: 15000
+
+# ============================================
+# TEST COMM BOX FEATURE
+# ============================================
+
+- tapOn: "Notice Board"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+- takeScreenshot: "cm/07_comm_box"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Quick Actions)"
+    timeout: 15000
+
+# ============================================
+# TEST EMERGENCY FEATURE
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Emergency"
+    commands:
+      - tapOn: "Emergency"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 10000
+      - takeScreenshot: "cm/08_emergency"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Quick Actions)"
+    timeout: 15000
+
+# ============================================
+# TEST MY STAFF FEATURE
+# ============================================
+
+- runFlow:
+    when:
+      visible: "My Staff"
+    commands:
+      - tapOn: "My Staff"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 10000
+      - takeScreenshot: "cm/09_my_staff"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Quick Actions)"
+    timeout: 15000
+
+# ============================================
+# TEST PROFILE FEATURE
+# ============================================
+
+- tapOn: "Profile"
+- extendedWaitUntil:
+    visible: "(Profile|Logout|Settings)"
+    timeout: 10000
+- takeScreenshot: "cm/10_profile"
+
+# ============================================
+# TEST COMPLETE
+# ============================================
+
+- takeScreenshot: "cm/11_test_complete"
+- assertVisible: "(Profile|Logout|Campus Manager)"
+

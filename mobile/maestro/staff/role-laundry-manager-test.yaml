@@ -1,0 +1,94 @@
+appId: com.mapmars.hmsstaff
+name: "Laundry Manager - E2E Test"
+tags:
+  - laundry_manager
+  - e2e
+  - role-specific
+
+---
+
+# ============================================
+# Laundry Manager Role E2E Test
+# Phone: 9900000010 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible: "(Staff App|Phone Number|Login)"
+    timeout: 30000
+
+- takeScreenshot: "laundry_manager/01_login"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered)"
+    optional: true
+- inputText: "8888888887"
+- hideKeyboard
+
+- takeScreenshot: "laundry_manager/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle "Test Mode" dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|6-digit)"
+    timeout: 15000
+
+- takeScreenshot: "laundry_manager/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify)"
+    optional: true
+
+# Handle "Select Institution" screen
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant)"
+    commands:
+      - takeScreenshot: "laundry_manager/04_tenant_selection"
+      - tapOn:
+          text: "(Demo College|Demo|College)"
+          optional: true
+
+# Wait for Dashboard
+- extendedWaitUntil:
+    visible: "(Laundry Manager|Laundry|Good Morning|Good Afternoon|Good Evening|Dashboard)"
+    timeout: 30000
+
+- takeScreenshot: "laundry_manager/05_dashboard"
+
+# Verify Laundry Manager-specific features
+- assertVisible: "(Laundry Manager|Laundry|Orders|Pickup)"
+- takeScreenshot: "laundry_manager/06_dashboard_verified"
+
+# Navigate to Profile
+- runFlow:
+    when:
+      visible: "Profile"
+    commands:
+      - tapOn: "Profile"
+      - extendedWaitUntil:
+          visible: "(Profile|Logout|Laundry Manager)"
+          timeout: 10000
+      - takeScreenshot: "laundry_manager/07_profile"
+
+- takeScreenshot: "laundry_manager/08_test_complete"
+

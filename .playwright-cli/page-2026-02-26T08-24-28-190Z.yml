@@ -1,0 +1,583 @@
+- generic [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - generic [ref=e4]: Screen reader support enabled.
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link "Forms Home" [ref=e10] [cursor=pointer]:
+          - img [ref=e14]
+        - textbox "Document title" [ref=e24]: Student Bulk Upload Intake
+        - button "Move to folder" [ref=e1517] [cursor=pointer]
+        - checkbox "Star" [ref=e28] [cursor=pointer]
+        - generic "Saving…, Every change you make is automatically saved in Drive.,Last edit was seconds ago" [ref=e2245]: Saving…
+      - generic [ref=e35]:
+        - button "Customize Theme" [ref=e37] [cursor=pointer]
+        - link "Preview" [ref=e43] [cursor=pointer]
+        - button "Undo" [ref=e49] [cursor=pointer]
+        - button "Redo" [ref=e55] [cursor=pointer]
+        - button "Copy responder link" [ref=e61] [cursor=pointer]
+        - button "Share" [ref=e67] [cursor=pointer]
+        - button "Open published form settings" [ref=e74] [cursor=pointer]:
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e80]: Published
+        - button "More" [ref=e82] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e93] [cursor=pointer]':
+          - img [ref=e95]
+    - tablist [ref=e99]:
+      - tab "Questions" [selected] [ref=e100] [cursor=pointer]:
+        - generic [ref=e101]: Questions
+      - tab "Responses" [ref=e102] [cursor=pointer]:
+        - generic [ref=e104]: Responses
+      - tab "Settings" [ref=e105] [cursor=pointer]:
+        - generic [ref=e106]: Settings
+  - generic [ref=e113]:
+    - generic [ref=e115]:
+      - button "Add question" [ref=e117] [cursor=pointer]
+      - button "Import questions" [ref=e123] [cursor=pointer]
+      - button "Add title and description" [ref=e129] [cursor=pointer]
+      - button "Add image" [ref=e135] [cursor=pointer]
+      - button "Add video" [ref=e141] [cursor=pointer]
+      - button "Add section" [ref=e147] [cursor=pointer]
+    - generic [ref=e154]:
+      - generic [ref=e160]:
+        - generic [ref=e163]:
+          - textbox "Form title" [ref=e165]
+          - toolbar "Formatting options":
+            - button "Bold" [ref=e167] [cursor=pointer]:
+              - generic [ref=e170]: 
+            - button "Italic" [ref=e171] [cursor=pointer]:
+              - generic [ref=e174]: 
+            - button "Underline" [ref=e175] [cursor=pointer]:
+              - generic [ref=e178]: 
+            - button "Insert link" [ref=e179] [cursor=pointer]:
+              - generic [ref=e182]: 
+            - button "Remove formatting" [ref=e183] [cursor=pointer]:
+              - generic [ref=e186]: 
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic: Form description
+            - textbox "Form description" [ref=e191]
+          - toolbar "Formatting options":
+            - button "Bold" [ref=e193] [cursor=pointer]:
+              - generic [ref=e196]: 
+            - button "Italic" [ref=e197] [cursor=pointer]:
+              - generic [ref=e200]: 
+            - button "Underline" [ref=e201] [cursor=pointer]:
+              - generic [ref=e204]: 
+            - button "Insert link" [ref=e205] [cursor=pointer]:
+              - generic [ref=e208]: 
+            - button "Numbered list" [ref=e209] [cursor=pointer]:
+              - generic [ref=e212]: 
+            - button "Bulleted list" [ref=e213] [cursor=pointer]:
+              - generic [ref=e216]: 
+            - button "Remove formatting" [ref=e217] [cursor=pointer]:
+              - generic [ref=e220]: 
+      - generic [ref=e221]:
+        - generic [ref=e229]:
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - textbox "Question" [ref=e238]
+              - toolbar "Formatting options":
+                - button "Bold" [ref=e240] [cursor=pointer]:
+                  - generic [ref=e243]: 
+                - button "Italic" [ref=e244] [cursor=pointer]:
+                  - generic [ref=e247]: 
+                - button "Underline" [ref=e248] [cursor=pointer]:
+                  - generic [ref=e251]: 
+                - button "Insert link" [ref=e252] [cursor=pointer]:
+                  - generic [ref=e255]: 
+                - button "Remove formatting" [ref=e256] [cursor=pointer]:
+                  - generic [ref=e259]: 
+            - generic [ref=e260]: "*"
+          - generic [ref=e266]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e268]
+        - generic [ref=e276]:
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - textbox "Question" [ref=e288]
+              - toolbar "Formatting options":
+                - button "Bold" [ref=e290] [cursor=pointer]:
+                  - generic [ref=e293]: 
+                - button "Italic" [ref=e294] [cursor=pointer]:
+                  - generic [ref=e297]: 
+                - button "Underline" [ref=e298] [cursor=pointer]:
+                  - generic [ref=e301]: 
+                - button "Insert link" [ref=e302] [cursor=pointer]:
+                  - generic [ref=e305]: 
+                - button "Remove formatting" [ref=e306] [cursor=pointer]:
+                  - generic [ref=e309]: 
+            - generic [ref=e310]: "*"
+          - generic [ref=e316]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e318]
+        - generic [ref=e326]:
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - textbox "Question" [ref=e335]
+              - toolbar "Formatting options":
+                - button "Bold" [ref=e337] [cursor=pointer]:
+                  - generic [ref=e340]: 
+                - button "Italic" [ref=e341] [cursor=pointer]:
+                  - generic [ref=e344]: 
+                - button "Underline" [ref=e345] [cursor=pointer]:
+                  - generic [ref=e348]: 
+                - button "Insert link" [ref=e349] [cursor=pointer]:
+                  - generic [ref=e352]: 
+                - button "Remove formatting" [ref=e353] [cursor=pointer]:
+                  - generic [ref=e356]: 
+            - generic [ref=e357]: "*"
+          - generic [ref=e363]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e365]
+        - generic [ref=e373]:
+          - generic [ref=e379]:
+            - generic [ref=e380]:
+              - textbox "Question" [ref=e382]
+              - toolbar "Formatting options":
+                - button "Bold" [ref=e384] [cursor=pointer]:
+                  - generic [ref=e387]: 
+                - button "Italic" [ref=e388] [cursor=pointer]:
+                  - generic [ref=e391]: 
+                - button "Underline" [ref=e392] [cursor=pointer]:
+                  - generic [ref=e395]: 
+                - button "Insert link" [ref=e396] [cursor=pointer]:
+                  - generic [ref=e399]: 
+                - button "Remove formatting" [ref=e400] [cursor=pointer]:
+                  - generic [ref=e403]: 
+            - generic [ref=e404]: "*"
+          - list "question options" [ref=e410]:
+            - listitem "question option" [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e415]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e423]: male
+            - listitem "question option" [ref=e424]:
+              - generic [ref=e425]:
+                - generic [ref=e428]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e436]: female
+            - listitem "question option" [ref=e1906]:
+              - generic [ref=e1907]:
+                - generic [ref=e1918]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e1926]: other
+        - generic [ref=e573]:
+          - generic [ref=e580]:
+            - textbox "Question" [ref=e582]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e584] [cursor=pointer]:
+                - generic [ref=e587]: 
+              - button "Italic" [ref=e588] [cursor=pointer]:
+                - generic [ref=e591]: 
+              - button "Underline" [ref=e592] [cursor=pointer]:
+                - generic [ref=e595]: 
+              - button "Insert link" [ref=e596] [cursor=pointer]:
+                - generic [ref=e599]: 
+              - button "Remove formatting" [ref=e600] [cursor=pointer]:
+                - generic [ref=e603]: 
+          - generic [ref=e609]:
+            - generic: Long answer text
+            - textbox "Long answer text" [disabled] [ref=e611]
+        - generic [ref=e619]:
+          - generic [ref=e626]:
+            - textbox "Question" [ref=e628]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e630] [cursor=pointer]:
+                - generic [ref=e633]: 
+              - button "Italic" [ref=e634] [cursor=pointer]:
+                - generic [ref=e637]: 
+              - button "Underline" [ref=e638] [cursor=pointer]:
+                - generic [ref=e641]: 
+              - button "Insert link" [ref=e642] [cursor=pointer]:
+                - generic [ref=e645]: 
+              - button "Remove formatting" [ref=e646] [cursor=pointer]:
+                - generic [ref=e649]: 
+          - textbox [disabled] [ref=e659]: Month, day, year
+        - generic [ref=e670]:
+          - generic [ref=e677]:
+            - textbox "Question" [ref=e679]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e681] [cursor=pointer]:
+                - generic [ref=e684]: 
+              - button "Italic" [ref=e685] [cursor=pointer]:
+                - generic [ref=e688]: 
+              - button "Underline" [ref=e689] [cursor=pointer]:
+                - generic [ref=e692]: 
+              - button "Insert link" [ref=e693] [cursor=pointer]:
+                - generic [ref=e696]: 
+              - button "Remove formatting" [ref=e697] [cursor=pointer]:
+                - generic [ref=e700]: 
+          - generic [ref=e706]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e708]
+        - generic [ref=e716]:
+          - generic [ref=e723]:
+            - textbox "Question" [ref=e725]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e727] [cursor=pointer]:
+                - generic [ref=e730]: 
+              - button "Italic" [ref=e731] [cursor=pointer]:
+                - generic [ref=e734]: 
+              - button "Underline" [ref=e735] [cursor=pointer]:
+                - generic [ref=e738]: 
+              - button "Insert link" [ref=e739] [cursor=pointer]:
+                - generic [ref=e742]: 
+              - button "Remove formatting" [ref=e743] [cursor=pointer]:
+                - generic [ref=e746]: 
+          - generic [ref=e752]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e754]
+        - generic [ref=e762]:
+          - generic [ref=e769]:
+            - textbox "Question" [ref=e771]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e773] [cursor=pointer]:
+                - generic [ref=e776]: 
+              - button "Italic" [ref=e777] [cursor=pointer]:
+                - generic [ref=e780]: 
+              - button "Underline" [ref=e781] [cursor=pointer]:
+                - generic [ref=e784]: 
+              - button "Insert link" [ref=e785] [cursor=pointer]:
+                - generic [ref=e788]: 
+              - button "Remove formatting" [ref=e789] [cursor=pointer]:
+                - generic [ref=e792]: 
+          - generic [ref=e798]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e800]
+        - generic [ref=e808]:
+          - generic [ref=e815]:
+            - textbox "Question" [ref=e817]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e819] [cursor=pointer]:
+                - generic [ref=e822]: 
+              - button "Italic" [ref=e823] [cursor=pointer]:
+                - generic [ref=e826]: 
+              - button "Underline" [ref=e827] [cursor=pointer]:
+                - generic [ref=e830]: 
+              - button "Insert link" [ref=e831] [cursor=pointer]:
+                - generic [ref=e834]: 
+              - button "Remove formatting" [ref=e835] [cursor=pointer]:
+                - generic [ref=e838]: 
+          - generic [ref=e844]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e846]
+        - generic [ref=e854]:
+          - generic [ref=e857]:
+            - generic [ref=e861]:
+              - textbox "Question" [ref=e863]
+              - toolbar "Formatting options":
+                - button "Bold" [ref=e865] [cursor=pointer]:
+                  - generic [ref=e868]: 
+                - button "Italic" [ref=e869] [cursor=pointer]:
+                  - generic [ref=e872]: 
+                - button "Underline" [ref=e873] [cursor=pointer]:
+                  - generic [ref=e876]: 
+                - button "Insert link" [ref=e877] [cursor=pointer]:
+                  - generic [ref=e880]: 
+                - button "Remove formatting" [ref=e881] [cursor=pointer]:
+                  - generic [ref=e884]: 
+            - button "Add inline image" [ref=e1994] [cursor=pointer]
+            - generic [ref=e2000]:
+              - generic [ref=e2001]: Question Type
+              - listbox "Question types" [ref=e2002] [cursor=pointer]:
+                - option "Short answer":
+                  - generic [ref=e2006]: Short answer
+                - option "Paragraph":
+                  - generic [ref=e2010]: Paragraph
+                - option "Multiple choice" [selected] [ref=e2011]:
+                  - generic [ref=e2015]: Multiple choice
+                - option "Checkboxes":
+                  - generic [ref=e2019]: Checkboxes
+                - option "Dropdown":
+                  - generic [ref=e2023]: Dropdown
+                - option "File upload":
+                  - generic [ref=e2027]: File upload
+                - option "Linear scale":
+                  - generic [ref=e2031]: Linear scale
+                - option "Rating":
+                  - generic [ref=e2035]: Rating
+                - option "Multiple choice grid":
+                  - generic [ref=e2039]: Multiple choice grid
+                - option "Checkbox grid":
+                  - generic [ref=e2043]: Checkbox grid
+                - option "Date":
+                  - generic [ref=e2047]: Date
+                - option "Time":
+                  - generic [ref=e2051]: Time
+          - generic [ref=e885]:
+            - generic [ref=e889]:
+              - list "question options" [ref=e890]:
+                - listitem "question option" [ref=e891]:
+                  - generic [ref=e892]:
+                    - generic [ref=e895]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e896]:
+                      - textbox "option value" [ref=e903]: "1"
+                      - button "Add image to option" [ref=e2054] [cursor=pointer]
+                      - button "Remove option" [ref=e2056] [cursor=pointer]:
+                        - img [ref=e2059]
+                - listitem "question option" [ref=e904]:
+                  - generic [ref=e905]:
+                    - generic [ref=e908]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e909]:
+                      - textbox "option value" [ref=e916]: "2"
+                      - button "Add image to option" [ref=e2073] [cursor=pointer]
+                      - button "Remove option" [ref=e2079] [cursor=pointer]:
+                        - img [ref=e2082]
+                - listitem "question option" [ref=e917]:
+                  - generic [ref=e918]:
+                    - generic [ref=e921]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e922]:
+                      - textbox "option value" [ref=e929]: "3"
+                      - button "Add image to option" [ref=e2087] [cursor=pointer]
+                      - button "Remove option" [ref=e2089] [cursor=pointer]:
+                        - img [ref=e2092]
+                - listitem "question option" [ref=e930]:
+                  - generic [ref=e931]:
+                    - generic [ref=e934]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e935]:
+                      - textbox "option value" [ref=e942]: Option 4
+                      - button "Add image to option" [ref=e2097] [cursor=pointer]
+                      - button "Remove option" [ref=e2099] [cursor=pointer]:
+                        - img [ref=e2102]
+                - listitem "question option" [ref=e943]:
+                  - generic [ref=e944]:
+                    - generic [ref=e947]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e948]:
+                      - textbox "option value" [ref=e955]: Option 5
+                      - button "Add image to option" [ref=e2107] [cursor=pointer]
+                      - button "Remove option" [ref=e2109] [cursor=pointer]:
+                        - img [ref=e2112]
+                - listitem "question option" [ref=e956]:
+                  - generic [ref=e957]:
+                    - generic [ref=e960]:
+                      - generic:
+                        - radio [disabled]
+                    - generic [ref=e961]:
+                      - textbox "option value" [active] [ref=e968]: Option 6
+                      - button "Add image to option" [ref=e2117] [cursor=pointer]
+                      - button "Remove option" [ref=e2119] [cursor=pointer]:
+                        - img [ref=e2122]
+              - generic [ref=e2156]:
+                - generic [ref=e2157]:
+                  - generic:
+                    - radio [disabled]
+                - generic [ref=e2159]:
+                  - generic: Add option
+                  - textbox "Add option" [ref=e2160]
+                - generic [ref=e2161]:
+                  - generic [ref=e2162]: or
+                  - button "add \"Other\"" [ref=e2163] [cursor=pointer]:
+                    - generic [ref=e2166]: add "Other"
+            - generic [ref=e2169]:
+              - button "Duplicate question" [ref=e2171] [cursor=pointer]
+              - button "Delete question" [ref=e2177] [cursor=pointer]
+              - generic [ref=e2183]:
+                - generic [ref=e2185]: Required
+                - checkbox "Required" [ref=e2186] [cursor=pointer]
+              - button "More options" [ref=e2190] [cursor=pointer]
+        - generic [ref=e1014]:
+          - generic [ref=e1021]:
+            - generic [ref=e1022]:
+              - generic: Question
+              - textbox "Question"
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1024] [cursor=pointer]:
+                - generic [ref=e1027]: 
+              - button "Italic" [ref=e1028] [cursor=pointer]:
+                - generic [ref=e1031]: 
+              - button "Underline" [ref=e1032] [cursor=pointer]:
+                - generic [ref=e1035]: 
+              - button "Insert link" [ref=e1036] [cursor=pointer]:
+                - generic [ref=e1039]: 
+              - button "Remove formatting" [ref=e1040] [cursor=pointer]:
+                - generic [ref=e1043]: 
+          - list "question options" [ref=e1049]:
+            - listitem "question option" [ref=e1050]:
+              - generic [ref=e1051]:
+                - generic [ref=e1054]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e1062]: Option 1
+        - generic [ref=e1069]:
+          - generic [ref=e1076]:
+            - textbox "Question" [ref=e1078]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1080] [cursor=pointer]:
+                - generic [ref=e1083]: 
+              - button "Italic" [ref=e1084] [cursor=pointer]:
+                - generic [ref=e1087]: 
+              - button "Underline" [ref=e1088] [cursor=pointer]:
+                - generic [ref=e1091]: 
+              - button "Insert link" [ref=e1092] [cursor=pointer]:
+                - generic [ref=e1095]: 
+              - button "Remove formatting" [ref=e1096] [cursor=pointer]:
+                - generic [ref=e1099]: 
+          - generic [ref=e1105]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1107]
+        - generic [ref=e1115]:
+          - generic [ref=e1122]:
+            - textbox "Question" [ref=e1124]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1126] [cursor=pointer]:
+                - generic [ref=e1129]: 
+              - button "Italic" [ref=e1130] [cursor=pointer]:
+                - generic [ref=e1133]: 
+              - button "Underline" [ref=e1134] [cursor=pointer]:
+                - generic [ref=e1137]: 
+              - button "Insert link" [ref=e1138] [cursor=pointer]:
+                - generic [ref=e1141]: 
+              - button "Remove formatting" [ref=e1142] [cursor=pointer]:
+                - generic [ref=e1145]: 
+          - generic [ref=e1151]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1153]
+        - generic [ref=e1161]:
+          - generic [ref=e1168]:
+            - textbox "Question" [ref=e1170]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1172] [cursor=pointer]:
+                - generic [ref=e1175]: 
+              - button "Italic" [ref=e1176] [cursor=pointer]:
+                - generic [ref=e1179]: 
+              - button "Underline" [ref=e1180] [cursor=pointer]:
+                - generic [ref=e1183]: 
+              - button "Insert link" [ref=e1184] [cursor=pointer]:
+                - generic [ref=e1187]: 
+              - button "Remove formatting" [ref=e1188] [cursor=pointer]:
+                - generic [ref=e1191]: 
+          - generic [ref=e1197]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1199]
+        - generic [ref=e1207]:
+          - generic [ref=e1214]:
+            - textbox "Question" [ref=e1216]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1218] [cursor=pointer]:
+                - generic [ref=e1221]: 
+              - button "Italic" [ref=e1222] [cursor=pointer]:
+                - generic [ref=e1225]: 
+              - button "Underline" [ref=e1226] [cursor=pointer]:
+                - generic [ref=e1229]: 
+              - button "Insert link" [ref=e1230] [cursor=pointer]:
+                - generic [ref=e1233]: 
+              - button "Remove formatting" [ref=e1234] [cursor=pointer]:
+                - generic [ref=e1237]: 
+          - generic [ref=e1243]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1245]
+        - generic [ref=e1253]:
+          - generic [ref=e1260]:
+            - textbox "Question" [ref=e1262]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1264] [cursor=pointer]:
+                - generic [ref=e1267]: 
+              - button "Italic" [ref=e1268] [cursor=pointer]:
+                - generic [ref=e1271]: 
+              - button "Underline" [ref=e1272] [cursor=pointer]:
+                - generic [ref=e1275]: 
+              - button "Insert link" [ref=e1276] [cursor=pointer]:
+                - generic [ref=e1279]: 
+              - button "Remove formatting" [ref=e1280] [cursor=pointer]:
+                - generic [ref=e1283]: 
+          - generic [ref=e1289]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1291]
+        - generic [ref=e1299]:
+          - generic [ref=e1306]:
+            - textbox "Question" [ref=e1308]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1310] [cursor=pointer]:
+                - generic [ref=e1313]: 
+              - button "Italic" [ref=e1314] [cursor=pointer]:
+                - generic [ref=e1317]: 
+              - button "Underline" [ref=e1318] [cursor=pointer]:
+                - generic [ref=e1321]: 
+              - button "Insert link" [ref=e1322] [cursor=pointer]:
+                - generic [ref=e1325]: 
+              - button "Remove formatting" [ref=e1326] [cursor=pointer]:
+                - generic [ref=e1329]: 
+          - generic [ref=e1335]:
+            - generic: Short answer text
+            - textbox "Short answer text" [disabled] [ref=e1337]
+        - generic [ref=e1345]:
+          - generic [ref=e1352]:
+            - textbox "Question" [ref=e1354]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1356] [cursor=pointer]:
+                - generic [ref=e1359]: 
+              - button "Italic" [ref=e1360] [cursor=pointer]:
+                - generic [ref=e1363]: 
+              - button "Underline" [ref=e1364] [cursor=pointer]:
+                - generic [ref=e1367]: 
+              - button "Insert link" [ref=e1368] [cursor=pointer]:
+                - generic [ref=e1371]: 
+              - button "Remove formatting" [ref=e1372] [cursor=pointer]:
+                - generic [ref=e1375]: 
+          - list "question options" [ref=e1381]:
+            - listitem "question option" [ref=e1382]:
+              - generic [ref=e1383]:
+                - generic [ref=e1386]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e1394]: Option 1
+        - generic [ref=e1401]:
+          - generic [ref=e1408]:
+            - textbox "Question" [ref=e1410]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1412] [cursor=pointer]:
+                - generic [ref=e1415]: 
+              - button "Italic" [ref=e1416] [cursor=pointer]:
+                - generic [ref=e1419]: 
+              - button "Underline" [ref=e1420] [cursor=pointer]:
+                - generic [ref=e1423]: 
+              - button "Insert link" [ref=e1424] [cursor=pointer]:
+                - generic [ref=e1427]: 
+              - button "Remove formatting" [ref=e1428] [cursor=pointer]:
+                - generic [ref=e1431]: 
+          - generic [ref=e1437]:
+            - generic: Long answer text
+            - textbox "Long answer text" [disabled] [ref=e1439]
+        - generic [ref=e1447]:
+          - generic [ref=e1454]:
+            - textbox "Question" [ref=e1456]
+            - toolbar "Formatting options":
+              - button "Bold" [ref=e1458] [cursor=pointer]:
+                - generic [ref=e1461]: 
+              - button "Italic" [ref=e1462] [cursor=pointer]:
+                - generic [ref=e1465]: 
+              - button "Underline" [ref=e1466] [cursor=pointer]:
+                - generic [ref=e1469]: 
+              - button "Insert link" [ref=e1470] [cursor=pointer]:
+                - generic [ref=e1473]: 
+              - button "Remove formatting" [ref=e1474] [cursor=pointer]:
+                - generic [ref=e1477]: 
+          - list "question options" [ref=e1483]:
+            - listitem "question option" [ref=e1484]:
+              - generic [ref=e1485]:
+                - generic [ref=e1488]:
+                  - generic:
+                    - radio [disabled]
+                - textbox "option value" [ref=e1496]: Option 1
+  - button "Help and feedback" [ref=e1501] [cursor=pointer]
+  - iframe [ref=e1506]:
+    
+  - generic [ref=e1508]: .
+  - generic [ref=e1510]: Banner hidden
+  - generic [ref=e1784]: Duplicate options not supported

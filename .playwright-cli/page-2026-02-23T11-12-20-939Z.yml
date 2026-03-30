@@ -1,0 +1,523 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Unassigned Staff" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: List
+              - heading "Unassigned Staff" [level=1] [ref=e24]
+            - link "Add New Staff" [ref=e27] [cursor=pointer]:
+              - /url: https://admin.mapservices.in/admin/unassigned-staff/create
+              - img [ref=e28]
+              - generic [ref=e30]: Add New Staff
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - generic [ref=e39]:
+                - generic [ref=e40]: Search
+                - generic [ref=e41]:
+                  - img [ref=e43]
+                  - searchbox "Search" [ref=e46]
+              - table [ref=e48]:
+                - rowgroup [ref=e49]:
+                  - row "Employee ID Name Phone Tenant Role Assigned Hostel Actions" [ref=e50]:
+                    - columnheader "Employee ID" [ref=e51]:
+                      - button "Employee ID" [ref=e52] [cursor=pointer]:
+                        - generic [ref=e53]: Employee ID
+                        - img [ref=e54]
+                    - columnheader "Name" [ref=e56]:
+                      - button "Name" [ref=e57] [cursor=pointer]:
+                        - generic [ref=e58]: Name
+                        - img [ref=e59]
+                    - columnheader "Phone" [ref=e61]:
+                      - generic [ref=e63]: Phone
+                    - columnheader "Tenant" [ref=e64]:
+                      - generic [ref=e66]: Tenant
+                    - columnheader "Role" [ref=e67]:
+                      - generic [ref=e69]: Role
+                    - columnheader "Assigned Hostel" [ref=e70]:
+                      - generic [ref=e72]: Assigned Hostel
+                    - columnheader "Actions" [ref=e73]
+                - rowgroup [ref=e74]:
+                  - row "EMP-00044 Ram 8082833909 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e75]:
+                    - cell "EMP-00044" [ref=e76]:
+                      - link "EMP-00044" [ref=e78] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e83]: EMP-00044
+                    - cell "Ram" [ref=e84]:
+                      - link "Ram" [ref=e86] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e91]: Ram
+                    - cell "8082833909" [ref=e92]:
+                      - generic [ref=e99] [cursor=pointer]: "8082833909"
+                    - cell "Not Assigned" [ref=e100]:
+                      - link "Not Assigned" [ref=e102] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e104]: Not Assigned
+                    - cell "Not Assigned" [ref=e105]:
+                      - link "Not Assigned" [ref=e107] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e109]: Not Assigned
+                    - cell "Not Assigned" [ref=e110]:
+                      - link "Not Assigned" [ref=e112] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e114]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e115]:
+                      - generic [ref=e117]:
+                        - link "View" [ref=e118] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                          - img [ref=e119]
+                          - generic [ref=e122]: View
+                        - link "Edit" [ref=e123] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/262/edit
+                          - img [ref=e124]
+                          - generic [ref=e127]: Edit
+                        - button "Deactivate" [ref=e128] [cursor=pointer]:
+                          - img [ref=e129]
+                          - generic [ref=e131]: Deactivate
+                        - button "Assign" [ref=e132] [cursor=pointer]:
+                          - img [ref=e133]
+                          - generic [ref=e135]: Assign
+                        - button "Assignment History" [ref=e136] [cursor=pointer]:
+                          - img [ref=e137]
+                          - generic [ref=e139]: Assignment History
+                  - row "EMP-00030 M sports 9876543226 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e140]:
+                    - cell "EMP-00030" [ref=e141]:
+                      - link "EMP-00030" [ref=e143] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e148]: EMP-00030
+                    - cell "M sports" [ref=e149]:
+                      - link "M sports" [ref=e151] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e156]: M sports
+                    - cell "9876543226" [ref=e157]:
+                      - generic [ref=e164] [cursor=pointer]: "9876543226"
+                    - cell "Not Assigned" [ref=e165]:
+                      - link "Not Assigned" [ref=e167] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e169]: Not Assigned
+                    - cell "Not Assigned" [ref=e170]:
+                      - link "Not Assigned" [ref=e172] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e174]: Not Assigned
+                    - cell "Not Assigned" [ref=e175]:
+                      - link "Not Assigned" [ref=e177] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e179]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e180]:
+                      - generic [ref=e182]:
+                        - link "View" [ref=e183] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                          - img [ref=e184]
+                          - generic [ref=e187]: View
+                        - link "Edit" [ref=e188] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/35/edit
+                          - img [ref=e189]
+                          - generic [ref=e192]: Edit
+                        - button "Deactivate" [ref=e193] [cursor=pointer]:
+                          - img [ref=e194]
+                          - generic [ref=e196]: Deactivate
+                        - button "Assign" [ref=e197] [cursor=pointer]:
+                          - img [ref=e198]
+                          - generic [ref=e200]: Assign
+                        - button "Assignment History" [ref=e201] [cursor=pointer]:
+                          - img [ref=e202]
+                          - generic [ref=e204]: Assignment History
+                  - row "EMP-00029 m - security 9876543225 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e205]:
+                    - cell "EMP-00029" [ref=e206]:
+                      - link "EMP-00029" [ref=e208] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e213]: EMP-00029
+                    - cell "m - security" [ref=e214]:
+                      - link "m - security" [ref=e216] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e221]: m - security
+                    - cell "9876543225" [ref=e222]:
+                      - generic [ref=e229] [cursor=pointer]: "9876543225"
+                    - cell "Not Assigned" [ref=e230]:
+                      - link "Not Assigned" [ref=e232] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e234]: Not Assigned
+                    - cell "Not Assigned" [ref=e235]:
+                      - link "Not Assigned" [ref=e237] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e239]: Not Assigned
+                    - cell "Not Assigned" [ref=e240]:
+                      - link "Not Assigned" [ref=e242] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e244]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e245]:
+                      - generic [ref=e247]:
+                        - link "View" [ref=e248] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                          - img [ref=e249]
+                          - generic [ref=e252]: View
+                        - link "Edit" [ref=e253] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/34/edit
+                          - img [ref=e254]
+                          - generic [ref=e257]: Edit
+                        - button "Deactivate" [ref=e258] [cursor=pointer]:
+                          - img [ref=e259]
+                          - generic [ref=e261]: Deactivate
+                        - button "Assign" [ref=e262] [cursor=pointer]:
+                          - img [ref=e263]
+                          - generic [ref=e265]: Assign
+                        - button "Assignment History" [ref=e266] [cursor=pointer]:
+                          - img [ref=e267]
+                          - generic [ref=e269]: Assignment History
+                  - row "EMP-00028 m - laundry 9876543224 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e270]:
+                    - cell "EMP-00028" [ref=e271]:
+                      - link "EMP-00028" [ref=e273] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e278]: EMP-00028
+                    - cell "m - laundry" [ref=e279]:
+                      - link "m - laundry" [ref=e281] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e286]: m - laundry
+                    - cell "9876543224" [ref=e287]:
+                      - generic [ref=e294] [cursor=pointer]: "9876543224"
+                    - cell "Not Assigned" [ref=e295]:
+                      - link "Not Assigned" [ref=e297] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e299]: Not Assigned
+                    - cell "Not Assigned" [ref=e300]:
+                      - link "Not Assigned" [ref=e302] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e304]: Not Assigned
+                    - cell "Not Assigned" [ref=e305]:
+                      - link "Not Assigned" [ref=e307] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e309]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e310]:
+                      - generic [ref=e312]:
+                        - link "View" [ref=e313] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                          - img [ref=e314]
+                          - generic [ref=e317]: View
+                        - link "Edit" [ref=e318] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/33/edit
+                          - img [ref=e319]
+                          - generic [ref=e322]: Edit
+                        - button "Deactivate" [ref=e323] [cursor=pointer]:
+                          - img [ref=e324]
+                          - generic [ref=e326]: Deactivate
+                        - button "Assign" [ref=e327] [cursor=pointer]:
+                          - img [ref=e328]
+                          - generic [ref=e330]: Assign
+                        - button "Assignment History" [ref=e331] [cursor=pointer]:
+                          - img [ref=e332]
+                          - generic [ref=e334]: Assignment History
+                  - row "EMP-00027 m - repair 9874653212 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e335]:
+                    - cell "EMP-00027" [ref=e336]:
+                      - link "EMP-00027" [ref=e338] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e343]: EMP-00027
+                    - cell "m - repair" [ref=e344]:
+                      - link "m - repair" [ref=e346] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e351]: m - repair
+                    - cell "9874653212" [ref=e352]:
+                      - generic [ref=e359] [cursor=pointer]: "9874653212"
+                    - cell "Not Assigned" [ref=e360]:
+                      - link "Not Assigned" [ref=e362] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e364]: Not Assigned
+                    - cell "Not Assigned" [ref=e365]:
+                      - link "Not Assigned" [ref=e367] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e369]: Not Assigned
+                    - cell "Not Assigned" [ref=e370]:
+                      - link "Not Assigned" [ref=e372] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e374]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e375]:
+                      - generic [ref=e377]:
+                        - link "View" [ref=e378] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                          - img [ref=e379]
+                          - generic [ref=e382]: View
+                        - link "Edit" [ref=e383] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/32/edit
+                          - img [ref=e384]
+                          - generic [ref=e387]: Edit
+                        - button "Deactivate" [ref=e388] [cursor=pointer]:
+                          - img [ref=e389]
+                          - generic [ref=e391]: Deactivate
+                        - button "Assign" [ref=e392] [cursor=pointer]:
+                          - img [ref=e393]
+                          - generic [ref=e395]: Assign
+                        - button "Assignment History" [ref=e396] [cursor=pointer]:
+                          - img [ref=e397]
+                          - generic [ref=e399]: Assignment History
+                  - row "EMP-00026 M - house keeping 9876543200 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e400]:
+                    - cell "EMP-00026" [ref=e401]:
+                      - link "EMP-00026" [ref=e403] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e408]: EMP-00026
+                    - cell "M - house keeping" [ref=e409]:
+                      - link "M - house keeping" [ref=e411] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e416]: M - house keeping
+                    - cell "9876543200" [ref=e417]:
+                      - generic [ref=e424] [cursor=pointer]: "9876543200"
+                    - cell "Not Assigned" [ref=e425]:
+                      - link "Not Assigned" [ref=e427] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e429]: Not Assigned
+                    - cell "Not Assigned" [ref=e430]:
+                      - link "Not Assigned" [ref=e432] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e434]: Not Assigned
+                    - cell "Not Assigned" [ref=e435]:
+                      - link "Not Assigned" [ref=e437] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e439]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e440]:
+                      - generic [ref=e442]:
+                        - link "View" [ref=e443] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                          - img [ref=e444]
+                          - generic [ref=e447]: View
+                        - link "Edit" [ref=e448] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/31/edit
+                          - img [ref=e449]
+                          - generic [ref=e452]: Edit
+                        - button "Deactivate" [ref=e453] [cursor=pointer]:
+                          - img [ref=e454]
+                          - generic [ref=e456]: Deactivate
+                        - button "Assign" [ref=e457] [cursor=pointer]:
+                          - img [ref=e458]
+                          - generic [ref=e460]: Assign
+                        - button "Assignment History" [ref=e461] [cursor=pointer]:
+                          - img [ref=e462]
+                          - generic [ref=e464]: Assignment History
+                  - row "EMP-00025 M - warden 9876543220 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e465]:
+                    - cell "EMP-00025" [ref=e466]:
+                      - link "EMP-00025" [ref=e468] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e473]: EMP-00025
+                    - cell "M - warden" [ref=e474]:
+                      - link "M - warden" [ref=e476] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e481]: M - warden
+                    - cell "9876543220" [ref=e482]:
+                      - generic [ref=e489] [cursor=pointer]: "9876543220"
+                    - cell "Not Assigned" [ref=e490]:
+                      - link "Not Assigned" [ref=e492] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e494]: Not Assigned
+                    - cell "Not Assigned" [ref=e495]:
+                      - link "Not Assigned" [ref=e497] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e499]: Not Assigned
+                    - cell "Not Assigned" [ref=e500]:
+                      - link "Not Assigned" [ref=e502] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e504]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e505]:
+                      - generic [ref=e507]:
+                        - link "View" [ref=e508] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                          - img [ref=e509]
+                          - generic [ref=e512]: View
+                        - link "Edit" [ref=e513] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/30/edit
+                          - img [ref=e514]
+                          - generic [ref=e517]: Edit
+                        - button "Deactivate" [ref=e518] [cursor=pointer]:
+                          - img [ref=e519]
+                          - generic [ref=e521]: Deactivate
+                        - button "Assign" [ref=e522] [cursor=pointer]:
+                          - img [ref=e523]
+                          - generic [ref=e525]: Assign
+                        - button "Assignment History" [ref=e526] [cursor=pointer]:
+                          - img [ref=e527]
+                          - generic [ref=e529]: Assignment History
+                  - row "EMP-00024 M Campus manager 9874653210 Not Assigned Not Assigned Not Assigned View Edit Deactivate Assign Assignment History" [ref=e530]:
+                    - cell "EMP-00024" [ref=e531]:
+                      - link "EMP-00024" [ref=e533] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e538]: EMP-00024
+                    - cell "M Campus manager" [ref=e539]:
+                      - link "M Campus manager" [ref=e541] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e546]: M Campus manager
+                    - cell "9874653210" [ref=e547]:
+                      - generic [ref=e554] [cursor=pointer]: "9874653210"
+                    - cell "Not Assigned" [ref=e555]:
+                      - link "Not Assigned" [ref=e557] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e559]: Not Assigned
+                    - cell "Not Assigned" [ref=e560]:
+                      - link "Not Assigned" [ref=e562] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e564]: Not Assigned
+                    - cell "Not Assigned" [ref=e565]:
+                      - link "Not Assigned" [ref=e567] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e569]: Not Assigned
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e570]:
+                      - generic [ref=e572]:
+                        - link "View" [ref=e573] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                          - img [ref=e574]
+                          - generic [ref=e577]: View
+                        - link "Edit" [ref=e578] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/29/edit
+                          - img [ref=e579]
+                          - generic [ref=e582]: Edit
+                        - button "Deactivate" [ref=e583] [cursor=pointer]:
+                          - img [ref=e584]
+                          - generic [ref=e586]: Deactivate
+                        - button "Assign" [ref=e587] [cursor=pointer]:
+                          - img [ref=e588]
+                          - generic [ref=e590]: Assign
+                        - button "Assignment History" [ref=e591] [cursor=pointer]:
+                          - img [ref=e592]
+                          - generic [ref=e594]: Assignment History
+              - navigation "Pagination navigation" [ref=e595]:
+                - generic [ref=e598]:
+                  - generic [ref=e600]: Per page
+                  - combobox "Per page" [ref=e602]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+            - generic:
+              - dialog
+            - generic:
+              - dialog:
+                - generic [ref=e715]:
+                  - generic [ref=e716]:
+                    - button "Close" [ref=e718] [cursor=pointer]:
+                      - generic [ref=e719]: Close
+                      - img [ref=e720]
+                    - heading "Assign" [level=2] [ref=e723]
+                  - generic [ref=e725]:
+                    - generic [ref=e728]:
+                      - generic [ref=e731]:
+                        - text: Tenant
+                        - superscript [ref=e732]: "*"
+                      - combobox [active] [ref=e737]:
+                        - generic [ref=e801]:
+                          - text: CLI Auto Tenant 17718351303
+                          - 'button "Remove item: ''b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc''" [ref=e802] [cursor=pointer]': Remove item
+                    - generic [ref=e743]:
+                      - generic [ref=e746]:
+                        - text: Role
+                        - superscript [ref=e747]: "*"
+                      - combobox [ref=e752]:
+                        - generic [ref=e755]: Select an option
+                    - generic [ref=e758]:
+                      - generic [ref=e761]:
+                        - text: Hostel
+                        - superscript [ref=e803]: "*"
+                      - combobox [ref=e805]:
+                        - generic [ref=e808]: Select an option
+                    - generic [ref=e770]:
+                      - generic [ref=e773]: Assignment Notes
+                      - textbox "Assignment Notes" [ref=e778]
+                  - generic [ref=e780]:
+                    - button "Submit" [ref=e781] [cursor=pointer]:
+                      - generic [ref=e782]: Submit
+                    - button "Cancel" [ref=e783] [cursor=pointer]:
+                      - generic [ref=e784]: Cancel
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e603]:
+      - generic [ref=e605]:
+        - link "Super Admin logo" [ref=e607] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e608]
+        - button "Collapse sidebar" [ref=e609] [cursor=pointer]:
+          - generic [ref=e610]: Collapse sidebar
+          - img [ref=e611]
+      - navigation [ref=e613]:
+        - list [ref=e614]:
+          - listitem [ref=e615]:
+            - list [ref=e616]:
+              - listitem [ref=e617]:
+                - link "Dashboard" [ref=e618] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e619]
+                  - generic [ref=e621]: Dashboard
+          - listitem [ref=e622]:
+            - generic [ref=e623] [cursor=pointer]:
+              - img [ref=e624]
+              - generic [ref=e626]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e627]:
+                - generic [ref=e628]: Tenant Management
+                - img [ref=e629]
+            - list [ref=e631]:
+              - listitem [ref=e632]:
+                - link "New Tenant Onboarding" [ref=e633] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e637]: New Tenant Onboarding
+              - listitem [ref=e638]:
+                - link "All Tenants" [ref=e639] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e644]: All Tenants
+              - listitem [ref=e645]:
+                - link "Archived Tenants" [ref=e646] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e650]: Archived Tenants
+          - listitem [ref=e651]:
+            - generic [ref=e652] [cursor=pointer]:
+              - img [ref=e653]
+              - generic [ref=e655]: Staff Management
+              - button "Staff Management" [expanded] [ref=e656]:
+                - generic [ref=e657]: Staff Management
+                - img [ref=e658]
+            - list [ref=e660]:
+              - listitem [ref=e661]:
+                - link "All Staff" [ref=e662] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e666]: All Staff
+              - listitem [ref=e667]:
+                - link "Assigned Staff" [ref=e668] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e673]: Assigned Staff
+              - listitem [ref=e674]:
+                - link "Unassigned Staff" [ref=e675] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e680]: Unassigned Staff
+              - listitem [ref=e681]:
+                - link "Archived Staff" [ref=e682] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e686]: Archived Staff
+          - listitem [ref=e687]:
+            - generic [ref=e688] [cursor=pointer]:
+              - img [ref=e689]
+              - generic [ref=e692]: Operations
+              - button "Operations" [ref=e693]:
+                - generic [ref=e694]: Operations
+                - img [ref=e695]
+          - listitem [ref=e697]:
+            - generic [ref=e698] [cursor=pointer]:
+              - img [ref=e699]
+              - generic [ref=e701]: Reports
+              - button "Reports" [expanded] [ref=e702]:
+                - generic [ref=e703]: Reports
+                - img [ref=e704]
+            - list [ref=e706]:
+              - listitem [ref=e707]:
+                - link "Report Center" [ref=e708] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e711]: Report Center
+  - generic:
+    - status

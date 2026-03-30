@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="0" time="3.0">
+    <testcase id="Staff App Launch Test" name="Staff App Launch Test" classname="Staff App Launch Test" time="3.0" status="SUCCESS">
+      <properties>
+        <property name="tags" value="launch, smoke, critical"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

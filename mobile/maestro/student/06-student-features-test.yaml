@@ -1,0 +1,138 @@
+appId: com.maphms.student
+name: "Student App Features Test (Already Logged In)"
+tags:
+  - student-app
+  - features
+  - logged-in
+---
+# Test student app features when already logged in
+# This test assumes the app is already running and user is logged in
+
+# App should already be running - just wait for it to be ready
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Navigate to home/dashboard by pressing back if needed
+- runFlow:
+    when:
+      visible: "(Back|Sports|Booking|Leave|Outpass)"
+    commands:
+      - pressKey: Back
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Back)"
+          commands:
+            - pressKey: Back
+            - waitForAnimationToEnd
+
+# Verify we're on dashboard/home
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions|My Profile|Out-pass|Leave|Attendance|Complaints|Tickets|Notices|Home)"
+    timeout: 10000
+- takeScreenshot: "student/features/01_dashboard"
+
+# Test Profile
+- runFlow:
+    when:
+      visible: "My Profile"
+    commands:
+      - tapOn: "My Profile"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Profile|Name|Phone|Email|Room)"
+          timeout: 10000
+      - takeScreenshot: "student/features/02_profile"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Outpass
+- runFlow:
+    when:
+      visible: "Out-pass"
+    commands:
+      - tapOn: "Out-pass"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Gate Pass|Out Pass|Outpass|Create|New|Request)"
+          timeout: 10000
+      - takeScreenshot: "student/features/03_outpass"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Leave
+- runFlow:
+    when:
+      visible: "Leave"
+    commands:
+      - tapOn: "Leave"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Leave|Regular Leave|Create|New|Request)"
+          timeout: 10000
+      - takeScreenshot: "student/features/04_leave"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Attendance (bottom tab)
+- runFlow:
+    when:
+      visible: "Attendance"
+    commands:
+      - tapOn: "Attendance"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Attendance|Present|Absent|History)"
+          timeout: 10000
+      - takeScreenshot: "student/features/05_attendance"
+      - tapOn: "(Home|Dashboard)"
+      - waitForAnimationToEnd
+
+# Test Complaints
+- runFlow:
+    when:
+      visible: "Complaints"
+    commands:
+      - tapOn: "Complaints"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Complaints|Complaint|Create|New|Submit)"
+          timeout: 10000
+      - takeScreenshot: "student/features/06_complaints"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Tickets
+- runFlow:
+    when:
+      visible: "Tickets"
+    commands:
+      - tapOn: "Tickets"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Tickets|Ticket|Support|Create|New)"
+          timeout: 10000
+      - takeScreenshot: "student/features/07_tickets"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Notices (bottom tab)
+- runFlow:
+    when:
+      visible: "Notices"
+    commands:
+      - tapOn: "Notices"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Notices|Notice|Announcement|Board)"
+          timeout: 10000
+      - takeScreenshot: "student/features/08_notices"
+      - tapOn: "(Home|Dashboard)"
+      - waitForAnimationToEnd
+
+# Final dashboard check
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions|Home)"
+    timeout: 10000
+- takeScreenshot: "student/features/09_final_dashboard"
+

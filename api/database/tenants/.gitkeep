@@ -1,0 +1,7 @@
+# Tenant Databases Directory
+
+This directory holds SQLite database files for each tenant.
+Each tenant gets their own database file: tenant_{uuid}.sqlite
+
+These files are gitignored but the directory structure is preserved.
+

@@ -1,0 +1,62 @@
+{
+    "tenant_overview": {
+        "rows": 25,
+        "file": "\/tmp\/superadmin-reports\/tenant_overview.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "occupancy": {
+        "rows": 29,
+        "file": "\/tmp\/superadmin-reports\/occupancy.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "student_export": {
+        "rows": 200,
+        "file": "\/tmp\/superadmin-reports\/student_export.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "staff_deployment": {
+        "rows": 19,
+        "file": "\/tmp\/superadmin-reports\/staff_deployment.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "attendance": {
+        "rows": 1,
+        "file": "\/tmp\/superadmin-reports\/attendance.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "requests": {
+        "rows": 14,
+        "file": "\/tmp\/superadmin-reports\/requests.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "incidents": {
+        "rows": 0,
+        "file": "\/tmp\/superadmin-reports\/incidents.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "checkout_renewal": {
+        "rows": 200,
+        "file": "\/tmp\/superadmin-reports\/checkout_renewal.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "payments": {
+        "rows": 0,
+        "file": "\/tmp\/superadmin-reports\/payments.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    },
+    "audit_trail": {
+        "rows": 0,
+        "file": "\/tmp\/superadmin-reports\/audit_trail.csv",
+        "from": "2026-01-25",
+        "to": "2026-02-23"
+    }
+}

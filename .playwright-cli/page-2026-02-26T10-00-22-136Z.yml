@@ -1,0 +1,217 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - heading "Student Bulk Upload Intake" [level=1] [ref=e12]: Student Bulk Upload Intake
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - link "Sign in to Google" [ref=e17] [cursor=pointer]:
+              - /url: https://accounts.google.com/Login?continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg%2Fviewform%3Ffbzx%3D-2365047988784778621
+            - text: to save your progress.
+            - button "Learn more" [ref=e18] [cursor=pointer]
+          - generic [ref=e20]: "* Indicates required question"
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - generic [ref=e24]:
+            - heading "Full Name Required question" [level=3] [ref=e27]:
+              - generic [ref=e28]: Full Name
+              - generic "Required question" [ref=e29]: "*"
+            - generic [ref=e34]:
+              - textbox "Full Name Required question" [ref=e35]
+              - generic: Your answer
+        - listitem [ref=e37]:
+          - generic [ref=e39]:
+            - heading "Email Address Required question" [level=3] [ref=e42]:
+              - generic [ref=e43]: Email Address
+              - generic "Required question" [ref=e44]: "*"
+            - generic [ref=e49]:
+              - textbox "Email Address Required question" [ref=e50]
+              - generic: Your answer
+        - listitem [ref=e52]:
+          - generic [ref=e54]:
+            - heading "Mobile Number Required question" [level=3] [ref=e57]:
+              - generic [ref=e58]: Mobile Number
+              - generic "Required question" [ref=e59]: "*"
+            - generic [ref=e64]:
+              - textbox "Mobile Number Required question" [ref=e65]
+              - generic: Your answer
+        - listitem [ref=e67]:
+          - generic [ref=e69]:
+            - heading "Gender Required question" [level=3] [ref=e72]:
+              - generic [ref=e73]: Gender
+              - generic "Required question" [ref=e74]: "*"
+            - radiogroup "Gender Required question" [ref=e77]:
+              - generic [ref=e78]:
+                - generic [ref=e81]:
+                  - radio "male" [ref=e429] [cursor=pointer]
+                  - generic [ref=e85]: male
+                - generic [ref=e88]:
+                  - radio "female" [ref=e432] [cursor=pointer]
+                  - generic [ref=e92]: female
+                - generic [ref=e95]:
+                  - radio "other" [ref=e435] [cursor=pointer]
+                  - generic [ref=e99]: other
+        - listitem [ref=e100]:
+          - generic [ref=e102]:
+            - heading "Date of Birth" [level=3] [ref=e105]:
+              - generic [ref=e106]: Date of Birth
+            - generic "Date of Birth" [ref=e109]:
+              - generic [ref=e110]: Date
+              - textbox "Date" [ref=e115]
+        - listitem [ref=e117]:
+          - generic [ref=e119]:
+            - heading "MAP ID" [level=3] [ref=e122]:
+              - generic [ref=e123]: MAP ID
+            - generic [ref=e128]:
+              - textbox "MAP ID" [ref=e129]
+              - generic: Your answer
+        - listitem [ref=e131]:
+          - generic [ref=e133]:
+            - heading "ERP Number" [level=3] [ref=e136]:
+              - generic [ref=e137]: ERP Number
+            - generic [ref=e142]:
+              - textbox "ERP Number" [ref=e143]
+              - generic: Your answer
+        - listitem [ref=e145]:
+          - generic [ref=e147]:
+            - heading "Department" [level=3] [ref=e150]:
+              - generic [ref=e151]: Department
+            - generic [ref=e156]:
+              - textbox "Department" [ref=e157]
+              - generic: Your answer
+        - listitem [ref=e159]:
+          - generic [ref=e161]:
+            - heading "Year of Study" [level=3] [ref=e164]:
+              - generic [ref=e165]: Year of Study
+            - radiogroup "Year of Study" [ref=e168]:
+              - generic [ref=e169]:
+                - generic [ref=e172]:
+                  - radio "1" [ref=e438] [cursor=pointer]
+                  - generic [ref=e176]: "1"
+                - generic [ref=e179]:
+                  - radio "2" [ref=e441] [cursor=pointer]
+                  - generic [ref=e183]: "2"
+                - generic [ref=e186]:
+                  - radio "3" [ref=e444] [cursor=pointer]
+                  - generic [ref=e190]: "3"
+                - generic [ref=e193]:
+                  - radio "4" [ref=e447] [cursor=pointer]
+                  - generic [ref=e197]: "4"
+                - generic [ref=e200]:
+                  - radio "5" [ref=e450] [cursor=pointer]
+                  - generic [ref=e204]: "5"
+        - listitem [ref=e205]:
+          - generic [ref=e207]:
+            - heading "Father Name" [level=3] [ref=e210]:
+              - generic [ref=e211]: Father Name
+            - generic [ref=e216]:
+              - textbox "Father Name" [ref=e217]
+              - generic: Your answer
+        - listitem [ref=e219]:
+          - generic [ref=e221]:
+            - heading "Father Mobile Number" [level=3] [ref=e224]:
+              - generic [ref=e225]: Father Mobile Number
+            - generic [ref=e230]:
+              - textbox "Father Mobile Number" [ref=e231]
+              - generic: Your answer
+        - listitem [ref=e233]:
+          - generic [ref=e235]:
+            - heading "Mother Name" [level=3] [ref=e238]:
+              - generic [ref=e239]: Mother Name
+            - generic [ref=e244]:
+              - textbox "Mother Name" [ref=e245]
+              - generic: Your answer
+        - listitem [ref=e247]:
+          - generic [ref=e249]:
+            - heading "Mother Mobile Number" [level=3] [ref=e252]:
+              - generic [ref=e253]: Mother Mobile Number
+            - generic [ref=e258]:
+              - textbox "Mother Mobile Number" [ref=e259]
+              - generic: Your answer
+        - listitem [ref=e261]:
+          - generic [ref=e263]:
+            - heading "Local Guardian Name" [level=3] [ref=e266]:
+              - generic [ref=e267]: Local Guardian Name
+            - generic [ref=e272]:
+              - textbox "Local Guardian Name" [ref=e273]
+              - generic: Your answer
+        - listitem [ref=e275]:
+          - generic [ref=e277]:
+            - heading "Local Guardian Contact" [level=3] [ref=e280]:
+              - generic [ref=e281]: Local Guardian Contact
+            - generic [ref=e286]:
+              - textbox "Local Guardian Contact" [ref=e287]
+              - generic: Your answer
+        - listitem [ref=e289]:
+          - generic [ref=e291]:
+            - heading "Local Relationship" [level=3] [ref=e294]:
+              - generic [ref=e295]: Local Relationship
+            - generic [ref=e300]:
+              - textbox "Local Relationship" [ref=e301]
+              - generic: Your answer
+        - listitem [ref=e303]:
+          - generic [ref=e305]:
+            - heading "Local Address" [level=3] [ref=e308]:
+              - generic [ref=e309]: Local Address
+            - generic [ref=e312]:
+              - generic: Your answer
+              - textbox "Local Address" [ref=e314]
+        - listitem [ref=e316]:
+          - generic [ref=e318]:
+            - heading "Blood Group" [level=3] [ref=e321]:
+              - generic [ref=e322]: Blood Group
+            - radiogroup "Blood Group" [ref=e325]:
+              - generic [ref=e326]:
+                - generic [ref=e329]:
+                  - radio "A+" [ref=e453] [cursor=pointer]
+                  - generic [ref=e333]: A+
+                - generic [ref=e336]:
+                  - radio "A-" [ref=e456] [cursor=pointer]
+                  - generic [ref=e340]: A-
+                - generic [ref=e343]:
+                  - radio "B+" [ref=e459] [cursor=pointer]
+                  - generic [ref=e347]: B+
+                - generic [ref=e350]:
+                  - radio "B-" [ref=e462] [cursor=pointer]
+                  - generic [ref=e354]: B-
+                - generic [ref=e357]:
+                  - radio "O+" [ref=e465] [cursor=pointer]
+                  - generic [ref=e361]: O+
+                - generic [ref=e364]:
+                  - radio "O-" [ref=e468] [cursor=pointer]
+                  - generic [ref=e368]: O-
+                - generic [ref=e371]:
+                  - radio "AB+" [ref=e471] [cursor=pointer]
+                  - generic [ref=e375]: AB+
+                - generic [ref=e378]:
+                  - radio "AB-" [ref=e474] [cursor=pointer]
+                  - generic [ref=e382]: AB-
+        - listitem [ref=e383]:
+          - generic [ref=e385]:
+            - heading "Medical Information" [level=3] [ref=e388]:
+              - generic [ref=e389]: Medical Information
+            - radiogroup "Medical Information" [ref=e392]:
+              - generic [ref=e396]:
+                - radio "Option 1" [ref=e477] [cursor=pointer]
+                - generic [ref=e400]: Option 1
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - button "Submit" [ref=e404] [cursor=pointer]:
+            - generic [ref=e407]: Submit
+          - button "Clear form" [ref=e409] [cursor=pointer]:
+            - generic [ref=e412]: Clear form
+        - generic [ref=e413]: Never submit passwords through Google Forms.
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - text: This form was created inside Rorko.com.
+        - paragraph [ref=e416]:
+          - text: Does this form look suspicious?
+          - link "Report" [ref=e417] [cursor=pointer]:
+            - /url: https://drive.google.com/abuse?id=AKkXjoxnRLNhrY7Y8DEdYOQMUCI4gFrSiV-UFQDiwhkMPPtMTCH7M_nHKOHl-1PrO5dP34q_xTess0SrL7GjxRg:0&docurl=https://docs.google.com/forms/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/viewform
+      - link "Google Forms" [ref=e419] [cursor=pointer]:
+        - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+        - img "Google" [ref=e420]
+        - text: Forms
+  - generic [ref=e424]:
+    - button "help and feedback" [ref=e425] [cursor=pointer]
+    - tooltip [ref=e428]: Help and feedback

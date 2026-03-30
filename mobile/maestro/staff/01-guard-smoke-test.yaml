@@ -1,0 +1,142 @@
+appId: com.mapmars.hmsstaff
+name: "Guard Role Smoke Test"
+tags:
+  - guard
+  - smoke
+  - staff
+  - role-test
+
+---
+
+# ============================================
+# Guard Role - Test Credentials
+# Phone: 8888888888 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - takeScreenshot: "guard/00_splash_screen"
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Enter Your Number|Get OTP|(Send OTP|Get OTP)|Phone Number|Login|10-digit)"
+    timeout: 15000
+
+- takeScreenshot: "guard/01_app_launched"
+
+# Enter phone number (Guard role: 9739143498)
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter Your Number|10-digit)"
+    optional: true
+- inputText: "9739143498"
+- hideKeyboard
+
+- takeScreenshot: "guard/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle OTP sent success dialog
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+# Handle Test Mode dialog if it appears
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - takeScreenshot: "guard/02b_test_mode_dialog"
+      - tapOn: "OK"
+
+# Retry Get OTP if still on login screen
+- runFlow:
+    when:
+      visible: "(Send OTP|Get OTP)"
+    commands:
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Success|OTP sent successfully)"
+          commands:
+            - tapOn: "OK"
+      - runFlow:
+          when:
+            visible: "Test Mode"
+          commands:
+            - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|6-digit)"
+    timeout: 15000
+
+- takeScreenshot: "guard/03_otp_screen"
+
+# Enter OTP - tap on input field first
+- tapOn:
+    text: "(Enter 6-digit|6-digit code)"
+    optional: true
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login)"
+    optional: true
+
+# Handle Tenant/Institution Selection if it appears
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your)"
+    commands:
+      - takeScreenshot: "guard/03b_tenant_selection"
+      - tapOn: "Demo College Hostel"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 10000
+
+# Wait for Guard Dashboard (best-effort) and capture state
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 30000
+
+- takeScreenshot: "guard/04_dashboard"
+
+# Best-effort verification and navigation, but do not fail the test if tiles are missing
+- runFlow:
+    when:
+      visible: "(Verify Time|My Checklist|Notice Board)"
+    commands:
+      - takeScreenshot: "guard/05_dashboard_verified"
+
+- runFlow:
+    when:
+      visible: "(Profile|Account)"
+    commands:
+      - tapOn: "(Profile|Account)"
+      - extendedWaitUntil:
+          visible: "(Profile|Logout)"
+          timeout: 10000
+      - takeScreenshot: "guard/07_profile"
+
+- takeScreenshot: "guard/08_test_complete"

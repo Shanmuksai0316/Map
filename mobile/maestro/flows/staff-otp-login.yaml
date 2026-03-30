@@ -1,0 +1,74 @@
+appId: com.mapmars.hmsstaff
+name: "Staff OTP Login Flow"
+---
+
+# Inputs via env:
+#   phone: phone number for login (use test numbers like 8888888888)
+#   otp: otp code (use 123456 for test mode)
+#   dashboardRegex: Regex to verify dashboard loaded
+
+# Wait for login screen to load
+- extendedWaitUntil:
+    visible: "(Phone Number|Enter your registered phone)"
+    timeout: 10000
+
+- takeScreenshot: "login/01_login_screen"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter 10-digit)"
+    optional: true
+- inputText: ${phone}
+- hideKeyboard
+
+- takeScreenshot: "login/02_phone_entered"
+
+# Tap Send OTP
+- extendedWaitUntil:
+    visible: "Send OTP"
+    timeout: 5000
+- tapOn: "Send OTP"
+
+# Handle any error dialogs
+- runFlow:
+    when:
+      visible: "(Error|Unable to detect|Try again)"
+    commands:
+      - takeScreenshot: "login/error_dialog"
+      - tapOn: "OK"
+
+# Handle Test Mode dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - takeScreenshot: "login/03_test_mode_dialog"
+      - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit)"
+    timeout: 15000
+
+- takeScreenshot: "login/04_otp_screen"
+
+# Enter OTP
+- tapOn:
+    text: "(Enter OTP|OTP|Enter 6-digit)"
+    optional: true
+- inputText: ${otp}
+- hideKeyboard
+
+- takeScreenshot: "login/05_otp_entered"
+
+# Submit OTP
+- tapOn: 
+    text: "(Verify OTP|Verify|Submit|Login)"
+
+# Wait for dashboard
+- extendedWaitUntil:
+    visible: ${dashboardRegex}
+    timeout: 25000
+
+- takeScreenshot: "login/06_dashboard_loaded"
+

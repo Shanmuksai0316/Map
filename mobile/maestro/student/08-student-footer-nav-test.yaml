@@ -1,0 +1,80 @@
+appId: com.maphms.student
+name: "Student App Footer Navigation Test"
+tags:
+  - student-app
+  - footer
+  - navigation
+  - e2e
+---
+# Minimal test focused on verifying bottom footer navigation tabs.
+# Assumes the app is already installed and may or may not be logged in.
+
+# Step 1: Tenant selection (if shown)
+- runFlow:
+    when:
+      visible: "(Select.*Tenant|Choose.*Institution|Tenant.*Selection)"
+    commands:
+      - tapOn: "${tenant_code}"
+      - waitForAnimationToEnd
+
+# Step 2: Login flow (phone + OTP) - only if login screen is visible
+- runFlow:
+    when:
+      visible: "(Phone|Mobile|Number|Login|Sign.*In)"
+    commands:
+      - inputText: "${phone}"
+      - tapOn: "(Send.*OTP|Get.*OTP|Request.*OTP|Continue)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(OTP|Verification|Enter.*Code|6.*digit)"
+          timeout: 10000
+      - inputText: "${otp}"
+      - tapOn: "(Verify|Submit|Continue|Login)"
+      - waitForAnimationToEnd
+
+# Step 3: Ensure we are on the main dashboard / home
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Home|Quick.*Actions|Actions|VIDYARTHI)"
+    timeout: 20000
+- takeScreenshot: "student/footer-nav/00_dashboard"
+
+# Step 4: Footer navigation sanity check (uses explicit testIDs)
+- runFlow:
+    when:
+      visible: "(VIDYARTHI|Actions|Dashboard|Home)"
+    commands:
+      # Attendance tab
+      - tapOn:
+          id: "footer-tab-attendance"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "My Attendance"
+          timeout: 10000
+      - takeScreenshot: "student/footer-nav/01_attendance"
+
+      # Social Media tab
+      - tapOn:
+          id: "footer-tab-socialmedia"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "Share this application"
+          timeout: 10000
+      - takeScreenshot: "student/footer-nav/02_social"
+
+      # Profile tab
+      - tapOn:
+          id: "footer-tab-profile"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "Request Account Deletion"
+          timeout: 10000
+      - takeScreenshot: "student/footer-nav/03_profile"
+
+      # Home tab
+      - tapOn:
+          id: "footer-tab-home"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "OMAP Services Management Pvt Ltd"
+          timeout: 10000
+      - takeScreenshot: "student/footer-nav/04_home"

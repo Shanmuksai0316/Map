@@ -1,0 +1,53 @@
+appId: com.maphms.student
+name: "iOS Login Dev Bypass Check"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- assertVisible:
+    id: "phone-input"
+- takeScreenshot: "bypass/01_login"
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "bypass/02_phone"
+
+- tapOn:
+    id: "send-otp-button"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Test Mode|Success|OK|Alert)"
+    commands:
+      - tapOn: "(OK|Close|Done)"
+      - waitForAnimationToEnd
+
+- assertVisible: "Verification Code"
+- takeScreenshot: "bypass/03_otp"
+
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- takeScreenshot: "bypass/04_otp_entered"
+
+- tapOn:
+    id: "verify-otp-button"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- assertVisible: "My Profile"
+- takeScreenshot: "bypass/05_dashboard"

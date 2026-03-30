@@ -1,0 +1,1109 @@
+CREATE TABLE IF NOT EXISTS "migrations"(
+  "id" integer primary key autoincrement not null,
+  "migration" varchar not null,
+  "batch" integer not null
+);
+CREATE TABLE IF NOT EXISTS "users"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "phone" varchar not null,
+  "name" varchar not null,
+  "email" varchar,
+  "kind" varchar not null,
+  "archived" tinyint(1) not null default '0',
+  "archived_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "password" varchar,
+  "remember_token" varchar,
+  "role_hint" varchar,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade
+);
+CREATE INDEX "users_tenant_id_kind_index" on "users"("tenant_id", "kind");
+CREATE UNIQUE INDEX "users_phone_unique" on "users"("phone");
+CREATE TABLE IF NOT EXISTS "user_roles"(
+  "id" integer primary key autoincrement not null,
+  "user_id" integer not null,
+  "role" varchar not null,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("user_id") references "users"("id") on delete cascade
+);
+CREATE INDEX "user_roles_user_id_role_index" on "user_roles"(
+  "user_id",
+  "role"
+);
+CREATE TABLE IF NOT EXISTS "sessions"(
+  "id" varchar not null,
+  "user_id" integer,
+  "ip_address" varchar,
+  "user_agent" text,
+  "payload" text not null,
+  "last_activity" integer not null,
+  primary key("id")
+);
+CREATE INDEX "sessions_user_id_index" on "sessions"("user_id");
+CREATE INDEX "sessions_last_activity_index" on "sessions"("last_activity");
+CREATE TABLE IF NOT EXISTS "cache"(
+  "key" varchar not null,
+  "value" text not null,
+  "expiration" integer not null,
+  primary key("key")
+);
+CREATE TABLE IF NOT EXISTS "cache_locks"(
+  "key" varchar not null,
+  "owner" varchar not null,
+  "expiration" integer not null,
+  primary key("key")
+);
+CREATE TABLE IF NOT EXISTS "jobs"(
+  "id" integer primary key autoincrement not null,
+  "queue" varchar not null,
+  "payload" text not null,
+  "attempts" integer not null,
+  "reserved_at" integer,
+  "available_at" integer not null,
+  "created_at" integer not null
+);
+CREATE INDEX "jobs_queue_index" on "jobs"("queue");
+CREATE TABLE IF NOT EXISTS "job_batches"(
+  "id" varchar not null,
+  "name" varchar not null,
+  "total_jobs" integer not null,
+  "pending_jobs" integer not null,
+  "failed_jobs" integer not null,
+  "failed_job_ids" text not null,
+  "options" text,
+  "cancelled_at" integer,
+  "created_at" integer not null,
+  "finished_at" integer,
+  primary key("id")
+);
+CREATE TABLE IF NOT EXISTS "failed_jobs"(
+  "id" integer primary key autoincrement not null,
+  "uuid" varchar not null,
+  "connection" text not null,
+  "queue" text not null,
+  "payload" text not null,
+  "exception" text not null,
+  "failed_at" datetime not null default CURRENT_TIMESTAMP
+);
+CREATE UNIQUE INDEX "failed_jobs_uuid_unique" on "failed_jobs"("uuid");
+CREATE TABLE IF NOT EXISTS "tenants"(
+  "id" integer primary key autoincrement not null,
+  "code" varchar not null,
+  "name" varchar not null,
+  "addon_security" tinyint(1) not null default '0',
+  "addon_sports" tinyint(1) not null default '0',
+  "addon_laundry" tinyint(1) not null default '0',
+  "settings" text,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE UNIQUE INDEX "tenants_code_unique" on "tenants"("code");
+CREATE TABLE IF NOT EXISTS "campuses"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "code" varchar not null,
+  "name" varchar not null,
+  "address" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "campuses_tenant_id_code_unique" on "campuses"(
+  "tenant_id",
+  "code"
+);
+CREATE TABLE IF NOT EXISTS "hostels"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer not null,
+  "code" varchar not null,
+  "name" varchar not null,
+  "gender_mode" varchar not null,
+  "curfew_time" time not null,
+  "overnight_enabled" tinyint(1) not null default '0',
+  "visiting_start" time,
+  "visiting_end" time,
+  "settings" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("campus_id") references "campuses"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "hostels_tenant_id_code_unique" on "hostels"(
+  "tenant_id",
+  "code"
+);
+CREATE TABLE IF NOT EXISTS "students"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "user_id" integer not null,
+  "hostel_id" integer,
+  "map_student_id" varchar not null,
+  "student_uid" varchar not null,
+  "roll_no" varchar,
+  "program" varchar,
+  "year_of_study" integer,
+  "admission_year" integer,
+  "guardian" text,
+  "medical_notes" text,
+  "correspondence_address" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("user_id") references "users"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete set null
+);
+CREATE UNIQUE INDEX "students_tenant_id_student_uid_unique" on "students"(
+  "tenant_id",
+  "student_uid"
+);
+CREATE UNIQUE INDEX "students_map_student_id_unique" on "students"(
+  "map_student_id"
+);
+CREATE TABLE IF NOT EXISTS "permissions"(
+  "id" integer primary key autoincrement not null,
+  "name" varchar not null,
+  "guard_name" varchar not null,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE UNIQUE INDEX "permissions_name_guard_name_unique" on "permissions"(
+  "name",
+  "guard_name"
+);
+CREATE TABLE IF NOT EXISTS "roles"(
+  "id" integer primary key autoincrement not null,
+  "name" varchar not null,
+  "guard_name" varchar not null,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE UNIQUE INDEX "roles_name_guard_name_unique" on "roles"(
+  "name",
+  "guard_name"
+);
+CREATE TABLE IF NOT EXISTS "model_has_permissions"(
+  "permission_id" integer not null,
+  "model_type" varchar not null,
+  "model_id" integer not null,
+  foreign key("permission_id") references "permissions"("id") on delete cascade,
+  primary key("permission_id", "model_id", "model_type")
+);
+CREATE INDEX "model_has_permissions_model_id_model_type_index" on "model_has_permissions"(
+  "model_id",
+  "model_type"
+);
+CREATE TABLE IF NOT EXISTS "model_has_roles"(
+  "role_id" integer not null,
+  "model_type" varchar not null,
+  "model_id" integer not null,
+  foreign key("role_id") references "roles"("id") on delete cascade,
+  primary key("role_id", "model_id", "model_type")
+);
+CREATE INDEX "model_has_roles_model_id_model_type_index" on "model_has_roles"(
+  "model_id",
+  "model_type"
+);
+CREATE TABLE IF NOT EXISTS "role_has_permissions"(
+  "permission_id" integer not null,
+  "role_id" integer not null,
+  foreign key("permission_id") references "permissions"("id") on delete cascade,
+  foreign key("role_id") references "roles"("id") on delete cascade,
+  primary key("permission_id", "role_id")
+);
+CREATE TABLE IF NOT EXISTS "out_passes"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "student_id" integer not null,
+  "hostel_id" integer not null,
+  "reason" varchar not null,
+  "overnight" tinyint(1) not null default('0'),
+  "status" varchar not null default('pending'),
+  "requested_at" datetime not null,
+  "decided_at" datetime,
+  "valid_until" datetime not null,
+  "note" text,
+  "idempotency_key" varchar,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "decision_by" integer,
+  foreign key("hostel_id") references hostels("id") on delete cascade on update no action,
+  foreign key("student_id") references students("id") on delete cascade on update no action,
+  foreign key("tenant_id") references tenants("id") on delete cascade on update no action,
+  foreign key("decision_by") references "users"("id") on delete set null
+);
+CREATE INDEX "out_passes_tenant_id_hostel_id_status_requested_at_index" on "out_passes"(
+  "tenant_id",
+  "hostel_id",
+  "status",
+  "requested_at"
+);
+CREATE UNIQUE INDEX "out_passes_tenant_id_idempotency_key_unique" on "out_passes"(
+  "tenant_id",
+  "idempotency_key"
+);
+CREATE INDEX "out_passes_tenant_id_student_id_requested_at_index" on "out_passes"(
+  "tenant_id",
+  "student_id",
+  "requested_at"
+);
+CREATE TABLE IF NOT EXISTS "personal_access_tokens"(
+  "id" integer primary key autoincrement not null,
+  "tokenable_type" varchar not null,
+  "tokenable_id" integer not null,
+  "name" text not null,
+  "token" varchar not null,
+  "abilities" text,
+  "last_used_at" datetime,
+  "expires_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE INDEX "personal_access_tokens_tokenable_type_tokenable_id_index" on "personal_access_tokens"(
+  "tokenable_type",
+  "tokenable_id"
+);
+CREATE UNIQUE INDEX "personal_access_tokens_token_unique" on "personal_access_tokens"(
+  "token"
+);
+CREATE INDEX "personal_access_tokens_expires_at_index" on "personal_access_tokens"(
+  "expires_at"
+);
+CREATE TABLE IF NOT EXISTS "out_pass_histories"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "out_pass_id" integer not null,
+  "acted_by" integer,
+  "from_status" varchar,
+  "to_status" varchar not null,
+  "note" text,
+  "timeline_label" varchar,
+  "timeline_description" text,
+  "changed_at" datetime not null,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("out_pass_id") references "out_passes"("id") on delete cascade,
+  foreign key("acted_by") references "users"("id") on delete set null
+);
+CREATE INDEX "out_pass_histories_tenant_id_out_pass_id_changed_at_index" on "out_pass_histories"(
+  "tenant_id",
+  "out_pass_id",
+  "changed_at"
+);
+CREATE TABLE IF NOT EXISTS "out_pass_exports"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "requested_by" integer not null,
+  "status" varchar not null default 'pending',
+  "filters" text,
+  "file_path" varchar,
+  "error" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("requested_by") references "users"("id") on delete cascade
+);
+CREATE INDEX "out_pass_exports_tenant_id_status_created_at_index" on "out_pass_exports"(
+  "tenant_id",
+  "status",
+  "created_at"
+);
+CREATE TABLE IF NOT EXISTS "rooms"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer not null,
+  "hostel_id" integer not null,
+  "block_code" varchar,
+  "floor_code" varchar,
+  "number" varchar not null,
+  "capacity" integer not null default '1',
+  "is_active" tinyint(1) not null default '1',
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("campus_id") references "campuses"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "rooms_tenant_id_hostel_id_number_unique" on "rooms"(
+  "tenant_id",
+  "hostel_id",
+  "number"
+);
+CREATE INDEX "rooms_tenant_id_hostel_id_block_code_floor_code_index" on "rooms"(
+  "tenant_id",
+  "hostel_id",
+  "block_code",
+  "floor_code"
+);
+CREATE TABLE IF NOT EXISTS "room_beds"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "room_id" integer not null,
+  "hostel_id" integer not null,
+  "code" varchar not null,
+  "status" varchar not null default 'available',
+  "occupied_at" datetime,
+  "released_at" datetime,
+  "meta" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("room_id") references "rooms"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "room_beds_tenant_id_room_id_code_unique" on "room_beds"(
+  "tenant_id",
+  "room_id",
+  "code"
+);
+CREATE INDEX "room_beds_tenant_id_status_index" on "room_beds"(
+  "tenant_id",
+  "status"
+);
+CREATE TABLE IF NOT EXISTS "room_allocations"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "student_id" integer not null,
+  "room_bed_id" integer not null,
+  "hostel_id" integer not null,
+  "effective_from" datetime not null,
+  "effective_to" datetime,
+  "is_active" tinyint(1) not null default '1',
+  "note" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("student_id") references "students"("id") on delete cascade,
+  foreign key("room_bed_id") references "room_beds"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade
+);
+CREATE INDEX "room_allocations_tenant_id_student_id_is_active_index" on "room_allocations"(
+  "tenant_id",
+  "student_id",
+  "is_active"
+);
+CREATE INDEX "room_allocations_tenant_id_room_bed_id_is_active_index" on "room_allocations"(
+  "tenant_id",
+  "room_bed_id",
+  "is_active"
+);
+CREATE UNIQUE INDEX "room_allocations_unique_student_active" on "room_allocations"(
+  "tenant_id",
+  "student_id",
+  "is_active"
+);
+CREATE UNIQUE INDEX "room_allocations_unique_bed_active" on "room_allocations"(
+  "tenant_id",
+  "room_bed_id",
+  "is_active"
+);
+CREATE TABLE IF NOT EXISTS "room_blocks"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "hostel_id" integer not null,
+  "code" varchar not null,
+  "name" varchar not null,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "room_blocks_tenant_id_hostel_id_code_unique" on "room_blocks"(
+  "tenant_id",
+  "hostel_id",
+  "code"
+);
+CREATE TABLE IF NOT EXISTS "room_blocked_beds"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "room_bed_id" integer not null,
+  "blocked_by" integer,
+  "reason" varchar,
+  "effective_from" datetime not null,
+  "effective_to" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("room_bed_id") references "room_beds"("id") on delete cascade,
+  foreign key("blocked_by") references "users"("id") on delete set null
+);
+CREATE INDEX "room_blocked_beds_tenant_id_room_bed_id_index" on "room_blocked_beds"(
+  "tenant_id",
+  "room_bed_id"
+);
+CREATE TABLE IF NOT EXISTS "onboarding_wizards"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer,
+  "status" varchar not null default 'draft',
+  "payload" text,
+  "ready_checks" text,
+  "summary" text,
+  "completed_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade
+);
+CREATE TABLE IF NOT EXISTS "import_jobs"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "kind" varchar not null,
+  "status" varchar not null,
+  "filename" varchar not null,
+  "total_rows" integer not null default '0',
+  "error_rows" integer not null default '0',
+  "processed_rows" integer not null default '0',
+  "inserted_rows" integer not null default '0',
+  "updated_rows" integer not null default '0',
+  "meta" text,
+  "committed_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade
+);
+CREATE INDEX "import_jobs_tenant_id_kind_index" on "import_jobs"(
+  "tenant_id",
+  "kind"
+);
+CREATE TABLE IF NOT EXISTS "import_errors"(
+  "id" integer primary key autoincrement not null,
+  "import_job_id" integer not null,
+  "row_number" integer not null,
+  "code" varchar not null,
+  "message" varchar not null,
+  "row_snapshot" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("import_job_id") references "import_jobs"("id") on delete cascade
+);
+CREATE TABLE IF NOT EXISTS "attendance_logs"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "attendance_session_id" integer not null,
+  "student_id" integer not null,
+  "status" varchar check("status" in('present', 'absent', 'late', 'excused')) not null default 'present',
+  "marked_at" datetime not null,
+  "marked_by" integer,
+  "note" text,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "session_id" integer,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("attendance_session_id") references "attendance_sessions"("id") on delete cascade,
+  foreign key("student_id") references "students"("id") on delete cascade,
+  foreign key("marked_by") references "users"("id") on delete set null
+);
+CREATE UNIQUE INDEX "attendance_logs_attendance_session_id_student_id_unique" on "attendance_logs"(
+  "attendance_session_id",
+  "student_id"
+);
+CREATE INDEX "attendance_logs_tenant_id_status_index" on "attendance_logs"(
+  "tenant_id",
+  "status"
+);
+CREATE TABLE IF NOT EXISTS "laundry_cycles"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "hostel_id" integer,
+  "machine_label" varchar not null,
+  "status" varchar check("status" in('scheduled', 'in_progress', 'completed')) not null default 'scheduled',
+  "started_at" datetime,
+  "completed_at" datetime,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete set null
+);
+CREATE INDEX "laundry_cycles_tenant_id_status_index" on "laundry_cycles"(
+  "tenant_id",
+  "status"
+);
+CREATE TABLE IF NOT EXISTS "laundry_requests"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer,
+  "hostel_id" integer,
+  "student_id" integer not null,
+  "laundry_cycle_id" integer,
+  "service_type" varchar check("service_type" in('wash_only', 'wash_and_fold', 'dry_clean')) not null,
+  "status" varchar check("status" in('queued', 'washing', 'drying', 'ready', 'completed', 'cancelled')) not null default 'queued',
+  "bag_count" integer not null default '1',
+  "requested_at" datetime not null,
+  "ready_at" datetime,
+  "completed_at" datetime,
+  "special_instructions" text,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("campus_id") references "campuses"("id") on delete set null,
+  foreign key("hostel_id") references "hostels"("id") on delete set null,
+  foreign key("student_id") references "students"("id") on delete cascade,
+  foreign key("laundry_cycle_id") references "laundry_cycles"("id") on delete set null
+);
+CREATE INDEX "laundry_requests_tenant_id_status_index" on "laundry_requests"(
+  "tenant_id",
+  "status"
+);
+CREATE INDEX "laundry_requests_tenant_id_student_id_index" on "laundry_requests"(
+  "tenant_id",
+  "student_id"
+);
+CREATE TABLE IF NOT EXISTS "sports_events"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer,
+  "hostel_id" integer,
+  "sport" varchar not null,
+  "name" varchar not null,
+  "scheduled_at" datetime not null,
+  "venue" varchar,
+  "status" varchar check("status" in('scheduled', 'completed', 'cancelled')) not null default 'scheduled',
+  "capacity" integer not null default '0',
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("campus_id") references "campuses"("id") on delete set null,
+  foreign key("hostel_id") references "hostels"("id") on delete set null
+);
+CREATE INDEX "sports_events_tenant_id_scheduled_at_index" on "sports_events"(
+  "tenant_id",
+  "scheduled_at"
+);
+CREATE INDEX "sports_events_tenant_id_status_index" on "sports_events"(
+  "tenant_id",
+  "status"
+);
+CREATE TABLE IF NOT EXISTS "sports_enrollments"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "sports_event_id" integer not null,
+  "student_id" integer not null,
+  "status" varchar check("status" in('registered', 'waitlisted', 'attended', 'no_show', 'cancelled')) not null default 'registered',
+  "enrolled_at" datetime not null,
+  "attended_at" datetime,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("sports_event_id") references "sports_events"("id") on delete cascade,
+  foreign key("student_id") references "students"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "sports_enrollments_sports_event_id_student_id_unique" on "sports_enrollments"(
+  "sports_event_id",
+  "student_id"
+);
+CREATE INDEX "sports_enrollments_tenant_id_status_index" on "sports_enrollments"(
+  "tenant_id",
+  "status"
+);
+CREATE TABLE IF NOT EXISTS "sports_equipment_loans"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "student_id" integer not null,
+  "item_name" varchar not null,
+  "checked_out_at" datetime not null,
+  "due_at" datetime,
+  "returned_at" datetime,
+  "condition_notes" text,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("student_id") references "students"("id") on delete cascade
+);
+CREATE INDEX "sports_equipment_loans_tenant_id_item_name_index" on "sports_equipment_loans"(
+  "tenant_id",
+  "item_name"
+);
+CREATE INDEX "sports_equipment_loans_tenant_id_returned_at_index" on "sports_equipment_loans"(
+  "tenant_id",
+  "returned_at"
+);
+CREATE TABLE IF NOT EXISTS "notices"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer,
+  "hostel_id" integer,
+  "title" varchar not null,
+  "body" text not null,
+  "status" varchar check("status" in('draft', 'scheduled', 'published', 'archived')) not null default 'draft',
+  "audience" varchar check("audience" in('all_students', 'hostel_students', 'staff')) not null,
+  "channels" text,
+  "publish_at" datetime,
+  "published_at" datetime,
+  "expires_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "deleted_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("campus_id") references "campuses"("id") on delete set null,
+  foreign key("hostel_id") references "hostels"("id") on delete set null
+);
+CREATE INDEX "notices_tenant_id_status_index" on "notices"(
+  "tenant_id",
+  "status"
+);
+CREATE INDEX "notices_tenant_id_publish_at_index" on "notices"(
+  "tenant_id",
+  "publish_at"
+);
+CREATE TABLE IF NOT EXISTS "checklist_templates"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "role" varchar not null,
+  "title" varchar not null,
+  "tasks" text not null,
+  "active" tinyint(1) not null default '1',
+  "created_by_user_id" integer not null,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("created_by_user_id") references "users"("id")
+);
+CREATE INDEX "checklist_templates_tenant_id_role_active_index" on "checklist_templates"(
+  "tenant_id",
+  "role",
+  "active"
+);
+CREATE TABLE IF NOT EXISTS "checklist_instances"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "template_id" integer not null,
+  "date" date not null,
+  "shift" varchar not null default 'Daily',
+  "role" varchar not null,
+  "assignee_user_id" integer not null,
+  "status" varchar not null default 'Pending',
+  "total_tasks" integer not null,
+  "completed_tasks" integer not null default '0',
+  "submitted_at" datetime,
+  "manager_user_id" integer,
+  "manager_note" text,
+  "reviewed_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "review_status" varchar not null default 'Pending',
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("template_id") references "checklist_templates"("id") on delete cascade,
+  foreign key("assignee_user_id") references "users"("id"),
+  foreign key("manager_user_id") references "users"("id") on delete set null
+);
+CREATE INDEX "checklist_instances_tenant_id_template_id_index" on "checklist_instances"(
+  "tenant_id",
+  "template_id"
+);
+CREATE UNIQUE INDEX "checklists_unique_instance" on "checklist_instances"(
+  "tenant_id",
+  "template_id",
+  "date",
+  "shift",
+  "assignee_user_id"
+);
+CREATE TABLE IF NOT EXISTS "checklist_items"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "instance_id" integer not null,
+  "code" varchar not null,
+  "label" varchar not null,
+  "state" varchar not null default 'Pending',
+  "comment" text,
+  "photo_urls" text,
+  "completed_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("instance_id") references "checklist_instances"("id") on delete cascade
+);
+CREATE UNIQUE INDEX "checklist_items_instance_id_code_unique" on "checklist_items"(
+  "instance_id",
+  "code"
+);
+CREATE TABLE IF NOT EXISTS "checklist_job_events"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "instance_id" integer not null,
+  "event_type" varchar not null,
+  "phase" varchar,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE INDEX "checklist_job_events_tenant_id_index" on "checklist_job_events"(
+  "tenant_id"
+);
+CREATE INDEX "checklist_job_events_instance_id_index" on "checklist_job_events"(
+  "instance_id"
+);
+CREATE UNIQUE INDEX "uniq_checklist_job_event" on "checklist_job_events"(
+  "instance_id",
+  "event_type",
+  "phase"
+);
+CREATE TABLE IF NOT EXISTS "gate_entries"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer,
+  "hostel_id" integer,
+  "guard_id" integer,
+  "student_id" integer,
+  "event" varchar not null,
+  "occurred_at" datetime not null,
+  "source" varchar not null default('mobile'),
+  "was_offline" tinyint(1) not null default('0'),
+  "synced_at" datetime,
+  "notes" varchar,
+  "metadata" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "client_reference" varchar,
+  "outpass_id" integer,
+  "direction" varchar check("direction" in('out', 'in')),
+  "method" varchar check("method" in('qr', 'otp', 'manual')),
+  "verified" tinyint(1) not null default '1',
+  "verified_at" datetime,
+  "guard_user_id" integer,
+  "note" text,
+  "late_minutes" integer not null default '0',
+  foreign key("student_id") references students("id") on delete set null on update no action,
+  foreign key("guard_id") references users("id") on delete set null on update no action,
+  foreign key("hostel_id") references hostels("id") on delete set null on update no action,
+  foreign key("campus_id") references campuses("id") on delete set null on update no action,
+  foreign key("tenant_id") references tenants("id") on delete cascade on update no action,
+  foreign key("outpass_id") references "out_passes"("id") on delete set null,
+  foreign key("guard_user_id") references "users"("id") on delete set null
+);
+CREATE UNIQUE INDEX "gate_entries_tenant_id_client_reference_unique" on "gate_entries"(
+  "tenant_id",
+  "client_reference"
+);
+CREATE INDEX "gate_entries_tenant_id_occurred_at_index" on "gate_entries"(
+  "tenant_id",
+  "occurred_at"
+);
+CREATE INDEX "gate_entries_tenant_id_student_id_index" on "gate_entries"(
+  "tenant_id",
+  "student_id"
+);
+CREATE INDEX "gate_entries_tenant_id_student_id_created_at_index" on "gate_entries"(
+  "tenant_id",
+  "student_id",
+  "created_at"
+);
+CREATE TABLE IF NOT EXISTS "gate_devices"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "hostel_id" integer not null,
+  "device_uuid" varchar not null,
+  "name" varchar not null,
+  "is_active" tinyint(1) not null default '1',
+  "enrolled_by_user_id" integer,
+  "enrolled_at" datetime,
+  "last_seen_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade,
+  foreign key("enrolled_by_user_id") references "users"("id") on delete set null
+);
+CREATE INDEX "gate_devices_tenant_id_hostel_id_index" on "gate_devices"(
+  "tenant_id",
+  "hostel_id"
+);
+CREATE UNIQUE INDEX "gate_devices_tenant_id_device_uuid_unique" on "gate_devices"(
+  "tenant_id",
+  "device_uuid"
+);
+CREATE TABLE IF NOT EXISTS "guest_visits"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "hostel_id" integer not null,
+  "student_id" integer not null,
+  "name" varchar not null,
+  "phone" varchar not null,
+  "whom_to_meet" varchar not null,
+  "visit_date" date not null,
+  "status" varchar check("status" in('pre_registered', 'allowed', 'denied')) not null default 'pre_registered',
+  "created_by_user_id" integer not null,
+  "allowed_by_user_id" integer,
+  "denied_by_user_id" integer,
+  "allowed_at" datetime,
+  "denied_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade,
+  foreign key("student_id") references "students"("id") on delete cascade,
+  foreign key("created_by_user_id") references "users"("id") on delete cascade,
+  foreign key("allowed_by_user_id") references "users"("id") on delete set null,
+  foreign key("denied_by_user_id") references "users"("id") on delete set null
+);
+CREATE INDEX "guest_visits_tenant_id_hostel_id_visit_date_index" on "guest_visits"(
+  "tenant_id",
+  "hostel_id",
+  "visit_date"
+);
+CREATE INDEX "guest_visits_tenant_id_student_id_visit_date_index" on "guest_visits"(
+  "tenant_id",
+  "student_id",
+  "visit_date"
+);
+CREATE UNIQUE INDEX "unique_guest_visit" on "guest_visits"(
+  "tenant_id",
+  "hostel_id",
+  "student_id",
+  "visit_date",
+  "name",
+  "phone"
+);
+CREATE TABLE IF NOT EXISTS "tickets"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "hostel_id" integer not null,
+  "category" varchar check("category" in('housekeeping', 'maintenance', 'security', 'laundry', 'other')) not null default 'other',
+  "priority" varchar check("priority" in('low', 'medium', 'high')) not null default 'medium',
+  "status" varchar check("status" in('open', 'in_progress', 'on_hold', 'resolved', 'closed')) not null default 'open',
+  "reporter_student_id" integer,
+  "reporter_user_id" integer,
+  "assignee_user_id" integer,
+  "title" varchar not null,
+  "description" text not null,
+  "photos" text,
+  "sla_due_at" datetime,
+  "closed_at" datetime,
+  "created_by_user_id" integer not null,
+  "updated_by_user_id" integer,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "deleted_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("hostel_id") references "hostels"("id") on delete cascade,
+  foreign key("reporter_student_id") references "students"("id") on delete set null,
+  foreign key("reporter_user_id") references "users"("id") on delete set null,
+  foreign key("assignee_user_id") references "users"("id") on delete set null,
+  foreign key("created_by_user_id") references "users"("id") on delete cascade,
+  foreign key("updated_by_user_id") references "users"("id") on delete set null
+);
+CREATE INDEX "tickets_tenant_id_hostel_id_status_index" on "tickets"(
+  "tenant_id",
+  "hostel_id",
+  "status"
+);
+CREATE INDEX "tickets_tenant_id_status_created_at_index" on "tickets"(
+  "tenant_id",
+  "status",
+  "created_at"
+);
+CREATE INDEX "tickets_tenant_id_assignee_user_id_status_index" on "tickets"(
+  "tenant_id",
+  "assignee_user_id",
+  "status"
+);
+CREATE INDEX "tickets_tenant_id_reporter_student_id_index" on "tickets"(
+  "tenant_id",
+  "reporter_student_id"
+);
+CREATE INDEX "tickets_tenant_id_reporter_user_id_index" on "tickets"(
+  "tenant_id",
+  "reporter_user_id"
+);
+CREATE INDEX "tickets_sla_due_at_index" on "tickets"("sla_due_at");
+CREATE TABLE IF NOT EXISTS "ticket_comments"(
+  "id" integer primary key autoincrement not null,
+  "ticket_id" integer not null,
+  "user_id" integer not null,
+  "body" text not null,
+  "attachments" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  "attachment_key" varchar,
+  "attachment_mime" varchar,
+  "attachment_size" integer,
+  "attachment_safe" tinyint(1),
+  foreign key("ticket_id") references "tickets"("id") on delete cascade,
+  foreign key("user_id") references "users"("id") on delete cascade
+);
+CREATE INDEX "ticket_comments_ticket_id_created_at_index" on "ticket_comments"(
+  "ticket_id",
+  "created_at"
+);
+CREATE INDEX "ticket_comments_user_id_created_at_index" on "ticket_comments"(
+  "user_id",
+  "created_at"
+);
+CREATE INDEX "ticket_comments_attachment_key_index" on "ticket_comments"(
+  "attachment_key"
+);
+CREATE TABLE IF NOT EXISTS "push_device_tokens"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "user_id" integer not null,
+  "token" varchar not null,
+  "platform" varchar,
+  "last_seen_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("tenant_id") references "tenants"("id") on delete cascade,
+  foreign key("user_id") references "users"("id") on delete cascade
+);
+CREATE INDEX "push_device_tokens_tenant_id_index" on "push_device_tokens"(
+  "tenant_id"
+);
+CREATE INDEX "push_device_tokens_user_id_index" on "push_device_tokens"(
+  "user_id"
+);
+CREATE UNIQUE INDEX "push_device_tokens_token_unique" on "push_device_tokens"(
+  "token"
+);
+CREATE TABLE IF NOT EXISTS "staff_assignments"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "user_id" integer not null,
+  "hostel_id" integer not null,
+  "assigned_at" datetime,
+  "revoked_at" datetime,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE UNIQUE INDEX "staff_assignments_tenant_id_user_id_hostel_id_unique" on "staff_assignments"(
+  "tenant_id",
+  "user_id",
+  "hostel_id"
+);
+CREATE INDEX "staff_assignments_tenant_id_index" on "staff_assignments"(
+  "tenant_id"
+);
+CREATE INDEX "staff_assignments_user_id_index" on "staff_assignments"(
+  "user_id"
+);
+CREATE INDEX "staff_assignments_hostel_id_index" on "staff_assignments"(
+  "hostel_id"
+);
+CREATE TABLE IF NOT EXISTS "reports"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "name" varchar not null,
+  "params" text not null,
+  "status" varchar not null default 'queued',
+  "storage_path" varchar,
+  "error" text,
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE INDEX "reports_tenant_id_index" on "reports"("tenant_id");
+CREATE TABLE IF NOT EXISTS "payments"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" varchar not null,
+  "student_id" integer not null,
+  "reference" varchar not null,
+  "amount_paise" integer not null,
+  "mode" varchar check("mode" in('cash', 'upi', 'card', 'bank')) not null,
+  "status" varchar check("status" in('pending', 'confirmed', 'failed')) not null default 'pending',
+  "receipt_key" varchar,
+  "meta" text,
+  "created_at" datetime,
+  "updated_at" datetime,
+  foreign key("student_id") references "students"("id") on delete cascade
+);
+CREATE INDEX "payments_tenant_id_index" on "payments"("tenant_id");
+CREATE UNIQUE INDEX "payments_reference_unique" on "payments"("reference");
+CREATE INDEX "attendance_logs_session_id_index" on "attendance_logs"(
+  "session_id"
+);
+CREATE INDEX "attendance_logs_session_id_room_id_index" on "attendance_logs"(
+  "session_id",
+  "room_id"
+);
+CREATE INDEX "attendance_logs_session_id_student_id_index" on "attendance_logs"(
+  "session_id",
+  "student_id"
+);
+CREATE UNIQUE INDEX "attendance_logs_session_student_unique" on "attendance_logs"(
+  "session_id",
+  "student_id"
+);
+CREATE TABLE IF NOT EXISTS "attendance_sessions"(
+  "id" integer primary key autoincrement not null,
+  "tenant_id" integer not null,
+  "campus_id" integer,
+  "hostel_id" integer not null,
+  "name" varchar,
+  "kind" varchar,
+  "session_date" date,
+  "scheduled_at" datetime,
+  "metadata" text,
+  "status" varchar check("status" in('scheduled', 'active', 'closed', 'open', 'Open')) not null default 'scheduled',
+  "created_at" datetime,
+  "updated_at" datetime
+);
+CREATE UNIQUE INDEX "attendance_sessions_hostel_id_session_date_unique" on "attendance_sessions"(
+  "hostel_id",
+  "session_date"
+);
+CREATE INDEX "attendance_sessions_tenant_id_index" on "attendance_sessions"(
+  "tenant_id"
+);
+CREATE INDEX "attendance_sessions_campus_id_index" on "attendance_sessions"(
+  "campus_id"
+);
+CREATE INDEX "attendance_sessions_hostel_id_index" on "attendance_sessions"(
+  "hostel_id"
+);
+CREATE INDEX "attendance_sessions_session_date_index" on "attendance_sessions"(
+  "session_date"
+);
+CREATE INDEX "attendance_sessions_status_index" on "attendance_sessions"(
+  "status"
+);
+
+INSERT INTO migrations VALUES(1,'0001_01_01_000000_create_users_table',1);
+INSERT INTO migrations VALUES(2,'0001_01_01_000001_create_cache_table',1);
+INSERT INTO migrations VALUES(3,'0001_01_01_000002_create_jobs_table',1);
+INSERT INTO migrations VALUES(4,'2025_09_26_200101_create_out_passes_table',1);
+INSERT INTO migrations VALUES(5,'2025_09_26_201519_create_tenants_table',1);
+INSERT INTO migrations VALUES(6,'2025_09_26_202626_create_campuses_table',1);
+INSERT INTO migrations VALUES(7,'2025_09_26_202632_create_hostels_table',1);
+INSERT INTO migrations VALUES(8,'2025_09_26_203735_create_students_table',1);
+INSERT INTO migrations VALUES(9,'2025_09_27_100336_create_permission_tables',1);
+INSERT INTO migrations VALUES(10,'2025_09_27_101751_add_decision_fields_to_out_passes_table',1);
+INSERT INTO migrations VALUES(11,'2025_09_27_102517_create_personal_access_tokens_table',1);
+INSERT INTO migrations VALUES(12,'2025_09_27_111617_create_out_pass_histories_table',1);
+INSERT INTO migrations VALUES(13,'2025_09_27_112203_create_out_pass_exports_table',1);
+INSERT INTO migrations VALUES(14,'2025_09_27_115102_add_password_to_users_table',1);
+INSERT INTO migrations VALUES(15,'2025_09_27_122639_add_timeline_fields_to_out_pass_histories',1);
+INSERT INTO migrations VALUES(16,'2025_09_27_123347_create_rooms_table',1);
+INSERT INTO migrations VALUES(17,'2025_09_27_123526_create_room_beds_table',1);
+INSERT INTO migrations VALUES(18,'2025_09_27_123551_create_room_allocations_table',1);
+INSERT INTO migrations VALUES(19,'2025_09_27_123650_create_room_blocks_table',1);
+INSERT INTO migrations VALUES(20,'2025_09_27_123956_create_room_blocked_beds_table',1);
+INSERT INTO migrations VALUES(21,'2025_09_28_000001_create_onboarding_wizards_table',1);
+INSERT INTO migrations VALUES(22,'2025_09_28_020000_create_import_jobs_table',1);
+INSERT INTO migrations VALUES(23,'2025_09_29_000000_create_gate_entries_table',1);
+INSERT INTO migrations VALUES(24,'2025_09_29_010000_add_client_reference_to_gate_entries_table',1);
+INSERT INTO migrations VALUES(25,'2025_09_29_020000_create_attendance_tables',1);
+INSERT INTO migrations VALUES(26,'2025_09_29_030000_create_laundry_tables',1);
+INSERT INTO migrations VALUES(27,'2025_09_29_040000_create_sports_tables',1);
+INSERT INTO migrations VALUES(28,'2025_09_29_050000_create_notices_table',1);
+INSERT INTO migrations VALUES(29,'2025_09_29_093420_create_checklist_templates_table',1);
+INSERT INTO migrations VALUES(30,'2025_09_29_093421_create_checklist_instances_table',1);
+INSERT INTO migrations VALUES(31,'2025_09_29_093422_create_checklist_items_table',1);
+INSERT INTO migrations VALUES(32,'2025_09_29_185839_create_checklist_job_events_table',1);
+INSERT INTO migrations VALUES(33,'2025_09_29_190506_add_review_fields_to_checklist_instances',1);
+INSERT INTO migrations VALUES(34,'2025_10_01_123723_add_gate_mvp_fields_to_gate_entries_table',1);
+INSERT INTO migrations VALUES(35,'2025_10_01_124908_create_gate_devices_table',1);
+INSERT INTO migrations VALUES(36,'2025_10_01_152000_create_guest_visits_table',1);
+INSERT INTO migrations VALUES(37,'2025_10_01_190000_create_tickets_table',1);
+INSERT INTO migrations VALUES(38,'2025_10_01_190001_create_ticket_comments_table',1);
+INSERT INTO migrations VALUES(39,'2025_10_06_000001_add_attachment_to_ticket_comments',1);
+INSERT INTO migrations VALUES(40,'2025_10_06_000002_create_push_device_tokens',1);
+INSERT INTO migrations VALUES(41,'2025_10_06_231017_create_staff_assignments_table',2);
+INSERT INTO migrations VALUES(42,'2025_10_06_231021_create_reports_table',3);
+INSERT INTO migrations VALUES(43,'2025_10_06_231024_add_role_hint_to_users_table',4);
+INSERT INTO migrations VALUES(44,'2025_10_06_000001_create_push_device_tokens_table',5);
+INSERT INTO migrations VALUES(45,'2025_10_06_000100_create_payments_table',6);
+INSERT INTO migrations VALUES(47,'2025_10_07_123903_create_attendance_sessions_table',7);

@@ -1,0 +1,112 @@
+appId: com.maphms.student
+name: "Student App Login Test"
+tags:
+  - student-app
+  - login
+  - authentication
+env:
+  phone: "8888888800"
+  otp: "123456"
+---
+# Student App Login Flow Test
+# Tests the complete login authentication flow
+
+# Launch app (or bring to foreground if already running)
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Navigate back to home/dashboard if on a feature screen
+- runFlow:
+    when:
+      visible: "(Back|Sports|Booking|Leave|Outpass|Complaint)"
+    commands:
+      - pressKey: Back
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Back)"
+          commands:
+            - pressKey: Back
+            - waitForAnimationToEnd
+
+# Check if already logged in - if so, logout first
+- runFlow:
+    when:
+      visible: "(Welcome|Dashboard|Quick Actions|My Profile|Out-pass|Leave|Attendance|Complaints|Tickets|Notices)"
+    commands:
+      - takeScreenshot: "student/login/00_already_logged_in"
+      # Try to find logout option - usually in Profile
+      - tapOn: "My Profile"
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Logout|Sign Out|Log out)"
+          commands:
+            - tapOn: "(Logout|Sign Out|Log out)"
+            - waitForAnimationToEnd
+            - runFlow:
+                when:
+                  visible: "(Confirm|OK|Yes)"
+                commands:
+                  - tapOn: "(Confirm|OK|Yes)"
+                  - waitForAnimationToEnd
+      # If no logout found, go back
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Verify login screen appears
+- extendedWaitUntil:
+    visible: "(Phone|Enter|Login|Hostel|Management|10-digit)"
+    timeout: 15000
+- takeScreenshot: "student/login/01_login_screen"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter 10-digit)"
+    optional: true
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "student/login/02_phone_entered"
+
+# Send OTP
+- tapOn: "Send OTP"
+- waitForAnimationToEnd
+
+# Handle test mode dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - takeScreenshot: "student/login/03_test_mode_dialog"
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+
+# Verify OTP screen appears
+- extendedWaitUntil:
+    visible: "(OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit)"
+    timeout: 15000
+- takeScreenshot: "student/login/04_otp_screen"
+
+# Enter OTP
+- tapOn:
+    text: "(Enter OTP|OTP|Enter 6-digit)"
+    optional: true
+- inputText: ${otp}
+- hideKeyboard
+- takeScreenshot: "student/login/05_otp_entered"
+
+# Verify OTP
+- tapOn: "(Verify OTP|Verify|Submit|Login)"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Verify dashboard loads
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions|My Profile)"
+    timeout: 25000
+- takeScreenshot: "student/login/06_dashboard_loaded"
+- assertVisible: "(Welcome|Dashboard)"
+- assertVisible: "My Profile"
+

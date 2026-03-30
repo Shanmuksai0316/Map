@@ -1,0 +1,164 @@
+# MAP HMS Staff App - Laundry Manager Role Full Test Suite
+# Tests Laundry Manager functionality per US-LAU-01
+#
+# Prerequisites:
+# - Staff app installed (com.mapmars.hmsstaff)
+# - Demo token generated for Laundry Manager role
+#
+# Usage:
+#   maestro test laundry-manager-full-test.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=laundry_manager"
+
+appId: com.mapmars.hmsstaff
+name: "Laundry Manager Full Test Suite"
+tags:
+  - laundry-manager
+  - laundry
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=131%7CYrA1o97Bh2maMC3Zlsamj7BH9B3pJOZsptsp4PkP46c79362&role=laundry_manager&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=360&userName=Sunita+Laundry&userPhone=%2B919876543693&userEmail=laundry1%40stxaviers.edu"
+      phone: "9538678739"
+      otp: "123456"
+      dashboardRegex: "(laundry manager|Actions|Raise Request|Active Requests|Notice Board|Profile)"
+
+- takeScreenshot: "laundry_manager/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD TESTS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(laundry manager|Actions|Raise Request|Active Requests|Notice Board|Profile)"
+    timeout: 15000
+
+- takeScreenshot: "laundry_manager/02_dashboard"
+
+# Verify Laundry Manager dashboard components
+- assertVisible: "(Raise Request|Active Requests|Notice Board|Profile)"
+
+- takeScreenshot: "laundry_manager/03_dashboard_verified"
+
+# ============================================
+# PART 3: REQUEST LIST TESTS (US-LAU-01)
+# ============================================
+
+# Navigate to Request List
+- tapOn: "(Active Requests|Requests|Request List)"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "laundry_manager/04_request_list"
+
+# Verify Request List screen
+- assertVisible: "(Requests|Pending|Ready|Processing|No requests)"
+
+# Test request detail if available
+- runFlow:
+    when:
+      visible: "(Pending|Student|Request)"
+    commands:
+      - tapOn:
+          text: "(Pending|Request)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "laundry_manager/05_request_detail"
+      # Verify request detail elements
+      - assertVisible: "(Student|Items|Count|Weight|Process)"
+      - back
+
+# ============================================
+# PART 4: CREATE REQUEST WORKFLOW (US-LAU-01)
+# ============================================
+
+# Look for create/add button
+- runFlow:
+    when:
+      visible: "(Create|\\+|New Request|Add)"
+    commands:
+      - tapOn:
+          text: "(Create|New Request|Add)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "laundry_manager/06_create_request"
+      # Verify create form (US-LAU-01: Fast student search, counts, weight)
+      - assertVisible: "(Student|Search|Items|Count|Weight)"
+      - back
+
+# ============================================
+# PART 5: QR SCANNER TEST (Student Search)
+# ============================================
+
+# Navigate to QR Scanner if available
+- runFlow:
+    when:
+      visible: "(Scan|QR|Scanner)"
+    commands:
+      - tapOn:
+          text: "(Scan|QR|Scan QR)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "laundry_manager/07_qr_scanner"
+      # Handle camera permission if needed
+      - runFlow:
+          when:
+            visible: "Allow"
+          commands:
+            - tapOn:
+                text: "Allow"
+            - waitForAnimationToEnd
+      - back
+
+# ============================================
+# PART 6: PROCESS/HANDOVER WORKFLOW (US-LAU-01)
+# ============================================
+
+# Test processing a request (if in list)
+- runFlow:
+    when:
+      visible: "(Process|Ready|Handover)"
+    commands:
+      - tapOn:
+          text: "(Ready|Process)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "laundry_manager/08_process_handover"
+      # Verify handover elements (US-LAU-01: Manual Verify)
+      - assertVisible: "(Verify|Handover|Note|Complete)"
+      - back
+
+# ============================================
+# PART 7: FINAL VERIFICATION
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Requests"
+    commands:
+      - back
+
+- runFlow:
+    when:
+      visible: "Dashboard"
+    commands:
+      - tapOn: "Dashboard"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "laundry_manager/09_final_dashboard"
+
+# Verify still logged in
+- assertVisible: "(Raise Request|Active Requests|Notice Board|Profile)"

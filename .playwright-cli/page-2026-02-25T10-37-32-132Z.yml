@@ -1,0 +1,168 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Test Rector" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e14]:
+              - heading "Rector Dashboard" [level=1] [ref=e16]
+              - button "Download Monthly Report" [ref=e19] [cursor=pointer]:
+                - img [ref=e20]
+                - generic [ref=e22]: Download Monthly Report
+            - generic [ref=e25]:
+              - generic [ref=e140]:
+                - heading "Good Afternoon, Test Rector!" [level=2] [ref=e141]
+                - paragraph [ref=e142]: Welcome to your Rector Dashboard. Here's an overview of your pending requests and hostel activities.
+              - generic [ref=e143]:
+                - generic [ref=e145]:
+                  - generic [ref=e147]: Active Hostels
+                  - generic [ref=e148]: "1"
+                  - generic [ref=e149]:
+                    - generic [ref=e150]: Under your oversight
+                    - img [ref=e151]
+                - generic [ref=e154]:
+                  - generic [ref=e156]: Resident Students
+                  - generic [ref=e157]: "1"
+                  - generic [ref=e158]:
+                    - generic [ref=e159]: Across all assigned hostels
+                    - img [ref=e160]
+                - generic [ref=e163]:
+                  - generic [ref=e165]: Pending Requests
+                  - generic [ref=e166]: "3"
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: Awaiting your decision
+                    - img [ref=e169]
+              - heading "Approval Trend (7 Days)" [level=3] [ref=e174]
+              - heading "Hostel Occupancy (Percent)" [level=3] [ref=e43]
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - heading "Urgent Pending Approvals" [level=3] [ref=e183]
+                  - table [ref=e185]:
+                    - rowgroup [ref=e186]:
+                      - row "ID Student Hostel Type Reason SLA Action" [ref=e187]:
+                        - columnheader "ID" [ref=e188]:
+                          - generic [ref=e190]: ID
+                        - columnheader "Student" [ref=e191]:
+                          - generic [ref=e193]: Student
+                        - columnheader "Hostel" [ref=e194]:
+                          - generic [ref=e196]: Hostel
+                        - columnheader "Type" [ref=e197]:
+                          - generic [ref=e199]: Type
+                        - columnheader "Reason" [ref=e200]:
+                          - generic [ref=e202]: Reason
+                        - columnheader "SLA" [ref=e203]:
+                          - generic [ref=e205]: SLA
+                        - columnheader "Action" [ref=e206]
+                    - rowgroup [ref=e207]:
+                      - row "LEV-X6DMRATI tulip student tulip boys hostel Leave Brothers marriage 🟢 167.9h left Review" [ref=e208]:
+                        - cell "LEV-X6DMRATI" [ref=e209]:
+                          - generic [ref=e216]: LEV-X6DMRATI
+                        - cell "tulip student" [ref=e217]:
+                          - generic [ref=e224]: tulip student
+                        - cell "tulip boys hostel" [ref=e225]:
+                          - generic [ref=e232]: tulip boys hostel
+                        - cell "Leave" [ref=e233]:
+                          - generic [ref=e241]: Leave
+                        - cell "Brothers marriage" [ref=e242]:
+                          - generic [ref=e249]: Brothers marriage
+                        - cell "🟢 167.9h left" [ref=e250]:
+                          - generic [ref=e257]: 🟢 167.9h left
+                        - cell "Review" [ref=e258]:
+                          - link "Review" [ref=e261] [cursor=pointer]:
+                            - /url: https://ppcu.mapservices.in/rector/leaves/4
+                            - img [ref=e262]
+                            - generic [ref=e265]: Review
+                - generic:
+                  - dialog
+                - generic:
+                  - dialog
+                - generic:
+                  - dialog
+                - generic:
+                  - dialog
+                - generic:
+                  - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e61]:
+      - generic [ref=e63]:
+        - link "Pimpri Chinchinwad University - Rector App logo" [ref=e65] [cursor=pointer]:
+          - /url: /rector
+          - img "Pimpri Chinchinwad University - Rector App logo" [ref=e66]
+        - button "Collapse sidebar" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: Collapse sidebar
+          - img [ref=e69]
+      - navigation [ref=e71]:
+        - list [ref=e72]:
+          - listitem [ref=e73]:
+            - list [ref=e74]:
+              - listitem [ref=e75]:
+                - link "Rector Dashboard" [ref=e76] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector
+                  - img [ref=e77]
+                  - generic [ref=e79]: Rector Dashboard
+              - listitem [ref=e80]:
+                - link "Students" [ref=e81] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/students
+                  - img [ref=e82]
+                  - generic [ref=e84]: Students
+              - listitem [ref=e85]:
+                - link "Reports" [ref=e86] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/reports
+                  - img [ref=e87]
+                  - generic [ref=e89]: Reports
+          - listitem [ref=e90]:
+            - generic [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: Communications
+              - button "Communications" [expanded] [ref=e93]:
+                - generic [ref=e94]: Communications
+                - img [ref=e95]
+            - list [ref=e97]:
+              - listitem [ref=e98]:
+                - link "Comm Box" [ref=e99] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/comm-box
+                  - img [ref=e100]
+                  - generic [ref=e102]: Comm Box
+          - listitem [ref=e103]:
+            - generic [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: Approvals
+              - button "Approvals" [expanded] [ref=e106]:
+                - generic [ref=e107]: Approvals
+                - img [ref=e108]
+            - list [ref=e110]:
+              - listitem [ref=e111]:
+                - link "Out-Pass Approvals" [ref=e112] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/out-passes
+                  - img [ref=e113]
+                  - generic [ref=e115]: Out-Pass Approvals
+              - listitem [ref=e116]:
+                - link "Leave Approvals" [ref=e117] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/leaves
+                  - img [ref=e118]
+                  - generic [ref=e120]: Leave Approvals
+              - listitem [ref=e121]:
+                - link "Approval History" [ref=e122] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/approval-history
+                  - img [ref=e123]
+                  - generic [ref=e125]: Approval History
+          - listitem [ref=e126]:
+            - generic [ref=e127] [cursor=pointer]:
+              - generic [ref=e128]: Requests
+              - button "Requests" [expanded] [ref=e129]:
+                - generic [ref=e130]: Requests
+                - img [ref=e131]
+            - list [ref=e133]:
+              - listitem [ref=e134]:
+                - link "Guest Entry" [ref=e135] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/guest-entry-requests
+                  - img [ref=e136]
+                  - generic [ref=e138]: Guest Entry
+  - generic:
+    - status

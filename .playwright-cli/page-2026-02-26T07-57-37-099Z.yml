@@ -1,0 +1,119 @@
+- application [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - iframe [ref=e3]:
+    
+  - banner "Menu bar" [ref=e4]:
+    - generic [ref=e7]:
+      - link "Sheets home" [ref=e9] [cursor=pointer]:
+        - /url: https://docs.google.com/spreadsheets/u/0/?authuser=0&usp=sheets_web
+      - generic [ref=e16]:
+        - generic "Student Bulk Upload Responses" [ref=e18]:
+          - generic [ref=e19]:
+            - generic: Student Bulk Upload Responses
+            - textbox "Rename" [ref=e21]: Student Bulk Upload Responses
+          - generic [ref=e22]:
+            - checkbox "Star" [ref=e24] [cursor=pointer]
+            - button "Move" [ref=e28] [cursor=pointer]
+            - 'button "Document status: Saving…." [ref=e444]':
+              - generic [ref=e449] [cursor=pointer]: Saving…
+        - generic [ref=e39]:
+          - button "Last edit was seconds ago" [ref=e393] [cursor=pointer]
+          - button "Show all comments" [ref=e45] [cursor=pointer]
+          - button "Join a call here or present this tab to the call" [ref=e49] [cursor=pointer]
+          - generic [ref=e54]:
+            - button "Share. Private to only me." [ref=e55] [cursor=pointer]: Share
+            - button "Quick sharing actions" [ref=e57] [cursor=pointer]
+          - generic [ref=e61]:
+            - generic:
+              - button "Try Gemini" [ref=e64] [cursor=pointer]:
+                - img [ref=e67]
+              - tooltip [ref=e70]: Try Gemini
+          - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e77] [cursor=pointer]':
+            - img [ref=e79]
+    - generic [ref=e80]:
+      - menubar [ref=e82]:
+        - menuitem "File" [ref=e83] [cursor=pointer]
+        - menuitem "Edit" [ref=e84] [cursor=pointer]
+        - menuitem "View" [ref=e85] [cursor=pointer]
+        - menuitem "Insert" [ref=e86] [cursor=pointer]
+        - menuitem "Format" [ref=e87] [cursor=pointer]
+        - menuitem "Data" [ref=e88] [cursor=pointer]
+        - menuitem "Tools" [ref=e89] [cursor=pointer]
+        - menuitem "Extensions" [ref=e90] [cursor=pointer]
+        - menuitem "Help" [ref=e91] [cursor=pointer]
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - toolbar "Search the menus (Option+/)" [ref=e94]:
+            - combobox "Menus" [ref=e96]
+          - toolbar "Main" [ref=e97]:
+            - button "Undo (⌘Z)" [ref=e98] [cursor=pointer]
+            - button "Redo (⌘Y)" [ref=e103] [cursor=pointer]
+            - button "Print (⌘P)" [ref=e108] [cursor=pointer]
+            - button "Paint format" [ref=e113] [cursor=pointer]
+            - combobox "Zoom" [ref=e118] [cursor=pointer]:
+              - option "Zoom list. 100% selected." [selected] [ref=e121]:
+                - textbox "Zoom" [ref=e122]: 100%
+            - separator [disabled] [ref=e126]
+            - button "Format as currency" [ref=e127] [cursor=pointer]:
+              - generic [ref=e129]: $
+            - button "Format as percent" [ref=e130] [cursor=pointer]:
+              - generic [ref=e132]: "%"
+            - button "Decrease decimal places" [ref=e133] [cursor=pointer]
+            - button "Increase decimal places" [ref=e138] [cursor=pointer]
+            - button "More formats" [ref=e143] [cursor=pointer]:
+              - generic [ref=e146]: "123"
+            - separator [disabled] [ref=e147]
+            - listbox "Font" [ref=e148] [cursor=pointer]:
+              - option "Font list. Default (Arial) selected." [selected] [ref=e383]: Default (Arial)
+            - separator [disabled] [ref=e155]
+            - button "Decrease font size (⌘+Shift+comma)" [ref=e156] [cursor=pointer]
+            - combobox "Font size" [ref=e161] [cursor=pointer]:
+              - option "Font size list. 10 selected." [selected] [ref=e164]:
+                - textbox "Font size" [ref=e165]: "10"
+            - button "Increase font size (⌘+Shift+period)" [ref=e166] [cursor=pointer]
+            - separator [disabled] [ref=e171]
+            - button "Bold (⌘B)" [ref=e172] [cursor=pointer]
+            - button "Italic (⌘I)" [ref=e177] [cursor=pointer]
+            - button "Strikethrough (⌘+Shift+X)" [ref=e182] [cursor=pointer]
+            - button "Text color" [ref=e187] [cursor=pointer]
+            - separator [disabled] [ref=e194]
+            - button "Fill color" [ref=e195] [cursor=pointer]
+            - button "Borders" [ref=e202] [cursor=pointer]
+            - button "Merge cells" [disabled] [ref=e208]
+            - button "Select merge type" [disabled] [ref=e213]
+            - separator [disabled] [ref=e219]
+            - button "Horizontal align" [ref=e220] [cursor=pointer]
+            - button "Vertical align" [ref=e229] [cursor=pointer]
+            - button "Text wrapping" [ref=e238] [cursor=pointer]
+            - button "Text rotation" [ref=e247] [cursor=pointer]
+            - separator [disabled] [ref=e256]
+            - button "More" [ref=e257] [cursor=pointer]
+        - toolbar "Mode and view" [ref=e264]:
+          - button "Hide the menus (Ctrl+Shift+F)" [ref=e265] [cursor=pointer]
+    - generic:
+      - generic:
+        - button "Show side panel" [pressed]:
+          - img [ref=e271] [cursor=pointer]
+    - generic [ref=e276]:
+      - generic "Name box (⌘ + J)" [ref=e277]:
+        - textbox [ref=e278]: A2
+        - button "Name box menu button. Select one of the menu items to navigate to its corresponding named range." [ref=e280] [cursor=pointer]
+      - textbox [ref=e296]
+  - navigation "Sheet tab bar" [ref=e351]:
+    - toolbar [ref=e352]:
+      - button "Add Sheet" [ref=e353] [cursor=pointer]
+      - button "All Sheets" [ref=e358] [cursor=pointer]
+    - toolbar [ref=e365]:
+      - button "Form Responses 1" [ref=e425] [cursor=pointer]:
+        - generic [ref=e431]: Form Responses 1
+      - button "Sheet1" [ref=e435]:
+        - generic [ref=e439]: Sheet1
+    - toolbar [ref=e376]
+  - generic [ref=e377]:
+    - combobox [active]
+  - link "Turn on screen reader support" [ref=e378] [cursor=pointer]:
+    - /url: "#"
+  - textbox [ref=e379]
+  - region [ref=e380]: To enable screen reader support, press ⌘+Option+Z To learn about keyboard shortcuts, press ⌘slash
+  - region

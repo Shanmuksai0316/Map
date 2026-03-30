@@ -1,0 +1,625 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Tenants" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/tenants
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: List
+              - heading "Tenants" [level=1] [ref=e24]
+            - link "New Tenant Onboarding" [ref=e27] [cursor=pointer]:
+              - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+              - img [ref=e28]
+              - generic [ref=e30]: New Tenant Onboarding
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - generic [ref=e36]:
+                - button "Export" [ref=e39] [cursor=pointer]:
+                  - img [ref=e40]
+                  - generic [ref=e42]: Export
+                - generic [ref=e44]:
+                  - generic [ref=e45]:
+                    - generic [ref=e46]: Search
+                    - generic [ref=e47]:
+                      - img [ref=e49]
+                      - searchbox "Search" [ref=e52]
+                  - button "Filter 1" [ref=e55] [cursor=pointer]:
+                    - generic [ref=e56]: Filter
+                    - img [ref=e57]
+                    - generic [ref=e62]: "1"
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]: Active filters
+                  - generic [ref=e67]:
+                    - generic [ref=e69]: All Tenants
+                    - button "Remove filter" [ref=e70] [cursor=pointer]:
+                      - img [ref=e71]
+                      - generic [ref=e73]: Remove filter
+                - button [ref=e75] [cursor=pointer]:
+                  - img [ref=e76]
+              - table [ref=e79]:
+                - rowgroup [ref=e80]:
+                  - row "Select/deselect all items for bulk actions. Code Name Hostels Students Staff Status Created On Actions" [ref=e81]:
+                    - columnheader "Select/deselect all items for bulk actions." [ref=e82]:
+                      - generic [ref=e84]:
+                        - checkbox "Select/deselect all items for bulk actions." [ref=e85]
+                        - generic [ref=e86]: Select/deselect all items for bulk actions.
+                    - columnheader "Code" [ref=e87]:
+                      - button "Code" [ref=e88] [cursor=pointer]:
+                        - generic [ref=e89]: Code
+                        - img [ref=e90]
+                    - columnheader "Name" [ref=e92]:
+                      - button "Name" [ref=e93] [cursor=pointer]:
+                        - generic [ref=e94]: Name
+                        - img [ref=e95]
+                    - columnheader "Hostels" [ref=e97]:
+                      - button "Hostels" [ref=e98] [cursor=pointer]:
+                        - generic [ref=e99]: Hostels
+                        - img [ref=e100]
+                    - columnheader "Students" [ref=e102]:
+                      - generic [ref=e104]: Students
+                    - columnheader "Staff" [ref=e105]:
+                      - generic [ref=e107]: Staff
+                    - columnheader "Status" [ref=e108]:
+                      - button "Status" [ref=e109] [cursor=pointer]:
+                        - generic [ref=e110]: Status
+                        - img [ref=e111]
+                    - columnheader "Created On" [ref=e113]:
+                      - button "Created On" [ref=e114] [cursor=pointer]:
+                        - generic [ref=e115]: Created On
+                        - img [ref=e116]
+                    - columnheader "Actions" [ref=e118]
+                - rowgroup [ref=e119]:
+                  - row "Select/deselect item f2e645ff-8d3e-4ed4-852e-a62b6afe5747 for bulk actions. MAP-CLI1771835173 CLI Auto Tenant 17718351735 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e120]:
+                    - cell "Select/deselect item f2e645ff-8d3e-4ed4-852e-a62b6afe5747 for bulk actions." [ref=e121]:
+                      - generic [ref=e123]:
+                        - checkbox "Select/deselect item f2e645ff-8d3e-4ed4-852e-a62b6afe5747 for bulk actions." [ref=e124]
+                        - generic [ref=e125]: Select/deselect item f2e645ff-8d3e-4ed4-852e-a62b6afe5747 for bulk actions.
+                    - cell "MAP-CLI1771835173" [ref=e126]:
+                      - generic [ref=e133] [cursor=pointer]: MAP-CLI1771835173
+                    - cell "CLI Auto Tenant 17718351735" [ref=e134]:
+                      - link "CLI Auto Tenant 17718351735" [ref=e136] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e141]: CLI Auto Tenant 17718351735
+                    - cell "0" [ref=e142]:
+                      - link "0" [ref=e144] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e149]: "0"
+                    - cell "0" [ref=e150]:
+                      - link "0" [ref=e152] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e157]: "0"
+                    - cell "0" [ref=e158]:
+                      - link "0" [ref=e160] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e165]: "0"
+                    - cell "Provisioning" [ref=e166]:
+                      - link "Provisioning" [ref=e168] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e174]: Provisioning
+                    - cell "23 Feb 2026" [ref=e175]:
+                      - link "23 Feb 2026" [ref=e177] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                        - generic [ref=e182]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e183]:
+                      - generic [ref=e185]:
+                        - link "Actions" [ref=e186] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                          - img [ref=e187]
+                          - generic [ref=e190]: Actions
+                        - link "Edit" [ref=e191] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/f2e645ff-8d3e-4ed4-852e-a62b6afe5747/edit
+                          - img [ref=e192]
+                          - generic [ref=e195]: Edit
+                        - link "Resume Onboarding" [ref=e196] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=f2e645ff-8d3e-4ed4-852e-a62b6afe5747
+                          - img [ref=e197]
+                          - generic [ref=e199]: Resume Onboarding
+                  - row "Select/deselect item c5097218-08af-49c6-ab63-1f6566b30ef4 for bulk actions. MAP-CLI1771835152 CLI Auto Tenant 17718351524 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e200]:
+                    - cell "Select/deselect item c5097218-08af-49c6-ab63-1f6566b30ef4 for bulk actions." [ref=e201]:
+                      - generic [ref=e203]:
+                        - checkbox "Select/deselect item c5097218-08af-49c6-ab63-1f6566b30ef4 for bulk actions." [ref=e204]
+                        - generic [ref=e205]: Select/deselect item c5097218-08af-49c6-ab63-1f6566b30ef4 for bulk actions.
+                    - cell "MAP-CLI1771835152" [ref=e206]:
+                      - generic [ref=e213] [cursor=pointer]: MAP-CLI1771835152
+                    - cell "CLI Auto Tenant 17718351524" [ref=e214]:
+                      - link "CLI Auto Tenant 17718351524" [ref=e216] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e221]: CLI Auto Tenant 17718351524
+                    - cell "0" [ref=e222]:
+                      - link "0" [ref=e224] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e229]: "0"
+                    - cell "0" [ref=e230]:
+                      - link "0" [ref=e232] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e237]: "0"
+                    - cell "0" [ref=e238]:
+                      - link "0" [ref=e240] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e245]: "0"
+                    - cell "Provisioning" [ref=e246]:
+                      - link "Provisioning" [ref=e248] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e254]: Provisioning
+                    - cell "23 Feb 2026" [ref=e255]:
+                      - link "23 Feb 2026" [ref=e257] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                        - generic [ref=e262]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e263]:
+                      - generic [ref=e265]:
+                        - link "Actions" [ref=e266] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4
+                          - img [ref=e267]
+                          - generic [ref=e270]: Actions
+                        - link "Edit" [ref=e271] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/c5097218-08af-49c6-ab63-1f6566b30ef4/edit
+                          - img [ref=e272]
+                          - generic [ref=e275]: Edit
+                        - link "Resume Onboarding" [ref=e276] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=c5097218-08af-49c6-ab63-1f6566b30ef4
+                          - img [ref=e277]
+                          - generic [ref=e279]: Resume Onboarding
+                  - row "Select/deselect item b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc for bulk actions. MAP-CLI1771835130 CLI Auto Tenant 17718351303 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e280]:
+                    - cell "Select/deselect item b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc for bulk actions." [ref=e281]:
+                      - generic [ref=e283]:
+                        - checkbox "Select/deselect item b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc for bulk actions." [ref=e284]
+                        - generic [ref=e285]: Select/deselect item b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc for bulk actions.
+                    - cell "MAP-CLI1771835130" [ref=e286]:
+                      - generic [ref=e293] [cursor=pointer]: MAP-CLI1771835130
+                    - cell "CLI Auto Tenant 17718351303" [ref=e294]:
+                      - link "CLI Auto Tenant 17718351303" [ref=e296] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e301]: CLI Auto Tenant 17718351303
+                    - cell "0" [ref=e302]:
+                      - link "0" [ref=e304] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e309]: "0"
+                    - cell "0" [ref=e310]:
+                      - link "0" [ref=e312] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e317]: "0"
+                    - cell "0" [ref=e318]:
+                      - link "0" [ref=e320] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e325]: "0"
+                    - cell "Provisioning" [ref=e326]:
+                      - link "Provisioning" [ref=e328] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e334]: Provisioning
+                    - cell "23 Feb 2026" [ref=e335]:
+                      - link "23 Feb 2026" [ref=e337] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                        - generic [ref=e342]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e343]:
+                      - generic [ref=e345]:
+                        - link "Actions" [ref=e346] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                          - img [ref=e347]
+                          - generic [ref=e350]: Actions
+                        - link "Edit" [ref=e351] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc/edit
+                          - img [ref=e352]
+                          - generic [ref=e355]: Edit
+                        - link "Resume Onboarding" [ref=e356] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=b3c3a3bd-f554-4ffe-8021-ac4ebb33bdcc
+                          - img [ref=e357]
+                          - generic [ref=e359]: Resume Onboarding
+                  - row "Select/deselect item 028f7070-bcb3-4870-ad5f-778ef81100be for bulk actions. MAP-CLI1771835108 CLI Auto Tenant 17718351082 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e360]:
+                    - cell "Select/deselect item 028f7070-bcb3-4870-ad5f-778ef81100be for bulk actions." [ref=e361]:
+                      - generic [ref=e363]:
+                        - checkbox "Select/deselect item 028f7070-bcb3-4870-ad5f-778ef81100be for bulk actions." [ref=e364]
+                        - generic [ref=e365]: Select/deselect item 028f7070-bcb3-4870-ad5f-778ef81100be for bulk actions.
+                    - cell "MAP-CLI1771835108" [ref=e366]:
+                      - generic [ref=e373] [cursor=pointer]: MAP-CLI1771835108
+                    - cell "CLI Auto Tenant 17718351082" [ref=e374]:
+                      - link "CLI Auto Tenant 17718351082" [ref=e376] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e381]: CLI Auto Tenant 17718351082
+                    - cell "0" [ref=e382]:
+                      - link "0" [ref=e384] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e389]: "0"
+                    - cell "0" [ref=e390]:
+                      - link "0" [ref=e392] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e397]: "0"
+                    - cell "0" [ref=e398]:
+                      - link "0" [ref=e400] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e405]: "0"
+                    - cell "Provisioning" [ref=e406]:
+                      - link "Provisioning" [ref=e408] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e414]: Provisioning
+                    - cell "23 Feb 2026" [ref=e415]:
+                      - link "23 Feb 2026" [ref=e417] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                        - generic [ref=e422]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e423]:
+                      - generic [ref=e425]:
+                        - link "Actions" [ref=e426] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be
+                          - img [ref=e427]
+                          - generic [ref=e430]: Actions
+                        - link "Edit" [ref=e431] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/028f7070-bcb3-4870-ad5f-778ef81100be/edit
+                          - img [ref=e432]
+                          - generic [ref=e435]: Edit
+                        - link "Resume Onboarding" [ref=e436] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=028f7070-bcb3-4870-ad5f-778ef81100be
+                          - img [ref=e437]
+                          - generic [ref=e439]: Resume Onboarding
+                  - row "Select/deselect item 2babae4b-9f73-4ce8-b2ab-338ef6edd986 for bulk actions. MAP-CLI1771835087 CLI Auto Tenant 17718350871 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e440]:
+                    - cell "Select/deselect item 2babae4b-9f73-4ce8-b2ab-338ef6edd986 for bulk actions." [ref=e441]:
+                      - generic [ref=e443]:
+                        - checkbox "Select/deselect item 2babae4b-9f73-4ce8-b2ab-338ef6edd986 for bulk actions." [ref=e444]
+                        - generic [ref=e445]: Select/deselect item 2babae4b-9f73-4ce8-b2ab-338ef6edd986 for bulk actions.
+                    - cell "MAP-CLI1771835087" [ref=e446]:
+                      - generic [ref=e453] [cursor=pointer]: MAP-CLI1771835087
+                    - cell "CLI Auto Tenant 17718350871" [ref=e454]:
+                      - link "CLI Auto Tenant 17718350871" [ref=e456] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e461]: CLI Auto Tenant 17718350871
+                    - cell "0" [ref=e462]:
+                      - link "0" [ref=e464] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e469]: "0"
+                    - cell "0" [ref=e470]:
+                      - link "0" [ref=e472] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e477]: "0"
+                    - cell "0" [ref=e478]:
+                      - link "0" [ref=e480] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e485]: "0"
+                    - cell "Provisioning" [ref=e486]:
+                      - link "Provisioning" [ref=e488] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e494]: Provisioning
+                    - cell "23 Feb 2026" [ref=e495]:
+                      - link "23 Feb 2026" [ref=e497] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                        - generic [ref=e502]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e503]:
+                      - generic [ref=e505]:
+                        - link "Actions" [ref=e506] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                          - img [ref=e507]
+                          - generic [ref=e510]: Actions
+                        - link "Edit" [ref=e511] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/2babae4b-9f73-4ce8-b2ab-338ef6edd986/edit
+                          - img [ref=e512]
+                          - generic [ref=e515]: Edit
+                        - link "Resume Onboarding" [ref=e516] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=2babae4b-9f73-4ce8-b2ab-338ef6edd986
+                          - img [ref=e517]
+                          - generic [ref=e519]: Resume Onboarding
+                  - row "Select/deselect item 453db877-59fd-48c5-95c6-ea45d1f223bb for bulk actions. MAP-AUTO1771834882 Auto Tenant 1771834882 0 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e520]:
+                    - cell "Select/deselect item 453db877-59fd-48c5-95c6-ea45d1f223bb for bulk actions." [ref=e521]:
+                      - generic [ref=e523]:
+                        - checkbox "Select/deselect item 453db877-59fd-48c5-95c6-ea45d1f223bb for bulk actions." [ref=e524]
+                        - generic [ref=e525]: Select/deselect item 453db877-59fd-48c5-95c6-ea45d1f223bb for bulk actions.
+                    - cell "MAP-AUTO1771834882" [ref=e526]:
+                      - generic [ref=e533] [cursor=pointer]: MAP-AUTO1771834882
+                    - cell "Auto Tenant 1771834882" [ref=e534]:
+                      - link "Auto Tenant 1771834882" [ref=e536] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e541]: Auto Tenant 1771834882
+                    - cell "0" [ref=e542]:
+                      - link "0" [ref=e544] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e549]: "0"
+                    - cell "0" [ref=e550]:
+                      - link "0" [ref=e552] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e557]: "0"
+                    - cell "0" [ref=e558]:
+                      - link "0" [ref=e560] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e565]: "0"
+                    - cell "Provisioning" [ref=e566]:
+                      - link "Provisioning" [ref=e568] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e574]: Provisioning
+                    - cell "23 Feb 2026" [ref=e575]:
+                      - link "23 Feb 2026" [ref=e577] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                        - generic [ref=e582]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e583]:
+                      - generic [ref=e585]:
+                        - link "Actions" [ref=e586] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb
+                          - img [ref=e587]
+                          - generic [ref=e590]: Actions
+                        - link "Edit" [ref=e591] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/453db877-59fd-48c5-95c6-ea45d1f223bb/edit
+                          - img [ref=e592]
+                          - generic [ref=e595]: Edit
+                        - link "Resume Onboarding" [ref=e596] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=453db877-59fd-48c5-95c6-ea45d1f223bb
+                          - img [ref=e597]
+                          - generic [ref=e599]: Resume Onboarding
+                  - row "Select/deselect item f0feba1a-5bd6-4520-958e-0424d0b4da49 for bulk actions. MAP-AUTO1771834604 Auto Tenant 1771834604 1 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e600]:
+                    - cell "Select/deselect item f0feba1a-5bd6-4520-958e-0424d0b4da49 for bulk actions." [ref=e601]:
+                      - generic [ref=e603]:
+                        - checkbox "Select/deselect item f0feba1a-5bd6-4520-958e-0424d0b4da49 for bulk actions." [ref=e604]
+                        - generic [ref=e605]: Select/deselect item f0feba1a-5bd6-4520-958e-0424d0b4da49 for bulk actions.
+                    - cell "MAP-AUTO1771834604" [ref=e606]:
+                      - generic [ref=e613] [cursor=pointer]: MAP-AUTO1771834604
+                    - cell "Auto Tenant 1771834604" [ref=e614]:
+                      - link "Auto Tenant 1771834604" [ref=e616] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e621]: Auto Tenant 1771834604
+                    - cell "1" [ref=e622]:
+                      - link "1" [ref=e624] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e629]: "1"
+                    - cell "0" [ref=e630]:
+                      - link "0" [ref=e632] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e637]: "0"
+                    - cell "0" [ref=e638]:
+                      - link "0" [ref=e640] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e645]: "0"
+                    - cell "Provisioning" [ref=e646]:
+                      - link "Provisioning" [ref=e648] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e654]: Provisioning
+                    - cell "23 Feb 2026" [ref=e655]:
+                      - link "23 Feb 2026" [ref=e657] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                        - generic [ref=e662]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e663]:
+                      - generic [ref=e665]:
+                        - link "Actions" [ref=e666] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49
+                          - img [ref=e667]
+                          - generic [ref=e670]: Actions
+                        - link "Edit" [ref=e671] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/f0feba1a-5bd6-4520-958e-0424d0b4da49/edit
+                          - img [ref=e672]
+                          - generic [ref=e675]: Edit
+                        - link "Resume Onboarding" [ref=e676] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=f0feba1a-5bd6-4520-958e-0424d0b4da49
+                          - img [ref=e677]
+                          - generic [ref=e679]: Resume Onboarding
+                  - row "Select/deselect item a3f29d71-5076-465c-b18e-3f7fdc482c8f for bulk actions. MAP-DOOM doom 1 0 0 Provisioning 23 Feb 2026 Actions Edit Resume Onboarding" [ref=e680]:
+                    - cell "Select/deselect item a3f29d71-5076-465c-b18e-3f7fdc482c8f for bulk actions." [ref=e681]:
+                      - generic [ref=e683]:
+                        - checkbox "Select/deselect item a3f29d71-5076-465c-b18e-3f7fdc482c8f for bulk actions." [ref=e684]
+                        - generic [ref=e685]: Select/deselect item a3f29d71-5076-465c-b18e-3f7fdc482c8f for bulk actions.
+                    - cell "MAP-DOOM" [ref=e686]:
+                      - generic [ref=e693] [cursor=pointer]: MAP-DOOM
+                    - cell "doom" [ref=e694]:
+                      - link "doom" [ref=e696] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e701]: doom
+                    - cell "1" [ref=e702]:
+                      - link "1" [ref=e704] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e709]: "1"
+                    - cell "0" [ref=e710]:
+                      - link "0" [ref=e712] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e717]: "0"
+                    - cell "0" [ref=e718]:
+                      - link "0" [ref=e720] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e725]: "0"
+                    - cell "Provisioning" [ref=e726]:
+                      - link "Provisioning" [ref=e728] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e734]: Provisioning
+                    - cell "23 Feb 2026" [ref=e735]:
+                      - link "23 Feb 2026" [ref=e737] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                        - generic [ref=e742]: 23 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e743]:
+                      - generic [ref=e745]:
+                        - link "Actions" [ref=e746] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                          - img [ref=e747]
+                          - generic [ref=e750]: Actions
+                        - link "Edit" [ref=e751] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/a3f29d71-5076-465c-b18e-3f7fdc482c8f/edit
+                          - img [ref=e752]
+                          - generic [ref=e755]: Edit
+                        - link "Resume Onboarding" [ref=e756] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=a3f29d71-5076-465c-b18e-3f7fdc482c8f
+                          - img [ref=e757]
+                          - generic [ref=e759]: Resume Onboarding
+                  - row "Select/deselect item 3c9b8bae-5ba4-4610-a805-1e66640d9c3d for bulk actions. MAP-SMBT SMBT 1 0 0 Provisioning 19 Feb 2026 Actions Edit Resume Onboarding" [ref=e760]:
+                    - cell "Select/deselect item 3c9b8bae-5ba4-4610-a805-1e66640d9c3d for bulk actions." [ref=e761]:
+                      - generic [ref=e763]:
+                        - checkbox "Select/deselect item 3c9b8bae-5ba4-4610-a805-1e66640d9c3d for bulk actions." [ref=e764]
+                        - generic [ref=e765]: Select/deselect item 3c9b8bae-5ba4-4610-a805-1e66640d9c3d for bulk actions.
+                    - cell "MAP-SMBT" [ref=e766]:
+                      - generic [ref=e773] [cursor=pointer]: MAP-SMBT
+                    - cell "SMBT" [ref=e774]:
+                      - link "SMBT" [ref=e776] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e781]: SMBT
+                    - cell "1" [ref=e782]:
+                      - link "1" [ref=e784] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e789]: "1"
+                    - cell "0" [ref=e790]:
+                      - link "0" [ref=e792] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e797]: "0"
+                    - cell "0" [ref=e798]:
+                      - link "0" [ref=e800] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e805]: "0"
+                    - cell "Provisioning" [ref=e806]:
+                      - link "Provisioning" [ref=e808] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e814]: Provisioning
+                    - cell "19 Feb 2026" [ref=e815]:
+                      - link "19 Feb 2026" [ref=e817] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                        - generic [ref=e822]: 19 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e823]:
+                      - generic [ref=e825]:
+                        - link "Actions" [ref=e826] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                          - img [ref=e827]
+                          - generic [ref=e830]: Actions
+                        - link "Edit" [ref=e831] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/3c9b8bae-5ba4-4610-a805-1e66640d9c3d/edit
+                          - img [ref=e832]
+                          - generic [ref=e835]: Edit
+                        - link "Resume Onboarding" [ref=e836] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=3c9b8bae-5ba4-4610-a805-1e66640d9c3d
+                          - img [ref=e837]
+                          - generic [ref=e839]: Resume Onboarding
+                  - row "Select/deselect item aad81cbb-a8a4-4cad-8c32-6da7206b9f03 for bulk actions. MAP-PCJ PCJ 1 0 0 Provisioning 19 Feb 2026 Actions Edit Resume Onboarding" [ref=e840]:
+                    - cell "Select/deselect item aad81cbb-a8a4-4cad-8c32-6da7206b9f03 for bulk actions." [ref=e841]:
+                      - generic [ref=e843]:
+                        - checkbox "Select/deselect item aad81cbb-a8a4-4cad-8c32-6da7206b9f03 for bulk actions." [ref=e844]
+                        - generic [ref=e845]: Select/deselect item aad81cbb-a8a4-4cad-8c32-6da7206b9f03 for bulk actions.
+                    - cell "MAP-PCJ" [ref=e846]:
+                      - generic [ref=e853] [cursor=pointer]: MAP-PCJ
+                    - cell "PCJ" [ref=e854]:
+                      - link "PCJ" [ref=e856] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e861]: PCJ
+                    - cell "1" [ref=e862]:
+                      - link "1" [ref=e864] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e869]: "1"
+                    - cell "0" [ref=e870]:
+                      - link "0" [ref=e872] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e877]: "0"
+                    - cell "0" [ref=e878]:
+                      - link "0" [ref=e880] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e885]: "0"
+                    - cell "Provisioning" [ref=e886]:
+                      - link "Provisioning" [ref=e888] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e894]: Provisioning
+                    - cell "19 Feb 2026" [ref=e895]:
+                      - link "19 Feb 2026" [ref=e897] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                        - generic [ref=e902]: 19 Feb 2026
+                    - cell "Actions Edit Resume Onboarding" [ref=e903]:
+                      - generic [ref=e905]:
+                        - link "Actions" [ref=e906] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                          - img [ref=e907]
+                          - generic [ref=e910]: Actions
+                        - link "Edit" [ref=e911] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/aad81cbb-a8a4-4cad-8c32-6da7206b9f03/edit
+                          - img [ref=e912]
+                          - generic [ref=e915]: Edit
+                        - link "Resume Onboarding" [ref=e916] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=aad81cbb-a8a4-4cad-8c32-6da7206b9f03
+                          - img [ref=e917]
+                          - generic [ref=e919]: Resume Onboarding
+              - navigation "Pagination navigation" [ref=e920]:
+                - generic [ref=e923]:
+                  - generic [ref=e925]: Per page
+                  - combobox "Per page" [ref=e927]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+                - button "Next" [ref=e928] [cursor=pointer]:
+                  - generic [ref=e929]: Next
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e930]:
+      - generic [ref=e932]:
+        - link "Super Admin logo" [ref=e934] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e935]
+        - button "Collapse sidebar" [ref=e936] [cursor=pointer]:
+          - generic [ref=e937]: Collapse sidebar
+          - img [ref=e938]
+      - navigation [ref=e940]:
+        - list [ref=e941]:
+          - listitem [ref=e942]:
+            - list [ref=e943]:
+              - listitem [ref=e944]:
+                - link "Dashboard" [ref=e945] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e946]
+                  - generic [ref=e948]: Dashboard
+          - listitem [ref=e949]:
+            - generic [ref=e950] [cursor=pointer]:
+              - img [ref=e951]
+              - generic [ref=e953]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e954]:
+                - generic [ref=e955]: Tenant Management
+                - img [ref=e956]
+            - list [ref=e958]:
+              - listitem [ref=e959]:
+                - link "New Tenant Onboarding" [ref=e960] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e964]: New Tenant Onboarding
+              - listitem [ref=e965]:
+                - link "All Tenants" [ref=e966] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e971]: All Tenants
+              - listitem [ref=e972]:
+                - link "Archived Tenants" [ref=e973] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e977]: Archived Tenants
+          - listitem [ref=e978]:
+            - generic [ref=e979] [cursor=pointer]:
+              - img [ref=e980]
+              - generic [ref=e982]: Staff Management
+              - button "Staff Management" [ref=e983]:
+                - generic [ref=e984]: Staff Management
+                - img [ref=e985]
+          - listitem [ref=e987]:
+            - generic [ref=e988] [cursor=pointer]:
+              - img [ref=e989]
+              - generic [ref=e992]: Operations
+              - button "Operations" [ref=e993]:
+                - generic [ref=e994]: Operations
+                - img [ref=e995]
+          - listitem [ref=e997]:
+            - generic [ref=e998] [cursor=pointer]:
+              - img [ref=e999]
+              - generic [ref=e1001]: Reports
+              - button "Reports" [expanded] [ref=e1002]:
+                - generic [ref=e1003]: Reports
+                - img [ref=e1004]
+            - list [ref=e1006]:
+              - listitem [ref=e1007]:
+                - link "Report Center" [ref=e1008] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e1011]: Report Center
+  - generic:
+    - status:
+      - generic [ref=e1013]:
+        - img [ref=e1014]
+        - generic [ref=e1016]:
+          - heading "Draft saved" [level=3] [ref=e1017]
+          - generic [ref=e1018]: Your progress has been saved. You can resume later.
+        - button [ref=e1019] [cursor=pointer]:
+          - img [ref=e1020]

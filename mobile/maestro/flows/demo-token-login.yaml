@@ -1,0 +1,34 @@
+# MAP HMS Staff App - Demo Token Deep Link Login
+# Uses deep link to auto-login with demo token for testing
+#
+# Usage: 
+#   maestro test demo-token-login.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=warden"
+
+appId: com.mapmars.hmsstaff
+name: "Demo Token Deep Link Login"
+tags:
+  - login
+  - demo-token
+  - deep-link
+
+---
+
+# Launch app first
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Open the deep link (passed via --env deepLink="...")
+- openLink: ${deepLink}
+
+# Wait for authentication to complete
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 20000
+
+# Screenshot the result
+- takeScreenshot: "02_deep_link_login_result"

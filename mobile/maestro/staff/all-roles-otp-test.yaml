@@ -1,0 +1,118 @@
+appId: com.mapmars.hmsstaff
+name: "All Staff Roles E2E Test Suite"
+tags:
+  - all-roles
+  - e2e
+  - comprehensive
+  - staff
+
+---
+
+# ============================================
+# Complete Staff Roles E2E Test
+# Tests all 8 staff roles using OTP login
+# OTP for test mode: 123456
+# ============================================
+
+# ==== ROLE 1: CAMPUS MANAGER ====
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible: "(Staff App|Phone Number)"
+    timeout: 30000
+
+- takeScreenshot: "roles/cm_01_login"
+
+# Login as Campus Manager
+- tapOn:
+    text: "(Phone Number|Enter your registered)"
+    optional: true
+- inputText: "8888888888"
+- hideKeyboard
+- tapOn: "(Send OTP|Get OTP)"
+
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP)"
+    timeout: 15000
+
+- inputText: "123456"
+- hideKeyboard
+- tapOn:
+    text: "(Verify & Login|Verify)"
+    optional: true
+
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant)"
+    commands:
+      - tapOn: "Demo College Hostel"
+
+- extendedWaitUntil:
+    visible: "(Campus Manager|Good Morning|Good Afternoon|Good Evening)"
+    timeout: 30000
+
+- takeScreenshot: "roles/cm_02_dashboard"
+- assertVisible: "Campus Manager"
+- takeScreenshot: "roles/cm_03_verified"
+
+# Test Campus Manager features
+- tapOn: "Checklists"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+- takeScreenshot: "roles/cm_04_checklists"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "Quick Actions"
+    timeout: 15000
+
+- tapOn: "Requests"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+- takeScreenshot: "roles/cm_05_requests"
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "Quick Actions"
+    timeout: 15000
+
+- tapOn: "Profile"
+- extendedWaitUntil:
+    visible: "(Profile|Logout)"
+    timeout: 10000
+- takeScreenshot: "roles/cm_06_profile"
+
+# Logout
+- runFlow:
+    when:
+      visible: "Logout"
+    commands:
+      - tapOn: "Logout"
+      - runFlow:
+          when:
+            visible: "(Yes|Confirm|OK)"
+          commands:
+            - tapOn:
+                text: "(Yes|Confirm|OK)"
+
+- takeScreenshot: "roles/cm_07_complete"
+
+# ==== TEST COMPLETE ====
+- assertVisible: "(Staff App|Phone Number|Login)"
+- takeScreenshot: "roles/test_suite_complete"
+

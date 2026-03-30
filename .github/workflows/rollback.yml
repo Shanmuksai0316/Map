@@ -1,0 +1,167 @@
+name: Rollback Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      backup_timestamp:
+        description: 'Backup timestamp to rollback to (format: YYYYMMDD_HHMMSS). Leave empty for latest backup.'
+        required: false
+        type: string
+      environment:
+        description: 'Environment to rollback'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - staging
+          - production
+      skip_confirmation:
+        description: 'Skip confirmation (dangerous!)'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  AWS_REGION: eu-north-1
+  EC2_HOST: 13.60.92.37
+  DEPLOY_PATH: /var/www/map-hms
+  DOCKER_CONTAINER: map-hms-app
+
+jobs:
+  rollback:
+    name: Rollback to Previous Version
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup SSH with official action
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
+      
+      - name: Add AWS host to known_hosts
+        run: |
+          ssh-keyscan -H ${{ env.EC2_HOST }} >> ~/.ssh/known_hosts
+      
+      - name: List available backups
+        id: list_backups
+        run: |
+          echo "📋 Available backups:"
+          ssh ec2-user@${{ env.EC2_HOST }} \
+            "sudo ls -lh /var/www/backups/ | tail -n +2"
+      
+      - name: Perform rollback
+        run: |
+          ssh ec2-user@${{ env.EC2_HOST }} << 'ROLLBACK'
+            set -e
+            
+            BACKUP_TIMESTAMP="${{ inputs.backup_timestamp }}"
+            
+            if [ -z "$BACKUP_TIMESTAMP" ]; then
+              echo "🔍 No backup timestamp specified, using latest backup..."
+              BACKUP_DIR=$(sudo ls -dt /var/www/backups/* | head -n 1)
+            else
+              BACKUP_DIR="/var/www/backups/$BACKUP_TIMESTAMP"
+            fi
+            
+            echo "📦 Rollback target: $BACKUP_DIR"
+            
+            if [ ! -d "$BACKUP_DIR/code" ]; then
+              echo "❌ Backup not found at $BACKUP_DIR/code"
+              exit 1
+            fi
+            
+            # Create a backup of current state before rollback
+            CURRENT_BACKUP=/var/www/backups/pre-rollback-$(date +%Y%m%d_%H%M%S)
+            sudo mkdir -p $CURRENT_BACKUP
+            sudo cp -r ${{ env.DEPLOY_PATH }} $CURRENT_BACKUP/code
+            echo "💾 Current state backed up to $CURRENT_BACKUP"
+            
+            # Perform rollback
+            echo "🔙 Rolling back to $BACKUP_DIR..."
+            sudo rsync -av --delete $BACKUP_DIR/code/ ${{ env.DEPLOY_PATH }}/
+            
+            # Fix permissions
+            sudo chown -R apache:apache ${{ env.DEPLOY_PATH }}/storage
+            sudo chown -R apache:apache ${{ env.DEPLOY_PATH }}/bootstrap/cache
+            
+            echo "✅ Files restored from backup"
+          ROLLBACK
+      
+      - name: Reinstall dependencies
+        run: |
+          ssh ec2-user@${{ env.EC2_HOST }} << 'INSTALL'
+            cd ${{ env.DEPLOY_PATH }}
+            
+            echo "📦 Installing dependencies from backup..."
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} composer install \
+              --no-interaction \
+              --prefer-dist \
+              --optimize-autoloader \
+              --no-dev
+          INSTALL
+      
+      - name: Clear caches
+        run: |
+          ssh ec2-user@${{ env.EC2_HOST }} << 'CACHE'
+            cd ${{ env.DEPLOY_PATH }}
+            
+            echo "🧹 Clearing all caches..."
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan config:clear
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan cache:clear
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan route:clear
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan view:clear
+            
+            echo "📦 Re-caching configuration..."
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan config:cache
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan route:cache
+          CACHE
+      
+      - name: Restart services
+        run: |
+          ssh ec2-user@${{ env.EC2_HOST }} << 'RESTART'
+            echo "🔄 Restarting services..."
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} php artisan queue:restart
+            sudo docker exec ${{ env.DOCKER_CONTAINER }} service nginx reload || true
+          RESTART
+      
+      - name: Health check
+        run: |
+          echo "🏥 Running health check..."
+          sleep 10
+          
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://${{ env.EC2_HOST }}/healthz || echo "000")
+          
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "✅ Rollback successful! Application is healthy (HTTP $HTTP_CODE)"
+          else
+            echo "❌ Rollback may have failed! Health check returned HTTP $HTTP_CODE"
+            exit 1
+          fi
+      
+      - name: Rollback summary
+        if: success()
+        run: |
+          echo "## ⏪ Rollback Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Environment:** ${{ inputs.environment }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Backup Timestamp:** ${{ inputs.backup_timestamp || 'Latest' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Rolled back by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "⚠️ **Action Required:** Investigate why the rollback was necessary" >> $GITHUB_STEP_SUMMARY
+      
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "## ❌ Rollback Failed!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Immediate actions required:**" >> $GITHUB_STEP_SUMMARY
+          echo "1. SSH into the server and investigate" >> $GITHUB_STEP_SUMMARY
+          echo "2. Check application logs" >> $GITHUB_STEP_SUMMARY
+          echo "3. Verify backup integrity" >> $GITHUB_STEP_SUMMARY
+          echo "4. Consider manual intervention" >> $GITHUB_STEP_SUMMARY
+

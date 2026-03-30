@@ -1,0 +1,269 @@
+appId: com.mapmars.hmsstaff
+name: "Warden - Comprehensive Demo Test"
+tags:
+  - warden
+  - comprehensive
+  - demo-ready
+  - e2e
+
+---
+
+# ============================================
+# WARDEN COMPREHENSIVE DEMO TEST
+# Phone: 8888888888 | OTP: 123456
+# Tests: Login, All Tabs, All Features, UX, Navigation
+# Mimics actual user behavior for demo readiness
+# ============================================
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- stopApp:
+    appId: com.mapmars.hmsstaff
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Login|(Send OTP|Get OTP))"
+    timeout: 45000
+
+- takeScreenshot: "warden-demo/01_app_launched"
+
+# Enter Warden phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered)"
+    optional: true
+- inputText: "8888888888"
+- hideKeyboard
+
+- takeScreenshot: "warden-demo/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle "Test Mode" dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|6-digit)"
+    timeout: 15000
+
+- takeScreenshot: "warden-demo/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify)"
+    optional: true
+
+# Handle "Select Institution" screen
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant)"
+    commands:
+      - takeScreenshot: "warden-demo/04_tenant_selection"
+      - tapOn:
+          text: "(Demo College|Demo|College)"
+          optional: true
+
+# Wait for Warden Dashboard
+- extendedWaitUntil:
+    visible: "(Warden Portal|Warden|Good Morning|Good Afternoon|Good Evening|Dashboard)"
+    timeout: 30000
+
+- takeScreenshot: "warden-demo/05_dashboard_loaded"
+
+# ============================================
+# PART 2: DASHBOARD VERIFICATION
+# ============================================
+
+# Verify header elements
+- assertVisible:
+    text: "(Warden Portal|Warden)"
+    
+- takeScreenshot: "warden-demo/06_dashboard_header"
+
+# Verify Quick Actions exist
+- assertVisible:
+    text: "(Outpass Approvals|Leave Approvals|Sick Leaves|Guest Entries)"
+    optional: true
+
+- takeScreenshot: "warden-demo/07_quick_actions"
+
+# ============================================
+# PART 3: TEST OUTPASS APPROVALS
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Outpass Approvals"
+    commands:
+      - tapOn: "Outpass Approvals"
+      - extendedWaitUntil:
+          visible: "(Outpass Approvals|No pending|All caught up)"
+          timeout: 10000
+      - takeScreenshot: "warden-demo/08_outpass_screen"
+      - back
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Quick Actions)"
+    timeout: 10000
+
+# ============================================
+# PART 4: TEST LEAVE APPROVALS
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Leave Approvals"
+    commands:
+      - tapOn: "Leave Approvals"
+      - extendedWaitUntil:
+          visible: "(Leave Approvals|No pending|All caught up)"
+          timeout: 10000
+      - takeScreenshot: "warden-demo/09_leave_screen"
+      - back
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Quick Actions)"
+    timeout: 10000
+
+# ============================================
+# PART 5: TEST SICK LEAVES
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Sick Leaves"
+    commands:
+      - tapOn: "Sick Leaves"
+      - extendedWaitUntil:
+          visible: "(Sick Leaves|No sick reports|All students are healthy)"
+          timeout: 10000
+      - takeScreenshot: "warden-demo/10_sick_leaves_screen"
+      - back
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Quick Actions)"
+    timeout: 10000
+
+# ============================================
+# PART 6: TEST GUEST ENTRIES
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Guest Entries"
+    commands:
+      - tapOn: "Guest Entries"
+      - extendedWaitUntil:
+          visible: "(Guest Entries|Active|All|No guest)"
+          timeout: 10000
+      - takeScreenshot: "warden-demo/11_guest_entries_screen"
+      - back
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Quick Actions)"
+    timeout: 10000
+
+# ============================================
+# PART 7: TEST BOTTOM TAB - ATTENDANCE
+# ============================================
+
+- tapOn:
+    text: "Attendance"
+    optional: true
+
+- extendedWaitUntil:
+    visible: "(Attendance|Rooms|No session)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/12_attendance_tab"
+
+# ============================================
+# PART 8: TEST BOTTOM TAB - CHECKLIST
+# ============================================
+
+- tapOn:
+    text: "Checklist"
+
+- extendedWaitUntil:
+    visible: "(Checklist|Daily tasks|Pending|Completed)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/13_checklist_tab"
+
+# ============================================
+# PART 9: TEST BOTTOM TAB - REQUESTS
+# ============================================
+
+- tapOn:
+    text: "Requests"
+
+- extendedWaitUntil:
+    visible: "(Requests|All|Housekeeping|Manage all)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/14_requests_tab"
+
+# ============================================
+# PART 10: TEST BOTTOM TAB - STUDENTS
+# ============================================
+
+- tapOn:
+    text: "Students"
+
+- extendedWaitUntil:
+    visible: "(Students|Search|hostels)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/15_students_tab"
+
+# ============================================
+# PART 11: BACK TO DASHBOARD
+# ============================================
+
+- tapOn:
+    text: "Dashboard"
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Quick Actions)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/16_back_to_dashboard"
+
+# ============================================
+# PART 12: TEST PROFILE NAVIGATION
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Profile"
+    commands:
+      - scroll
+      - tapOn: "Profile"
+      - extendedWaitUntil:
+          visible: "(Profile|Logout|Settings)"
+          timeout: 10000
+      - takeScreenshot: "warden-demo/17_profile_screen"
+      - back
+
+# ============================================
+# FINAL: TEST COMPLETE
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(Warden Portal|Dashboard|Quick Actions)"
+    timeout: 10000
+
+- takeScreenshot: "warden-demo/18_test_complete"

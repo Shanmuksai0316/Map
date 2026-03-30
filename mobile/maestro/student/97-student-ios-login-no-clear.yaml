@@ -1,0 +1,50 @@
+appId: com.maphms.student
+name: "Student iOS Login No Clear"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "noclear/01_initial"
+
+- tapOn:
+    id: "phone-input"
+    optional: true
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "noclear/02_phone"
+
+- tapOn:
+    id: "send-otp-button"
+    optional: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "noclear/03_after_send"
+
+- runFlow:
+    when:
+      visible: "(Test Mode|Success|OK|Alert)"
+    commands:
+      - tapOn: "(OK|Close|Done)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "noclear/04_after_alert"
+
+- runFlow:
+    when:
+      visible: "Verification Code"
+    commands:
+      - tapOn:
+          id: "otp-input"
+      - eraseText
+      - inputText: ${otp}
+      - hideKeyboard
+      - takeScreenshot: "noclear/05_otp"
+      - tapOn:
+          id: "verify-otp-button"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "noclear/06_after_verify"

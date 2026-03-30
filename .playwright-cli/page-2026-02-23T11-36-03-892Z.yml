@@ -1,0 +1,213 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - navigation [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - link "Assigned Staff" [ref=e19] [cursor=pointer]:
+                    - /url: https://admin.mapservices.in/admin/assigned-staff
+                - listitem [ref=e20]:
+                  - img [ref=e21]
+                  - generic [ref=e23]: List
+            - heading "Assigned Staff" [level=1] [ref=e24]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - generic [ref=e30]:
+                - button "Export" [ref=e33] [cursor=pointer]:
+                  - img [ref=e34]
+                  - generic [ref=e36]: Export
+                - generic [ref=e38]:
+                  - generic [ref=e39]:
+                    - generic [ref=e40]: Search
+                    - generic [ref=e41]:
+                      - img [ref=e43]
+                      - searchbox "Search" [ref=e46]: EMP-00025
+                  - button "Filter 0" [ref=e49] [cursor=pointer]:
+                    - generic [ref=e50]: Filter
+                    - img [ref=e51]
+                    - generic [ref=e56]: "0"
+              - generic [ref=e57]:
+                - generic [ref=e930]:
+                  - generic [ref=e931]: Active filters
+                  - generic [ref=e933]:
+                    - generic [ref=e935]: "Search: EMP-00025"
+                    - button "Remove filter" [ref=e936] [cursor=pointer]:
+                      - img [ref=e937]
+                      - generic [ref=e939]: Remove filter
+                - button [ref=e941] [cursor=pointer]:
+                  - img [ref=e942]
+              - table [ref=e945]:
+                - rowgroup [ref=e946]:
+                  - row "Employee ID Name Phone Tenant Role Assigned Hostel Actions" [ref=e947]:
+                    - columnheader "Employee ID" [ref=e948]:
+                      - button "Employee ID" [ref=e949] [cursor=pointer]:
+                        - generic [ref=e950]: Employee ID
+                        - img [ref=e951]
+                    - columnheader "Name" [ref=e953]:
+                      - button "Name" [ref=e954] [cursor=pointer]:
+                        - generic [ref=e955]: Name
+                        - img [ref=e956]
+                    - columnheader "Phone" [ref=e958]:
+                      - generic [ref=e960]: Phone
+                    - columnheader "Tenant" [ref=e961]:
+                      - button "Tenant" [ref=e962] [cursor=pointer]:
+                        - generic [ref=e963]: Tenant
+                        - img [ref=e964]
+                    - columnheader "Role" [ref=e966]:
+                      - generic [ref=e968]: Role
+                    - columnheader "Assigned Hostel" [ref=e969]:
+                      - generic [ref=e971]: Assigned Hostel
+                    - columnheader "Actions" [ref=e972]
+                - rowgroup [ref=e973]:
+                  - row "EMP-00025 M - warden 9876543220 CLI Auto Tenant 17718351303 Warden CL... View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e974]:
+                    - cell "EMP-00025" [ref=e975]:
+                      - link "EMP-00025" [ref=e977] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                        - generic [ref=e982]: EMP-00025
+                    - cell "M - warden" [ref=e983]:
+                      - link "M - warden" [ref=e985] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                        - generic [ref=e990]: M - warden
+                    - cell "9876543220" [ref=e991]:
+                      - generic [ref=e998] [cursor=pointer]: "9876543220"
+                    - cell "CLI Auto Tenant 17718351303" [ref=e999]:
+                      - link "CLI Auto Tenant 17718351303" [ref=e1001] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                        - generic [ref=e1006]: CLI Auto Tenant 17718351303
+                    - cell "Warden" [ref=e1007]:
+                      - link "Warden" [ref=e1009] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                        - generic [ref=e1015]: Warden
+                    - cell "CL..." [ref=e1016]:
+                      - link "CL..." [ref=e1018] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                        - generic [ref=e1024]: CL...
+                    - cell "View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e1025]:
+                      - generic [ref=e1027]:
+                        - link "View" [ref=e1028] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/30
+                          - img [ref=e1029]
+                          - generic [ref=e1032]: View
+                        - link "Edit" [ref=e1033] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/30/edit
+                          - img [ref=e1034]
+                          - generic [ref=e1037]: Edit
+                        - button "Deactivate" [ref=e1038] [cursor=pointer]:
+                          - img [ref=e1039]
+                          - generic [ref=e1041]: Deactivate
+                        - button "Reassign" [ref=e1042] [cursor=pointer]:
+                          - img [ref=e1043]
+                          - generic [ref=e1045]: Reassign
+                        - button "Revoke Assignment" [ref=e1046] [cursor=pointer]:
+                          - img [ref=e1047]
+                          - generic [ref=e1049]: Revoke Assignment
+                        - button "Assignment History" [ref=e1050] [cursor=pointer]:
+                          - img [ref=e1051]
+                          - generic [ref=e1053]: Assignment History
+              - navigation "Pagination navigation" [ref=e1054]:
+                - generic [ref=e1057]:
+                  - generic [ref=e1059]: Per page
+                  - combobox "Per page" [ref=e1061]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e821]:
+      - generic [ref=e823]:
+        - link "Super Admin logo" [ref=e825] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e826]
+        - button "Collapse sidebar" [ref=e827] [cursor=pointer]:
+          - generic [ref=e828]: Collapse sidebar
+          - img [ref=e829]
+      - navigation [ref=e831]:
+        - list [ref=e832]:
+          - listitem [ref=e833]:
+            - list [ref=e834]:
+              - listitem [ref=e835]:
+                - link "Dashboard" [ref=e836] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e837]
+                  - generic [ref=e839]: Dashboard
+          - listitem [ref=e840]:
+            - generic [ref=e841] [cursor=pointer]:
+              - img [ref=e842]
+              - generic [ref=e844]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e845]:
+                - generic [ref=e846]: Tenant Management
+                - img [ref=e847]
+            - list [ref=e849]:
+              - listitem [ref=e850]:
+                - link "New Tenant Onboarding" [ref=e851] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e855]: New Tenant Onboarding
+              - listitem [ref=e856]:
+                - link "All Tenants" [ref=e857] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e862]: All Tenants
+              - listitem [ref=e863]:
+                - link "Archived Tenants" [ref=e864] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e868]: Archived Tenants
+          - listitem [ref=e869]:
+            - generic [ref=e870] [cursor=pointer]:
+              - img [ref=e871]
+              - generic [ref=e873]: Staff Management
+              - button "Staff Management" [expanded] [ref=e874]:
+                - generic [ref=e875]: Staff Management
+                - img [ref=e876]
+            - list [ref=e878]:
+              - listitem [ref=e879]:
+                - link "All Staff" [ref=e880] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e884]: All Staff
+              - listitem [ref=e885]:
+                - link "Assigned Staff" [ref=e886] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e891]: Assigned Staff
+              - listitem [ref=e892]:
+                - link "Unassigned Staff" [ref=e893] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e898]: Unassigned Staff
+              - listitem [ref=e899]:
+                - link "Archived Staff" [ref=e900] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e904]: Archived Staff
+          - listitem [ref=e905]:
+            - generic [ref=e906] [cursor=pointer]:
+              - img [ref=e907]
+              - generic [ref=e910]: Operations
+              - button "Operations" [ref=e911]:
+                - generic [ref=e912]: Operations
+                - img [ref=e913]
+          - listitem [ref=e915]:
+            - generic [ref=e916] [cursor=pointer]:
+              - img [ref=e917]
+              - generic [ref=e919]: Reports
+              - button "Reports" [expanded] [ref=e920]:
+                - generic [ref=e921]: Reports
+                - img [ref=e922]
+            - list [ref=e924]:
+              - listitem [ref=e925]:
+                - link "Report Center" [ref=e926] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e929]: Report Center
+  - generic:
+    - status

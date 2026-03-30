@@ -1,0 +1,115 @@
+appId: com.maphms.student
+name: "Student Store Screenshots Robust"
+tags:
+  - student-app
+  - store-screenshots
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Get Started"
+    commands:
+      - takeScreenshot: "student/store/01_splash"
+      - tapOn: "Get Started"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Phone Number|Enter your registered phone|Send OTP|10-digit)"
+    commands:
+      - takeScreenshot: "student/store/02_login_screen"
+      - tapOn:
+          text: "(Phone Number|Enter your registered phone|10-digit)"
+          optional: true
+      - inputText: ${phone}
+      - hideKeyboard
+      - takeScreenshot: "student/store/03_phone_entered"
+      - tapOn: "Send OTP"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Test Mode|OK|Alert)"
+          commands:
+            - tapOn: "(OK|Close|Done)"
+            - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter 6-digit code|Verify & Login|Resend OTP|OTP)"
+    timeout: 30000
+- takeScreenshot: "student/store/04_otp_screen"
+
+- tapOn:
+    text: "(Enter 6-digit code|Enter OTP|OTP)"
+    optional: true
+- inputText: ${otp}
+- hideKeyboard
+- takeScreenshot: "student/store/05_otp_entered"
+
+- tapOn:
+    text: "(Verify & Login|Verify OTP|Verify|Submit|Login)"
+    optional: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your)"
+    commands:
+      - takeScreenshot: "student/store/06_tenant_selection"
+      - tapOn: "(MAP|Test|Demo|PPCU)"
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Quick Actions|My Profile|Requests|Out-pass|Leave|Dashboard|Home|Good Evening)"
+    timeout: 30000
+- takeScreenshot: "student/store/07_dashboard"
+
+- runFlow:
+    when:
+      visible: "My Profile"
+    commands:
+      - tapOn: "My Profile"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/store/08_profile"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Requests"
+    commands:
+      - tapOn: "Requests"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/store/09_requests"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Out-pass"
+    commands:
+      - tapOn: "Out-pass"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/store/10_outpass"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Leave"
+    commands:
+      - tapOn: "Leave"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/store/11_leave"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+- takeScreenshot: "student/store/12_final_home"

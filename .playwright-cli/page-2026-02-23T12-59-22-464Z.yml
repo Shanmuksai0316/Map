@@ -1,0 +1,50 @@
+- generic [ref=e1]:
+  - main [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - img "Super Admin logo" [ref=e8]
+          - heading "Sign in" [level=1] [ref=e9]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img "MAP - Streamline Your Institute Operations" [ref=e14]
+            - generic [ref=e15]:
+              - heading "Streamline Your Institute Operations." [level=1] [ref=e16]
+              - paragraph [ref=e17]: The most advanced hostel management system designed for scale, powering institutions across India.
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - generic [ref=e21]: Super Admin Login
+              - paragraph [ref=e22]: Enter your credentials to access the management portal.
+            - generic [ref=e23]:
+              - generic [ref=e24]:
+                - generic [ref=e27]:
+                  - generic [ref=e30]:
+                    - text: Email address
+                    - superscript [ref=e31]: "*"
+                  - textbox "Email address*" [active] [ref=e35]
+                - generic [ref=e38]:
+                  - generic [ref=e39]:
+                    - generic [ref=e41]:
+                      - text: Password
+                      - superscript [ref=e42]: "*"
+                    - link "Forgot password?" [ref=e45] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/password-reset/request
+                      - generic [ref=e46]: Forgot password?
+                  - generic [ref=e48]:
+                    - textbox "Password*" [ref=e50]
+                    - button "Show password" [ref=e53] [cursor=pointer]:
+                      - generic [ref=e54]: Show password
+                      - img [ref=e55]
+                - generic [ref=e62]:
+                  - checkbox "Remember me" [ref=e63]
+                  - generic [ref=e64]: Remember me
+              - button "Sign in" [ref=e67] [cursor=pointer]:
+                - generic [ref=e68]: Sign in
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+  - generic:
+    - status

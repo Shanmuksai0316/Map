@@ -1,0 +1,84 @@
+appId: com.mapmars.hmsstaff
+name: "Staff API Login Flow (with automation bypass)"
+---
+
+# Inputs via env:
+#   phone: phone number for login
+#   tenantCode: tenant code (e.g., MAP-TEST)
+#   automationSecret: the OTP automation secret
+#   automationOtp: the automation OTP code (default 123456)
+#   dashboardRegex: Regex to verify dashboard loaded
+
+# Wait for login screen to load
+- extendedWaitUntil:
+    visible: "(Phone Number|Enter your registered phone)"
+    timeout: 15000
+
+- takeScreenshot: "login/01_login_screen"
+
+# Enter phone number (remove +91 prefix for input)
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter 10-digit)"
+    optional: true
+- inputText: ${phone}
+- hideKeyboard
+
+- takeScreenshot: "login/02_phone_entered"
+
+# Tap Send OTP button
+- extendedWaitUntil:
+    visible: "Send OTP"
+    timeout: 5000
+
+# Scroll down to ensure button is visible
+- scroll
+
+- tapOn: 
+    text: "Send OTP"
+    retryTapIfNoChange: true
+
+# Wait a bit for network call
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 3000
+
+- takeScreenshot: "login/02b_after_send_otp"
+
+# Handle any error dialogs
+- runFlow:
+    when:
+      visible: "(Error|Unable|OK)"
+    commands:
+      - takeScreenshot: "login/error_dialog"
+      - tapOn:
+          text: "(OK|Dismiss|Close)"
+          optional: true
+
+# Wait for OTP screen or verify button
+- extendedWaitUntil:
+    visible: "(Enter OTP|Verify OTP|OTP sent|Enter the 6-digit|Verify|6-digit|verification)"
+    timeout: 15000
+
+- takeScreenshot: "login/03_otp_screen"
+
+# Enter OTP (automation code: 123456)
+- tapOn:
+    text: "(Enter OTP|Enter the 6-digit|Digit 1)"
+    optional: true
+- inputText: ${automationOtp}
+- hideKeyboard
+
+- takeScreenshot: "login/04_otp_entered"
+
+# Tap Verify
+- tapOn:
+    text: "(Verify|Verify OTP|Submit|Login)"
+    optional: true
+
+# Wait for dashboard to load
+- extendedWaitUntil:
+    visible: ${dashboardRegex}
+    timeout: 15000
+
+- takeScreenshot: "login/05_dashboard_loaded"
+

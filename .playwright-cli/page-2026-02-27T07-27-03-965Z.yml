@@ -1,0 +1,248 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Tulip campus manager" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Import Jobs" [ref=e19] [cursor=pointer]:
+                      - /url: https://ppcu.mapservices.in/campus-manager/import-jobs
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: View
+              - heading "View Import Job" [level=1] [ref=e24]
+            - generic [ref=e32]:
+              - generic [ref=e34]:
+                - heading "Summary" [level=3] [ref=e38]
+                - generic [ref=e42]:
+                  - generic [ref=e45]:
+                    - term [ref=e47]:
+                      - generic [ref=e48]: Type
+                    - definition [ref=e50]:
+                      - generic [ref=e58]: Students
+                  - generic [ref=e61]:
+                    - term [ref=e63]:
+                      - generic [ref=e64]: Status
+                    - definition [ref=e66]:
+                      - generic [ref=e74]: Completed
+                  - generic [ref=e77]:
+                    - term [ref=e79]:
+                      - generic [ref=e80]: Created At
+                    - definition [ref=e82]:
+                      - generic [ref=e89]: 26 Feb 2026 15:21
+                  - generic [ref=e92]:
+                    - term [ref=e94]:
+                      - generic [ref=e95]: Committed At
+                    - definition [ref=e97]:
+                      - generic [ref=e104]: 26 Feb 2026 15:21
+                  - generic [ref=e107]:
+                    - term [ref=e109]:
+                      - generic [ref=e110]: Original Filename
+                    - definition [ref=e112]:
+                      - generic [ref=e119]: students-1772099485132.csv
+              - generic [ref=e121]:
+                - heading "Counts" [level=3] [ref=e125]
+                - generic [ref=e129]:
+                  - generic [ref=e132]:
+                    - term [ref=e134]:
+                      - generic [ref=e135]: Total Rows
+                    - definition [ref=e137]:
+                      - generic [ref=e144]: "1"
+                  - generic [ref=e147]:
+                    - term [ref=e149]:
+                      - generic [ref=e150]: Processed Rows
+                    - definition [ref=e152]:
+                      - generic [ref=e159]: "1"
+                  - generic [ref=e162]:
+                    - term [ref=e164]:
+                      - generic [ref=e165]: Error Rows
+                    - definition [ref=e167]:
+                      - generic [ref=e174]: "0"
+                  - generic [ref=e177]:
+                    - term [ref=e179]:
+                      - generic [ref=e180]: Inserted Rows
+                    - definition [ref=e182]:
+                      - generic [ref=e189]: "1"
+                  - generic [ref=e192]:
+                    - term [ref=e194]:
+                      - generic [ref=e195]: Updated Rows
+                    - definition [ref=e197]:
+                      - generic [ref=e204]: "0"
+              - generic [ref=e206]:
+                - heading "Imported Students" [level=3] [ref=e210]
+                - generic [ref=e217]:
+                  - term [ref=e219]:
+                    - generic [ref=e220]: Details
+                  - definition [ref=e222]:
+                    - generic [ref=e229]: No student-level preview is available for this import. Re-run import to generate detailed student list.
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e236]:
+      - generic [ref=e238]:
+        - link "Campus Manager Dashboard logo" [ref=e240] [cursor=pointer]:
+          - /url: /campus-manager
+          - img "Campus Manager Dashboard logo" [ref=e241]
+        - button "Collapse sidebar" [ref=e242] [cursor=pointer]:
+          - generic [ref=e243]: Collapse sidebar
+          - img [ref=e244]
+      - navigation [ref=e246]:
+        - list [ref=e247]:
+          - listitem [ref=e248]:
+            - list [ref=e249]:
+              - listitem [ref=e250]:
+                - link "Dashboard" [ref=e251] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager
+                  - img [ref=e252]
+                  - generic [ref=e254]: Dashboard
+          - listitem [ref=e255]:
+            - generic [ref=e256] [cursor=pointer]:
+              - generic [ref=e257]: Rooms & Allocation
+              - button "Rooms & Allocation" [expanded] [ref=e258]:
+                - generic [ref=e259]: Rooms & Allocation
+                - img [ref=e260]
+            - list [ref=e262]:
+              - listitem [ref=e263]:
+                - link "Room Overview" [ref=e264] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/room-visualization
+                  - img [ref=e265]
+                  - generic [ref=e267]: Room Overview
+              - listitem [ref=e268]:
+                - link "Checkout Center" [ref=e269] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/checkout-center
+                  - img [ref=e270]
+                  - generic [ref=e272]: Checkout Center
+          - listitem [ref=e273]:
+            - generic [ref=e274] [cursor=pointer]:
+              - generic [ref=e275]: Sports Management
+              - button "Sports Management" [expanded] [ref=e276]:
+                - generic [ref=e277]: Sports Management
+                - img [ref=e278]
+            - list [ref=e280]:
+              - listitem [ref=e281]:
+                - link "Sports Facilities" [ref=e282] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/sports-facilities
+                  - img [ref=e283]
+                  - generic [ref=e285]: Sports Facilities
+          - listitem [ref=e286]:
+            - generic [ref=e287] [cursor=pointer]:
+              - generic [ref=e288]: Security
+              - button "Security" [expanded] [ref=e289]:
+                - generic [ref=e290]: Security
+                - img [ref=e291]
+            - list [ref=e293]:
+              - listitem [ref=e294]:
+                - link "Gate Entries" [ref=e295] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/gate-entries
+                  - img [ref=e296]
+                  - generic [ref=e298]: Gate Entries
+          - listitem [ref=e299]:
+            - generic [ref=e301]: Student Management
+            - list [ref=e302]:
+              - listitem [ref=e303]:
+                - link "All Students" [ref=e304] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/students
+                  - img [ref=e305]
+                  - generic [ref=e307]: All Students
+              - listitem [ref=e308]:
+                - link "Assigned Students" [ref=e309] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/students/assigned
+                  - img [ref=e310]
+                  - generic [ref=e312]: Assigned Students
+              - listitem [ref=e313]:
+                - link "Unassigned Students" [ref=e314] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/unassigned-students
+                  - img [ref=e315]
+                  - generic [ref=e317]: Unassigned Students
+              - listitem [ref=e318]:
+                - link "Bulk Upload Students 21" [ref=e319] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/import-jobs
+                  - img [ref=e320]
+                  - generic [ref=e322]: Bulk Upload Students
+                  - generic [ref=e326]: "21"
+          - listitem [ref=e327]:
+            - generic [ref=e328] [cursor=pointer]:
+              - generic [ref=e329]: Room & Allocation
+              - button "Room & Allocation" [ref=e330]:
+                - generic [ref=e331]: Room & Allocation
+                - img [ref=e332]
+          - listitem [ref=e334]:
+            - generic [ref=e335] [cursor=pointer]:
+              - generic [ref=e336]: Checklist
+              - button "Checklist" [ref=e337]:
+                - generic [ref=e338]: Checklist
+                - img [ref=e339]
+          - listitem [ref=e341]:
+            - generic [ref=e343]: Requests
+            - list [ref=e344]:
+              - listitem [ref=e345]:
+                - link "Delayed Requests 8" [ref=e346] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/delayed-requests
+                  - img [ref=e347]
+                  - generic [ref=e349]: Delayed Requests
+                  - generic [ref=e353]: "8"
+              - listitem [ref=e354]:
+                - link "Housekeeping" [ref=e355] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/housekeeping-requests
+                  - img [ref=e356]
+                  - generic [ref=e358]: Housekeeping
+              - listitem [ref=e359]:
+                - link "Repair & Maintenance" [ref=e360] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/maintenance-requests
+                  - img [ref=e361]
+                  - generic [ref=e363]: Repair & Maintenance
+              - listitem [ref=e364]:
+                - link "Outpass" [ref=e365] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/outpass-requests
+                  - img [ref=e366]
+                  - generic [ref=e368]: Outpass
+              - listitem [ref=e369]:
+                - link "Leave" [ref=e370] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/leave-requests
+                  - img [ref=e371]
+                  - generic [ref=e373]: Leave
+              - listitem [ref=e374]:
+                - link "Guest Entry" [ref=e375] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/guest-entry-requests
+                  - img [ref=e376]
+                  - generic [ref=e378]: Guest Entry
+              - listitem [ref=e379]:
+                - link "Sports" [ref=e380] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/sports-requests
+                  - img [ref=e381]
+                  - generic [ref=e383]: Sports
+              - listitem [ref=e384]:
+                - link "Room Change Requests" [ref=e385] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/campus-manager/room-changes
+                  - img [ref=e386]
+                  - generic [ref=e388]: Room Change Requests
+          - listitem [ref=e389]:
+            - generic [ref=e390] [cursor=pointer]:
+              - generic [ref=e391]: Communications
+              - button "Communications" [ref=e392]:
+                - generic [ref=e393]: Communications
+                - img [ref=e394]
+          - listitem [ref=e396]:
+            - generic [ref=e397] [cursor=pointer]:
+              - generic [ref=e398]: Emergency
+              - button "Emergency" [ref=e399]:
+                - generic [ref=e400]: Emergency
+                - img [ref=e401]
+          - listitem [ref=e403]:
+            - generic [ref=e404] [cursor=pointer]:
+              - generic [ref=e405]: Operations
+              - button "Operations" [ref=e406]:
+                - generic [ref=e407]: Operations
+                - img [ref=e408]
+      - generic [ref=e411]: Version 1.0.0
+  - generic:
+    - status

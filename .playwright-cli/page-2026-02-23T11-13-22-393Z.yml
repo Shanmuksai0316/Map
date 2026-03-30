@@ -1,0 +1,585 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - navigation [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - link "Assigned Staff" [ref=e19] [cursor=pointer]:
+                    - /url: https://admin.mapservices.in/admin/assigned-staff
+                - listitem [ref=e20]:
+                  - img [ref=e21]
+                  - generic [ref=e23]: List
+            - heading "Assigned Staff" [level=1] [ref=e24]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - generic [ref=e30]:
+                - button "Export" [ref=e33] [cursor=pointer]:
+                  - img [ref=e34]
+                  - generic [ref=e36]: Export
+                - generic [ref=e38]:
+                  - generic [ref=e39]:
+                    - generic [ref=e40]: Search
+                    - generic [ref=e41]:
+                      - img [ref=e43]
+                      - searchbox "Search" [ref=e46]
+                  - button "Filter 0" [ref=e49] [cursor=pointer]:
+                    - generic [ref=e50]: Filter
+                    - img [ref=e51]
+                    - generic [ref=e56]: "0"
+              - table [ref=e58]:
+                - rowgroup [ref=e59]:
+                  - row "Employee ID Name Phone Tenant Role Assigned Hostel Actions" [ref=e60]:
+                    - columnheader "Employee ID" [ref=e61]:
+                      - button "Employee ID" [ref=e62] [cursor=pointer]:
+                        - generic [ref=e63]: Employee ID
+                        - img [ref=e64]
+                    - columnheader "Name" [ref=e66]:
+                      - button "Name" [ref=e67] [cursor=pointer]:
+                        - generic [ref=e68]: Name
+                        - img [ref=e69]
+                    - columnheader "Phone" [ref=e71]:
+                      - generic [ref=e73]: Phone
+                    - columnheader "Tenant" [ref=e74]:
+                      - button "Tenant" [ref=e75] [cursor=pointer]:
+                        - generic [ref=e76]: Tenant
+                        - img [ref=e77]
+                    - columnheader "Role" [ref=e79]:
+                      - generic [ref=e81]: Role
+                    - columnheader "Assigned Hostel" [ref=e82]:
+                      - generic [ref=e84]: Assigned Hostel
+                    - columnheader "Actions" [ref=e85]
+                - rowgroup [ref=e86]:
+                  - row "EMP-00050 Campus Manager MAP-CLI1771835173 9800750004 CLI Auto Tenant 17718351735 Campus Manager — View Edit Deactivate Assign Assignment History" [ref=e87]:
+                    - cell "EMP-00050" [ref=e88]:
+                      - link "EMP-00050" [ref=e90] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                        - generic [ref=e95]: EMP-00050
+                    - cell "Campus Manager MAP-CLI1771835173" [ref=e96]:
+                      - link "Campus Manager MAP-CLI1771835173" [ref=e98] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                        - generic [ref=e103]: Campus Manager MAP-CLI1771835173
+                    - cell "9800750004" [ref=e104]:
+                      - generic [ref=e111] [cursor=pointer]: "9800750004"
+                    - cell "CLI Auto Tenant 17718351735" [ref=e112]:
+                      - link "CLI Auto Tenant 17718351735" [ref=e114] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                        - generic [ref=e119]: CLI Auto Tenant 17718351735
+                    - cell "Campus Manager" [ref=e120]:
+                      - link "Campus Manager" [ref=e122] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                        - generic [ref=e128]: Campus Manager
+                    - cell "—" [ref=e129]:
+                      - link "—" [ref=e131] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                        - generic [ref=e133]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e134]:
+                      - generic [ref=e136]:
+                        - link "View" [ref=e137] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/268
+                          - img [ref=e138]
+                          - generic [ref=e141]: View
+                        - link "Edit" [ref=e142] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/268/edit
+                          - img [ref=e143]
+                          - generic [ref=e146]: Edit
+                        - button "Deactivate" [ref=e147] [cursor=pointer]:
+                          - img [ref=e148]
+                          - generic [ref=e150]: Deactivate
+                        - button "Assign" [ref=e151] [cursor=pointer]:
+                          - img [ref=e152]
+                          - generic [ref=e154]: Assign
+                        - button "Assignment History" [ref=e155] [cursor=pointer]:
+                          - img [ref=e156]
+                          - generic [ref=e158]: Assignment History
+                  - row "EMP-00047 Campus Manager MAP-CLI1771835108 9800750001 CLI Auto Tenant 17718351082 Campus Manager — View Edit Deactivate Assign Assignment History" [ref=e159]:
+                    - cell "EMP-00047" [ref=e160]:
+                      - link "EMP-00047" [ref=e162] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                        - generic [ref=e167]: EMP-00047
+                    - cell "Campus Manager MAP-CLI1771835108" [ref=e168]:
+                      - link "Campus Manager MAP-CLI1771835108" [ref=e170] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                        - generic [ref=e175]: Campus Manager MAP-CLI1771835108
+                    - cell "9800750001" [ref=e176]:
+                      - generic [ref=e183] [cursor=pointer]: "9800750001"
+                    - cell "CLI Auto Tenant 17718351082" [ref=e184]:
+                      - link "CLI Auto Tenant 17718351082" [ref=e186] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                        - generic [ref=e191]: CLI Auto Tenant 17718351082
+                    - cell "Campus Manager" [ref=e192]:
+                      - link "Campus Manager" [ref=e194] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                        - generic [ref=e200]: Campus Manager
+                    - cell "—" [ref=e201]:
+                      - link "—" [ref=e203] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                        - generic [ref=e205]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e206]:
+                      - generic [ref=e208]:
+                        - link "View" [ref=e209] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/265
+                          - img [ref=e210]
+                          - generic [ref=e213]: View
+                        - link "Edit" [ref=e214] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/265/edit
+                          - img [ref=e215]
+                          - generic [ref=e218]: Edit
+                        - button "Deactivate" [ref=e219] [cursor=pointer]:
+                          - img [ref=e220]
+                          - generic [ref=e222]: Deactivate
+                        - button "Assign" [ref=e223] [cursor=pointer]:
+                          - img [ref=e224]
+                          - generic [ref=e226]: Assign
+                        - button "Assignment History" [ref=e227] [cursor=pointer]:
+                          - img [ref=e228]
+                          - generic [ref=e230]: Assignment History
+                  - row "EMP-00049 Campus Manager MAP-CLI1771835152 9800750003 CLI Auto Tenant 17718351524 Campus Manager — View Edit Deactivate Assign Assignment History" [ref=e231]:
+                    - cell "EMP-00049" [ref=e232]:
+                      - link "EMP-00049" [ref=e234] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                        - generic [ref=e239]: EMP-00049
+                    - cell "Campus Manager MAP-CLI1771835152" [ref=e240]:
+                      - link "Campus Manager MAP-CLI1771835152" [ref=e242] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                        - generic [ref=e247]: Campus Manager MAP-CLI1771835152
+                    - cell "9800750003" [ref=e248]:
+                      - generic [ref=e255] [cursor=pointer]: "9800750003"
+                    - cell "CLI Auto Tenant 17718351524" [ref=e256]:
+                      - link "CLI Auto Tenant 17718351524" [ref=e258] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                        - generic [ref=e263]: CLI Auto Tenant 17718351524
+                    - cell "Campus Manager" [ref=e264]:
+                      - link "Campus Manager" [ref=e266] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                        - generic [ref=e272]: Campus Manager
+                    - cell "—" [ref=e273]:
+                      - link "—" [ref=e275] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                        - generic [ref=e277]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e278]:
+                      - generic [ref=e280]:
+                        - link "View" [ref=e281] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/267
+                          - img [ref=e282]
+                          - generic [ref=e285]: View
+                        - link "Edit" [ref=e286] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/267/edit
+                          - img [ref=e287]
+                          - generic [ref=e290]: Edit
+                        - button "Deactivate" [ref=e291] [cursor=pointer]:
+                          - img [ref=e292]
+                          - generic [ref=e294]: Deactivate
+                        - button "Assign" [ref=e295] [cursor=pointer]:
+                          - img [ref=e296]
+                          - generic [ref=e298]: Assign
+                        - button "Assignment History" [ref=e299] [cursor=pointer]:
+                          - img [ref=e300]
+                          - generic [ref=e302]: Assignment History
+                  - row "EMP-00048 Campus Manager MAP-CLI1771835130 9800750002 CLI Auto Tenant 17718351303 Campus Manager — View Edit Deactivate Assign Assignment History" [ref=e303]:
+                    - cell "EMP-00048" [ref=e304]:
+                      - link "EMP-00048" [ref=e306] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                        - generic [ref=e311]: EMP-00048
+                    - cell "Campus Manager MAP-CLI1771835130" [ref=e312]:
+                      - link "Campus Manager MAP-CLI1771835130" [ref=e314] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                        - generic [ref=e319]: Campus Manager MAP-CLI1771835130
+                    - cell "9800750002" [ref=e320]:
+                      - generic [ref=e327] [cursor=pointer]: "9800750002"
+                    - cell "CLI Auto Tenant 17718351303" [ref=e328]:
+                      - link "CLI Auto Tenant 17718351303" [ref=e330] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                        - generic [ref=e335]: CLI Auto Tenant 17718351303
+                    - cell "Campus Manager" [ref=e336]:
+                      - link "Campus Manager" [ref=e338] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                        - generic [ref=e344]: Campus Manager
+                    - cell "—" [ref=e345]:
+                      - link "—" [ref=e347] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                        - generic [ref=e349]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e350]:
+                      - generic [ref=e352]:
+                        - link "View" [ref=e353] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/266
+                          - img [ref=e354]
+                          - generic [ref=e357]: View
+                        - link "Edit" [ref=e358] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/266/edit
+                          - img [ref=e359]
+                          - generic [ref=e362]: Edit
+                        - button "Deactivate" [ref=e363] [cursor=pointer]:
+                          - img [ref=e364]
+                          - generic [ref=e366]: Deactivate
+                        - button "Assign" [ref=e367] [cursor=pointer]:
+                          - img [ref=e368]
+                          - generic [ref=e370]: Assign
+                        - button "Assignment History" [ref=e371] [cursor=pointer]:
+                          - img [ref=e372]
+                          - generic [ref=e374]: Assignment History
+                  - row "EMP-00046 Campus Manager MAP-CLI1771835087 9800750000 CLI Auto Tenant 17718350871 Campus Manager — View Edit Deactivate Assign Assignment History" [ref=e375]:
+                    - cell "EMP-00046" [ref=e376]:
+                      - link "EMP-00046" [ref=e378] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                        - generic [ref=e383]: EMP-00046
+                    - cell "Campus Manager MAP-CLI1771835087" [ref=e384]:
+                      - link "Campus Manager MAP-CLI1771835087" [ref=e386] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                        - generic [ref=e391]: Campus Manager MAP-CLI1771835087
+                    - cell "9800750000" [ref=e392]:
+                      - generic [ref=e399] [cursor=pointer]: "9800750000"
+                    - cell "CLI Auto Tenant 17718350871" [ref=e400]:
+                      - link "CLI Auto Tenant 17718350871" [ref=e402] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                        - generic [ref=e407]: CLI Auto Tenant 17718350871
+                    - cell "Campus Manager" [ref=e408]:
+                      - link "Campus Manager" [ref=e410] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                        - generic [ref=e416]: Campus Manager
+                    - cell "—" [ref=e417]:
+                      - link "—" [ref=e419] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                        - generic [ref=e421]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e422]:
+                      - generic [ref=e424]:
+                        - link "View" [ref=e425] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/264
+                          - img [ref=e426]
+                          - generic [ref=e429]: View
+                        - link "Edit" [ref=e430] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/264/edit
+                          - img [ref=e431]
+                          - generic [ref=e434]: Edit
+                        - button "Deactivate" [ref=e435] [cursor=pointer]:
+                          - img [ref=e436]
+                          - generic [ref=e438]: Deactivate
+                        - button "Assign" [ref=e439] [cursor=pointer]:
+                          - img [ref=e440]
+                          - generic [ref=e442]: Assign
+                        - button "Assignment History" [ref=e443] [cursor=pointer]:
+                          - img [ref=e444]
+                          - generic [ref=e446]: Assignment History
+                  - row "EMP-00045 Arjun 9988776655 CLI Auto Tenant 17718351303 Guard — View Edit Deactivate Assign Assignment History" [ref=e447]:
+                    - cell "EMP-00045" [ref=e448]:
+                      - link "EMP-00045" [ref=e450] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                        - generic [ref=e455]: EMP-00045
+                    - cell "Arjun" [ref=e456]:
+                      - link "Arjun" [ref=e458] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                        - generic [ref=e463]: Arjun
+                    - cell "9988776655" [ref=e464]:
+                      - generic [ref=e471] [cursor=pointer]: "9988776655"
+                    - cell "CLI Auto Tenant 17718351303" [ref=e472]:
+                      - link "CLI Auto Tenant 17718351303" [ref=e474] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                        - generic [ref=e479]: CLI Auto Tenant 17718351303
+                    - cell "Guard" [ref=e480]:
+                      - link "Guard" [ref=e482] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                        - generic [ref=e488]: Guard
+                    - cell "—" [ref=e489]:
+                      - link "—" [ref=e491] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                        - generic [ref=e493]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e494]:
+                      - generic [ref=e496]:
+                        - link "View" [ref=e497] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/263
+                          - img [ref=e498]
+                          - generic [ref=e501]: View
+                        - link "Edit" [ref=e502] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/263/edit
+                          - img [ref=e503]
+                          - generic [ref=e506]: Edit
+                        - button "Deactivate" [ref=e507] [cursor=pointer]:
+                          - img [ref=e508]
+                          - generic [ref=e510]: Deactivate
+                        - button "Assign" [ref=e511] [cursor=pointer]:
+                          - img [ref=e512]
+                          - generic [ref=e514]: Assign
+                        - button "Assignment History" [ref=e515] [cursor=pointer]:
+                          - img [ref=e516]
+                          - generic [ref=e518]: Assignment History
+                  - row "EMP-00042 Rector MAP-DU +919849290647 University of Delhi Bo... View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e519]:
+                    - cell "EMP-00042" [ref=e520]:
+                      - link "EMP-00042" [ref=e522] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                        - generic [ref=e527]: EMP-00042
+                    - cell "Rector MAP-DU" [ref=e528]:
+                      - link "Rector MAP-DU" [ref=e530] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                        - generic [ref=e535]: Rector MAP-DU
+                    - cell "+919849290647" [ref=e536]:
+                      - generic [ref=e543] [cursor=pointer]: "+919849290647"
+                    - cell "University of Delhi" [ref=e544]:
+                      - link "University of Delhi" [ref=e546] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                        - generic [ref=e551]: University of Delhi
+                    - cell [ref=e552]:
+                      - link [ref=e554] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                    - cell "Bo..." [ref=e556]:
+                      - link "Bo..." [ref=e558] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                        - generic [ref=e564]: Bo...
+                    - cell "View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e565]:
+                      - generic [ref=e567]:
+                        - link "View" [ref=e568] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/49
+                          - img [ref=e569]
+                          - generic [ref=e572]: View
+                        - link "Edit" [ref=e573] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/49/edit
+                          - img [ref=e574]
+                          - generic [ref=e577]: Edit
+                        - button "Deactivate" [ref=e578] [cursor=pointer]:
+                          - img [ref=e579]
+                          - generic [ref=e581]: Deactivate
+                        - button "Reassign" [ref=e582] [cursor=pointer]:
+                          - img [ref=e583]
+                          - generic [ref=e585]: Reassign
+                        - button "Revoke Assignment" [ref=e586] [cursor=pointer]:
+                          - img [ref=e587]
+                          - generic [ref=e589]: Revoke Assignment
+                        - button "Assignment History" [ref=e590] [cursor=pointer]:
+                          - img [ref=e591]
+                          - generic [ref=e593]: Assignment History
+                  - row "EMP-00043 College Admin MAP-DU +918665710327 University of Delhi Bo... View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e594]:
+                    - cell "EMP-00043" [ref=e595]:
+                      - link "EMP-00043" [ref=e597] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                        - generic [ref=e602]: EMP-00043
+                    - cell "College Admin MAP-DU" [ref=e603]:
+                      - link "College Admin MAP-DU" [ref=e605] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                        - generic [ref=e610]: College Admin MAP-DU
+                    - cell "+918665710327" [ref=e611]:
+                      - generic [ref=e618] [cursor=pointer]: "+918665710327"
+                    - cell "University of Delhi" [ref=e619]:
+                      - link "University of Delhi" [ref=e621] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                        - generic [ref=e626]: University of Delhi
+                    - cell [ref=e627]:
+                      - link [ref=e629] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                    - cell "Bo..." [ref=e631]:
+                      - link "Bo..." [ref=e633] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                        - generic [ref=e639]: Bo...
+                    - cell "View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e640]:
+                      - generic [ref=e642]:
+                        - link "View" [ref=e643] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/50
+                          - img [ref=e644]
+                          - generic [ref=e647]: View
+                        - link "Edit" [ref=e648] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/50/edit
+                          - img [ref=e649]
+                          - generic [ref=e652]: Edit
+                        - button "Deactivate" [ref=e653] [cursor=pointer]:
+                          - img [ref=e654]
+                          - generic [ref=e656]: Deactivate
+                        - button "Reassign" [ref=e657] [cursor=pointer]:
+                          - img [ref=e658]
+                          - generic [ref=e660]: Reassign
+                        - button "Revoke Assignment" [ref=e661] [cursor=pointer]:
+                          - img [ref=e662]
+                          - generic [ref=e664]: Revoke Assignment
+                        - button "Assignment History" [ref=e665] [cursor=pointer]:
+                          - img [ref=e666]
+                          - generic [ref=e668]: Assignment History
+                  - row "EMP-00041 Campus Manager MAP-DU +917076358463 University of Delhi — View Edit Deactivate Assign Assignment History" [ref=e669]:
+                    - cell "EMP-00041" [ref=e670]:
+                      - link "EMP-00041" [ref=e672] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                        - generic [ref=e677]: EMP-00041
+                    - cell "Campus Manager MAP-DU" [ref=e678]:
+                      - link "Campus Manager MAP-DU" [ref=e680] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                        - generic [ref=e685]: Campus Manager MAP-DU
+                    - cell "+917076358463" [ref=e686]:
+                      - generic [ref=e693] [cursor=pointer]: "+917076358463"
+                    - cell "University of Delhi" [ref=e694]:
+                      - link "University of Delhi" [ref=e696] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                        - generic [ref=e701]: University of Delhi
+                    - cell [ref=e702]:
+                      - link [ref=e704] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                    - cell "—" [ref=e706]:
+                      - link "—" [ref=e708] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                        - generic [ref=e710]: —
+                    - cell "View Edit Deactivate Assign Assignment History" [ref=e711]:
+                      - generic [ref=e713]:
+                        - link "View" [ref=e714] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/48
+                          - img [ref=e715]
+                          - generic [ref=e718]: View
+                        - link "Edit" [ref=e719] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/48/edit
+                          - img [ref=e720]
+                          - generic [ref=e723]: Edit
+                        - button "Deactivate" [ref=e724] [cursor=pointer]:
+                          - img [ref=e725]
+                          - generic [ref=e727]: Deactivate
+                        - button "Assign" [ref=e728] [cursor=pointer]:
+                          - img [ref=e729]
+                          - generic [ref=e731]: Assign
+                        - button "Assignment History" [ref=e732] [cursor=pointer]:
+                          - img [ref=e733]
+                          - generic [ref=e735]: Assignment History
+                  - row "EMP-00040 College Admin MAP-JNU +919055778971 Jawaharlal Nehru University Bo... View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e736]:
+                    - cell "EMP-00040" [ref=e737]:
+                      - link "EMP-00040" [ref=e739] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                        - generic [ref=e744]: EMP-00040
+                    - cell "College Admin MAP-JNU" [ref=e745]:
+                      - link "College Admin MAP-JNU" [ref=e747] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                        - generic [ref=e752]: College Admin MAP-JNU
+                    - cell "+919055778971" [ref=e753]:
+                      - generic [ref=e760] [cursor=pointer]: "+919055778971"
+                    - cell "Jawaharlal Nehru University" [ref=e761]:
+                      - link "Jawaharlal Nehru University" [ref=e763] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                        - generic [ref=e768]: Jawaharlal Nehru University
+                    - cell [ref=e769]:
+                      - link [ref=e771] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                    - cell "Bo..." [ref=e773]:
+                      - link "Bo..." [ref=e775] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                        - generic [ref=e781]: Bo...
+                    - cell "View Edit Deactivate Reassign Revoke Assignment Assignment History" [ref=e782]:
+                      - generic [ref=e784]:
+                        - link "View" [ref=e785] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/47
+                          - img [ref=e786]
+                          - generic [ref=e789]: View
+                        - link "Edit" [ref=e790] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/assigned-staff/47/edit
+                          - img [ref=e791]
+                          - generic [ref=e794]: Edit
+                        - button "Deactivate" [ref=e795] [cursor=pointer]:
+                          - img [ref=e796]
+                          - generic [ref=e798]: Deactivate
+                        - button "Reassign" [ref=e799] [cursor=pointer]:
+                          - img [ref=e800]
+                          - generic [ref=e802]: Reassign
+                        - button "Revoke Assignment" [ref=e803] [cursor=pointer]:
+                          - img [ref=e804]
+                          - generic [ref=e806]: Revoke Assignment
+                        - button "Assignment History" [ref=e807] [cursor=pointer]:
+                          - img [ref=e808]
+                          - generic [ref=e810]: Assignment History
+              - navigation "Pagination navigation" [ref=e811]:
+                - generic [ref=e814]:
+                  - generic [ref=e816]: Per page
+                  - combobox "Per page" [ref=e818]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+                - button "Next" [ref=e819] [cursor=pointer]:
+                  - generic [ref=e820]: Next
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e821]:
+      - generic [ref=e823]:
+        - link "Super Admin logo" [ref=e825] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e826]
+        - button "Collapse sidebar" [ref=e827] [cursor=pointer]:
+          - generic [ref=e828]: Collapse sidebar
+          - img [ref=e829]
+      - navigation [ref=e831]:
+        - list [ref=e832]:
+          - listitem [ref=e833]:
+            - list [ref=e834]:
+              - listitem [ref=e835]:
+                - link "Dashboard" [ref=e836] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e837]
+                  - generic [ref=e839]: Dashboard
+          - listitem [ref=e840]:
+            - generic [ref=e841] [cursor=pointer]:
+              - img [ref=e842]
+              - generic [ref=e844]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e845]:
+                - generic [ref=e846]: Tenant Management
+                - img [ref=e847]
+            - list [ref=e849]:
+              - listitem [ref=e850]:
+                - link "New Tenant Onboarding" [ref=e851] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e855]: New Tenant Onboarding
+              - listitem [ref=e856]:
+                - link "All Tenants" [ref=e857] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e862]: All Tenants
+              - listitem [ref=e863]:
+                - link "Archived Tenants" [ref=e864] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e868]: Archived Tenants
+          - listitem [ref=e869]:
+            - generic [ref=e870] [cursor=pointer]:
+              - img [ref=e871]
+              - generic [ref=e873]: Staff Management
+              - button "Staff Management" [expanded] [ref=e874]:
+                - generic [ref=e875]: Staff Management
+                - img [ref=e876]
+            - list [ref=e878]:
+              - listitem [ref=e879]:
+                - link "All Staff" [ref=e880] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e884]: All Staff
+              - listitem [ref=e885]:
+                - link "Assigned Staff" [ref=e886] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e891]: Assigned Staff
+              - listitem [ref=e892]:
+                - link "Unassigned Staff" [ref=e893] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e898]: Unassigned Staff
+              - listitem [ref=e899]:
+                - link "Archived Staff" [ref=e900] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e904]: Archived Staff
+          - listitem [ref=e905]:
+            - generic [ref=e906] [cursor=pointer]:
+              - img [ref=e907]
+              - generic [ref=e910]: Operations
+              - button "Operations" [ref=e911]:
+                - generic [ref=e912]: Operations
+                - img [ref=e913]
+          - listitem [ref=e915]:
+            - generic [ref=e916] [cursor=pointer]:
+              - img [ref=e917]
+              - generic [ref=e919]: Reports
+              - button "Reports" [expanded] [ref=e920]:
+                - generic [ref=e921]: Reports
+                - img [ref=e922]
+            - list [ref=e924]:
+              - listitem [ref=e925]:
+                - link "Report Center" [ref=e926] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e929]: Report Center
+  - generic:
+    - status

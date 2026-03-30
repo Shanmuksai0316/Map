@@ -1,0 +1,48 @@
+- generic [ref=e1]:
+  - iframe [ref=e263]:
+    
+  - generic [ref=e265]: Screen reader support enabled.
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Forms Home" [ref=e5614] [cursor=pointer]:
+          - img [ref=e11]
+        - textbox "Document title" [ref=e5615]: Student Bulk Upload Intake
+        - button "Move to folder" [ref=e5616] [cursor=pointer]
+        - checkbox "Star" [ref=e5617] [cursor=pointer]
+        - generic "All changes saved in Drive, Every change you make is automatically saved in Drive.,Last edit was 44 minutes ago" [ref=e5882]: All changes saved in Drive
+      - generic [ref=e24]:
+        - button "Customize Theme" [ref=e5619] [cursor=pointer]
+        - link "Preview" [ref=e5620] [cursor=pointer]
+        - button "Undo" [ref=e5621] [cursor=pointer]
+        - button "Redo" [ref=e5622] [cursor=pointer]
+        - button "Copy responder link" [ref=e5623] [cursor=pointer]
+        - button "Share" [ref=e5652] [cursor=pointer]
+        - button "Open published form settings" [ref=e5654] [cursor=pointer]:
+          - generic [ref=e5656]:
+            - img [ref=e5658]
+            - generic [ref=e5660]: Published
+        - button "More" [ref=e5661] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e5662] [cursor=pointer]':
+          - img [ref=e81]
+    - tablist [ref=e85]:
+      - tab "Questions" [ref=e5663] [cursor=pointer]:
+        - generic [ref=e87]: Questions
+      - tab "Responses" [active] [selected] [ref=e5664] [cursor=pointer]:
+        - generic [ref=e90]: Responses
+      - tab "Settings" [ref=e5665] [cursor=pointer]:
+        - generic [ref=e92]: Settings
+  - generic [ref=e5884]:
+    - generic [ref=e5886]:
+      - generic [ref=e5887]: 0 responses
+      - generic [ref=e5888]:
+        - button "Link to Sheets. Sends responses to a spreadsheet" [ref=e5891] [cursor=pointer]:
+          - generic [ref=e5898]: Link to Sheets
+        - button "More options for responses" [ref=e5901] [cursor=pointer]
+    - status [ref=e5910]:
+      - generic [ref=e5911]: No responses yet. Please check back later.
+  - button "Help and feedback" [ref=e5880] [cursor=pointer]
+  - iframe [ref=e257]:
+    
+  - generic [ref=e259]: .
+  - generic [ref=e399]: Banner hidden

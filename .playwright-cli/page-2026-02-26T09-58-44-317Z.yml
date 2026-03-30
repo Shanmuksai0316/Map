@@ -1,0 +1,598 @@
+- generic [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - generic [ref=e4]: Screen reader support enabled.
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link [ref=e3535] [cursor=pointer]:
+          - img [ref=e14]
+        - textbox [ref=e3536]: Student Bulk Upload Intake
+        - button [ref=e3537] [cursor=pointer]
+        - checkbox [ref=e3538] [cursor=pointer]
+        - generic [ref=e3539]: All changes saved in Drive
+      - generic [ref=e35]:
+        - button [disabled] [ref=e3540]
+        - link [ref=e3541] [cursor=pointer]
+        - button [disabled] [ref=e3542]
+        - button [disabled] [ref=e3543]
+        - button [ref=e3544] [cursor=pointer]
+        - button [ref=e3545] [cursor=pointer]
+        - button [ref=e3546] [cursor=pointer]:
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e80]: Published
+        - button [ref=e3547] [cursor=pointer]
+        - button [ref=e3548] [cursor=pointer]:
+          - img [ref=e95]
+    - tablist [ref=e99]:
+      - tab [selected] [ref=e3549] [cursor=pointer]:
+        - generic [ref=e101]: Questions
+      - tab [ref=e3550] [cursor=pointer]:
+        - generic [ref=e104]:
+          - text: Responses
+          - generic [ref=e3389]: "1"
+      - tab [ref=e3551] [cursor=pointer]:
+        - generic [ref=e106]: Settings
+  - generic [ref=e154]:
+    - generic [ref=e160]:
+      - generic [ref=e163]:
+        - textbox [ref=e3552]
+        - button [ref=e3553] [cursor=pointer]:
+          - generic [ref=e170]: 
+        - button [ref=e3554] [cursor=pointer]:
+          - generic [ref=e174]: 
+        - button [ref=e3555] [cursor=pointer]:
+          - generic [ref=e178]: 
+        - button [ref=e3556] [cursor=pointer]:
+          - generic [ref=e182]: 
+        - button [ref=e3557] [cursor=pointer]:
+          - generic [ref=e186]: 
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - generic: Form description
+          - textbox [ref=e3558]
+        - button [ref=e3559] [cursor=pointer]:
+          - generic [ref=e196]: 
+        - button [ref=e3560] [cursor=pointer]:
+          - generic [ref=e200]: 
+        - button [ref=e3561] [cursor=pointer]:
+          - generic [ref=e204]: 
+        - button [ref=e3562] [cursor=pointer]:
+          - generic [ref=e208]: 
+        - button [ref=e3563] [cursor=pointer]:
+          - generic [ref=e212]: 
+        - button [ref=e3564] [cursor=pointer]:
+          - generic [ref=e216]: 
+        - button [ref=e3565] [cursor=pointer]:
+          - generic [ref=e220]: 
+    - generic [ref=e221]:
+      - generic [ref=e229]:
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - textbox [ref=e3566]
+            - button [ref=e3567] [cursor=pointer]:
+              - generic [ref=e243]: 
+            - button [ref=e3568] [cursor=pointer]:
+              - generic [ref=e247]: 
+            - button [ref=e3569] [cursor=pointer]:
+              - generic [ref=e251]: 
+            - button [ref=e3570] [cursor=pointer]:
+              - generic [ref=e255]: 
+            - button [ref=e3571] [cursor=pointer]:
+              - generic [ref=e259]: 
+          - generic [ref=e260]: "*"
+        - generic [ref=e266]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3572]
+      - generic [ref=e276]:
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - textbox [ref=e3573]
+            - button [ref=e3574] [cursor=pointer]:
+              - generic [ref=e293]: 
+            - button [ref=e3575] [cursor=pointer]:
+              - generic [ref=e297]: 
+            - button [ref=e3576] [cursor=pointer]:
+              - generic [ref=e301]: 
+            - button [ref=e3577] [cursor=pointer]:
+              - generic [ref=e305]: 
+            - button [ref=e3578] [cursor=pointer]:
+              - generic [ref=e309]: 
+          - generic [ref=e310]: "*"
+        - generic [ref=e316]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3579]
+      - generic [ref=e326]:
+        - generic [ref=e332]:
+          - generic [ref=e333]:
+            - textbox [ref=e3580]
+            - button [ref=e3581] [cursor=pointer]:
+              - generic [ref=e340]: 
+            - button [ref=e3582] [cursor=pointer]:
+              - generic [ref=e344]: 
+            - button [ref=e3583] [cursor=pointer]:
+              - generic [ref=e348]: 
+            - button [ref=e3584] [cursor=pointer]:
+              - generic [ref=e352]: 
+            - button [ref=e3585] [cursor=pointer]:
+              - generic [ref=e356]: 
+          - generic [ref=e357]: "*"
+        - generic [ref=e363]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3586]
+      - generic [ref=e373]:
+        - generic [ref=e379]:
+          - generic [ref=e380]:
+            - textbox [ref=e3587]
+            - button [ref=e3588] [cursor=pointer]:
+              - generic [ref=e387]: 
+            - button [ref=e3589] [cursor=pointer]:
+              - generic [ref=e391]: 
+            - button [ref=e3590] [cursor=pointer]:
+              - generic [ref=e395]: 
+            - button [ref=e3591] [cursor=pointer]:
+              - generic [ref=e399]: 
+            - button [ref=e3592] [cursor=pointer]:
+              - generic [ref=e403]: 
+          - generic [ref=e404]: "*"
+        - list [ref=e3593]:
+          - listitem [ref=e3594]:
+            - generic [ref=e412]:
+              - generic [ref=e415]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3595]: male
+          - listitem [ref=e3596]:
+            - generic [ref=e425]:
+              - generic [ref=e428]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3597]: female
+          - listitem [ref=e3598]:
+            - generic [ref=e1907]:
+              - generic [ref=e1918]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3599]: other
+      - generic [ref=e619]:
+        - generic [ref=e626]:
+          - textbox [ref=e3600]
+          - button [ref=e3601] [cursor=pointer]:
+            - generic [ref=e633]: 
+          - button [ref=e3602] [cursor=pointer]:
+            - generic [ref=e637]: 
+          - button [ref=e3603] [cursor=pointer]:
+            - generic [ref=e641]: 
+          - button [ref=e3604] [cursor=pointer]:
+            - generic [ref=e645]: 
+          - button [ref=e3605] [cursor=pointer]:
+            - generic [ref=e649]: 
+        - textbox [disabled] [ref=e659]: Month, day, year
+      - generic [ref=e670]:
+        - generic [ref=e677]:
+          - textbox [ref=e3606]
+          - button [ref=e3607] [cursor=pointer]:
+            - generic [ref=e684]: 
+          - button [ref=e3608] [cursor=pointer]:
+            - generic [ref=e688]: 
+          - button [ref=e3609] [cursor=pointer]:
+            - generic [ref=e692]: 
+          - button [ref=e3610] [cursor=pointer]:
+            - generic [ref=e696]: 
+          - button [ref=e3611] [cursor=pointer]:
+            - generic [ref=e700]: 
+        - generic [ref=e706]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3612]
+      - generic [ref=e716]:
+        - generic [ref=e723]:
+          - textbox [ref=e3613]
+          - button [ref=e3614] [cursor=pointer]:
+            - generic [ref=e730]: 
+          - button [ref=e3615] [cursor=pointer]:
+            - generic [ref=e734]: 
+          - button [ref=e3616] [cursor=pointer]:
+            - generic [ref=e738]: 
+          - button [ref=e3617] [cursor=pointer]:
+            - generic [ref=e742]: 
+          - button [ref=e3618] [cursor=pointer]:
+            - generic [ref=e746]: 
+        - generic [ref=e752]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3619]
+      - generic [ref=e762]:
+        - generic [ref=e769]:
+          - textbox [ref=e3620]
+          - button [ref=e3621] [cursor=pointer]:
+            - generic [ref=e776]: 
+          - button [ref=e3622] [cursor=pointer]:
+            - generic [ref=e780]: 
+          - button [ref=e3623] [cursor=pointer]:
+            - generic [ref=e784]: 
+          - button [ref=e3624] [cursor=pointer]:
+            - generic [ref=e788]: 
+          - button [ref=e3625] [cursor=pointer]:
+            - generic [ref=e792]: 
+        - generic [ref=e798]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3626]
+      - generic [ref=e808]:
+        - generic [ref=e815]:
+          - textbox [ref=e3627]
+          - button [ref=e3628] [cursor=pointer]:
+            - generic [ref=e822]: 
+          - button [ref=e3629] [cursor=pointer]:
+            - generic [ref=e826]: 
+          - button [ref=e3630] [cursor=pointer]:
+            - generic [ref=e830]: 
+          - button [ref=e3631] [cursor=pointer]:
+            - generic [ref=e834]: 
+          - button [ref=e3632] [cursor=pointer]:
+            - generic [ref=e838]: 
+        - generic [ref=e844]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3633]
+      - generic [ref=e854]:
+        - generic [ref=e861]:
+          - textbox [ref=e3634]
+          - button [ref=e3635] [cursor=pointer]:
+            - generic [ref=e868]: 
+          - button [ref=e3636] [cursor=pointer]:
+            - generic [ref=e872]: 
+          - button [ref=e3637] [cursor=pointer]:
+            - generic [ref=e876]: 
+          - button [ref=e3638] [cursor=pointer]:
+            - generic [ref=e880]: 
+          - button [ref=e3639] [cursor=pointer]:
+            - generic [ref=e884]: 
+        - list [ref=e3640]:
+          - listitem [ref=e3641]:
+            - generic [ref=e892]:
+              - generic [ref=e895]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3642]: "1"
+          - listitem [ref=e3643]:
+            - generic [ref=e905]:
+              - generic [ref=e908]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3644]: "2"
+          - listitem [ref=e3645]:
+            - generic [ref=e918]:
+              - generic [ref=e921]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3646]: "3"
+          - listitem [ref=e3647]:
+            - generic [ref=e931]:
+              - generic [ref=e934]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3648]: "4"
+          - listitem [ref=e3649]:
+            - generic [ref=e944]:
+              - generic [ref=e947]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3650]: "5"
+      - generic [ref=e1069]:
+        - generic [ref=e1076]:
+          - textbox [ref=e3651]
+          - button [ref=e3652] [cursor=pointer]:
+            - generic [ref=e1083]: 
+          - button [ref=e3653] [cursor=pointer]:
+            - generic [ref=e1087]: 
+          - button [ref=e3654] [cursor=pointer]:
+            - generic [ref=e1091]: 
+          - button [ref=e3655] [cursor=pointer]:
+            - generic [ref=e1095]: 
+          - button [ref=e3656] [cursor=pointer]:
+            - generic [ref=e1099]: 
+        - generic [ref=e1105]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3657]
+      - generic [ref=e1115]:
+        - generic [ref=e1122]:
+          - textbox [ref=e3658]
+          - button [ref=e3659] [cursor=pointer]:
+            - generic [ref=e1129]: 
+          - button [ref=e3660] [cursor=pointer]:
+            - generic [ref=e1133]: 
+          - button [ref=e3661] [cursor=pointer]:
+            - generic [ref=e1137]: 
+          - button [ref=e3662] [cursor=pointer]:
+            - generic [ref=e1141]: 
+          - button [ref=e3663] [cursor=pointer]:
+            - generic [ref=e1145]: 
+        - generic [ref=e1151]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3664]
+      - generic [ref=e1161]:
+        - generic [ref=e1168]:
+          - textbox [ref=e3665]
+          - button [ref=e3666] [cursor=pointer]:
+            - generic [ref=e1175]: 
+          - button [ref=e3667] [cursor=pointer]:
+            - generic [ref=e1179]: 
+          - button [ref=e3668] [cursor=pointer]:
+            - generic [ref=e1183]: 
+          - button [ref=e3669] [cursor=pointer]:
+            - generic [ref=e1187]: 
+          - button [ref=e3670] [cursor=pointer]:
+            - generic [ref=e1191]: 
+        - generic [ref=e1197]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3671]
+      - generic [ref=e1207]:
+        - generic [ref=e1214]:
+          - textbox [ref=e3672]
+          - button [ref=e3673] [cursor=pointer]:
+            - generic [ref=e1221]: 
+          - button [ref=e3674] [cursor=pointer]:
+            - generic [ref=e1225]: 
+          - button [ref=e3675] [cursor=pointer]:
+            - generic [ref=e1229]: 
+          - button [ref=e3676] [cursor=pointer]:
+            - generic [ref=e1233]: 
+          - button [ref=e3677] [cursor=pointer]:
+            - generic [ref=e1237]: 
+        - generic [ref=e1243]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3678]
+      - generic [ref=e1253]:
+        - generic [ref=e1260]:
+          - textbox [ref=e3679]
+          - button [ref=e3680] [cursor=pointer]:
+            - generic [ref=e1267]: 
+          - button [ref=e3681] [cursor=pointer]:
+            - generic [ref=e1271]: 
+          - button [ref=e3682] [cursor=pointer]:
+            - generic [ref=e1275]: 
+          - button [ref=e3683] [cursor=pointer]:
+            - generic [ref=e1279]: 
+          - button [ref=e3684] [cursor=pointer]:
+            - generic [ref=e1283]: 
+        - generic [ref=e1289]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3685]
+      - generic [ref=e1299]:
+        - generic [ref=e1306]:
+          - textbox [ref=e3686]
+          - button [ref=e3687] [cursor=pointer]:
+            - generic [ref=e1313]: 
+          - button [ref=e3688] [cursor=pointer]:
+            - generic [ref=e1317]: 
+          - button [ref=e3689] [cursor=pointer]:
+            - generic [ref=e1321]: 
+          - button [ref=e3690] [cursor=pointer]:
+            - generic [ref=e1325]: 
+          - button [ref=e3691] [cursor=pointer]:
+            - generic [ref=e1329]: 
+        - generic [ref=e1335]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3692]
+      - generic [ref=e1345]:
+        - generic [ref=e1352]:
+          - textbox [ref=e3693]
+          - button [ref=e3694] [cursor=pointer]:
+            - generic [ref=e1359]: 
+          - button [ref=e3695] [cursor=pointer]:
+            - generic [ref=e1363]: 
+          - button [ref=e3696] [cursor=pointer]:
+            - generic [ref=e1367]: 
+          - button [ref=e3697] [cursor=pointer]:
+            - generic [ref=e1371]: 
+          - button [ref=e3698] [cursor=pointer]:
+            - generic [ref=e1375]: 
+        - generic [ref=e2875]:
+          - generic: Short answer text
+          - textbox [disabled] [ref=e3699]
+      - generic [ref=e1401]:
+        - generic [ref=e1408]:
+          - textbox [ref=e3700]
+          - button [ref=e3701] [cursor=pointer]:
+            - generic [ref=e1415]: 
+          - button [ref=e3702] [cursor=pointer]:
+            - generic [ref=e1419]: 
+          - button [ref=e3703] [cursor=pointer]:
+            - generic [ref=e1423]: 
+          - button [ref=e3704] [cursor=pointer]:
+            - generic [ref=e1427]: 
+          - button [ref=e3705] [cursor=pointer]:
+            - generic [ref=e1431]: 
+        - generic [ref=e1437]:
+          - generic: Long answer text
+          - textbox [disabled] [ref=e3706]
+      - generic [ref=e1447]:
+        - generic [ref=e1454]:
+          - textbox [ref=e3707]
+          - button [ref=e3708] [cursor=pointer]:
+            - generic [ref=e1461]: 
+          - button [ref=e3709] [cursor=pointer]:
+            - generic [ref=e1465]: 
+          - button [ref=e3710] [cursor=pointer]:
+            - generic [ref=e1469]: 
+          - button [ref=e3711] [cursor=pointer]:
+            - generic [ref=e1473]: 
+          - button [ref=e3712] [cursor=pointer]:
+            - generic [ref=e1477]: 
+        - list [ref=e3713]:
+          - listitem [ref=e3714]:
+            - generic [ref=e1485]:
+              - generic [ref=e1488]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3715]: A+
+          - listitem [ref=e3716]:
+            - generic [ref=e2369]:
+              - generic [ref=e2372]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3717]: A-
+          - listitem [ref=e3718]:
+            - generic [ref=e2393]:
+              - generic [ref=e2396]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3719]: B+
+          - listitem [ref=e3720]:
+            - generic [ref=e2417]:
+              - generic [ref=e2420]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3721]: B-
+          - listitem [ref=e3722]:
+            - generic [ref=e2441]:
+              - generic [ref=e2444]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3723]: O+
+          - listitem [ref=e3724]:
+            - generic [ref=e2465]:
+              - generic [ref=e2468]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3725]: O-
+          - listitem [ref=e3726]:
+            - generic [ref=e2489]:
+              - generic [ref=e2492]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3727]: AB+
+          - listitem [ref=e3728]:
+            - generic [ref=e2513]:
+              - generic [ref=e2516]:
+                - generic:
+                  - radio [disabled]
+              - textbox [ref=e3729]: AB-
+      - generic [ref=e3151]:
+        - generic [ref=e3157]:
+          - generic [ref=e3161]:
+            - textbox [ref=e3730]
+            - button [ref=e3731] [cursor=pointer]:
+              - generic [ref=e3170]: 
+            - button [ref=e3732] [cursor=pointer]:
+              - generic [ref=e3174]: 
+            - button [ref=e3733] [cursor=pointer]:
+              - generic [ref=e3178]: 
+            - button [ref=e3734] [cursor=pointer]:
+              - generic [ref=e3182]: 
+            - button [ref=e3735] [cursor=pointer]:
+              - generic [ref=e3186]: 
+          - button [ref=e3736] [cursor=pointer]
+          - generic [ref=e3194]:
+            - generic [ref=e3195]: Question Type
+            - listbox [ref=e3737] [cursor=pointer]:
+              - generic [ref=e3200]: Short answer
+              - generic [ref=e3204]: Paragraph
+              - option [selected] [ref=e3738]:
+                - generic [ref=e3209]: Multiple choice
+              - generic [ref=e3213]: Checkboxes
+              - generic [ref=e3217]: Dropdown
+              - generic [ref=e3221]: File upload
+              - generic [ref=e3225]: Linear scale
+              - generic [ref=e3229]: Rating
+              - generic [ref=e3233]: Multiple choice grid
+              - generic [ref=e3237]: Checkbox grid
+              - generic [ref=e3241]: Date
+              - generic [ref=e3245]: Time
+        - generic [ref=e3246]:
+          - generic [ref=e3396]:
+            - list [ref=e3739]:
+              - listitem [ref=e3740]:
+                - generic [ref=e3399]:
+                  - generic [ref=e3402]:
+                    - generic:
+                      - radio [disabled]
+                  - generic [ref=e3403]:
+                    - textbox [ref=e3741]: Option 1
+                    - button [ref=e3742] [cursor=pointer]
+            - generic [ref=e3416]:
+              - generic [ref=e3417]:
+                - generic:
+                  - radio [disabled]
+              - generic [ref=e3419]:
+                - generic: Add option
+                - textbox [ref=e3743]
+              - generic [ref=e3421]:
+                - generic [ref=e3422]: or
+                - button [ref=e3744] [cursor=pointer]:
+                  - generic [ref=e3426]: add "Other"
+          - generic [ref=e3283]:
+            - button [disabled] [ref=e3745]
+            - button [disabled] [ref=e3746]
+            - generic [ref=e3297]:
+              - generic [ref=e3299]: Required
+              - checkbox [ref=e3747] [cursor=pointer]
+            - button [ref=e3748] [cursor=pointer]
+  - button [ref=e3749] [cursor=pointer]
+  - iframe [ref=e1506]:
+    
+  - generic [ref=e1508]: .
+  - generic [ref=e1510]: Banner hidden
+  - dialog [ref=e3809]:
+    - iframe [active] [ref=e3811]:
+      - dialog [ref=f44e5]:
+        - dialog "Share \"Student Bulk Upload Intake\"" [ref=f44e10]:
+          - generic [ref=f44e21]:
+            - generic [ref=f44e33]:
+              - heading "Share \"Student Bulk Upload Intake\"" [level=2] [ref=f44e35]
+              - generic [ref=f44e36]:
+                - button "Support" [ref=f44e41] [cursor=pointer]:
+                  - generic [ref=f44e43]: help_outline
+                - button "Settings" [ref=f44e53] [cursor=pointer]:
+                  - generic [ref=f44e55]: settings
+            - region "Share \"Student Bulk Upload Intake\"" [ref=f44e59]:
+              - generic [ref=f44e65]:
+                - generic [ref=f44e66]:
+                  - grid [ref=f44e77]:
+                    - generic [ref=f44e79]:
+                      - combobox "Add people, groups, and calendar events" [active] [ref=f44e80]
+                      - text: Add people, groups, and calendar events
+                  - generic [ref=f44e83]:
+                    - generic [ref=f44e86]: People with access
+                    - menu "List of people this item is shared with. There is 1 person or group in the list." [ref=f44e99]:
+                      - menuitem "Nagraj YR (you) Nagraj YR (you). nagraj@rorko.com. Owner." [ref=f44e100]:
+                        - generic [ref=f44e103]:
+                          - img "Nagraj YR (you)" [ref=f44e105]:
+                            - img [ref=f44e106]
+                          - generic [ref=f44e107]:
+                            - generic "Nagraj YR (you)." [ref=f44e108]: Nagraj YR (you)
+                            - generic "nagraj@rorko.com." [ref=f44e109]: nagraj@rorko.com
+                          - generic [ref=f44e113]:
+                            - button "Owner." [disabled]:
+                              - generic: Owner
+                    - generic [ref=f44e115]:
+                      - generic [ref=f44e119]: General access
+                      - listbox "Link sharing permissions for Student Bulk Upload Intake" [ref=f44e121]:
+                        - option "Editor view Restricted change link Only people with access can open with the link" [ref=f44e122]:
+                          - generic [ref=f44e124]:
+                            - img [ref=f44e127]
+                            - generic [ref=f44e129]:
+                              - generic [ref=f44e130]:
+                                - generic [ref=f44e131]: Editor view
+                                - button "Restricted change link" [ref=f44e135] [cursor=pointer]:
+                                  - generic [ref=f44e136]: Restricted
+                                  - img [ref=f44e139]
+                              - generic [ref=f44e141]: Only people with access can open with the link
+                        - option "Responder view Rorko.com change link Anyone in this group with the link can respond Responder. change link permission" [ref=f44e142]:
+                          - generic [ref=f44e144]:
+                            - img [ref=f44e147]
+                            - generic [ref=f44e149]:
+                              - generic [ref=f44e150]:
+                                - generic [ref=f44e151]: Responder view
+                                - button "Rorko.com change link" [ref=f44e155] [cursor=pointer]:
+                                  - generic [ref=f44e156]: Rorko.com
+                                  - img [ref=f44e159]
+                              - generic [ref=f44e161]: Anyone in this group with the link can respond
+                            - generic [ref=f44e166]:
+                              - button "Responder. change link permission" [disabled]:
+                                - generic: Responder
+                - generic [ref=f44e168]:
+                  - button "Copy responder link" [ref=f44e170] [cursor=pointer]:
+                    - img [ref=f44e173]
+                    - generic [ref=f44e175]: Copy responder link
+                  - button "Done" [ref=f44e177] [cursor=pointer]:
+                    - generic [ref=f44e178]: Done

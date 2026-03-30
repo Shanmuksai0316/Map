@@ -1,0 +1,9 @@
+role,status,phone,expected_card,artifacts_dir
+rm_supervisor,pass,7200658181,Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/rm_supervisor
+sports_manager,pass,7676000129,Active Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/sports_manager
+guard,pass,9739143498,Outpass,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/guard
+hk_supervisor,pass,8555903456,Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/hk_supervisor
+laundry_manager,pass,9538678739,Active Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/laundry_manager
+warden,pass,9739557963,Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/warden
+campus_manager,pass,7975452363,Requests,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/campus_manager
+rector,pass,9663275871,Outpass,/Users/nagrajyr/Downloads/mapmars/mobile/.qa/staff-emulator-2026-03-06/full-run/maestro/rector

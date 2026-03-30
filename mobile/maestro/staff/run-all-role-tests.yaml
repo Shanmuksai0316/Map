@@ -1,0 +1,52 @@
+appId: com.mapmars.hmsstaff
+name: "All Staff Roles - Sequential E2E Test"
+tags:
+  - all-roles
+  - e2e
+  - comprehensive
+  - sequential
+
+---
+
+# ============================================
+# All Staff Roles E2E Test Suite
+# 
+# Tests all 8 staff roles sequentially:
+# 1. Campus Manager (8888888888) - ✅ Verified
+# 2. Rector (9900000003)
+# 3. Warden (9900000005)
+# 4. Guard (9900000009)
+# 5. HK Supervisor (9900000007)
+# 6. RM Supervisor (9900000008)
+# 7. Laundry Manager (9900000010)
+# 8. Sports Manager (9900000011)
+#
+# OTP for all: 123456
+# ============================================
+
+# Run Campus Manager test first (verified working)
+- runFlow:
+    file: role-campus-manager-test.yaml
+
+# Run remaining role tests
+- runFlow:
+    file: role-rector-test.yaml
+
+- runFlow:
+    file: role-warden-test.yaml
+
+- runFlow:
+    file: role-guard-test.yaml
+
+- runFlow:
+    file: role-hk-supervisor-test.yaml
+
+- runFlow:
+    file: role-rm-supervisor-test.yaml
+
+- runFlow:
+    file: role-laundry-manager-test.yaml
+
+- runFlow:
+    file: role-sports-manager-test.yaml
+

@@ -1,0 +1,142 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of College Management" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Report Center" [level=1] [ref=e16]
+            - generic [ref=e18]:
+              - generic [ref=e19]:
+                - generic [ref=e22]:
+                  - heading "Generate Report" [level=3] [ref=e23]
+                  - paragraph [ref=e24]: "College Management: Select report type, date range, and format. Maximum 30-day range per download."
+                - generic [ref=e27]:
+                  - generic [ref=e28]:
+                    - generic [ref=e31]:
+                      - generic [ref=e34]:
+                        - text: Report Type
+                        - superscript [ref=e35]: "*"
+                      - listbox [ref=e180]:
+                        - generic [ref=e247]:
+                          - text: Room Occupancy
+                          - 'button "Remove item: ''room_occupancy''" [ref=e248] [cursor=pointer]': Remove item
+                    - generic [ref=e43]:
+                      - generic [ref=e46]:
+                        - text: Start Date
+                        - superscript [ref=e47]: "*"
+                      - button "Feb 16, 2026" [ref=e250] [cursor=pointer]:
+                        - textbox "Start Date*" [ref=e251]:
+                          - /placeholder: ""
+                          - text: Feb 16, 2026
+                    - generic [ref=e56]:
+                      - generic [ref=e59]:
+                        - text: End Date
+                        - superscript [ref=e60]: "*"
+                      - button "Feb 23, 2026" [ref=e253] [cursor=pointer]:
+                        - textbox "End Date*" [ref=e254]:
+                          - /placeholder: ""
+                          - text: Feb 23, 2026
+                    - generic [ref=e69]:
+                      - generic [ref=e72]:
+                        - text: Format
+                        - superscript [ref=e73]: "*"
+                      - listbox [ref=e186]:
+                        - generic [ref=e189]:
+                          - text: CSV
+                          - 'button "Remove item: ''csv''" [ref=e190] [cursor=pointer]': Remove item
+                  - button "Download Report" [ref=e80] [cursor=pointer]:
+                    - img [ref=e81]
+                    - generic [ref=e83]: Download Report
+              - generic [ref=e84]:
+                - heading "Available Reports" [level=3] [ref=e88]
+                - generic [ref=e91]:
+                  - button "Attendance Summary Daily attendance rates across hostels" [ref=e92] [cursor=pointer]:
+                    - generic [ref=e93]:
+                      - img [ref=e94]
+                      - heading "Attendance Summary" [level=4] [ref=e96]
+                    - paragraph [ref=e97]: Daily attendance rates across hostels
+                  - button "Attendance Detail Absent student names and details" [ref=e98] [cursor=pointer]:
+                    - generic [ref=e99]:
+                      - img [ref=e100]
+                      - heading "Attendance Detail" [level=4] [ref=e102]
+                    - paragraph [ref=e103]: Absent student names and details
+                  - button "Pass Requests Outpass and leave requests by status" [ref=e104] [cursor=pointer]:
+                    - generic [ref=e105]:
+                      - img [ref=e106]
+                      - heading "Pass Requests" [level=4] [ref=e108]
+                    - paragraph [ref=e109]: Outpass and leave requests by status
+                  - button "Incidents Incident reports summary" [ref=e110] [cursor=pointer]:
+                    - generic [ref=e111]:
+                      - img [ref=e112]
+                      - heading "Incidents" [level=4] [ref=e114]
+                    - paragraph [ref=e115]: Incident reports summary
+                  - button "Room Occupancy Room-wise occupancy and vacancies" [active] [ref=e116] [cursor=pointer]:
+                    - generic [ref=e117]:
+                      - img [ref=e118]
+                      - heading "Room Occupancy" [level=4] [ref=e120]
+                    - paragraph [ref=e121]: Room-wise occupancy and vacancies
+                  - button "Checklist Staff checklist compliance rates" [ref=e122] [cursor=pointer]:
+                    - generic [ref=e123]:
+                      - img [ref=e124]
+                      - heading "Checklist" [level=4] [ref=e126]
+                    - paragraph [ref=e127]: Staff checklist compliance rates
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e128]:
+      - generic [ref=e130]:
+        - link "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e132] [cursor=pointer]:
+          - /url: /college-mgmt
+          - img "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e133]
+        - button "Collapse sidebar" [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]: Collapse sidebar
+          - img [ref=e136]
+      - navigation [ref=e138]:
+        - list [ref=e139]:
+          - listitem [ref=e140]:
+            - list [ref=e141]:
+              - listitem [ref=e142]:
+                - link "College Management Dashboard" [ref=e143] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt
+                  - img [ref=e144]
+                  - generic [ref=e146]: College Management Dashboard
+              - listitem [ref=e147]:
+                - link "Students" [ref=e148] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/students
+                  - img [ref=e149]
+                  - generic [ref=e151]: Students
+          - listitem [ref=e152]:
+            - generic [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: Operations
+              - button "Operations" [expanded] [ref=e155]:
+                - generic [ref=e156]: Operations
+                - img [ref=e157]
+            - list [ref=e159]:
+              - listitem [ref=e160]:
+                - link "Out-Passes" [ref=e161] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/out-passes
+                  - img [ref=e162]
+                  - generic [ref=e164]: Out-Passes
+              - listitem [ref=e165]:
+                - link "Tickets" [ref=e166] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                  - img [ref=e167]
+                  - generic [ref=e169]: Tickets
+              - listitem [ref=e170]:
+                - link "Attendance" [ref=e171] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/attendance-sessions
+                  - img [ref=e172]
+                  - generic [ref=e174]: Attendance
+              - listitem [ref=e175]:
+                - link "Reports" [ref=e176] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/report-center
+                  - img [ref=e177]
+                  - generic [ref=e179]: Reports
+  - generic:
+    - status

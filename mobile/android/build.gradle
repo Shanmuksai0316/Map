@@ -1,0 +1,34 @@
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 26  // PRD §5 requires Android ≥8.0 (SDK 26)
+        compileSdkVersion = 35  // Play requirement: target latest supported SDK
+        targetSdkVersion = 35  // Play requirement: target latest supported SDK
+        ndkVersion = "27.0.12077973"  // NDK 27.0 for compatibility with react-native-worklets-core
+        cmakeVersion = "3.22.1"  // Required for react-native-skia
+        kotlinVersion = "2.1.20"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        // React Native Gradle plugin JAR built from node_modules
+        flatDir { dirs("../node_modules/@react-native/gradle-plugin/react-native-gradle-plugin/build/libs") }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.7.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20")
+        classpath("com.google.gms:google-services:4.4.4")
+        classpath(name: "react-native-gradle-plugin", ext: "jar")
+    }
+}
+
+// Expose SDK versions to all subprojects (e.g. react-native-reanimated)
+ext {
+    buildToolsVersion = "35.0.0"
+    minSdkVersion = 26
+    compileSdkVersion = 35
+    targetSdkVersion = 35
+    ndkVersion = "27.0.12077973"
+    cmakeVersion = "3.22.1"
+    kotlinVersion = "2.1.20"
+}

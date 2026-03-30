@@ -1,0 +1,28 @@
+appId: com.maphms.student
+name: "iOS SendOTP Validation Check"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: "1"
+- hideKeyboard
+- takeScreenshot: "valcheck/01_before_send"
+
+- tapOn:
+    id: "send-otp-button"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "valcheck/02_after_send"
+
+- runFlow:
+    when:
+      visible: "Error"
+    commands:
+      - takeScreenshot: "valcheck/03_error_dialog"

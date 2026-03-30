@@ -1,0 +1,2 @@
+app_id,role,username,password,otp,notes
+com.mapmars.hmsstaff,staff-reviewer,REQUIRED,REQUIRED,REQUIRED,Provide at least one working reviewer account for staff roles.

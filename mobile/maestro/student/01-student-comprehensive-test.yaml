@@ -1,0 +1,219 @@
+appId: com.maphms.student
+name: "Student App Comprehensive E2E Test"
+tags:
+  - student-app
+  - comprehensive
+  - e2e
+env:
+  phone: "8888888800"
+  otp: "123456"
+---
+# Comprehensive Student App E2E Test
+# Tests all major features of the student app
+
+# Step 1: Login
+- runFlow:
+    file: "../flows/student-otp-login.yaml"
+    env:
+      phone: ${phone}
+      otp: ${otp}
+
+# Step 2: Verify Dashboard Elements
+- assertVisible: "(Welcome|Dashboard)"
+- assertVisible: "My Profile"
+- assertVisible: "Out-pass"
+- assertVisible: "Leave"
+- assertVisible: "Attendance"
+- assertVisible: "Complaints"
+- assertVisible: "Tickets"
+- assertVisible: "Notices"
+- takeScreenshot: "student/01_dashboard_verified"
+
+# Step 3: Test Profile Screen
+- tapOn: "My Profile"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Profile|Name|Phone|Email|Room)"
+    timeout: 10000
+- takeScreenshot: "student/02_profile_screen"
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 4: Test Outpass/Gate Pass
+- assertVisible: "Out-pass"
+- tapOn: "Out-pass"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Gate Pass|Out Pass|Create|Request|History)"
+    timeout: 10000
+- takeScreenshot: "student/03_gatepass_screen"
+- runFlow:
+    when:
+      visible: "(Create|New|Request)"
+    commands:
+      - tapOn: "(Create|New|Request)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/04_gatepass_form"
+      - pressKey: Back
+      - waitForAnimationToEnd
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 5: Test Leave Management
+- assertVisible: "Leave"
+- tapOn: "Leave"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Leave|Regular Leave|Create|Request|History)"
+    timeout: 10000
+- takeScreenshot: "student/05_leave_screen"
+- runFlow:
+    when:
+      visible: "(Create|New|Request)"
+    commands:
+      - tapOn: "(Create|New|Request)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/06_leave_form"
+      - pressKey: Back
+      - waitForAnimationToEnd
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 6: Test Attendance
+- assertVisible: "Attendance"
+- tapOn: "Attendance"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Attendance|Present|Absent|History|Statistics)"
+    timeout: 10000
+- takeScreenshot: "student/07_attendance_screen"
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 7: Test Complaints
+- assertVisible: "Complaints"
+- tapOn: "Complaints"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Complaints|Complaint|Create|New|Submit)"
+    timeout: 10000
+- takeScreenshot: "student/08_complaints_screen"
+- runFlow:
+    when:
+      visible: "(Create|New|Submit)"
+    commands:
+      - tapOn: "(Create|New|Submit)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/09_complaint_form"
+      - pressKey: Back
+      - waitForAnimationToEnd
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 8: Test Tickets
+- assertVisible: "Tickets"
+- tapOn: "Tickets"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Tickets|Ticket|Support|Create|New)"
+    timeout: 10000
+- takeScreenshot: "student/10_tickets_screen"
+- runFlow:
+    when:
+      visible: "(Create|New)"
+    commands:
+      - tapOn: "(Create|New)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "student/11_ticket_form"
+      - pressKey: Back
+      - waitForAnimationToEnd
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 9: Test Notices
+- assertVisible: "Notices"
+- tapOn: "Notices"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Notices|Notice|Announcement|Board)"
+    timeout: 10000
+- takeScreenshot: "student/12_notices_screen"
+- pressKey: Back
+- waitForAnimationToEnd
+
+# Step 10: Test Sports (if available)
+- runFlow:
+    when:
+      visible: "Sports"
+    commands:
+      - tapOn: "Sports"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Sports|Booking|Facility|Court)"
+          timeout: 10000
+      - takeScreenshot: "student/13_sports_screen"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Step 11: Test Laundry (if available)
+- runFlow:
+    when:
+      visible: "Laundry"
+    commands:
+      - tapOn: "Laundry"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Laundry|Request|Service)"
+          timeout: 10000
+      - takeScreenshot: "student/14_laundry_screen"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Step 12: Test Emergency
+- runFlow:
+    when:
+      visible: "Emergency"
+    commands:
+      - tapOn: "Emergency"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Emergency|Contact|Help)"
+          timeout: 10000
+      - takeScreenshot: "student/15_emergency_screen"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Step 13: Test Notice Board
+- runFlow:
+    when:
+      visible: "(Notice Board|Communication)"
+    commands:
+      - tapOn: "(Notice Board|Communication)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Notice Board|Communication|Message)"
+          timeout: 10000
+      - takeScreenshot: "student/16_commbox_screen"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Step 14: Test Requests Hub
+- runFlow:
+    when:
+      visible: "Requests"
+    commands:
+      - tapOn: "Requests"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Requests|Request|History|Status)"
+          timeout: 10000
+      - takeScreenshot: "student/17_requests_hub"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Final: Return to Dashboard
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions)"
+    timeout: 10000
+- takeScreenshot: "student/18_final_dashboard"
+

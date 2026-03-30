@@ -1,0 +1,125 @@
+appId: com.mapmars.hmsstaff
+name: "Guard API Integration Test"
+tags:
+  - guard
+  - smoke
+  - staff
+  - api
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & API LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+# Wait for app to fully load (can take time on first launch)
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 20000
+
+# Take screenshot of whatever is visible first
+- takeScreenshot: "guard/00_initial_state"
+
+# Wait for login screen elements
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Login|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "guard/01_app_launched"
+
+# Login with Guard test credentials
+# Phone: 8888888881 (without +91 prefix for mobile input)
+# OTP: 123456 (automation bypass code)
+- runFlow:
+    file: ../flows/staff-api-login.yaml
+    env:
+      phone: "8888888881"
+      tenantCode: "MAP-TEST"
+      automationSecret: "demo-test-secret-123"
+      automationOtp: "123456"
+      dashboardRegex: "(Security Guard|Guard|Dashboard|Verify Time|My Checklist|Notice Board)"
+
+# ============================================
+# PART 2: DASHBOARD VERIFICATION
+# ============================================
+
+- takeScreenshot: "guard/02_dashboard"
+
+# Verify Guard dashboard elements are visible
+- assertVisible:
+    text: "(My Checklist|Checklist|Dashboard)"
+    
+- assertVisible:
+    text: "(Notice Board|Communication|Messages)"
+
+# ============================================
+# PART 3: NAVIGATION TEST
+# ============================================
+
+# Test bottom navigation
+- runFlow:
+    when:
+      visible: "(Home|Dashboard)"
+    commands:
+      - tapOn: "(Home|Dashboard)"
+      - takeScreenshot: "guard/03_home_tab"
+
+# Navigate to Checklist
+- runFlow:
+    when:
+      visible: "(My Checklist|Checklist)"
+    commands:
+      - tapOn: "(My Checklist|Checklist)"
+      - extendedWaitUntil:
+          visible: "(Today|Checklist|Tasks|Morning|Evening)"
+          timeout: 5000
+      - takeScreenshot: "guard/04_checklist"
+
+# Navigate to Notice Board
+- runFlow:
+    when:
+      visible: "(Notice Board|Messages)"
+    commands:
+      - tapOn: "(Notice Board|Messages)"
+      - extendedWaitUntil:
+          visible: "(Messages|Communication|Inbox|No messages)"
+          timeout: 5000
+      - takeScreenshot: "guard/05_comm_box"
+
+# Navigate to Profile
+- runFlow:
+    when:
+      visible: "(Profile|Account|Me)"
+    commands:
+      - tapOn: "(Profile|Account|Me)"
+      - extendedWaitUntil:
+          visible: "(Test Guard|Profile|Settings|Logout)"
+          timeout: 5000
+      - takeScreenshot: "guard/06_profile"
+
+# ============================================
+# PART 4: QR SCANNER TEST (if available)
+# ============================================
+
+- runFlow:
+    when:
+      visible: "(Scan QR|QR Scanner|Verify Time)"
+    commands:
+      - tapOn: "(Scan QR|QR Scanner|Verify Time)"
+      - extendedWaitUntil:
+          visible: "(Camera|Scan|Permission|QR|Allow)"
+          timeout: 5000
+      - takeScreenshot: "guard/07_qr_scanner"
+      - back
+
+# ============================================
+# FINAL STATE
+# ============================================
+
+- takeScreenshot: "guard/08_final_state"
+

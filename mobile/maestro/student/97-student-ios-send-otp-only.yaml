@@ -1,0 +1,22 @@
+appId: com.maphms.student
+name: "Student iOS Send OTP Only"
+env:
+  phone: "9886179767"
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,54%"
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "sendotp/01_phone_filled"
+- tapOn: "Send OTP"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "sendotp/02_after_send"

@@ -1,0 +1,23 @@
+# Nixpacks configuration for Railway (alternative to Dockerfile)
+# Railway will auto-detect this and use Nixpacks build system
+
+[phases.setup]
+nixPkgs = ["php82", "php82Packages.composer", "postgresql", "nodejs", "nginx"]
+
+[phases.install]
+cmds = [
+  "composer install --no-dev --optimize-autoloader --prefer-dist",
+  "npm ci --only=production"
+]
+
+[phases.build]
+cmds = [
+  "npm run build",
+  "php artisan config:cache",
+  "php artisan route:cache",
+  "php artisan view:cache"
+]
+
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
+

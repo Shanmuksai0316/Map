@@ -1,0 +1,88 @@
+appId: com.mapmars.hmsstaff
+name: "Guard Smoke Test"
+tags:
+  - guard
+  - smoke
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible: "(Hostel Management|Staff App|MAP)"
+    timeout: 15000
+
+- takeScreenshot: "guard/01_app_launched"
+
+# Login with Guard test credentials (see test login banner)
+- runFlow:
+    file: ../flows/staff-otp-login.yaml
+    env:
+      phone: "8888888888"
+      otp: "123456"
+      dashboardRegex: "(Campus Manager|Dashboard|Verify Time|My Checklist|Notice Board|Requests|Students)"
+
+# ============================================
+# PART 2: DASHBOARD VERIFICATION
+# ============================================
+
+- takeScreenshot: "guard/02_dashboard"
+
+# Verify key elements are visible
+- assertVisible:
+    text: "(Verify Time|My Checklist|Notice Board|Dashboard)"
+
+- takeScreenshot: "guard/03_dashboard_verified"
+
+# ============================================
+# PART 3: NAVIGATE KEY FEATURES
+# ============================================
+
+# Test Verify Time
+- runFlow:
+    when:
+      visible: "Verify Time"
+    commands:
+      - tapOn: "Verify Time"
+      - extendedWaitUntil:
+          visible: "(Verify Time|Time Verification|Outpass|Gate Pass)"
+          timeout: 10000
+      - takeScreenshot: "guard/04_verify_time"
+      - back
+
+# Test Checklist
+- runFlow:
+    when:
+      visible: "My Checklist"
+    commands:
+      - tapOn: "My Checklist"
+      - extendedWaitUntil:
+          visible: "(Checklist|Tasks|Today)"
+          timeout: 10000
+      - takeScreenshot: "guard/05_checklist"
+      - back
+
+# Test Notice Board
+- runFlow:
+    when:
+      visible: "Notice Board"
+    commands:
+      - tapOn: "Notice Board"
+      - extendedWaitUntil:
+          visible: "(Notice Board|Notices|Messages)"
+          timeout: 10000
+      - takeScreenshot: "guard/06_comm_box"
+      - back
+
+# Final state
+- takeScreenshot: "guard/07_final_state"
+
+

@@ -1,0 +1,33 @@
+# MAP HMS Staff App - Launch Test
+# Verifies the app launches successfully
+
+appId: com.mapmars.hmsstaff
+name: "Staff App Launch Test"
+tags:
+  - launch
+  - smoke
+  - critical
+
+---
+
+# Launch the staff app
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+# Wait for app to load (5 seconds should be enough)
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Screenshot the initial state
+- takeScreenshot: "01_app_launched"
+
+# Wait a bit more for any loading to complete
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Take final screenshot
+- takeScreenshot: "02_app_ready"

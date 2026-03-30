@@ -1,0 +1,125 @@
+appId: com.mapmars.hmsstaff
+name: "RM Supervisor Role Smoke Test"
+tags:
+  - rm-supervisor
+  - smoke
+  - staff
+  - role-test
+
+---
+
+# ============================================
+# RM Supervisor Role - Test Credentials
+# Phone: 7200658181 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Enter Your Number|Get OTP|Login|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "rm-supervisor/01_app_launched"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter Your Number|10-digit)"
+    optional: true
+- inputText: "7200658181"
+- hideKeyboard
+
+- takeScreenshot: "rm-supervisor/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle OTP sent success dialog
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+# Retry Get OTP if still on login screen
+- runFlow:
+    when:
+      visible: "(Send OTP|Get OTP)"
+    commands:
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Success|OTP sent successfully)"
+          commands:
+            - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|OTP|6-digit|Enter 6-digit)"
+    timeout: 20000
+
+- takeScreenshot: "rm-supervisor/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login|Continue)"
+    optional: true
+
+# Wait for RM Supervisor Dashboard
+- extendedWaitUntil:
+    visible: "(Good Morning|Good Afternoon|Good Evening|RM Supervisor|Room Maintenance|Checklist|Requests|Profile)"
+    timeout: 20000
+
+- takeScreenshot: "rm-supervisor/04_dashboard"
+
+# ============================================
+# Verify RM Supervisor-specific UI Elements
+# ============================================
+
+# Check for RM Supervisor dashboard tiles
+- assertVisible:
+    text: "(Profile|Checklist|Requests)"
+
+- takeScreenshot: "rm-supervisor/05_dashboard_verified"
+
+# Test navigation to Checklist
+- runFlow:
+    when:
+      visible: "Checklist"
+    commands:
+      - tapOn: "Checklist"
+      - extendedWaitUntil:
+          visible: "(Checklist|Daily Checklist|No checklist|No checklist available|No checklist assigned|Today|Tasks|No tasks)"
+          timeout: 10000
+      - takeScreenshot: "rm-supervisor/06_checklist_screen"
+      - back
+
+# Test navigation to Requests
+- runFlow:
+    when:
+      visible: "Requests"
+    commands:
+      - tapOn: "Requests"
+      - extendedWaitUntil:
+          visible: "(Requests|Pending|Completed|No requests|KARTA)"
+          timeout: 10000
+      - takeScreenshot: "rm-supervisor/07_requests_screen"
+      - back
+
+- takeScreenshot: "rm-supervisor/08_test_complete"

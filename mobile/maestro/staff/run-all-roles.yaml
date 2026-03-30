@@ -1,0 +1,54 @@
+appId: com.mapmars.hmsstaff
+name: "All Staff Roles - Sequential Test Suite"
+tags:
+  - all-roles
+  - staff
+  - smoke
+  - comprehensive
+
+---
+
+# ============================================
+# Run All 8 Staff Role Tests Sequentially
+# ============================================
+# 
+# This flow runs each role test one after another.
+# Each test clears app state before login.
+#
+# Test Credentials:
+# 1. Guard:          8888888881
+# 2. Warden:         8888888882
+# 3. Campus Manager: 8888888883
+# 4. Rector:         8888888884
+# 5. HK Supervisor:  8888888885
+# 6. RM Supervisor:  8888888886
+# 7. Laundry Manager:8888888887
+# 8. Sports Manager: 8888888888
+#
+# OTP for all: 123456
+# ============================================
+
+- runFlow:
+    file: 01-guard-smoke-test.yaml
+
+- runFlow:
+    file: 02-warden-smoke-test.yaml
+
+- runFlow:
+    file: 03-campus-manager-smoke-test.yaml
+
+- runFlow:
+    file: 04-rector-smoke-test.yaml
+
+- runFlow:
+    file: 05-hk-supervisor-smoke-test.yaml
+
+- runFlow:
+    file: 06-rm-supervisor-smoke-test.yaml
+
+- runFlow:
+    file: 07-laundry-manager-smoke-test.yaml
+
+- runFlow:
+    file: 08-sports-manager-smoke-test.yaml
+

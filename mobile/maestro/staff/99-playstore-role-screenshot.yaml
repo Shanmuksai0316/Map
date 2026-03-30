@@ -1,0 +1,84 @@
+appId: com.mapmars.hmsstaff
+name: "Staff Play Store Role Screenshot"
+tags:
+  - playstore
+  - staff
+
+---
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Phone Number|Enter your registered phone|10-digit|Login|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "playstore/${ROLE}/01_login"
+
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|10-digit)"
+    optional: true
+- inputText: "${PHONE}"
+- hideKeyboard
+
+- takeScreenshot: "playstore/${ROLE}/02_phone"
+
+- tapOn: "(Send OTP|Get OTP)"
+
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|6-digit|OTP)"
+    timeout: 30000
+
+- takeScreenshot: "playstore/${ROLE}/03_otp"
+
+- tapOn:
+    text: "(Enter 6-digit|6-digit code|Enter OTP)"
+    optional: true
+- inputText: "${OTP}"
+- hideKeyboard
+
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login)"
+    optional: true
+
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your)"
+    commands:
+      - takeScreenshot: "playstore/${ROLE}/04_tenant"
+      - tapOn:
+          text: "(Demo College Hostel|Demo College|Demo|College)"
+          optional: true
+
+- runFlow:
+    when:
+      visible: "(Good Morning|Good Afternoon|Good Evening|Dashboard|Requests|My Checklist|Outpass|Students|Notice Board|Profile)"
+    commands:
+      - takeScreenshot: "playstore/${ROLE}/05_dashboard"
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "playstore/${ROLE}/06_post_login_state"

@@ -1,0 +1,47 @@
+appId: com.maphms.student
+name: "Student iOS Login Diagnostic v2"
+env:
+  phone: "9886179767"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debugv2/01_after_launch"
+
+- runFlow:
+    when:
+      visible: "Your Home Away From Home"
+    commands:
+      - tapOn: "Get Started"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "debugv2/02_after_get_started"
+
+- extendedWaitUntil:
+    visible: "(Phone Number|Send OTP|Enter your registered phone number)"
+    timeout: 20000
+- tapOn: "Enter your registered phone number"
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "debugv2/03_phone_entered"
+- tapOn: "Send OTP"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debugv2/04_after_send_otp"
+
+- runFlow:
+    when:
+      visible: "Error"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+      - tapOn: "Enter your registered phone number"
+      - eraseText
+      - inputText: ${phone}
+      - hideKeyboard
+      - tapOn: "Send OTP"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "debugv2/05_after_retry_send_otp"
+
+- takeScreenshot: "debugv2/06_final"

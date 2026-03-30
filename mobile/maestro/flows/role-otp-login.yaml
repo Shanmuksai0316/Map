@@ -1,0 +1,151 @@
+appId: com.mapmars.hmsstaff
+name: "Role Auth - OTP First"
+---
+
+# Inputs via env:
+#   phone: phone number
+#   otp: otp code
+#   dashboardRegex: Regex that indicates the role dashboard loaded
+
+# Handle onboarding splash if present
+- runFlow:
+    when:
+      visible: "(Play Store|Gmail|Photos|YouTube)"
+    commands:
+      - launchApp:
+          appId: com.mapmars.hmsstaff
+          clearState: false
+          clearKeychain: false
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Get Started →|Get Started|Get started|Continue|Let's Get Started|Lets Get Started)"
+    commands:
+      - tapOn:
+          text: "(Get Started →|Get Started|Get started|Continue|Let's Get Started|Lets Get Started)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Get Started →|Get Started|Get started|Continue)"
+          commands:
+            - tapOn:
+                text: "(Get Started →|Get Started|Get started|Continue)"
+                optional: true
+            - waitForAnimationToEnd
+
+# Handle emulator ANR dialog if it appears
+- runFlow:
+    when:
+      visible: "(System UI isn't responding|isn't responding)"
+    commands:
+      - tapOn:
+          text: "(Wait|Close app)"
+          optional: true
+      - waitForAnimationToEnd
+
+# Wait for splash CTA, login screen, or dashboard before continuing
+- extendedWaitUntil:
+    visible: "(Get Started →|Get Started|Enter your registered phone|Phone Number|Enter phone|Mobile Number|Enter Your Number|Dashboard|Checklist|Requests|Notice Board|Profile|Actions|Preparing your experience|MAP HMS|Staff App)"
+    timeout: 30000
+
+# If still on staff prep screen, wait until login or dashboard appears
+- runFlow:
+    when:
+      visible: "(Preparing your experience|MAP HMS|Staff App)"
+    commands:
+      - extendedWaitUntil:
+          visible: "(Get Started →|Get Started|Enter your registered phone|Phone Number|Enter phone|Mobile Number|Enter Your Number|Dashboard|Checklist|Requests|Notice Board|Profile|Actions)"
+          timeout: 30000
+
+# If still on splash after initial wait, tap Get Started now
+- runFlow:
+    when:
+      visible: "(Get Started →|Get Started)"
+    commands:
+      - tapOn:
+          text: "(Get Started →|Get Started)"
+          optional: true
+      - waitForAnimationToEnd
+
+# Tenant selection (if shown)
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your|Pimpri|MAP-PPCU|Demo College)"
+    commands:
+      - tapOn:
+          text: "(Pimpri Chinchwad|MAP-PPCU|Demo College Hostel|Pimpri)"
+          optional: true
+      - waitForAnimationToEnd
+
+# If already on dashboard, no-op
+- runFlow:
+    when:
+      visible: ${dashboardRegex}
+    commands:
+      - takeScreenshot: "login/already_logged_in_dashboard"
+
+# OTP login flow
+- runFlow:
+    when:
+      visible: "(Phone Number|Enter phone|Phone|Enter your registered|Mobile Number|Enter mobile|Enter Your Number)"
+    commands:
+      - tapOn:
+          id: phone-input
+          optional: true
+      - tapOn:
+          text: "(Phone Number|Enter phone|Phone|Enter your registered|Mobile Number|Enter mobile|Enter Your Number)"
+          optional: true
+      - inputText: ${phone}
+      - hideKeyboard
+      - scroll
+      - extendedWaitUntil:
+          visible: "(Send OTP|Get OTP|Verify & Login|verify-otp-button|otp-input|Verification Code)"
+          timeout: 10000
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - runFlow:
+          when:
+            visible: "(Institution not detected|Cannot reach the server|Check your internet connection)"
+          commands:
+            - tapOn: "OK"
+            - waitForAnimationToEnd
+            - tapOn:
+                text: "(Send OTP|Get OTP)"
+                optional: true
+      - runFlow:
+          when:
+            visible: "(OTP sent successfully|Success)"
+          commands:
+            - tapOn: "OK"
+      - runFlow:
+          when:
+            visible: "Test Mode"
+          commands:
+            - tapOn: "OK"
+      - extendedWaitUntil:
+          visible: "(otp-input|verify-otp-button|OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit|Enter 6-digit code|Enter OTP Code|Verification Code|Verify & Login)"
+          timeout: 15000
+          optional: true
+      - runFlow:
+          when:
+            visible: "(Get OTP|Send OTP)"
+          commands:
+            - tapOn:
+                text: "(Get OTP|Send OTP)"
+                optional: true
+            - extendedWaitUntil:
+                visible: "(otp-input|verify-otp-button|OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit|Enter 6-digit code|Enter OTP Code|Verification Code|Verify & Login)"
+                timeout: 30000
+      - tapOn:
+          text: "(OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit|Enter 6-digit code|Enter OTP Code|Verification Code)"
+          optional: true
+      - inputText: ${otp}
+      - hideKeyboard
+      - tapOn: "(Verify OTP|Verify|Submit|Continue|Login|Verify & Continue|Verify & Login)"
+      - extendedWaitUntil:
+          visible: ${dashboardRegex}
+          timeout: 25000
+      - takeScreenshot: "login/otp_dashboard"

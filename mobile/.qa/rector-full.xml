@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="67.0">
+    <testcase id="Rector Full Test Suite" name="Rector Full Test Suite" classname="Rector Full Test Suite" time="67.0" status="ERROR">
+      <properties>
+        <property name="tags" value="rector, approvals, insights, staff"/>
+      </properties>
+      <failure>Element not found: Text matching regex: Approvals</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

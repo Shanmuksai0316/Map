@@ -1,0 +1,144 @@
+appId: com.mapmars.hmsstaff
+name: "Warden Role Smoke Test"
+tags:
+  - warden
+  - smoke
+  - staff
+  - role-test
+
+---
+
+# ============================================
+# Warden Role - Test Credentials
+# Phone: 9739557963 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Enter Your Number|Get OTP|(Send OTP|Get OTP)|Phone Number|Login|10-digit)"
+    timeout: 30000
+
+- takeScreenshot: "warden/01_app_launched"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter Your Number|10-digit)"
+    optional: true
+- inputText: "9739557963"
+- hideKeyboard
+
+- takeScreenshot: "warden/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle OTP sent success dialog
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+# Handle Test Mode dialog if it appears
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+
+# Retry Get OTP if still on login screen
+- runFlow:
+    when:
+      visible: "(Send OTP|Get OTP)"
+    commands:
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Success|OTP sent successfully)"
+          commands:
+            - tapOn: "OK"
+      - runFlow:
+          when:
+            visible: "Test Mode"
+          commands:
+            - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|6-digit)"
+    timeout: 15000
+
+- takeScreenshot: "warden/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify if button is present (some flows auto-verify)
+- runFlow:
+    when:
+      visible: "(Verify & Login|Verify OTP|Verify|Submit|Login|Continue)"
+    commands:
+      - tapOn: "(Verify & Login|Verify OTP|Verify|Submit|Login|Continue)"
+
+# Wait for Warden Dashboard
+- extendedWaitUntil:
+    visible: "(Good Morning|Good Afternoon|Good Evening|Warden|Outpass|Leave|Students)"
+    timeout: 20000
+
+- takeScreenshot: "warden/04_dashboard"
+
+# ============================================
+# Verify Warden-specific UI Elements
+# ============================================
+
+# Check for Warden dashboard tiles
+- assertVisible:
+    text: "(Outpass Approvals|Leave Approvals|Students|Attendance)"
+
+- takeScreenshot: "warden/05_dashboard_verified"
+
+# Test navigation to Outpass Approvals
+- runFlow:
+    when:
+      visible: "Outpass Approvals"
+    commands:
+      - tapOn: "Outpass Approvals"
+      - extendedWaitUntil:
+          visible: "(Outpass|Pending|Approved|Rejected|No outpass)"
+          timeout: 10000
+      - takeScreenshot: "warden/06_outpass_screen"
+      - back
+
+# Test navigation to Students
+- runFlow:
+    when:
+      visible: "Students"
+    commands:
+      - tapOn: "Students"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "warden/07_students_screen"
+      - back
+
+- takeScreenshot: "warden/08_test_complete"

@@ -1,0 +1,172 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Tenant Onboarding Wizard" [level=1] [ref=e16]
+            - generic [ref=e19]:
+              - generic [ref=e20]:
+                - generic [ref=e21]:
+                  - generic [ref=e22]:
+                    - generic [ref=e23]: Onboarding Progress
+                    - generic [ref=e24]: 50%
+                  - generic [ref=e25]:
+                    - generic [ref=e26]: ✔ Tenant Info
+                    - generic [ref=e27]: ✔ Hostels
+                    - generic [ref=e28]: ✔ Staff
+                    - generic [ref=e29]: • Rooms
+                    - generic [ref=e30]: • Amenities
+                    - generic [ref=e31]: • Confirmation
+                - generic [ref=e32]:
+                  - button "Save Draft" [ref=e33] [cursor=pointer]:
+                    - generic [ref=e34]: Save Draft
+                  - button "Save & Exit" [ref=e35] [cursor=pointer]:
+                    - generic [ref=e36]: Save & Exit
+              - generic [ref=e37]:
+                - generic [ref=e38]: Validation summary
+                - list [ref=e39]:
+                  - listitem [ref=e40]: Configure rooms in Step 4.
+              - generic [ref=e44]:
+                - generic [ref=e47]:
+                  - list [ref=e48]:
+                    - listitem [ref=e49]:
+                      - button "Tenant Information Create the tenant and its single campus" [ref=e50] [cursor=pointer]:
+                        - img [ref=e369]
+                        - generic [ref=e54]:
+                          - generic [ref=e55]: Tenant Information
+                          - generic [ref=e56]: Create the tenant and its single campus
+                      - img [ref=e58]
+                    - listitem [ref=e60]:
+                      - button "Hostel Details Add hostel information and address" [ref=e61] [cursor=pointer]:
+                        - img [ref=e464]
+                        - generic [ref=e65]:
+                          - generic [ref=e66]: Hostel Details
+                          - generic [ref=e67]: Add hostel information and address
+                      - img [ref=e69]
+                    - listitem [ref=e71]:
+                      - button "Staff Assignment Assign Campus Manager (tenant-level) and hostel staff per hostel" [disabled] [ref=e72]:
+                        - img [ref=e74]
+                        - generic [ref=e76]:
+                          - generic [ref=e77]: Staff Assignment
+                          - generic [ref=e78]: Assign Campus Manager (tenant-level) and hostel staff per hostel
+                      - img [ref=e80]
+                    - listitem [ref=e82]:
+                      - button "Hostel Configuration Configure floors, rooms, and beds for each hostel" [disabled] [ref=e83]:
+                        - img [ref=e85]
+                        - generic [ref=e87]:
+                          - generic [ref=e88]: Hostel Configuration
+                          - generic [ref=e89]: Configure floors, rooms, and beds for each hostel
+                      - img [ref=e91]
+                    - listitem [ref=e93]:
+                      - button "Amenities Select available amenities for the hostel(s)" [disabled] [ref=e94]:
+                        - img [ref=e96]
+                        - generic [ref=e98]:
+                          - generic [ref=e99]: Amenities
+                          - generic [ref=e100]: Select available amenities for the hostel(s)
+                      - img [ref=e102]
+                    - listitem [ref=e104]:
+                      - button "Confirmation Review all details and activate tenant" [disabled] [ref=e105]:
+                        - img [ref=e107]
+                        - generic [ref=e109]:
+                          - generic [ref=e110]: Confirmation
+                          - generic [ref=e111]: Review all details and activate tenant
+                  - option "Select an option"
+                  - option "Boys Hostel" [selected]
+                  - option "Girls Hostel"
+                  - option "Co-Ed Hostel"
+                  - tabpanel "Staff info + Create New Staff Member | Refresh Staff List Campus Manager (Tenant-Level) Campus Manager manages all hostels under this tenant. Campus Manager* Select from unassigned staff pool Hostel Staff Assignments Assign Staff for Hostel" [ref=e524]:
+                    - generic [ref=e467]:
+                      - generic [ref=e470]:
+                        - generic [ref=e473]: Staff info
+                        - generic [ref=e476]:
+                          - link "+ Create New Staff Member" [ref=e477] [cursor=pointer]:
+                            - /url: https://admin.mapservices.in/admin/unassigned-staff
+                          - text: "|"
+                          - button "Refresh Staff List" [ref=e478] [cursor=pointer]
+                      - generic [ref=e480]:
+                        - generic [ref=e483]:
+                          - heading "Campus Manager (Tenant-Level)" [level=3] [ref=e484]
+                          - paragraph [ref=e485]: Campus Manager manages all hostels under this tenant.
+                        - generic [ref=e491]:
+                          - generic [ref=e494]:
+                            - text: Campus Manager
+                            - superscript [ref=e495]: "*"
+                          - generic [ref=e496]:
+                            - combobox [active] [ref=e500]:
+                              - generic [ref=e525]:
+                                - text: M sports
+                                - 'button "Remove item: ''35''" [ref=e526] [cursor=pointer]': Remove item
+                            - generic [ref=e504]: Select from unassigned staff pool
+                      - generic [ref=e507]:
+                        - generic [ref=e510]: Hostel Staff Assignments
+                        - button "Assign Staff for Hostel" [ref=e514] [cursor=pointer]:
+                          - generic [ref=e515]: Assign Staff for Hostel
+                  - generic [ref=e283]:
+                    - button "Back" [ref=e385] [cursor=pointer]:
+                      - generic [ref=e386]: Back
+                    - button "Next" [ref=e359] [cursor=pointer]:
+                      - generic [ref=e360]: Next
+                - button "Activate Tenant" [ref=e286] [cursor=pointer]:
+                  - generic [ref=e287]: Activate Tenant
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e288]:
+      - generic [ref=e290]:
+        - link "Super Admin logo" [ref=e292] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e293]
+        - button "Collapse sidebar" [ref=e294] [cursor=pointer]:
+          - generic [ref=e295]: Collapse sidebar
+          - img [ref=e296]
+      - navigation [ref=e298]:
+        - list [ref=e299]:
+          - listitem [ref=e300]:
+            - list [ref=e301]:
+              - listitem [ref=e302]:
+                - link "Dashboard" [ref=e303] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e304]
+                  - generic [ref=e306]: Dashboard
+          - listitem [ref=e307]:
+            - generic [ref=e308] [cursor=pointer]:
+              - img [ref=e309]
+              - generic [ref=e311]: Tenant Management
+              - button "Tenant Management" [ref=e312]:
+                - generic [ref=e313]: Tenant Management
+                - img [ref=e314]
+          - listitem [ref=e316]:
+            - generic [ref=e317] [cursor=pointer]:
+              - img [ref=e318]
+              - generic [ref=e320]: Staff Management
+              - button "Staff Management" [ref=e321]:
+                - generic [ref=e322]: Staff Management
+                - img [ref=e323]
+          - listitem [ref=e325]:
+            - generic [ref=e326] [cursor=pointer]:
+              - img [ref=e327]
+              - generic [ref=e330]: Operations
+              - button "Operations" [ref=e331]:
+                - generic [ref=e332]: Operations
+                - img [ref=e333]
+          - listitem [ref=e335]:
+            - generic [ref=e336] [cursor=pointer]:
+              - img [ref=e337]
+              - generic [ref=e339]: Reports
+              - button "Reports" [expanded] [ref=e340]:
+                - generic [ref=e341]: Reports
+                - img [ref=e342]
+            - list [ref=e344]:
+              - listitem [ref=e345]:
+                - link "Report Center" [ref=e346] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e349]: Report Center
+  - generic:
+    - status

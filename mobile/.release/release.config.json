@@ -1,0 +1,55 @@
+{
+  "app": {
+    "app_id": "com.maphms.student",
+    "app_name": "MAP Vidyarthi",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "contact": {
+    "name": "MAP HMS Release Team",
+    "email": "support@maphms.com",
+    "phone": "+91-9876543210"
+  },
+  "authentication": {
+    "requires_login": true
+  },
+  "test_account": {
+    "fallback_accounts": [
+      {
+        "username": "9876543210",
+        "password": "123456",
+        "role": "student-reviewer",
+        "notes": "Primary App Review account (student). Login: enter phone, tap Send OTP, then use 123456."
+      },
+      {
+        "username": "9999999999",
+        "password": "123456",
+        "role": "student-reviewer-fallback",
+        "notes": "Fallback reviewer account if primary phone is unavailable."
+      }
+    ]
+  },
+  "policy": {
+    "privacy_policy_url": "https://mapservices.in/privacy-policy/",
+    "support_url": "https://mapservices.in/",
+    "account_deletion_url": "https://mapservices.in/privacy-policy/"
+  },
+  "fastlane": {
+    "ios_lane": "deploy_student_appstore",
+    "android_lane": "deploy_student_production"
+  },
+  "testing": {
+    "maestro_flows": [
+      "maestro/flows/student-otp-login.yaml",
+      "maestro/student/00-student-complete-test.yaml"
+    ],
+    "device_matrix": [
+      "iPhone SE (3rd generation)",
+      "iPhone 15 Pro Max",
+      "Pixel 6",
+      "iPad Air (11-inch)"
+    ]
+  }
+}

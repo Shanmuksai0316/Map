@@ -1,0 +1,29 @@
+appId: com.maphms.student
+name: "Student iOS Coordinate Probe"
+env:
+  phone: "9886179767"
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "probe/01_launch"
+
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "probe/02_after_cta"
+
+- tapOn:
+    point: "50%,54%"
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "probe/03_phone_entered"
+
+- tapOn:
+    point: "50%,65%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "probe/04_after_send"

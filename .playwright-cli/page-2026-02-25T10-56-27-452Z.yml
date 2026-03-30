@@ -1,0 +1,94 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Test Rector" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e14]:
+            - heading "Rector Dashboard" [level=1] [ref=e16]
+            - button "Download Monthly Report" [ref=e19] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e22]: Download Monthly Report
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e54]:
+      - generic [ref=e56]:
+        - link "Pimpri Chinchinwad University - Rector App logo" [ref=e58] [cursor=pointer]:
+          - /url: /rector
+          - img "Pimpri Chinchinwad University - Rector App logo" [ref=e59]
+        - button "Collapse sidebar" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: Collapse sidebar
+          - img [ref=e62]
+      - navigation [ref=e64]:
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - list [ref=e67]:
+              - listitem [ref=e68]:
+                - link "Rector Dashboard" [ref=e69] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector
+                  - img [ref=e70]
+                  - generic [ref=e72]: Rector Dashboard
+              - listitem [ref=e73]:
+                - link "Students" [ref=e74] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/students
+                  - img [ref=e75]
+                  - generic [ref=e77]: Students
+              - listitem [ref=e78]:
+                - link "Reports" [ref=e79] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/reports
+                  - img [ref=e80]
+                  - generic [ref=e82]: Reports
+          - listitem [ref=e83]:
+            - generic [ref=e84] [cursor=pointer]:
+              - generic [ref=e85]: Communications
+              - button "Communications" [expanded] [ref=e86]:
+                - generic [ref=e87]: Communications
+                - img [ref=e88]
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - link "Comm Box" [ref=e92] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/comm-box
+                  - img [ref=e93]
+                  - generic [ref=e95]: Comm Box
+          - listitem [ref=e96]:
+            - generic [ref=e97] [cursor=pointer]:
+              - generic [ref=e98]: Approvals
+              - button "Approvals" [expanded] [ref=e99]:
+                - generic [ref=e100]: Approvals
+                - img [ref=e101]
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "Out-Pass Approvals" [ref=e105] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/out-passes
+                  - img [ref=e106]
+                  - generic [ref=e108]: Out-Pass Approvals
+              - listitem [ref=e109]:
+                - link "Leave Approvals" [ref=e110] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/leaves
+                  - img [ref=e111]
+                  - generic [ref=e113]: Leave Approvals
+              - listitem [ref=e114]:
+                - link "Approval History" [ref=e115] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/approval-history
+                  - img [ref=e116]
+                  - generic [ref=e118]: Approval History
+          - listitem [ref=e119]:
+            - generic [ref=e120] [cursor=pointer]:
+              - generic [ref=e121]: Requests
+              - button "Requests" [expanded] [ref=e122]:
+                - generic [ref=e123]: Requests
+                - img [ref=e124]
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - link "Guest Entry" [ref=e128] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/guest-entry-requests
+                  - img [ref=e129]
+                  - generic [ref=e131]: Guest Entry
+  - generic:
+    - status

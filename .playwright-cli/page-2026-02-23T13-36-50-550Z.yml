@@ -1,0 +1,58 @@
+- generic [ref=e1]:
+  - iframe [ref=e80]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]: "500"
+      - generic [ref=f1e6]: Server Error
+  - main [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e8]
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - img "MAP - Streamline Your Institute Operations" [ref=e13]
+            - generic [ref=e14]:
+              - heading "Streamline Your Institute Operations." [level=1] [ref=e15]
+              - paragraph [ref=e16]: The most advanced hostel management system designed for scale, powering institutions across India.
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - heading "Sign in" [level=2] [ref=e20]
+              - generic [ref=e21]: College Management Login
+              - paragraph [ref=e22]: Enter your registered phone number and OTP to access the college management dashboard.
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: OTP sent to +917777777777
+              - paragraph [ref=e44]: Enter the 6-digit code we sent to your phone
+            - generic [ref=e24]:
+              - generic [ref=e47]:
+                - generic [ref=e50]:
+                  - text: OTP Code
+                  - superscript [ref=e51]: "*"
+                - generic [ref=e52]:
+                  - spinbutton "OTP Code*" [ref=e55]: "123456"
+                  - generic [ref=e56]: Enter the 6-digit OTP sent to your phone
+              - generic [ref=e38]:
+                - button "Verify & Login" [ref=e57] [cursor=pointer]:
+                  - generic [ref=e58]: Verify & Login
+                - generic [ref=e59]:
+                  - button "Resend OTP" [ref=e60] [cursor=pointer]
+                  - button "Change Phone" [ref=e61] [cursor=pointer]
+            - generic [ref=e63]:
+              - img [ref=e64]
+              - generic [ref=e66]:
+                - paragraph [ref=e67]: OTP will expire in 5 minutes
+                - paragraph [ref=e68]: Didn't receive the code? Click "Resend OTP" to get a new one.
+            - paragraph [ref=e41]: Secure OTP-based authentication
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+  - generic:
+    - status:
+      - generic [ref=e70]:
+        - img [ref=e71]
+        - generic [ref=e73]:
+          - heading "OTP Sent" [level=3] [ref=e74]
+          - generic [ref=e75]: OTP has been sent to +917777777777
+        - button [ref=e76] [cursor=pointer]:
+          - img [ref=e77]

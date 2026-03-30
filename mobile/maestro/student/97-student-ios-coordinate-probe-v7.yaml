@@ -1,0 +1,26 @@
+appId: com.maphms.student
+name: "Student iOS Probe v7"
+env:
+  phone: "9886179767"
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    point: "50%,54%"
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "probev7/01_phone_filled"
+
+- tapOn: "Send OTP"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "probev7/02_after_send_short_wait"
+- takeScreenshot: "probev7/03_after_send_medium_wait"
+- takeScreenshot: "probev7/04_after_send_long_wait"

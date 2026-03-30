@@ -1,0 +1,20 @@
+appId: com.maphms.student
+name: "iOS Auto OTP Check"
+env:
+  phone: "9886179767"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "autootp/01_after_phone"
+- assertVisible: "Verification Code"

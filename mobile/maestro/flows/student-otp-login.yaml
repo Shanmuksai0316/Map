@@ -1,0 +1,77 @@
+appId: com.maphms.student
+name: "Student OTP Login Flow"
+---
+# Student App Login Flow
+# Inputs via env:
+#   phone: phone number for login (use test number 9999999999)
+#   otp: otp code (use 123456 for test mode)
+
+# Wait for login screen to load
+- extendedWaitUntil:
+    visible: "(Phone Number|Enter your registered phone|Hostel Management System|Enter Your Number|VIDYARTHI)"
+    timeout: 10000
+
+- takeScreenshot: "student/login/01_login_screen"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter 10-digit|Enter Your Number)"
+    optional: true
+- inputText: ${phone}
+- hideKeyboard
+
+- takeScreenshot: "student/login/02_phone_entered"
+
+# Tap Send OTP
+- extendedWaitUntil:
+    visible: "(Send OTP|Get OTP)"
+    timeout: 5000
+- tapOn:
+    text: "(Send OTP|Get OTP)"
+
+# Handle any error dialogs and retry OTP send
+- runFlow:
+    when:
+      visible: "(Network request failed|Error|Unable to detect|Try again)"
+    commands:
+      - takeScreenshot: "student/login/error_dialog"
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+
+# Handle Test Mode dialog
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - takeScreenshot: "student/login/03_test_mode_dialog"
+      - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(OTP|Enter OTP|Verify OTP|One Time Password|Enter 6-digit|Verification Code|Enter 6-digit code)"
+    timeout: 15000
+
+- takeScreenshot: "student/login/04_otp_screen"
+
+# Enter OTP
+- tapOn:
+    text: "(Enter OTP|OTP|Enter 6-digit|Enter 6-digit code|Verification Code)"
+    optional: true
+- inputText: ${otp}
+- hideKeyboard
+
+- takeScreenshot: "student/login/05_otp_entered"
+
+# Submit OTP
+- tapOn: 
+    text: "(Verify OTP|Verify|Submit|Login)"
+
+# Wait for dashboard
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions|My Profile|Out-pass|Leave)"
+    timeout: 25000
+
+- takeScreenshot: "student/login/06_dashboard_loaded"

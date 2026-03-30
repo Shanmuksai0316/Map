@@ -1,0 +1,48 @@
+appId: com.maphms.student
+name: "Student iOS Login Diagnostic v3"
+env:
+  phone: "9886179767"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debugv3/01_after_launch"
+
+# Splash CTA is not reliably exposed via accessibility on iOS, so tap by position.
+- tapOn:
+    point: "50%,90%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debugv3/02_after_cta_tap"
+
+- extendedWaitUntil:
+    visible: "Send OTP"
+    timeout: 20000
+- tapOn:
+    point: "50%,58%"
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "debugv3/03_phone_entered"
+
+- tapOn: "Send OTP"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debugv3/04_after_send_otp"
+
+- runFlow:
+    when:
+      visible: "Error"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+      - tapOn:
+          point: "50%,58%"
+      - eraseText
+      - inputText: ${phone}
+      - hideKeyboard
+      - tapOn: "Send OTP"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "debugv3/05_after_retry"
+
+- takeScreenshot: "debugv3/06_final"

@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Unassigned Staff" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: Edit
+              - heading "Edit Unassigned Staff" [level=1] [ref=e24]
+            - generic [ref=e27]:
+              - generic [ref=e28]:
+                - generic [ref=e31]:
+                  - generic [ref=e34]:
+                    - text: Full Name
+                    - superscript [ref=e35]: "*"
+                  - textbox "Full Name*" [ref=e39]: Arjun
+                - generic [ref=e42]:
+                  - generic [ref=e45]:
+                    - text: Mobile Number
+                    - superscript [ref=e46]: "*"
+                  - generic [ref=e47]:
+                    - textbox "Mobile Number*" [ref=e50]:
+                      - /placeholder: "9876543210"
+                      - text: "9988776655"
+                    - generic [ref=e51]: 10-digit Indian mobile number - used for OTP login
+                - generic [ref=e54]:
+                  - generic [ref=e57]:
+                    - text: Role
+                    - superscript [ref=e58]: "*"
+                  - combobox [ref=e63]:
+                    - generic [ref=e66]: Select an option
+              - generic [ref=e68]:
+                - button "Save changes" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70]: Save changes
+                - button "Cancel" [ref=e71] [cursor=pointer]:
+                  - generic [ref=e72]: Cancel
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e73]:
+      - generic [ref=e75]:
+        - link "Super Admin logo" [ref=e77] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e78]
+        - button "Collapse sidebar" [ref=e79] [cursor=pointer]:
+          - generic [ref=e80]: Collapse sidebar
+          - img [ref=e81]
+      - navigation [ref=e83]:
+        - list [ref=e84]:
+          - listitem [ref=e85]:
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Dashboard" [ref=e88] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e89]
+                  - generic [ref=e91]: Dashboard
+          - listitem [ref=e92]:
+            - generic [ref=e93] [cursor=pointer]:
+              - img [ref=e94]
+              - generic [ref=e96]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e97]:
+                - generic [ref=e98]: Tenant Management
+                - img [ref=e99]
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - link "New Tenant Onboarding" [ref=e103] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e107]: New Tenant Onboarding
+              - listitem [ref=e108]:
+                - link "All Tenants" [ref=e109] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e114]: All Tenants
+              - listitem [ref=e115]:
+                - link "Archived Tenants" [ref=e116] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e120]: Archived Tenants
+          - listitem [ref=e121]:
+            - generic [ref=e122] [cursor=pointer]:
+              - img [ref=e123]
+              - generic [ref=e125]: Staff Management
+              - button "Staff Management" [expanded] [ref=e126]:
+                - generic [ref=e127]: Staff Management
+                - img [ref=e128]
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "All Staff" [ref=e132] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e136]: All Staff
+              - listitem [ref=e137]:
+                - link "Assigned Staff" [ref=e138] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e143]: Assigned Staff
+              - listitem [ref=e144]:
+                - link "Unassigned Staff" [ref=e145] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e150]: Unassigned Staff
+              - listitem [ref=e151]:
+                - link "Archived Staff" [ref=e152] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e156]: Archived Staff
+          - listitem [ref=e157]:
+            - generic [ref=e158] [cursor=pointer]:
+              - img [ref=e159]
+              - generic [ref=e162]: Operations
+              - button "Operations" [ref=e163]:
+                - generic [ref=e164]: Operations
+                - img [ref=e165]
+          - listitem [ref=e167]:
+            - generic [ref=e168] [cursor=pointer]:
+              - img [ref=e169]
+              - generic [ref=e171]: Reports
+              - button "Reports" [expanded] [ref=e172]:
+                - generic [ref=e173]: Reports
+                - img [ref=e174]
+            - list [ref=e176]:
+              - listitem [ref=e177]:
+                - link "Report Center" [ref=e178] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e181]: Report Center
+  - generic:
+    - status

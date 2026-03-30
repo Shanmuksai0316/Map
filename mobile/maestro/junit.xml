@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="6.0">
+    <testcase id="Student App Refined E2E Test" name="Student App Refined E2E Test" classname="Student App Refined E2E Test" time="6.0" status="ERROR">
+      <properties>
+        <property name="tags" value="student-app, refined, e2e"/>
+      </properties>
+      <failure>Unable to launch app com.maphms.student</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

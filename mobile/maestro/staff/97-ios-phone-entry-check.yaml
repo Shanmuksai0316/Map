@@ -1,0 +1,21 @@
+appId: com.mapmars.hmsstaff
+name: "Staff iOS Phone Entry Check"
+---
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+- waitForAnimationToEnd
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+- takeScreenshot: "staff/diag/01_login"
+- tapOn: "Enter your registered phone number"
+- inputText: "7975452363"
+- hideKeyboard
+- takeScreenshot: "staff/diag/02_after_input"
+- tapOn: "(Send OTP|Get OTP)"
+- takeScreenshot: "staff/diag/03_after_send"

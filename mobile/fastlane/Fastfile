@@ -1,0 +1,329 @@
+# MAP HMS Staff App Fastfile
+# Fastlane configuration for automated builds and deployments
+
+default_platform(:ios)
+
+platform :android do
+  # ==========================================
+  # Staff App Lanes
+  # ==========================================
+  desc "Build Staff App Debug APK"
+  lane :build_staff_debug do
+    gradle(
+      task: "assemble",
+      flavor: "staff",
+      build_type: "Debug",
+      project_dir: "android"
+    )
+  end
+
+  desc "Build Staff App Release APK"
+  lane :build_staff_release do
+    gradle(
+      task: "assemble",
+      flavor: "staff",
+      build_type: "Release",
+      project_dir: "android"
+    )
+  end
+
+  desc "Build Staff App Release Bundle (AAB)"
+  lane :build_staff_bundle do
+    gradle(
+      task: "bundle",
+      flavor: "staff",
+      build_type: "Release",
+      project_dir: "android"
+    )
+  end
+
+  desc "Deploy Staff App to Play Store Internal Track"
+  lane :deploy_staff_internal do
+    build_staff_bundle
+    upload_to_play_store(
+      track: "internal",
+      aab: "android/app/build/outputs/bundle/staffRelease/app-staff-release.aab",
+      package_name: "com.mapmars.hmsstaff",
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Deploy Staff App to Play Store Production"
+  lane :deploy_staff_production do
+    build_staff_bundle
+    upload_to_play_store(
+      track: "production",
+      aab: "android/app/build/outputs/bundle/staffRelease/app-staff-release.aab",
+      package_name: "com.mapmars.hmsstaff"
+    )
+  end
+
+  # ==========================================
+  # Student App Lanes
+  # ==========================================
+  desc "Build Student App Debug APK"
+  lane :build_student_debug do
+    gradle(
+      task: "assemble",
+      flavor: "student",
+      build_type: "Debug",
+      project_dir: "android"
+    )
+  end
+
+  desc "Build Student App Release APK"
+  lane :build_student_release do
+    gradle(
+      task: "assemble",
+      flavor: "student",
+      build_type: "Release",
+      project_dir: "android"
+    )
+  end
+
+  desc "Build Student App Release Bundle (AAB)"
+  lane :build_student_bundle do
+    gradle(
+      task: "bundleStudentProductionRelease",
+      project_dir: "android"
+    )
+  end
+
+  desc "Deploy Student App to Play Store Internal Track"
+  lane :deploy_student_internal do
+    build_student_bundle
+    upload_to_play_store(
+      track: "internal",
+      aab: "android/app/build/outputs/bundle/studentProductionRelease/app-student-production-release.aab",
+      package_name: "com.maphms.student",
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Deploy Student App to Play Store Production"
+  lane :deploy_student_production do
+    build_student_bundle
+    upload_to_play_store(
+      track: "production",
+      aab: "android/app/build/outputs/bundle/studentProductionRelease/app-student-production-release.aab",
+      package_name: "com.maphms.student"
+    )
+  end
+
+  # ==========================================
+  # Play Store status check (requires GOOGLE_PLAY_JSON_KEY_PATH)
+  # ==========================================
+  desc "Check Student app submission status on Play Store (production track)"
+  lane :check_student_playstore do
+    track = ENV["PLAY_TRACK"] || "production"
+    codes = google_play_track_version_codes(
+      package_name: "com.maphms.student",
+      track: track
+    )
+    if codes.nil? || codes.empty?
+      UI.important("Student app (com.maphms.student): No version codes on track '#{track}' – submission may not be completed or app not yet on this track.")
+    else
+      UI.success("Student app (com.maphms.student) on track '#{track}': version codes = #{codes.join(', ')}")
+    end
+    codes
+  end
+
+  desc "Check Staff app submission status on Play Store (production track)"
+  lane :check_staff_playstore do
+    track = ENV["PLAY_TRACK"] || "production"
+    codes = google_play_track_version_codes(
+      package_name: "com.mapmars.hmsstaff",
+      track: track
+    )
+    if codes.nil? || codes.empty?
+      UI.important("Staff app (com.mapmars.hmsstaff): No version codes on track '#{track}' – submission may not be completed or app not yet on this track.")
+    else
+      UI.success("Staff app (com.mapmars.hmsstaff) on track '#{track}': version codes = #{codes.join(', ')}")
+    end
+    codes
+  end
+
+  desc "Check both Student and Staff app submission status on Play Store"
+  lane :check_playstore_status do
+    check_student_playstore
+    check_staff_playstore
+  end
+
+  # Report release status for one app (completed = live on Play Store)
+  def report_release_status(package_name, track, app_label)
+    require "supply"
+    require "supply/options"
+    json_key = ENV["GOOGLE_PLAY_JSON_KEY_PATH"] || File.expand_path("~/keys/mapmars-play.json")
+    UI.user_error!("Set GOOGLE_PLAY_JSON_KEY_PATH to your Play service account JSON key") unless File.exist?(json_key)
+    params = { package_name: package_name, track: track, json_key: json_key, timeout: 300 }
+    Supply.config = params
+    client = Supply::Client.make_from_config(params: params)
+    client.begin_edit(package_name: package_name)
+    releases = client.track_releases(track)
+    client.abort_current_edit
+    if releases.nil? || releases.empty?
+      UI.important("#{app_label}: No releases on track '#{track}' – not released yet.")
+      return
+    end
+    UI.header("#{app_label} – track: #{track}")
+    releases.each do |r|
+      status = (r.respond_to?(:status) && r.status) ? r.status.to_s : "unknown"
+      version_codes = (r.respond_to?(:version_codes) && r.version_codes) ? r.version_codes.join(", ") : ""
+      name = r.respond_to?(:name) ? r.name : "unnamed"
+      frac = (r.respond_to?(:user_fraction) && r.user_fraction) ? "#{(r.user_fraction * 100).to_i}%" : "N/A"
+      UI.message("  Release: #{name} | version_codes: [#{version_codes}] | status: #{status} | rollout: #{frac}")
+      case status
+      when "completed" then UI.success("  -> Released to Play Store (live for users)")
+      when "inProgress" then UI.success("  -> Rolling out to Play Store (#{frac})")
+      when "draft" then UI.important("  -> Not yet released (draft)")
+      when "halted" then UI.important("  -> Rollout halted")
+      else UI.message("  -> Status: #{status}")
+      end
+    end
+  end
+
+  desc "Check if Student app is released on Play Store (production track release status)"
+  lane :check_student_release do
+    report_release_status("com.maphms.student", ENV["PLAY_TRACK"] || "production", "Student (Vidyarthi)")
+  end
+
+  desc "Check if Staff app is released on Play Store (production track release status)"
+  lane :check_staff_release do
+    report_release_status("com.mapmars.hmsstaff", ENV["PLAY_TRACK"] || "production", "Staff")
+  end
+
+  desc "Check if both apps are released to Play Store (release status, not just submission)"
+  lane :check_playstore_release do
+    check_student_release
+    check_staff_release
+  end
+
+  # ==========================================
+  # Combined Deployment Lanes
+  # ==========================================
+  desc "Deploy Both Apps to Internal Testing"
+  lane :deploy_both_internal do
+    deploy_staff_internal
+    deploy_student_internal
+  end
+end
+
+platform :ios do
+  desc "Build Staff App for Development"
+  lane :build_staff_dev do
+    cocoapods(podfile: "ios/Podfile")
+    gym(
+      workspace: "ios/rn082template.xcworkspace",
+      scheme: "MAPHMSStaff",
+      configuration: "Staff Debug",
+      export_method: "development",
+      output_directory: "ios/build",
+      output_name: "MAPHMSStaff-Dev.ipa"
+    )
+  end
+
+  desc "Build Staff App for Release"
+  lane :build_staff_release do
+    cocoapods(podfile: "ios/Podfile")
+    gym(
+      workspace: "ios/rn082template.xcworkspace",
+      scheme: "MAPHMSStaff",
+      configuration: "Staff Release",
+      export_method: "app-store",
+      output_directory: "ios/build",
+      output_name: "MAPHMSStaff.ipa"
+    )
+  end
+
+  desc "Deploy Staff App to TestFlight"
+  lane :deploy_staff_testflight do
+    build_staff_release
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Deploy Staff App to App Store"
+  lane :deploy_staff_appstore do
+    build_staff_release
+    deliver(
+      submit_for_review: true,
+      automatic_release: false,
+      force: true
+    )
+  end
+
+  # ============================
+  # Student iOS (Vidyarthi)
+  # ============================
+
+  desc "Build Student App for Release"
+  lane :build_student_release do
+    cocoapods(podfile: "ios/Podfile")
+    gym(
+      workspace: "ios/rn082template.xcworkspace",
+      scheme: "rn082template",
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: "ios/build",
+      output_name: "Vidyarthi.ipa"
+    )
+  end
+
+  desc "Deploy Student App to TestFlight"
+  lane :deploy_student_testflight do
+    build_student_release
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Deploy Student App to App Store"
+  lane :deploy_student_appstore do
+    build_student_release
+    deliver(
+      submit_for_review: true,
+      automatic_release: false,
+      force: true
+    )
+  end
+end
+
+desc "Run all tests"
+lane :test do
+  sh("cd .. && npm run test -- --coverage --watchAll=false")
+end
+
+desc "Increment version for both platforms"
+lane :bump_version do |options|
+  version = options[:version]
+  build = options[:build]
+
+  # Update package.json
+  package_json = JSON.parse(File.read("../package.json"))
+  package_json["version"] = version
+  File.write("../package.json", JSON.pretty_generate(package_json))
+
+  # Update Android version
+  gradle_file = File.read("../android/app/build.gradle")
+  gradle_file = gradle_file.gsub(/versionName "[^"]*"/, "versionName \"#{version}\"")
+  gradle_file = gradle_file.gsub(/versionCode \d+/, "versionCode #{build}")
+  File.write("../android/app/build.gradle", gradle_file)
+
+  # Update iOS version
+  xcodeproj = "ios/rn082template.xcodeproj"
+  increment_version_number(
+    version_number: version,
+    xcodeproj: xcodeproj
+  )
+  increment_build_number(
+    build_number: build,
+    xcodeproj: xcodeproj
+  )
+
+  UI.success("Version bumped to #{version} (#{build})")
+end

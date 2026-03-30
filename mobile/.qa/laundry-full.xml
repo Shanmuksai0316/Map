@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="28.0">
+    <testcase id="Laundry Manager Full Test Suite" name="Laundry Manager Full Test Suite" classname="Laundry Manager Full Test Suite" time="28.0" status="ERROR">
+      <properties/>
+      <failure>Assertion is false: "(Dashboard|Laundry|Manager)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

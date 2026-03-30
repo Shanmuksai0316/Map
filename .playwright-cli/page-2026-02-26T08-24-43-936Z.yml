@@ -1,0 +1,256 @@
+- generic [ref=e2]:
+  - button "Edit this form" [ref=e4] [cursor=pointer]:
+    - img [ref=e8]
+  - generic [ref=e11]:
+    - generic [ref=e14]:
+      - generic [ref=e16]:
+        - heading "Student Bulk Upload Intake" [level=1] [ref=e20]: Student Bulk Upload Intake
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e26]:
+                - text: nagraj@rorko.com
+                - link "Switch account" [ref=e27] [cursor=pointer]:
+                  - /url: https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/viewform?usp%3Dpublish-editor&service=wise
+              - generic [ref=e28]:
+                - img "Your email and Google account are not part of your response" [ref=e29]
+                - generic [ref=e33]: Not shared
+            - status [ref=e588] [cursor=pointer]:
+              - generic [ref=e592]: Draft saved
+          - generic [ref=e38]: "* Indicates required question"
+      - list [ref=e39]:
+        - listitem [ref=e40]:
+          - generic [ref=e42]:
+            - heading "Full Name Required question" [level=3] [ref=e45]:
+              - generic [ref=e46]: Full Name
+              - generic "Required question" [ref=e47]: "*"
+            - textbox "Full Name Required question" [active] [ref=e53]: Test Student One
+        - listitem [ref=e55]:
+          - generic [ref=e57]:
+            - heading "Email Address Required question" [level=3] [ref=e60]:
+              - generic [ref=e61]: Email Address
+              - generic "Required question" [ref=e62]: "*"
+            - textbox "Email Address Required question" [ref=e68]: test.student.one@example.com
+        - listitem [ref=e70]:
+          - generic [ref=e72]:
+            - heading "Mobile Number Required question" [level=3] [ref=e75]:
+              - generic [ref=e76]: Mobile Number
+              - generic "Required question" [ref=e77]: "*"
+            - generic [ref=e82]:
+              - textbox "Mobile Number Required question" [ref=e83]
+              - generic: Your answer
+            - alert [ref=e594]:
+              - generic [ref=e598]: This is a required question
+        - listitem [ref=e85]:
+          - generic [ref=e87]:
+            - heading "Gender Required question" [level=3] [ref=e90]:
+              - generic [ref=e91]: Gender
+              - generic "Required question" [ref=e92]: "*"
+            - radiogroup "Gender Required question" [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e99]:
+                  - radio "A+" [ref=e516] [cursor=pointer]
+                  - generic [ref=e103]: A+
+                - generic [ref=e106]:
+                  - radio "Option 6" [ref=e519] [cursor=pointer]
+                  - generic [ref=e110]: Option 6
+                - generic [ref=e113]:
+                  - radio "Option 7" [ref=e522] [cursor=pointer]
+                  - generic [ref=e117]: Option 7
+                - generic [ref=e120]:
+                  - radio "Option 8" [ref=e525] [cursor=pointer]
+                  - generic [ref=e124]: Option 8
+                - generic [ref=e127]:
+                  - radio "Option 9" [ref=e528] [cursor=pointer]
+                  - generic [ref=e131]: Option 9
+                - generic [ref=e134]:
+                  - radio "Option 10" [ref=e531] [cursor=pointer]
+                  - generic [ref=e138]: Option 10
+                - generic [ref=e141]:
+                  - radio "Option 11" [ref=e534] [cursor=pointer]
+                  - generic [ref=e145]: Option 11
+                - generic [ref=e148]:
+                  - radio "Option 12" [ref=e537] [cursor=pointer]
+                  - generic [ref=e152]: Option 12
+                - generic [ref=e155]:
+                  - radio "female" [ref=e540] [cursor=pointer]
+                  - generic [ref=e159]: female
+                - generic [ref=e162]:
+                  - radio "Female" [ref=e543] [cursor=pointer]
+                  - generic [ref=e166]: Female
+                - generic [ref=e169]:
+                  - radio "other" [ref=e546] [cursor=pointer]
+                  - generic [ref=e173]: other
+                - generic [ref=e176]:
+                  - radio "Prefer not to say" [ref=e549] [cursor=pointer]
+                  - generic [ref=e180]: Prefer not to say
+        - listitem [ref=e181]:
+          - generic [ref=e183]:
+            - heading "Medical Information" [level=3] [ref=e186]:
+              - generic [ref=e187]: Medical Information
+            - generic [ref=e190]:
+              - generic: Your answer
+              - textbox "Medical Information" [ref=e192]
+        - listitem [ref=e194]:
+          - generic [ref=e196]:
+            - heading "Date of Birth" [level=3] [ref=e199]:
+              - generic [ref=e200]: Date of Birth
+            - generic "Date of Birth" [ref=e203]:
+              - generic [ref=e204]: Date
+              - textbox "Date" [ref=e209]
+        - listitem [ref=e211]:
+          - generic [ref=e213]:
+            - heading "Student UID" [level=3] [ref=e216]:
+              - generic [ref=e217]: Student UID
+            - generic [ref=e222]:
+              - textbox "Student UID" [ref=e223]
+              - generic: Your answer
+        - listitem [ref=e225]:
+          - generic [ref=e227]:
+            - heading "MAP ID" [level=3] [ref=e230]:
+              - generic [ref=e231]: MAP ID
+            - generic [ref=e236]:
+              - textbox "MAP ID" [ref=e237]
+              - generic: Your answer
+        - listitem [ref=e239]:
+          - generic [ref=e241]:
+            - heading "ERP Number" [level=3] [ref=e244]:
+              - generic [ref=e245]: ERP Number
+            - generic [ref=e250]:
+              - textbox "ERP Number" [ref=e251]
+              - generic: Your answer
+        - listitem [ref=e253]:
+          - generic [ref=e255]:
+            - heading "Department" [level=3] [ref=e258]:
+              - generic [ref=e259]: Department
+            - generic [ref=e264]:
+              - textbox "Department" [ref=e265]
+              - generic: Your answer
+        - listitem [ref=e267]:
+          - generic [ref=e269]:
+            - heading "Year of Study" [level=3] [ref=e272]:
+              - generic [ref=e273]: Year of Study
+            - radiogroup "Year of Study" [ref=e276]:
+              - generic [ref=e277]:
+                - generic [ref=e280]:
+                  - radio "1" [ref=e552] [cursor=pointer]
+                  - generic [ref=e284]: "1"
+                - generic [ref=e287]:
+                  - radio "2" [ref=e555] [cursor=pointer]
+                  - generic [ref=e291]: "2"
+                - generic [ref=e294]:
+                  - radio "3" [ref=e558] [cursor=pointer]
+                  - generic [ref=e298]: "3"
+                - generic [ref=e301]:
+                  - radio "Option 4" [ref=e561] [cursor=pointer]
+                  - generic [ref=e305]: Option 4
+                - generic [ref=e308]:
+                  - radio "4" [ref=e564] [cursor=pointer]
+                  - generic [ref=e312]: "4"
+                - generic [ref=e315]:
+                  - radio "Option 6" [ref=e567] [cursor=pointer]
+                  - generic [ref=e319]: Option 6
+                - generic [ref=e322]:
+                  - radio "5" [ref=e570] [cursor=pointer]
+                  - generic [ref=e326]: "5"
+                - generic [ref=e329]:
+                  - radio "Option 8" [ref=e573] [cursor=pointer]
+                  - generic [ref=e333]: Option 8
+                - generic [ref=e336]:
+                  - radio "Option 9" [ref=e576] [cursor=pointer]
+                  - generic [ref=e340]: Option 9
+        - listitem [ref=e341]:
+          - generic [ref=e343]:
+            - generic:
+              - generic:
+                - heading [level=3]
+            - radiogroup [ref=e346]:
+              - generic [ref=e350]:
+                - radio "Option 1" [ref=e579] [cursor=pointer]
+                - generic [ref=e354]: Option 1
+        - listitem [ref=e355]:
+          - generic [ref=e357]:
+            - heading "Father Name" [level=3] [ref=e360]:
+              - generic [ref=e361]: Father Name
+            - generic [ref=e366]:
+              - textbox "Father Name" [ref=e367]
+              - generic: Your answer
+        - listitem [ref=e369]:
+          - generic [ref=e371]:
+            - heading "Father Mobile Number" [level=3] [ref=e374]:
+              - generic [ref=e375]: Father Mobile Number
+            - generic [ref=e380]:
+              - textbox "Father Mobile Number" [ref=e381]
+              - generic: Your answer
+        - listitem [ref=e383]:
+          - generic [ref=e385]:
+            - heading "Mother Name" [level=3] [ref=e388]:
+              - generic [ref=e389]: Mother Name
+            - generic [ref=e394]:
+              - textbox "Mother Name" [ref=e395]
+              - generic: Your answer
+        - listitem [ref=e397]:
+          - generic [ref=e399]:
+            - heading "Mother Mobile Number" [level=3] [ref=e402]:
+              - generic [ref=e403]: Mother Mobile Number
+            - generic [ref=e408]:
+              - textbox "Mother Mobile Number" [ref=e409]
+              - generic: Your answer
+        - listitem [ref=e411]:
+          - generic [ref=e413]:
+            - heading "Local Guardian Name" [level=3] [ref=e416]:
+              - generic [ref=e417]: Local Guardian Name
+            - generic [ref=e422]:
+              - textbox "Local Guardian Name" [ref=e423]
+              - generic: Your answer
+        - listitem [ref=e425]:
+          - generic [ref=e427]:
+            - heading "Local Guardian Contact" [level=3] [ref=e430]:
+              - generic [ref=e431]: Local Guardian Contact
+            - generic [ref=e436]:
+              - textbox "Local Guardian Contact" [ref=e437]
+              - generic: Your answer
+        - listitem [ref=e439]:
+          - generic [ref=e441]:
+            - heading "Local Relationship" [level=3] [ref=e444]:
+              - generic [ref=e445]: Local Relationship
+            - radiogroup "Local Relationship" [ref=e448]:
+              - generic [ref=e452]:
+                - radio "Option 1" [ref=e582] [cursor=pointer]
+                - generic [ref=e456]: Option 1
+        - listitem [ref=e457]:
+          - generic [ref=e459]:
+            - heading "Local Address" [level=3] [ref=e462]:
+              - generic [ref=e463]: Local Address
+            - generic [ref=e466]:
+              - generic: Your answer
+              - textbox "Local Address" [ref=e468]
+        - listitem [ref=e470]:
+          - generic [ref=e472]:
+            - heading "Blood Group" [level=3] [ref=e475]:
+              - generic [ref=e476]: Blood Group
+            - radiogroup "Blood Group" [ref=e479]:
+              - generic [ref=e483]:
+                - radio "Option 1" [ref=e585] [cursor=pointer]
+                - generic [ref=e487]: Option 1
+      - generic [ref=e488]:
+        - generic [ref=e489]:
+          - button "Submit" [ref=e491] [cursor=pointer]:
+            - generic [ref=e494]: Submit
+          - button "Clear form" [ref=e496] [cursor=pointer]:
+            - generic [ref=e499]: Clear form
+        - generic [ref=e500]: Never submit passwords through Google Forms.
+    - generic [ref=e501]:
+      - generic [ref=e502]:
+        - text: This form was created inside of Rorko.com. - Contact form owner
+        - paragraph [ref=e503]:
+          - text: Does this form look suspicious?
+          - link "Report" [ref=e504] [cursor=pointer]:
+            - /url: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/viewform?usp%3Dpublish-editor
+      - link "Google Forms" [ref=e506] [cursor=pointer]:
+        - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+        - img "Google" [ref=e507]
+        - text: Forms
+  - generic [ref=e511]:
+    - button "help and feedback" [ref=e512] [cursor=pointer]
+    - tooltip [ref=e515]: Help and feedback

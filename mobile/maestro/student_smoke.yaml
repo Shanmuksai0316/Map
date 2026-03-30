@@ -1,0 +1,36 @@
+appId: com.maphms.student
+name: Student app smoke - login and basic navigation
+
+env:
+  PHONE_NUMBER: "9886179767"
+  OTP_CODE: "123456"
+
+---
+- launchApp:
+    clearState: false
+
+# Enter phone number (use testID for reliability)
+- tapOn:
+    id: "phone-input"
+- inputText: ${PHONE_NUMBER}
+
+# Send OTP
+- tapOn:
+    id: "send-otp-button"
+
+# Enter OTP
+- tapOn:
+    id: "otp-input"
+- inputText: ${OTP_CODE}
+
+# Verify and login
+- tapOn:
+    id: "verify-otp-button"
+
+# Check key tiles exist
+- assertVisible: "Parcels"
+- assertVisible: "Notice Board"
+- assertVisible: "Leave"
+- assertVisible: "Laundry"
+- assertVisible: "Requests"
+

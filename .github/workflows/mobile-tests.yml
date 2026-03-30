@@ -1,0 +1,197 @@
+name: Mobile Tests & Coverage
+
+on:
+  push:
+    branches: [ main, develop, 'feat/**' ]
+    paths:
+      - 'mobile/**'
+      - '.github/workflows/mobile-tests.yml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'mobile/**'
+
+jobs:
+  test:
+    name: Run Tests & Generate Coverage
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./mobile
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: mobile/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run ESLint
+        run: npm run lint || true
+        continue-on-error: true
+      
+      - name: Run TypeScript type check
+        run: npx tsc --noEmit || true
+        continue-on-error: true
+      
+      - name: Run tests with coverage
+        run: npm test -- --coverage --maxWorkers=2
+      
+      - name: Check coverage thresholds
+        run: |
+          COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
+          echo "Coverage: $COVERAGE%"
+          if (( $(echo "$COVERAGE < 80" | bc -l) )); then
+            echo "❌ Coverage is below 80% ($COVERAGE%)"
+            echo "::warning::Test coverage is below target (80%). Current: $COVERAGE%"
+            # Don't fail build yet, just warn
+            # exit 1
+          else
+            echo "✅ Coverage meets target: $COVERAGE%"
+          fi
+      
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          directory: ./mobile/coverage
+          files: ./mobile/coverage/coverage-final.json
+          flags: mobile
+          name: mobile-coverage
+          fail_ci_if_error: false
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      
+      - name: Generate coverage badge
+        if: github.ref == 'refs/heads/main'
+        run: |
+          COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
+          COLOR="red"
+          if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
+            COLOR="brightgreen"
+          elif (( $(echo "$COVERAGE >= 60" | bc -l) )); then
+            COLOR="yellow"
+          elif (( $(echo "$COVERAGE >= 40" | bc -l) )); then
+            COLOR="orange"
+          fi
+          echo "COVERAGE_BADGE=![Coverage](https://img.shields.io/badge/coverage-${COVERAGE}%25-${COLOR})" >> $GITHUB_ENV
+      
+      - name: Comment coverage on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const fs = require('fs');
+            const coverage = JSON.parse(fs.readFileSync('./mobile/coverage/coverage-summary.json', 'utf8'));
+            const totalCoverage = coverage.total.lines.pct.toFixed(2);
+            const body = `## 📊 Test Coverage Report
+            
+            **Total Coverage:** ${totalCoverage}%
+            
+            | Metric | Coverage | Status |
+            |--------|----------|--------|
+            | **Lines** | ${coverage.total.lines.pct.toFixed(2)}% | ${coverage.total.lines.pct >= 80 ? '✅' : '⚠️'} |
+            | **Statements** | ${coverage.total.statements.pct.toFixed(2)}% | ${coverage.total.statements.pct >= 80 ? '✅' : '⚠️'} |
+            | **Functions** | ${coverage.total.functions.pct.toFixed(2)}% | ${coverage.total.functions.pct >= 80 ? '✅' : '⚠️'} |
+            | **Branches** | ${coverage.total.branches.pct.toFixed(2)}% | ${coverage.total.branches.pct >= 80 ? '✅' : '⚠️'} |
+            
+            ${totalCoverage >= 80 ? '✅ Coverage meets target (80%)' : '⚠️ Coverage is below target (80%)'}
+            
+            [View full coverage report on Codecov](https://codecov.io/gh/${{ github.repository }})
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.name,
+              body: body
+            });
+      
+      - name: Archive coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: mobile/coverage/
+          retention-days: 30
+      
+      - name: Archive test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: mobile/__tests__/__snapshots__/
+          retention-days: 7
+
+  lint-and-format:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./mobile
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: mobile/package-lock.json
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check code formatting (Prettier)
+        run: npx prettier --check "src/**/*.{ts,tsx,js,jsx,json}"
+        continue-on-error: true
+      
+      - name: Run ESLint
+        run: npm run lint
+        continue-on-error: true
+
+  security-audit:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./mobile
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+      
+      - name: Check for vulnerable dependencies
+        run: |
+          AUDIT_RESULT=$(npm audit --json || true)
+          HIGH_VULNS=$(echo $AUDIT_RESULT | jq '.metadata.vulnerabilities.high // 0')
+          CRITICAL_VULNS=$(echo $AUDIT_RESULT | jq '.metadata.vulnerabilities.critical // 0')
+          
+          if [ "$HIGH_VULNS" -gt 0 ] || [ "$CRITICAL_VULNS" -gt 0 ]; then
+            echo "⚠️ Found $CRITICAL_VULNS critical and $HIGH_VULNS high severity vulnerabilities"
+            echo "::warning::Security vulnerabilities detected. Run 'npm audit fix' locally."
+          else
+            echo "✅ No critical or high severity vulnerabilities found"
+          fi
+

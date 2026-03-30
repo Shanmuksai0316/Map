@@ -1,0 +1,65 @@
+- generic [ref=e1]:
+  - heading "Google Forms" [level=1] [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - button "Main menu" [ref=e6] [cursor=pointer]:
+            - img [ref=e7]
+          - link "Forms" [ref=e11] [cursor=pointer]:
+            - /url: https://docs.google.com/forms/?authuser=0
+            - img [ref=e12]
+            - generic [ref=e13]: Forms
+        - search [ref=e16]:
+          - table [ref=e18]:
+            - rowgroup [ref=e19]:
+              - row [ref=e20]:
+                - cell [ref=e21]:
+                  - combobox "Search bar" [ref=e22]
+          - button "Search" [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+        - generic [ref=e28]:
+          - button "Google apps" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+          - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e36] [cursor=pointer]':
+            - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e41]':
+              - img [ref=e43]
+  - generic [ref=e46]:
+    - generic [ref=e52]:
+      - generic [ref=e57]:
+        - generic [ref=e59]: Recently used templates
+        - listbox "Recently used templates" [ref=e60]:
+          - option "Blank form" [ref=e61]:
+            - generic "Blank form" [ref=e62] [cursor=pointer]
+            - generic "Blank form" [ref=e65]
+          - option "Event Feedback" [ref=e66]:
+            - generic "Event Feedback" [ref=e67] [cursor=pointer]
+            - generic "Event Feedback" [ref=e70]
+          - option "Order Form" [ref=e71]:
+            - generic "Order Form" [ref=e72] [cursor=pointer]
+            - generic "Order Form" [ref=e75]
+          - option "Job Application" [ref=e76]:
+            - generic "Job Application" [ref=e77] [cursor=pointer]
+            - generic "Job Application" [ref=e80]
+          - option "Time Off Request" [ref=e81]:
+            - generic "Time Off Request" [ref=e82] [cursor=pointer]
+            - generic "Time Off Request" [ref=e85]
+      - generic [ref=e90]:
+        - heading "Start a new form" [ref=e91]
+        - generic [ref=e92]:
+          - button "Template gallery" [ref=e93] [cursor=pointer]: Template gallery
+          - button "More actions." [ref=e98] [cursor=pointer]
+    - generic [ref=e106]:
+      - generic [ref=e108]:
+        - heading "Recent forms" [ref=e109]
+        - button "Owner Filter Options" [ref=e111]:
+          - generic [ref=e116] [cursor=pointer]: Owned by anyone
+        - generic [ref=e120]:
+          - button "List view" [ref=e121] [cursor=pointer]
+          - button "Sort options" [ref=e124] [cursor=pointer]
+          - button "Open file picker" [ref=e131] [cursor=pointer]
+      - generic [ref=e134]:
+        - generic [ref=e136]: Recent forms
+        - region [active] [ref=e138]:
+          - generic [ref=e139]: No forms yet
+          - generic [ref=e140]: Select a blank form or choose another template above to get started
+  - region

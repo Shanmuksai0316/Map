@@ -1,0 +1,63 @@
+appId: com.maphms.student
+name: "Student Outpass/Gate Pass Test"
+tags:
+  - student-app
+  - outpass
+  - gate-pass
+env:
+  phone: "8888888800"
+  otp: "123456"
+---
+# Student Outpass Feature Test
+# Tests gate pass creation and viewing
+
+# Login first
+- runFlow:
+    file: "../flows/student-otp-login.yaml"
+    env:
+      phone: ${phone}
+      otp: ${otp}
+
+# Navigate to Outpass
+- tapOn: "Out-pass"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "(Gate Pass|Out Pass|Outpass)"
+    timeout: 10000
+- takeScreenshot: "student/outpass/01_outpass_screen"
+
+# Check if create button exists
+- runFlow:
+    when:
+      visible: "(Create|New|Request|Apply)"
+    commands:
+      - tapOn: "(Create|New|Request|Apply)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(From|To|Date|Time|Reason|Purpose)"
+          timeout: 10000
+      - takeScreenshot: "student/outpass/02_outpass_form"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Check if history/list exists
+- runFlow:
+    when:
+      visible: "(History|List|Requests|Pending|Approved)"
+    commands:
+      - takeScreenshot: "student/outpass/03_outpass_list"
+      - runFlow:
+          when:
+            visible: "(View|Details|Tap)"
+          commands:
+            - tapOn: "(View|Details)"
+            - waitForAnimationToEnd
+            - takeScreenshot: "student/outpass/04_outpass_detail"
+            - pressKey: Back
+            - waitForAnimationToEnd
+
+# Return to dashboard
+- pressKey: Back
+- waitForAnimationToEnd
+- assertVisible: "(Welcome|Dashboard)"
+

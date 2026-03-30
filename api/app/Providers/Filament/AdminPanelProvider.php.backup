@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Providers\Filament;
+
+use Filament\Http\Middleware\Authenticate;
+use Filament\Pages;
+use Filament\Panel;
+use Filament\PanelProvider;
+use Filament\Support\Colors\Color;
+use Filament\Widgets;
+use Illuminate\Session\Middleware\StartSession;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Illuminate\Routing\Middleware\SubstituteBindings;
+
+class AdminPanelProvider extends PanelProvider
+{
+    public function panel(Panel $panel): Panel
+    {
+        return $panel
+            ->id('admin')
+            ->path('admin')              // => /admin
+            ->authGuard('web')           // tests must use 'web' guard
+            ->login()                    // register login routes
+            ->loginRouteSlug('login')
+            ->brandName('MAP - HMS')
+            ->brandLogo(asset('images/map-logo.svg'))
+            ->brandLogoHeight('3rem')
+            ->favicon(asset('images/map-logo.svg'))
+            ->colors([
+                'primary' => [
+                    50 => '#FFF5F2',
+                    100 => '#FFE5DC',
+                    200 => '#FFCBB8',
+                    300 => '#FFA98A',
+                    400 => '#FF8760',
+                    500 => '#FF6B35',
+                    600 => '#E55A2B',
+                    700 => '#CC4920',
+                    800 => '#B33818',
+                    900 => '#992E13',
+                    950 => '#801F0D',
+                ],
+                'gray' => Color::Slate,
+            ])
+            ->font('Inter')
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->discoverResources(
+                in: app_path('Filament/Admin/Resources'),
+                for: 'App\\Filament\\Admin\\Resources'
+            )
+            ->discoverPages(
+                in: app_path('Filament/Admin/Pages'),
+                for: 'App\\Filament\\Admin\\Pages'
+            )
+            ->pages([
+                Pages\Dashboard::class,
+            ])
+            ->discoverWidgets(
+                in: app_path('Filament/Admin/Widgets'),
+                for: 'App\\Filament\\Admin\\Widgets'
+            )
+            ->widgets([
+                Widgets\AccountWidget::class,
+            ])
+            ->middleware([
+                StartSession::class,
+                ShareErrorsFromSession::class,
+                SubstituteBindings::class,
+            ])
+            ->authMiddleware([
+                Authenticate::class,
+            ]);
+    }
+}

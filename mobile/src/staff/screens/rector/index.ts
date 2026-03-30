@@ -1,0 +1,10 @@
+export { RectorDashboard } from './RectorDashboard';
+export { OutpassListScreen } from './OutpassListScreen';
+export { OutpassDetailScreen } from './OutpassDetailScreen';
+export { LeaveListScreen } from './LeaveListScreen';
+export { RectorLeaveDetailScreen } from './RectorLeaveDetailScreen';
+export { RectorProfileScreen } from './RectorProfileScreen';
+export { RectorCommBoxScreen } from './RectorCommBoxScreen';
+export { RectorInsightsScreen } from './RectorInsightsScreen';
+export { GuestEntryListScreen } from './GuestEntryListScreen';
+export { RectorGuestEntryDetailScreen } from './RectorGuestEntryDetailScreen';

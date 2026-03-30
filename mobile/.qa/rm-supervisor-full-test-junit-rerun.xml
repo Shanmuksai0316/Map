@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="36.0">
+    <testcase id="RM Supervisor Full Test Suite" name="RM Supervisor Full Test Suite" classname="RM Supervisor Full Test Suite" time="36.0" status="ERROR">
+      <properties/>
+      <failure>Assertion is false: "(Dashboard|Maintenance|Repair|RM|Supervisor)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,125 @@
+appId: com.mapmars.hmsstaff
+name: "Laundry Manager Role Smoke Test"
+tags:
+  - laundry-manager
+  - smoke
+  - staff
+  - role-test
+
+---
+
+# ============================================
+# Laundry Manager Role - Test Credentials
+# Phone: 9538678739 | OTP: 123456
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+
+- extendedWaitUntil:
+    visible: "(Staff App|MAP|Phone Number|Enter Your Number|Get OTP|Login|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "laundry-manager/01_app_launched"
+
+# Enter phone number
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|Enter Your Number|10-digit)"
+    optional: true
+- inputText: "9538678739"
+- hideKeyboard
+
+- takeScreenshot: "laundry-manager/02_phone_entered"
+
+# Tap (Send OTP|Get OTP)
+- tapOn: "(Send OTP|Get OTP)"
+
+# Handle OTP sent success dialog
+- runFlow:
+    when:
+      visible: "(Success|OTP sent successfully)"
+    commands:
+      - tapOn: "OK"
+
+# Retry Get OTP if still on login screen
+- runFlow:
+    when:
+      visible: "(Send OTP|Get OTP)"
+    commands:
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+          optional: true
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Success|OTP sent successfully)"
+          commands:
+            - tapOn: "OK"
+
+# Wait for OTP screen
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter OTP|Verify|OTP|6-digit|Enter 6-digit)"
+    timeout: 20000
+
+- takeScreenshot: "laundry-manager/03_otp_screen"
+
+# Enter OTP
+- inputText: "123456"
+- hideKeyboard
+
+# Tap Verify
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login|Continue)"
+    optional: true
+
+# Wait for Laundry Manager Dashboard
+- extendedWaitUntil:
+    visible: "(Good Morning|Good Afternoon|Good Evening|Laundry Manager|Raise Request|Request List|Gate Pass)"
+    timeout: 20000
+
+- takeScreenshot: "laundry-manager/04_dashboard"
+
+# ============================================
+# Verify Laundry Manager-specific UI Elements
+# ============================================
+
+# Check for Laundry Manager dashboard tiles
+- assertVisible:
+    text: "(Raise Request|Request List|Gate Pass|QR Scanner)"
+
+- takeScreenshot: "laundry-manager/05_dashboard_verified"
+
+# Test navigation to Request List
+- runFlow:
+    when:
+      visible: "Request List"
+    commands:
+      - tapOn: "Request List"
+      - extendedWaitUntil:
+          visible: "(Requests|Pending|Completed|No requests)"
+          timeout: 10000
+      - takeScreenshot: "laundry-manager/06_request_list_screen"
+      - back
+
+# Test navigation to Gate Pass
+- runFlow:
+    when:
+      visible: "Gate Pass"
+    commands:
+      - tapOn: "Gate Pass"
+      - extendedWaitUntil:
+          visible: "(Gate Pass|Create|No gate pass)"
+          timeout: 10000
+      - takeScreenshot: "laundry-manager/07_gate_pass_screen"
+      - back
+
+- takeScreenshot: "laundry-manager/08_test_complete"

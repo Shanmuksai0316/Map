@@ -1,0 +1,59 @@
+appId: com.maphms.student
+name: "Student iOS Login by ID"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "iosid/01_splash"
+
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "iosid/02_login_screen"
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- takeScreenshot: "iosid/03_phone_entered"
+
+- tapOn:
+    id: "send-otp-button"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Test Mode|Success|OK|Alert)"
+    commands:
+      - tapOn: "(OK|Close|Done)"
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "Verification Code"
+    timeout: 20000
+- takeScreenshot: "iosid/04_otp_screen"
+
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- takeScreenshot: "iosid/05_otp_entered"
+
+- tapOn:
+    id: "verify-otp-button"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "My Profile"
+    timeout: 30000
+- takeScreenshot: "iosid/06_dashboard"

@@ -1,0 +1,147 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Dashboard" [level=1] [ref=e16]
+            - generic [ref=e18]:
+              - generic [ref=e21]:
+                - generic [ref=e22]:
+                  - heading "Good Afternoon, Super Admin! 👋" [level=1] [ref=e23]
+                  - paragraph [ref=e24]: Monday, February 23, 2026
+                - link "+ New Tenant" [ref=e27] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants?tableFilters[status][value]=provisioning
+              - generic [ref=e28]:
+                - generic [ref=e30]:
+                  - generic [ref=e32]:
+                    - generic [ref=e33]:
+                      - img [ref=e34]
+                      - generic [ref=e36]: Total Tenants
+                    - generic [ref=e37]: "12"
+                    - generic [ref=e39]: Active organizations
+                  - generic [ref=e41]:
+                    - generic [ref=e42]:
+                      - img [ref=e43]
+                      - generic [ref=e45]: Total Hostels
+                    - generic [ref=e46]: "348"
+                    - generic [ref=e48]: Managed facilities
+                  - generic [ref=e50]:
+                    - generic [ref=e51]:
+                      - img [ref=e52]
+                      - generic [ref=e54]: Total Students
+                    - generic [ref=e55]: 2,424
+                    - generic [ref=e57]: Enrolled students
+                  - generic [ref=e59]:
+                    - generic [ref=e60]:
+                      - img [ref=e61]
+                      - generic [ref=e63]: Staff Members
+                    - generic [ref=e64]: "53"
+                    - generic [ref=e66]: Across all tenants
+                  - generic [ref=e68]:
+                    - generic [ref=e69]:
+                      - img [ref=e70]
+                      - generic [ref=e72]: Bed Utilization
+                    - generic [ref=e73]: 49%
+                    - generic [ref=e75]: 2412 of 4920 beds
+                  - generic [ref=e77]:
+                    - generic [ref=e78]:
+                      - img [ref=e79]
+                      - generic [ref=e81]: Staff Checklist
+                    - generic [ref=e82]: 0.5%
+                    - generic [ref=e84]: Completion rate
+                  - generic [ref=e86]:
+                    - generic [ref=e87]:
+                      - img [ref=e88]
+                      - generic [ref=e90]: Requests
+                    - generic [ref=e91]: "5"
+                    - generic [ref=e93]: Open & in-progress
+                - heading "Students by Tenant" [level=3] [ref=e99]
+                - heading "Tenant Status Distribution" [level=3] [ref=e110]
+                - heading "Global Occupancy (All Tenants)" [level=3] [ref=e121]
+                - generic [ref=e128]:
+                  - generic [ref=e130]:
+                    - generic [ref=e131]:
+                      - img [ref=e132]
+                      - generic [ref=e134]: Pending Requests
+                    - generic [ref=e135]: "5"
+                    - generic [ref=e137]: Awaiting assignment
+                  - generic [ref=e139]:
+                    - generic [ref=e140]:
+                      - img [ref=e141]
+                      - generic [ref=e143]: In Progress
+                    - generic [ref=e144]: "0"
+                    - generic [ref=e146]: Currently being worked on
+                  - generic [ref=e148]:
+                    - generic [ref=e149]:
+                      - img [ref=e150]
+                      - generic [ref=e152]: Completed Today
+                    - generic [ref=e153]: "0"
+                    - generic [ref=e155]: Resolved today
+                  - generic [ref=e157]:
+                    - generic [ref=e158]:
+                      - img [ref=e159]
+                      - generic [ref=e161]: Overdue
+                    - generic [ref=e162]: "5"
+                    - generic [ref=e164]: Pending > 48 hours
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e174]:
+      - generic [ref=e176]:
+        - link "Super Admin logo" [ref=e178] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e179]
+        - button "Collapse sidebar" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]: Collapse sidebar
+          - img [ref=e182]
+      - navigation [ref=e184]:
+        - list [ref=e185]:
+          - listitem [ref=e186]:
+            - list [ref=e187]:
+              - listitem [ref=e188]:
+                - link "Dashboard" [ref=e189] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e190]
+                  - generic [ref=e192]: Dashboard
+          - listitem [ref=e193]:
+            - generic [ref=e194] [cursor=pointer]:
+              - img [ref=e195]
+              - generic [ref=e197]: Tenant Management
+              - button "Tenant Management" [ref=e198]:
+                - generic [ref=e199]: Tenant Management
+                - img [ref=e200]
+          - listitem [ref=e202]:
+            - generic [ref=e203] [cursor=pointer]:
+              - img [ref=e204]
+              - generic [ref=e206]: Staff Management
+              - button "Staff Management" [ref=e207]:
+                - generic [ref=e208]: Staff Management
+                - img [ref=e209]
+          - listitem [ref=e211]:
+            - generic [ref=e212] [cursor=pointer]:
+              - img [ref=e213]
+              - generic [ref=e216]: Operations
+              - button "Operations" [ref=e217]:
+                - generic [ref=e218]: Operations
+                - img [ref=e219]
+          - listitem [ref=e221]:
+            - generic [ref=e222] [cursor=pointer]:
+              - img [ref=e223]
+              - generic [ref=e225]: Reports
+              - button "Reports" [expanded] [ref=e226]:
+                - generic [ref=e227]: Reports
+                - img [ref=e228]
+            - list [ref=e230]:
+              - listitem [ref=e231]:
+                - link "Report Center" [ref=e232] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e235]: Report Center
+  - generic:
+    - status

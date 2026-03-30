@@ -1,0 +1,37 @@
+#!/bin/bash
+# Deploy Rector Leaves Show Fix
+# This fixes the 500 error on /rector/leaves/{id} endpoint
+
+echo "🚀 Deploying Rector Leaves Show Fix..."
+echo ""
+
+# Step 1: SSH to server and deploy
+echo "📝 Run these commands on the server:"
+echo ""
+echo "1. SSH to server:"
+echo "   ssh -i \"C:\\Users\\Nagraj Y R\\Downloads\\hostinger.pem\" root@72.62.79.173"
+echo ""
+echo "2. Navigate to app directory:"
+echo "   cd /opt/map-hms/app"
+echo ""
+echo "3. Pull latest code:"
+echo "   git pull origin main"
+echo ""
+echo "4. Clear all caches:"
+echo "   docker exec map-hms-app php artisan optimize:clear"
+echo "   docker exec map-hms-app php artisan config:clear"
+echo "   docker exec map-hms-app php artisan route:clear"
+echo "   docker exec map-hms-app php artisan cache:clear"
+echo ""
+echo "5. Restart application:"
+echo "   docker restart map-hms-app"
+echo ""
+echo "6. Verify deployment:"
+echo "   curl https://api.mapservices.in/healthz"
+echo ""
+echo "✅ Deployment commands ready!"
+echo ""
+echo "⚠️  IMPORTANT: Make sure to commit and push your changes first:"
+echo "   git add api/app/Http/Controllers/Api/V1/RectorDashboardController.php"
+echo "   git commit -m 'Fix: Implement showLeave method in RectorDashboardController'"
+echo "   git push origin main"

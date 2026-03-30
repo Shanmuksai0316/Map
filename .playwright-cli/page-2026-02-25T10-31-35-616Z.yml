@@ -1,0 +1,45 @@
+- generic [ref=e1]:
+  - main [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - img "Pimpri Chinchinwad University - Rector App logo" [ref=e8]
+          - heading "Sign in" [level=1] [ref=e9]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img "MAP - Streamline Your Institute Operations" [ref=e14]
+            - generic [ref=e15]:
+              - heading "Streamline Your Institute Operations." [level=1] [ref=e16]
+              - paragraph [ref=e17]: The most advanced hostel management system designed for scale, powering institutions across India.
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - generic [ref=e21]: Rector Login
+              - paragraph [ref=e22]: Enter your registered phone number and OTP to access the rector dashboard.
+            - paragraph [ref=e23]: Enter your registered phone number to receive an OTP
+            - generic [ref=e24]:
+              - generic [ref=e28]:
+                - generic [ref=e31]:
+                  - text: Phone Number
+                  - superscript [ref=e32]: "*"
+                - generic [ref=e33]:
+                  - textbox "Phone Number*" [ref=e36]:
+                    - /placeholder: "+919900000003"
+                    - text: "9876543210"
+                  - generic [ref=e37]: Enter your registered phone number
+              - button "Send OTP" [active] [ref=e39] [cursor=pointer]
+            - paragraph [ref=e41]: Secure OTP-based authentication
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+  - generic:
+    - status:
+      - generic [ref=e43]:
+        - img [ref=e44]
+        - generic [ref=e46]:
+          - heading "Error" [level=3] [ref=e47]
+          - generic [ref=e48]: No account exists with this phone number for this tenant
+        - button [ref=e49] [cursor=pointer]:
+          - img [ref=e50]

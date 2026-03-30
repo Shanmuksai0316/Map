@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="75.0">
+    <testcase id="HK Supervisor Full Test Suite" name="HK Supervisor Full Test Suite" classname="HK Supervisor Full Test Suite" time="75.0" status="ERROR">
+      <properties>
+        <property name="tags" value="hk-supervisor, housekeeping, checklist, tickets, staff"/>
+      </properties>
+      <failure>Assertion is false: "(Checklist|Daily|Tasks|Today|No checklist)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

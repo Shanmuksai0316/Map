@@ -1,0 +1,14 @@
+appId: com.maphms.student
+name: "iOS ID Check"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- assertVisible:
+    id: "phone-input"
+- assertVisible:
+    id: "send-otp-button"
+- takeScreenshot: "idcheck/login"

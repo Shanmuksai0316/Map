@@ -1,0 +1,473 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Tenants" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/tenants
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: List
+              - heading "Tenants" [level=1] [ref=e24]
+            - link "New Tenant Onboarding" [ref=e27] [cursor=pointer]:
+              - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+              - img [ref=e28]
+              - generic [ref=e30]: New Tenant Onboarding
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - generic [ref=e36]:
+                - button "Export" [ref=e39] [cursor=pointer]:
+                  - img [ref=e40]
+                  - generic [ref=e42]: Export
+                - generic [ref=e44]:
+                  - generic [ref=e45]:
+                    - generic [ref=e46]: Search
+                    - generic [ref=e47]:
+                      - img [ref=e49]
+                      - searchbox "Search" [ref=e52]
+                  - button "Filter 1" [ref=e55] [cursor=pointer]:
+                    - generic [ref=e56]: Filter
+                    - img [ref=e57]
+                    - generic [ref=e62]: "1"
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]: Active filters
+                  - generic [ref=e67]:
+                    - generic [ref=e69]: All Tenants
+                    - button "Remove filter" [ref=e70] [cursor=pointer]:
+                      - img [ref=e71]
+                      - generic [ref=e73]: Remove filter
+                - button [ref=e75] [cursor=pointer]:
+                  - img [ref=e76]
+              - table [ref=e79]:
+                - rowgroup [ref=e80]:
+                  - row "Select/deselect all items for bulk actions. Code Name Hostels Students Staff Status Created On Actions" [ref=e81]:
+                    - columnheader "Select/deselect all items for bulk actions." [ref=e82]:
+                      - generic [ref=e84]:
+                        - checkbox "Select/deselect all items for bulk actions." [ref=e85]
+                        - generic [ref=e86]: Select/deselect all items for bulk actions.
+                    - columnheader "Code" [ref=e87]:
+                      - button "Code" [ref=e88] [cursor=pointer]:
+                        - generic [ref=e89]: Code
+                        - img [ref=e90]
+                    - columnheader "Name" [ref=e92]:
+                      - button "Name" [ref=e93] [cursor=pointer]:
+                        - generic [ref=e94]: Name
+                        - img [ref=e95]
+                    - columnheader "Hostels" [ref=e97]:
+                      - button "Hostels" [ref=e98] [cursor=pointer]:
+                        - generic [ref=e99]: Hostels
+                        - img [ref=e100]
+                    - columnheader "Students" [ref=e102]:
+                      - generic [ref=e104]: Students
+                    - columnheader "Staff" [ref=e105]:
+                      - generic [ref=e107]: Staff
+                    - columnheader "Status" [ref=e108]:
+                      - button "Status" [ref=e109] [cursor=pointer]:
+                        - generic [ref=e110]: Status
+                        - img [ref=e111]
+                    - columnheader "Created On" [ref=e113]:
+                      - button "Created On" [ref=e114] [cursor=pointer]:
+                        - generic [ref=e115]: Created On
+                        - img [ref=e116]
+                    - columnheader "Actions" [ref=e118]
+                - rowgroup [ref=e119]:
+                  - row "Select/deselect item 7a9a8d4c-d88b-4d79-a213-067de9a5485c for bulk actions. MAP-TES test tenant 2 0 0 Provisioning 11 Feb 2026 Actions Edit" [ref=e120]:
+                    - cell "Select/deselect item 7a9a8d4c-d88b-4d79-a213-067de9a5485c for bulk actions." [ref=e121]:
+                      - generic [ref=e123]:
+                        - checkbox "Select/deselect item 7a9a8d4c-d88b-4d79-a213-067de9a5485c for bulk actions." [ref=e124]
+                        - generic [ref=e125]: Select/deselect item 7a9a8d4c-d88b-4d79-a213-067de9a5485c for bulk actions.
+                    - cell "MAP-TES" [ref=e126]:
+                      - generic [ref=e133] [cursor=pointer]: MAP-TES
+                    - cell "test tenant" [ref=e134]:
+                      - link "test tenant" [ref=e136] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e141]: test tenant
+                    - cell "2" [ref=e142]:
+                      - link "2" [ref=e144] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e149]: "2"
+                    - cell "0" [ref=e150]:
+                      - link "0" [ref=e152] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e157]: "0"
+                    - cell "0" [ref=e158]:
+                      - link "0" [ref=e160] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e165]: "0"
+                    - cell "Provisioning" [ref=e166]:
+                      - link "Provisioning" [ref=e168] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e174]: Provisioning
+                    - cell "11 Feb 2026" [ref=e175]:
+                      - link "11 Feb 2026" [ref=e177] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                        - generic [ref=e182]: 11 Feb 2026
+                    - cell "Actions Edit" [ref=e183]:
+                      - generic [ref=e185]:
+                        - link "Actions" [ref=e186] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c
+                          - img [ref=e187]
+                          - generic [ref=e190]: Actions
+                        - link "Edit" [ref=e191] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/7a9a8d4c-d88b-4d79-a213-067de9a5485c/edit
+                          - img [ref=e192]
+                          - generic [ref=e195]: Edit
+                  - row "Select/deselect item c51c5a39-f96d-427e-99dd-1695e6bf1858 for bulk actions. MAP-JFJERE dfvdfvefvervev 1 0 0 Provisioning 20 Jan 2026 Actions Edit" [ref=e196]:
+                    - cell "Select/deselect item c51c5a39-f96d-427e-99dd-1695e6bf1858 for bulk actions." [ref=e197]:
+                      - generic [ref=e199]:
+                        - checkbox "Select/deselect item c51c5a39-f96d-427e-99dd-1695e6bf1858 for bulk actions." [ref=e200]
+                        - generic [ref=e201]: Select/deselect item c51c5a39-f96d-427e-99dd-1695e6bf1858 for bulk actions.
+                    - cell "MAP-JFJERE" [ref=e202]:
+                      - generic [ref=e209] [cursor=pointer]: MAP-JFJERE
+                    - cell "dfvdfvefvervev" [ref=e210]:
+                      - link "dfvdfvefvervev" [ref=e212] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e217]: dfvdfvefvervev
+                    - cell "1" [ref=e218]:
+                      - link "1" [ref=e220] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e225]: "1"
+                    - cell "0" [ref=e226]:
+                      - link "0" [ref=e228] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e233]: "0"
+                    - cell "0" [ref=e234]:
+                      - link "0" [ref=e236] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e241]: "0"
+                    - cell "Provisioning" [ref=e242]:
+                      - link "Provisioning" [ref=e244] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e250]: Provisioning
+                    - cell "20 Jan 2026" [ref=e251]:
+                      - link "20 Jan 2026" [ref=e253] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                        - generic [ref=e258]: 20 Jan 2026
+                    - cell "Actions Edit" [ref=e259]:
+                      - generic [ref=e261]:
+                        - link "Actions" [ref=e262] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858
+                          - img [ref=e263]
+                          - generic [ref=e266]: Actions
+                        - link "Edit" [ref=e267] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/c51c5a39-f96d-427e-99dd-1695e6bf1858/edit
+                          - img [ref=e268]
+                          - generic [ref=e271]: Edit
+                  - row "Select/deselect item cb7b56d3-0247-4390-9984-c9240769f473 for bulk actions. MAP-GANG gangotri 1 0 0 Provisioning 12 Jan 2026 Actions Edit" [ref=e272]:
+                    - cell "Select/deselect item cb7b56d3-0247-4390-9984-c9240769f473 for bulk actions." [ref=e273]:
+                      - generic [ref=e275]:
+                        - checkbox "Select/deselect item cb7b56d3-0247-4390-9984-c9240769f473 for bulk actions." [ref=e276]
+                        - generic [ref=e277]: Select/deselect item cb7b56d3-0247-4390-9984-c9240769f473 for bulk actions.
+                    - cell "MAP-GANG" [ref=e278]:
+                      - generic [ref=e285] [cursor=pointer]: MAP-GANG
+                    - cell "gangotri" [ref=e286]:
+                      - link "gangotri" [ref=e288] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e293]: gangotri
+                    - cell "1" [ref=e294]:
+                      - link "1" [ref=e296] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e301]: "1"
+                    - cell "0" [ref=e302]:
+                      - link "0" [ref=e304] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e309]: "0"
+                    - cell "0" [ref=e310]:
+                      - link "0" [ref=e312] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e317]: "0"
+                    - cell "Provisioning" [ref=e318]:
+                      - link "Provisioning" [ref=e320] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e326]: Provisioning
+                    - cell "12 Jan 2026" [ref=e327]:
+                      - link "12 Jan 2026" [ref=e329] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                        - generic [ref=e334]: 12 Jan 2026
+                    - cell "Actions Edit" [ref=e335]:
+                      - generic [ref=e337]:
+                        - link "Actions" [ref=e338] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473
+                          - img [ref=e339]
+                          - generic [ref=e342]: Actions
+                        - link "Edit" [ref=e343] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/cb7b56d3-0247-4390-9984-c9240769f473/edit
+                          - img [ref=e344]
+                          - generic [ref=e347]: Edit
+                  - row "Select/deselect item 4fd283d3-5daa-4f5f-8154-b97c9ea6bf39 for bulk actions. MAP-TEST1 test college 1 0 0 Provisioning 08 Jan 2026 Actions Edit" [ref=e348]:
+                    - cell "Select/deselect item 4fd283d3-5daa-4f5f-8154-b97c9ea6bf39 for bulk actions." [ref=e349]:
+                      - generic [ref=e351]:
+                        - checkbox "Select/deselect item 4fd283d3-5daa-4f5f-8154-b97c9ea6bf39 for bulk actions." [ref=e352]
+                        - generic [ref=e353]: Select/deselect item 4fd283d3-5daa-4f5f-8154-b97c9ea6bf39 for bulk actions.
+                    - cell "MAP-TEST1" [ref=e354]:
+                      - generic [ref=e361] [cursor=pointer]: MAP-TEST1
+                    - cell "test college" [ref=e362]:
+                      - link "test college" [ref=e364] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e369]: test college
+                    - cell "1" [ref=e370]:
+                      - link "1" [ref=e372] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e377]: "1"
+                    - cell "0" [ref=e378]:
+                      - link "0" [ref=e380] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e385]: "0"
+                    - cell "0" [ref=e386]:
+                      - link "0" [ref=e388] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e393]: "0"
+                    - cell "Provisioning" [ref=e394]:
+                      - link "Provisioning" [ref=e396] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e402]: Provisioning
+                    - cell "08 Jan 2026" [ref=e403]:
+                      - link "08 Jan 2026" [ref=e405] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                        - generic [ref=e410]: 08 Jan 2026
+                    - cell "Actions Edit" [ref=e411]:
+                      - generic [ref=e413]:
+                        - link "Actions" [ref=e414] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39
+                          - img [ref=e415]
+                          - generic [ref=e418]: Actions
+                        - link "Edit" [ref=e419] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/4fd283d3-5daa-4f5f-8154-b97c9ea6bf39/edit
+                          - img [ref=e420]
+                          - generic [ref=e423]: Edit
+                  - row "Select/deselect item af581f41-601f-47cb-b55d-1b634b958559 for bulk actions. MAP-PPCU Pimpri Chinchinwad University 1 1 17 Active 06 Jan 2026 Actions Edit" [ref=e424]:
+                    - cell "Select/deselect item af581f41-601f-47cb-b55d-1b634b958559 for bulk actions." [ref=e425]:
+                      - generic [ref=e427]:
+                        - checkbox "Select/deselect item af581f41-601f-47cb-b55d-1b634b958559 for bulk actions." [ref=e428]
+                        - generic [ref=e429]: Select/deselect item af581f41-601f-47cb-b55d-1b634b958559 for bulk actions.
+                    - cell "MAP-PPCU" [ref=e430]:
+                      - generic [ref=e437] [cursor=pointer]: MAP-PPCU
+                    - cell "Pimpri Chinchinwad University" [ref=e438]:
+                      - link "Pimpri Chinchinwad University" [ref=e440] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e445]: Pimpri Chinchinwad University
+                    - cell "1" [ref=e446]:
+                      - link "1" [ref=e448] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e453]: "1"
+                    - cell "1" [ref=e454]:
+                      - link "1" [ref=e456] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e461]: "1"
+                    - cell "17" [ref=e462]:
+                      - link "17" [ref=e464] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e469]: "17"
+                    - cell "Active" [ref=e470]:
+                      - link "Active" [ref=e472] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e478]: Active
+                    - cell "06 Jan 2026" [ref=e479]:
+                      - link "06 Jan 2026" [ref=e481] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                        - generic [ref=e486]: 06 Jan 2026
+                    - cell "Actions Edit" [ref=e487]:
+                      - generic [ref=e489]:
+                        - link "Actions" [ref=e490] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559
+                          - img [ref=e491]
+                          - generic [ref=e494]: Actions
+                        - link "Edit" [ref=e495] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/af581f41-601f-47cb-b55d-1b634b958559/edit
+                          - img [ref=e496]
+                          - generic [ref=e499]: Edit
+                  - row "Select/deselect item 72cf0d90-51fb-4f75-a780-c4eaa3081dc3 for bulk actions. MAP-TEST Test Hostel 0 1 7 Active 03 Jan 2026 Actions Edit" [ref=e500]:
+                    - cell "Select/deselect item 72cf0d90-51fb-4f75-a780-c4eaa3081dc3 for bulk actions." [ref=e501]:
+                      - generic [ref=e503]:
+                        - checkbox "Select/deselect item 72cf0d90-51fb-4f75-a780-c4eaa3081dc3 for bulk actions." [ref=e504]
+                        - generic [ref=e505]: Select/deselect item 72cf0d90-51fb-4f75-a780-c4eaa3081dc3 for bulk actions.
+                    - cell "MAP-TEST" [ref=e506]:
+                      - generic [ref=e513] [cursor=pointer]: MAP-TEST
+                    - cell "Test Hostel" [ref=e514]:
+                      - link "Test Hostel" [ref=e516] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e521]: Test Hostel
+                    - cell "0" [ref=e522]:
+                      - link "0" [ref=e524] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e529]: "0"
+                    - cell "1" [ref=e530]:
+                      - link "1" [ref=e532] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e537]: "1"
+                    - cell "7" [ref=e538]:
+                      - link "7" [ref=e540] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e545]: "7"
+                    - cell "Active" [ref=e546]:
+                      - link "Active" [ref=e548] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e554]: Active
+                    - cell "03 Jan 2026" [ref=e555]:
+                      - link "03 Jan 2026" [ref=e557] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                        - generic [ref=e562]: 03 Jan 2026
+                    - cell "Actions Edit" [ref=e563]:
+                      - generic [ref=e565]:
+                        - link "Actions" [ref=e566] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3
+                          - img [ref=e567]
+                          - generic [ref=e570]: Actions
+                        - link "Edit" [ref=e571] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/72cf0d90-51fb-4f75-a780-c4eaa3081dc3/edit
+                          - img [ref=e572]
+                          - generic [ref=e575]: Edit
+                  - row "Select/deselect item 4d98ff6b-cc38-4656-a1a3-ccf74259c889 for bulk actions. MAP-DEMO-COLLEGE Demo College Hostel 0 0 1 Active 03 Jan 2026 Actions Edit" [ref=e576]:
+                    - cell "Select/deselect item 4d98ff6b-cc38-4656-a1a3-ccf74259c889 for bulk actions." [ref=e577]:
+                      - generic [ref=e579]:
+                        - checkbox "Select/deselect item 4d98ff6b-cc38-4656-a1a3-ccf74259c889 for bulk actions." [ref=e580]
+                        - generic [ref=e581]: Select/deselect item 4d98ff6b-cc38-4656-a1a3-ccf74259c889 for bulk actions.
+                    - cell "MAP-DEMO-COLLEGE" [ref=e582]:
+                      - generic [ref=e589] [cursor=pointer]: MAP-DEMO-COLLEGE
+                    - cell "Demo College Hostel" [ref=e590]:
+                      - link "Demo College Hostel" [ref=e592] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e597]: Demo College Hostel
+                    - cell "0" [ref=e598]:
+                      - link "0" [ref=e600] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e605]: "0"
+                    - cell "0" [ref=e606]:
+                      - link "0" [ref=e608] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e613]: "0"
+                    - cell "1" [ref=e614]:
+                      - link "1" [ref=e616] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e621]: "1"
+                    - cell "Active" [ref=e622]:
+                      - link "Active" [ref=e624] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e630]: Active
+                    - cell "03 Jan 2026" [ref=e631]:
+                      - link "03 Jan 2026" [ref=e633] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                        - generic [ref=e638]: 03 Jan 2026
+                    - cell "Actions Edit" [ref=e639]:
+                      - generic [ref=e641]:
+                        - link "Actions" [ref=e642] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889
+                          - img [ref=e643]
+                          - generic [ref=e646]: Actions
+                        - link "Edit" [ref=e647] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/tenants/4d98ff6b-cc38-4656-a1a3-ccf74259c889/edit
+                          - img [ref=e648]
+                          - generic [ref=e651]: Edit
+              - navigation "Pagination navigation" [ref=e652]:
+                - generic [ref=e655]:
+                  - generic [ref=e657]: Per page
+                  - combobox "Per page" [ref=e659]:
+                    - option "5" [selected]
+                    - option "10"
+                    - option "25"
+                    - option "50"
+                    - option "All"
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e660]:
+      - generic [ref=e662]:
+        - link "Super Admin logo" [ref=e664] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e665]
+        - button "Collapse sidebar" [ref=e666] [cursor=pointer]:
+          - generic [ref=e667]: Collapse sidebar
+          - img [ref=e668]
+      - navigation [ref=e670]:
+        - list [ref=e671]:
+          - listitem [ref=e672]:
+            - generic [ref=e673] [cursor=pointer]:
+              - img [ref=e674]
+              - generic [ref=e676]: Dashboard
+              - button "Dashboard" [expanded] [ref=e677]:
+                - generic [ref=e678]: Dashboard
+                - img [ref=e679]
+            - list [ref=e681]:
+              - listitem [ref=e682]:
+                - link "Dashboard" [ref=e683] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - generic [ref=e686]: Dashboard
+          - listitem [ref=e687]:
+            - generic [ref=e688] [cursor=pointer]:
+              - generic [ref=e689]: Cross-Tenant View
+              - button "Cross-Tenant View" [expanded] [ref=e690]:
+                - generic [ref=e691]: Cross-Tenant View
+                - img [ref=e692]
+            - list [ref=e694]:
+              - listitem [ref=e695]:
+                - link "Campuses" [ref=e696] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/campuses
+                  - img [ref=e697]
+                  - generic [ref=e699]: Campuses
+          - listitem [ref=e700]:
+            - generic [ref=e701] [cursor=pointer]:
+              - img [ref=e702]
+              - generic [ref=e704]: Tenant Management
+              - button "Tenant Management" [ref=e705]:
+                - generic [ref=e706]: Tenant Management
+                - img [ref=e707]
+          - listitem [ref=e709]:
+            - generic [ref=e710] [cursor=pointer]:
+              - img [ref=e711]
+              - generic [ref=e713]: Staff Management
+              - button "Staff Management" [ref=e714]:
+                - generic [ref=e715]: Staff Management
+                - img [ref=e716]
+          - listitem [ref=e718]:
+            - generic [ref=e719] [cursor=pointer]:
+              - img [ref=e720]
+              - generic [ref=e723]: Operations
+              - button "Operations" [ref=e724]:
+                - generic [ref=e725]: Operations
+                - img [ref=e726]
+          - listitem [ref=e728]:
+            - generic [ref=e729] [cursor=pointer]:
+              - img [ref=e730]
+              - generic [ref=e732]: Reports
+              - button "Reports" [expanded] [ref=e733]:
+                - generic [ref=e734]: Reports
+                - img [ref=e735]
+            - list [ref=e737]:
+              - listitem [ref=e738]:
+                - link "Reports" [ref=e739] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/report-index
+                  - generic [ref=e743]: Reports
+              - listitem [ref=e744]:
+                - link "Report Center" [ref=e745] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e749]: Report Center
+          - listitem [ref=e750]:
+            - generic [ref=e751] [cursor=pointer]:
+              - img [ref=e752]
+              - generic [ref=e754]: Settings
+              - button "Settings" [expanded] [ref=e755]:
+                - generic [ref=e756]: Settings
+                - img [ref=e757]
+            - list [ref=e759]:
+              - listitem [ref=e760]:
+                - link "Settings" [ref=e761] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/system-configuration
+                  - generic [ref=e764]: Settings
+  - generic:
+    - status

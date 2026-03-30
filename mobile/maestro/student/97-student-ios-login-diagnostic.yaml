@@ -1,0 +1,35 @@
+appId: com.maphms.student
+name: "Student iOS Login Diagnostic"
+---
+- launchApp
+- waitForAnimationToEnd
+- takeScreenshot: "debug/01_after_launch"
+
+- runFlow:
+    when:
+      visible: "Get Started"
+    commands:
+      - tapOn: "Get Started"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "debug/02_after_get_started"
+
+- runFlow:
+    when:
+      visible: "(Phone Number|Enter your registered phone number|Send OTP)"
+    commands:
+      - tapOn:
+          text: "(Enter your registered phone number|Phone Number)"
+          optional: true
+      - inputText: "9886179767"
+      - hideKeyboard
+      - takeScreenshot: "debug/03_phone_entered"
+      - tapOn: "Send OTP"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+      - takeScreenshot: "debug/04_after_send_otp"
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "debug/05_final"

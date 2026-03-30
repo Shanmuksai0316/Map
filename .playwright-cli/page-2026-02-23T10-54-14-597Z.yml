@@ -1,0 +1,449 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Unassigned Staff" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: List
+              - heading "Unassigned Staff" [level=1] [ref=e24]
+            - link "Add New Staff" [ref=e27] [cursor=pointer]:
+              - /url: https://admin.mapservices.in/admin/unassigned-staff/create
+              - img [ref=e28]
+              - generic [ref=e30]: Add New Staff
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - generic [ref=e39]:
+                - generic [ref=e40]: Search
+                - generic [ref=e41]:
+                  - img [ref=e43]
+                  - searchbox "Search" [ref=e46]
+              - table [ref=e48]:
+                - rowgroup [ref=e49]:
+                  - row "Employee ID Name Phone Tenant Role Assigned Hostel Actions" [ref=e50]:
+                    - columnheader "Employee ID" [ref=e51]:
+                      - button "Employee ID" [ref=e52] [cursor=pointer]:
+                        - generic [ref=e53]: Employee ID
+                        - img [ref=e54]
+                    - columnheader "Name" [ref=e56]:
+                      - button "Name" [ref=e57] [cursor=pointer]:
+                        - generic [ref=e58]: Name
+                        - img [ref=e59]
+                    - columnheader "Phone" [ref=e61]:
+                      - generic [ref=e63]: Phone
+                    - columnheader "Tenant" [ref=e64]:
+                      - generic [ref=e66]: Tenant
+                    - columnheader "Role" [ref=e67]:
+                      - generic [ref=e69]: Role
+                    - columnheader "Assigned Hostel" [ref=e70]:
+                      - generic [ref=e72]: Assigned Hostel
+                    - columnheader "Actions" [ref=e73]
+                - rowgroup [ref=e74]:
+                  - row "EMP-00045 Arjun 9988776655 Not Assigned Not Assigned Not Assigned View Edit" [ref=e75]:
+                    - cell "EMP-00045" [ref=e76]:
+                      - link "EMP-00045" [ref=e78] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                        - generic [ref=e83]: EMP-00045
+                    - cell "Arjun" [ref=e84]:
+                      - link "Arjun" [ref=e86] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                        - generic [ref=e91]: Arjun
+                    - cell "9988776655" [ref=e92]:
+                      - generic [ref=e99] [cursor=pointer]: "9988776655"
+                    - cell "Not Assigned" [ref=e100]:
+                      - link "Not Assigned" [ref=e102] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                        - generic [ref=e104]: Not Assigned
+                    - cell "Not Assigned" [ref=e105]:
+                      - link "Not Assigned" [ref=e107] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                        - generic [ref=e109]: Not Assigned
+                    - cell "Not Assigned" [ref=e110]:
+                      - link "Not Assigned" [ref=e112] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                        - generic [ref=e114]: Not Assigned
+                    - cell "View Edit" [ref=e115]:
+                      - generic [ref=e117]:
+                        - link "View" [ref=e118] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/263
+                          - img [ref=e119]
+                          - generic [ref=e122]: View
+                        - link "Edit" [ref=e123] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/263/edit
+                          - img [ref=e124]
+                          - generic [ref=e127]: Edit
+                  - row "EMP-00044 Ram 8082833909 Not Assigned Not Assigned Not Assigned View Edit" [ref=e128]:
+                    - cell "EMP-00044" [ref=e129]:
+                      - link "EMP-00044" [ref=e131] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e136]: EMP-00044
+                    - cell "Ram" [ref=e137]:
+                      - link "Ram" [ref=e139] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e144]: Ram
+                    - cell "8082833909" [ref=e145]:
+                      - generic [ref=e152] [cursor=pointer]: "8082833909"
+                    - cell "Not Assigned" [ref=e153]:
+                      - link "Not Assigned" [ref=e155] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e157]: Not Assigned
+                    - cell "Not Assigned" [ref=e158]:
+                      - link "Not Assigned" [ref=e160] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e162]: Not Assigned
+                    - cell "Not Assigned" [ref=e163]:
+                      - link "Not Assigned" [ref=e165] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                        - generic [ref=e167]: Not Assigned
+                    - cell "View Edit" [ref=e168]:
+                      - generic [ref=e170]:
+                        - link "View" [ref=e171] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/262
+                          - img [ref=e172]
+                          - generic [ref=e175]: View
+                        - link "Edit" [ref=e176] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/262/edit
+                          - img [ref=e177]
+                          - generic [ref=e180]: Edit
+                  - row "EMP-00030 M sports 9876543226 Not Assigned Not Assigned Not Assigned View Edit" [ref=e181]:
+                    - cell "EMP-00030" [ref=e182]:
+                      - link "EMP-00030" [ref=e184] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e189]: EMP-00030
+                    - cell "M sports" [ref=e190]:
+                      - link "M sports" [ref=e192] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e197]: M sports
+                    - cell "9876543226" [ref=e198]:
+                      - generic [ref=e205] [cursor=pointer]: "9876543226"
+                    - cell "Not Assigned" [ref=e206]:
+                      - link "Not Assigned" [ref=e208] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e210]: Not Assigned
+                    - cell "Not Assigned" [ref=e211]:
+                      - link "Not Assigned" [ref=e213] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e215]: Not Assigned
+                    - cell "Not Assigned" [ref=e216]:
+                      - link "Not Assigned" [ref=e218] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                        - generic [ref=e220]: Not Assigned
+                    - cell "View Edit" [ref=e221]:
+                      - generic [ref=e223]:
+                        - link "View" [ref=e224] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/35
+                          - img [ref=e225]
+                          - generic [ref=e228]: View
+                        - link "Edit" [ref=e229] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/35/edit
+                          - img [ref=e230]
+                          - generic [ref=e233]: Edit
+                  - row "EMP-00029 m - security 9876543225 Not Assigned Not Assigned Not Assigned View Edit" [ref=e234]:
+                    - cell "EMP-00029" [ref=e235]:
+                      - link "EMP-00029" [ref=e237] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e242]: EMP-00029
+                    - cell "m - security" [ref=e243]:
+                      - link "m - security" [ref=e245] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e250]: m - security
+                    - cell "9876543225" [ref=e251]:
+                      - generic [ref=e258] [cursor=pointer]: "9876543225"
+                    - cell "Not Assigned" [ref=e259]:
+                      - link "Not Assigned" [ref=e261] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e263]: Not Assigned
+                    - cell "Not Assigned" [ref=e264]:
+                      - link "Not Assigned" [ref=e266] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e268]: Not Assigned
+                    - cell "Not Assigned" [ref=e269]:
+                      - link "Not Assigned" [ref=e271] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                        - generic [ref=e273]: Not Assigned
+                    - cell "View Edit" [ref=e274]:
+                      - generic [ref=e276]:
+                        - link "View" [ref=e277] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/34
+                          - img [ref=e278]
+                          - generic [ref=e281]: View
+                        - link "Edit" [ref=e282] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/34/edit
+                          - img [ref=e283]
+                          - generic [ref=e286]: Edit
+                  - row "EMP-00028 m - laundry 9876543224 Not Assigned Not Assigned Not Assigned View Edit" [ref=e287]:
+                    - cell "EMP-00028" [ref=e288]:
+                      - link "EMP-00028" [ref=e290] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e295]: EMP-00028
+                    - cell "m - laundry" [ref=e296]:
+                      - link "m - laundry" [ref=e298] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e303]: m - laundry
+                    - cell "9876543224" [ref=e304]:
+                      - generic [ref=e311] [cursor=pointer]: "9876543224"
+                    - cell "Not Assigned" [ref=e312]:
+                      - link "Not Assigned" [ref=e314] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e316]: Not Assigned
+                    - cell "Not Assigned" [ref=e317]:
+                      - link "Not Assigned" [ref=e319] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e321]: Not Assigned
+                    - cell "Not Assigned" [ref=e322]:
+                      - link "Not Assigned" [ref=e324] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                        - generic [ref=e326]: Not Assigned
+                    - cell "View Edit" [ref=e327]:
+                      - generic [ref=e329]:
+                        - link "View" [ref=e330] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/33
+                          - img [ref=e331]
+                          - generic [ref=e334]: View
+                        - link "Edit" [ref=e335] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/33/edit
+                          - img [ref=e336]
+                          - generic [ref=e339]: Edit
+                  - row "EMP-00027 m - repair 9874653212 Not Assigned Not Assigned Not Assigned View Edit" [ref=e340]:
+                    - cell "EMP-00027" [ref=e341]:
+                      - link "EMP-00027" [ref=e343] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e348]: EMP-00027
+                    - cell "m - repair" [ref=e349]:
+                      - link "m - repair" [ref=e351] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e356]: m - repair
+                    - cell "9874653212" [ref=e357]:
+                      - generic [ref=e364] [cursor=pointer]: "9874653212"
+                    - cell "Not Assigned" [ref=e365]:
+                      - link "Not Assigned" [ref=e367] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e369]: Not Assigned
+                    - cell "Not Assigned" [ref=e370]:
+                      - link "Not Assigned" [ref=e372] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e374]: Not Assigned
+                    - cell "Not Assigned" [ref=e375]:
+                      - link "Not Assigned" [ref=e377] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                        - generic [ref=e379]: Not Assigned
+                    - cell "View Edit" [ref=e380]:
+                      - generic [ref=e382]:
+                        - link "View" [ref=e383] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/32
+                          - img [ref=e384]
+                          - generic [ref=e387]: View
+                        - link "Edit" [ref=e388] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/32/edit
+                          - img [ref=e389]
+                          - generic [ref=e392]: Edit
+                  - row "EMP-00026 M - house keeping 9876543200 Not Assigned Not Assigned Not Assigned View Edit" [ref=e393]:
+                    - cell "EMP-00026" [ref=e394]:
+                      - link "EMP-00026" [ref=e396] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e401]: EMP-00026
+                    - cell "M - house keeping" [ref=e402]:
+                      - link "M - house keeping" [ref=e404] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e409]: M - house keeping
+                    - cell "9876543200" [ref=e410]:
+                      - generic [ref=e417] [cursor=pointer]: "9876543200"
+                    - cell "Not Assigned" [ref=e418]:
+                      - link "Not Assigned" [ref=e420] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e422]: Not Assigned
+                    - cell "Not Assigned" [ref=e423]:
+                      - link "Not Assigned" [ref=e425] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e427]: Not Assigned
+                    - cell "Not Assigned" [ref=e428]:
+                      - link "Not Assigned" [ref=e430] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                        - generic [ref=e432]: Not Assigned
+                    - cell "View Edit" [ref=e433]:
+                      - generic [ref=e435]:
+                        - link "View" [ref=e436] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/31
+                          - img [ref=e437]
+                          - generic [ref=e440]: View
+                        - link "Edit" [ref=e441] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/31/edit
+                          - img [ref=e442]
+                          - generic [ref=e445]: Edit
+                  - row "EMP-00025 M - warden 9876543220 Not Assigned Not Assigned Not Assigned View Edit" [ref=e446]:
+                    - cell "EMP-00025" [ref=e447]:
+                      - link "EMP-00025" [ref=e449] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e454]: EMP-00025
+                    - cell "M - warden" [ref=e455]:
+                      - link "M - warden" [ref=e457] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e462]: M - warden
+                    - cell "9876543220" [ref=e463]:
+                      - generic [ref=e470] [cursor=pointer]: "9876543220"
+                    - cell "Not Assigned" [ref=e471]:
+                      - link "Not Assigned" [ref=e473] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e475]: Not Assigned
+                    - cell "Not Assigned" [ref=e476]:
+                      - link "Not Assigned" [ref=e478] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e480]: Not Assigned
+                    - cell "Not Assigned" [ref=e481]:
+                      - link "Not Assigned" [ref=e483] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                        - generic [ref=e485]: Not Assigned
+                    - cell "View Edit" [ref=e486]:
+                      - generic [ref=e488]:
+                        - link "View" [ref=e489] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/30
+                          - img [ref=e490]
+                          - generic [ref=e493]: View
+                        - link "Edit" [ref=e494] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/30/edit
+                          - img [ref=e495]
+                          - generic [ref=e498]: Edit
+                  - row "EMP-00024 M Campus manager 9874653210 Not Assigned Not Assigned Not Assigned View Edit" [ref=e499]:
+                    - cell "EMP-00024" [ref=e500]:
+                      - link "EMP-00024" [ref=e502] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e507]: EMP-00024
+                    - cell "M Campus manager" [ref=e508]:
+                      - link "M Campus manager" [ref=e510] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e515]: M Campus manager
+                    - cell "9874653210" [ref=e516]:
+                      - generic [ref=e523] [cursor=pointer]: "9874653210"
+                    - cell "Not Assigned" [ref=e524]:
+                      - link "Not Assigned" [ref=e526] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e528]: Not Assigned
+                    - cell "Not Assigned" [ref=e529]:
+                      - link "Not Assigned" [ref=e531] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e533]: Not Assigned
+                    - cell "Not Assigned" [ref=e534]:
+                      - link "Not Assigned" [ref=e536] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                        - generic [ref=e538]: Not Assigned
+                    - cell "View Edit" [ref=e539]:
+                      - generic [ref=e541]:
+                        - link "View" [ref=e542] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/29
+                          - img [ref=e543]
+                          - generic [ref=e546]: View
+                        - link "Edit" [ref=e547] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/unassigned-staff/29/edit
+                          - img [ref=e548]
+                          - generic [ref=e551]: Edit
+              - navigation "Pagination navigation" [ref=e552]:
+                - generic [ref=e555]:
+                  - generic [ref=e557]: Per page
+                  - combobox "Per page" [ref=e559]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e560]:
+      - generic [ref=e562]:
+        - link "Super Admin logo" [ref=e564] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e565]
+        - button "Collapse sidebar" [ref=e566] [cursor=pointer]:
+          - generic [ref=e567]: Collapse sidebar
+          - img [ref=e568]
+      - navigation [ref=e570]:
+        - list [ref=e571]:
+          - listitem [ref=e572]:
+            - list [ref=e573]:
+              - listitem [ref=e574]:
+                - link "Dashboard" [ref=e575] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e576]
+                  - generic [ref=e578]: Dashboard
+          - listitem [ref=e579]:
+            - generic [ref=e580] [cursor=pointer]:
+              - img [ref=e581]
+              - generic [ref=e583]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e584]:
+                - generic [ref=e585]: Tenant Management
+                - img [ref=e586]
+            - list [ref=e588]:
+              - listitem [ref=e589]:
+                - link "New Tenant Onboarding" [ref=e590] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e594]: New Tenant Onboarding
+              - listitem [ref=e595]:
+                - link "All Tenants" [ref=e596] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e601]: All Tenants
+              - listitem [ref=e602]:
+                - link "Archived Tenants" [ref=e603] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e607]: Archived Tenants
+          - listitem [ref=e608]:
+            - generic [ref=e609] [cursor=pointer]:
+              - img [ref=e610]
+              - generic [ref=e612]: Staff Management
+              - button "Staff Management" [expanded] [ref=e613]:
+                - generic [ref=e614]: Staff Management
+                - img [ref=e615]
+            - list [ref=e617]:
+              - listitem [ref=e618]:
+                - link "All Staff" [ref=e619] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e623]: All Staff
+              - listitem [ref=e624]:
+                - link "Assigned Staff" [ref=e625] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e630]: Assigned Staff
+              - listitem [ref=e631]:
+                - link "Unassigned Staff" [ref=e632] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e637]: Unassigned Staff
+              - listitem [ref=e638]:
+                - link "Archived Staff" [ref=e639] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e643]: Archived Staff
+          - listitem [ref=e644]:
+            - generic [ref=e645] [cursor=pointer]:
+              - img [ref=e646]
+              - generic [ref=e649]: Operations
+              - button "Operations" [ref=e650]:
+                - generic [ref=e651]: Operations
+                - img [ref=e652]
+          - listitem [ref=e654]:
+            - generic [ref=e655] [cursor=pointer]:
+              - img [ref=e656]
+              - generic [ref=e658]: Reports
+              - button "Reports" [expanded] [ref=e659]:
+                - generic [ref=e660]: Reports
+                - img [ref=e661]
+            - list [ref=e663]:
+              - listitem [ref=e664]:
+                - link "Report Center" [ref=e665] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e668]: Report Center
+  - generic:
+    - status

@@ -1,0 +1,73 @@
+- generic [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - generic [ref=e4]: Screen reader support enabled.
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link "Forms Home" [ref=e10] [cursor=pointer]:
+          - img [ref=e14]
+        - textbox "Document title" [ref=e24]: Student Bulk Upload Intake
+        - button "Move to folder" [ref=e1517] [cursor=pointer]
+        - checkbox "Star" [ref=e28] [cursor=pointer]
+        - generic "All changes saved in Drive, Every change you make is automatically saved in Drive.,Last edit was 1 hour ago" [ref=e3390]: All changes saved in Drive
+      - generic [ref=e35]:
+        - button "Customize Theme" [ref=e37] [cursor=pointer]
+        - link "Preview" [ref=e43] [cursor=pointer]
+        - button "Undo" [ref=e49] [cursor=pointer]
+        - button "Redo" [ref=e55] [cursor=pointer]
+        - button "Copy responder link" [ref=e61] [cursor=pointer]
+        - button "Share" [ref=e67] [cursor=pointer]
+        - button "Open published form settings" [ref=e74] [cursor=pointer]:
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e80]: Published
+        - button "More" [ref=e82] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e93] [cursor=pointer]':
+          - img [ref=e95]
+    - tablist [ref=e99]:
+      - tab "Questions" [ref=e100] [cursor=pointer]:
+        - generic [ref=e101]: Questions
+      - tab "Responses 1" [ref=e3387] [cursor=pointer]:
+        - generic [ref=e104]:
+          - text: Responses
+          - generic [ref=e3389]: "1"
+      - tab "Settings" [active] [selected] [ref=e105] [cursor=pointer]:
+        - generic [ref=e106]: Settings
+  - generic [ref=e3428]:
+    - generic [ref=e3429]:
+      - generic [ref=e3430]: Settings
+      - generic [ref=e3431]:
+        - generic [ref=e3435]:
+          - generic [ref=e3437]:
+            - text: Make this a quiz
+            - generic [ref=e3438]: Assign point values, set answers, and automatically provide feedback
+          - checkbox "Make this a quiz. Assign point values, set answers, and automatically provide feedback" [ref=e3440] [cursor=pointer]
+        - generic [ref=e3445]:
+          - generic [ref=e3446]:
+            - text: Responses
+            - generic [ref=e3447]: Manage how responses are collected and protected
+          - button "View responses settings" [ref=e3449] [cursor=pointer]
+        - generic [ref=e3456]:
+          - generic [ref=e3457]:
+            - text: Presentation
+            - generic [ref=e3458]: Manage how the form and responses are presented
+          - button "View presentation settings" [ref=e3460] [cursor=pointer]
+    - generic [ref=e3465]:
+      - generic [ref=e3466]: Defaults
+      - generic [ref=e3467]:
+        - generic [ref=e3470]:
+          - generic [ref=e3471]:
+            - text: Form defaults
+            - generic [ref=e3472]: Settings applied to this form and new forms
+          - button "View Form defaults" [ref=e3474] [cursor=pointer]
+        - generic [ref=e3481]:
+          - generic [ref=e3482]:
+            - text: Question defaults
+            - generic [ref=e3483]: Settings applied to all new questions
+          - button "View Question defaults" [ref=e3485] [cursor=pointer]
+  - button "Help and feedback" [ref=e1501] [cursor=pointer]
+  - iframe [ref=e1506]:
+    
+  - generic [ref=e1508]: .
+  - generic [ref=e1510]: Banner hidden

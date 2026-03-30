@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Support;
+
+use App\Models\Hostel;
+use App\Models\User;
+
+final class HostelScope
+{
+    /** Return hostel IDs a user can work with. Backward compat:
+     *  if no assignments → return all tenant hostels (current behavior). */
+    public static function idsFor(User $user): array
+    {
+        $ids = $user->staffHostels()->pluck('hostels.id')->all();
+        if (empty($ids)) {
+            return Hostel::where('tenant_id', $user->tenant_id)->pluck('id')->all();
+        }
+        return $ids;
+    }
+}

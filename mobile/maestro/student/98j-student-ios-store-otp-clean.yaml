@@ -1,0 +1,22 @@
+appId: com.maphms.student
+name: "Student iOS Store OTP Clean"
+env:
+  phone: "9886179767"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- tapOn:
+    point: "50%,20%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/03_otp_screen"

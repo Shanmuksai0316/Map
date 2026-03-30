@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Super Admin Report Center" [level=1] [ref=e16]
+            - generic [ref=e18]:
+              - generic [ref=e19]:
+                - generic [ref=e22]:
+                  - heading "Generate Report" [level=3] [ref=e23]
+                  - paragraph [ref=e24]: "Super Admin: Full access to all report types including student data export. Max 30-day range."
+                - generic [ref=e27]:
+                  - generic [ref=e28]:
+                    - generic [ref=e31]:
+                      - generic [ref=e34]:
+                        - text: Report Type
+                        - superscript [ref=e35]: "*"
+                      - listbox [ref=e40]:
+                        - generic [ref=e247]:
+                          - text: Occupancy Report
+                          - 'button "Remove item: ''occupancy''" [ref=e248] [cursor=pointer]': Remove item
+                    - generic [ref=e46]:
+                      - generic [ref=e49]: Tenant
+                      - listbox [ref=e54]:
+                        - generic [ref=e57]: Select an option
+                    - generic [ref=e60]:
+                      - generic [ref=e63]:
+                        - text: Start Date
+                        - superscript [ref=e64]: "*"
+                      - button "Feb 13, 2026" [ref=e256] [cursor=pointer]:
+                        - textbox "Start Date*" [ref=e257]:
+                          - /placeholder: ""
+                          - text: Feb 13, 2026
+                    - generic [ref=e73]:
+                      - generic [ref=e76]:
+                        - text: End Date
+                        - superscript [ref=e77]: "*"
+                      - button "Feb 20, 2026" [ref=e259] [cursor=pointer]:
+                        - textbox "End Date*" [ref=e260]:
+                          - /placeholder: ""
+                          - text: Feb 20, 2026
+                    - generic [ref=e86]:
+                      - generic [ref=e89]:
+                        - text: Format
+                        - superscript [ref=e90]: "*"
+                      - listbox [ref=e95]:
+                        - generic [ref=e98]:
+                          - text: CSV
+                          - 'button "Remove item: ''csv''" [ref=e99] [cursor=pointer]': Remove item
+                  - button "Download Report" [ref=e101] [cursor=pointer]:
+                    - img [ref=e102]
+                    - generic [ref=e104]: Download Report
+              - generic [ref=e105]:
+                - heading "Available Reports" [level=3] [ref=e109]
+                - generic [ref=e112]:
+                  - generic [ref=e113]:
+                    - generic [ref=e114]:
+                      - img [ref=e115]
+                      - heading "Tenant Overview" [level=4] [ref=e117]
+                    - paragraph [ref=e118]: All tenants with metrics
+                  - generic [ref=e119]:
+                    - generic [ref=e120]:
+                      - img [ref=e121]
+                      - heading "Occupancy" [level=4] [ref=e123]
+                    - paragraph [ref=e124]: Occupancy rates across hostels
+                  - generic [ref=e125]:
+                    - generic [ref=e126]:
+                      - img [ref=e127]
+                      - heading "Student Export" [level=4] [ref=e129]
+                    - paragraph [ref=e130]: Full student data per hostel
+                  - generic [ref=e131]:
+                    - generic [ref=e132]:
+                      - img [ref=e133]
+                      - heading "Staff Deployment" [level=4] [ref=e135]
+                    - paragraph [ref=e136]: Staff roles and assignments
+                  - generic [ref=e137]:
+                    - generic [ref=e138]:
+                      - img [ref=e139]
+                      - heading "Attendance" [level=4] [ref=e141]
+                    - paragraph [ref=e142]: Attendance compliance
+                  - generic [ref=e143]:
+                    - generic [ref=e144]:
+                      - img [ref=e145]
+                      - heading "Request Summary" [level=4] [ref=e147]
+                    - paragraph [ref=e148]: All request types
+                  - generic [ref=e149]:
+                    - generic [ref=e150]:
+                      - img [ref=e151]
+                      - heading "Incidents" [level=4] [ref=e153]
+                    - paragraph [ref=e154]: Incident reports
+                  - generic [ref=e155]:
+                    - generic [ref=e156]:
+                      - img [ref=e157]
+                      - heading "Checkout/Renewal" [level=4] [ref=e159]
+                    - paragraph [ref=e160]: Checkout & renewal tracking
+                  - generic [ref=e161]:
+                    - generic [ref=e162]:
+                      - img [ref=e163]
+                      - heading "Payments" [level=4] [ref=e165]
+                    - paragraph [ref=e166]: Payment collections
+                  - generic [ref=e167]:
+                    - generic [ref=e168]:
+                      - img [ref=e169]
+                      - heading "Audit Trail" [level=4] [ref=e171]
+                    - paragraph [ref=e172]: Audit log of all actions
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e173]:
+      - generic [ref=e175]:
+        - link "Super Admin logo" [ref=e177] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e178]
+        - button "Collapse sidebar" [ref=e179] [cursor=pointer]:
+          - generic [ref=e180]: Collapse sidebar
+          - img [ref=e181]
+      - navigation [ref=e183]:
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - list [ref=e186]:
+              - listitem [ref=e187]:
+                - link "Dashboard" [ref=e188] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e189]
+                  - generic [ref=e191]: Dashboard
+          - listitem [ref=e192]:
+            - generic [ref=e193] [cursor=pointer]:
+              - img [ref=e194]
+              - generic [ref=e196]: Tenant Management
+              - button "Tenant Management" [ref=e197]:
+                - generic [ref=e198]: Tenant Management
+                - img [ref=e199]
+          - listitem [ref=e201]:
+            - generic [ref=e202] [cursor=pointer]:
+              - img [ref=e203]
+              - generic [ref=e205]: Staff Management
+              - button "Staff Management" [ref=e206]:
+                - generic [ref=e207]: Staff Management
+                - img [ref=e208]
+          - listitem [ref=e210]:
+            - generic [ref=e211] [cursor=pointer]:
+              - img [ref=e212]
+              - generic [ref=e215]: Operations
+              - button "Operations" [ref=e216]:
+                - generic [ref=e217]: Operations
+                - img [ref=e218]
+          - listitem [ref=e220]:
+            - generic [ref=e221] [cursor=pointer]:
+              - img [ref=e222]
+              - generic [ref=e224]: Reports
+              - button "Reports" [expanded] [ref=e225]:
+                - generic [ref=e226]: Reports
+                - img [ref=e227]
+            - list [ref=e229]:
+              - listitem [ref=e230]:
+                - link "Report Center" [ref=e231] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e234]: Report Center
+  - generic:
+    - status

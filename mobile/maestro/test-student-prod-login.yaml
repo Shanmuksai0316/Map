@@ -1,0 +1,112 @@
+appId: com.maphms.student
+---
+# Student App Test - Production Backend Login
+# Tests login flow with test student credentials
+
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd  # Wait for splash screen
+
+# Handle "Get Started" splash screen if it appears
+- runFlow:
+    when:
+      visible: "Get Started"
+    commands:
+      - takeScreenshot: "00-splash-screen"
+      - tapOn: "Get Started"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+
+# Wait for login screen to appear
+- extendedWaitUntil:
+    visible: "(Phone|Enter|Login|10-digit|Send OTP|Get OTP|Enter Your Number|VIDYARTHI)"
+    timeout: 15000
+
+# Log in
+- takeScreenshot: "01-login-screen"
+- tapOn:
+    text: "(Phone Number|Enter your registered phone|10-digit|Enter Your Number)"
+    optional: true
+- inputText: "8888888800"
+- hideKeyboard
+- takeScreenshot: "02-phone-entered"
+- tapOn:
+    text: "(Send OTP|Get OTP)"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Handle "Network request failed" - retry
+- runFlow:
+    when:
+      visible: "Network request failed"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "(Send OTP|Get OTP)"
+      - waitForAnimationToEnd
+      - waitForAnimationToEnd
+
+# Handle Test Mode dialog if it appears
+- runFlow:
+    when:
+      visible: "Test Mode"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+
+# Handle any alert/OK dialog
+- runFlow:
+    when:
+      visible: ".*OK.*|.*Alert.*"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+
+# Wait for OTP screen (longer timeout for network)
+- extendedWaitUntil:
+    visible: "(OTP|Enter OTP|Verify|6-digit|Enter 6-digit|Verification|Verification Code|Enter 6-digit code)"
+    timeout: 20000
+- takeScreenshot: "03-otp-screen"
+
+# Enter OTP
+- tapOn:
+    text: "(Enter OTP|Enter 6-digit|Enter 6-digit code|6-digit|Verification Code)"
+    optional: true
+- inputText: "123456"
+- hideKeyboard
+- takeScreenshot: "03b-otp-entered"
+
+# Verify OTP
+- tapOn:
+    text: "(Verify OTP|Verify|Verify & Login|Submit|Login)"
+    optional: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Handle Tenant/Institution Selection if it appears
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your)"
+    commands:
+      - takeScreenshot: "03c-tenant-selection"
+      - tapOn: "(MAP-TEST|Demo|Test)"
+      - waitForAnimationToEnd
+
+# Verify dashboard loads
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Quick Actions|My Profile)"
+    timeout: 25000
+- takeScreenshot: "04-dashboard-loaded"
+
+# Verify key features are visible
+- assertVisible: "(Out-pass|Gate Pass|Outpass)"
+- assertVisible: "Attendance"
+- assertVisible: "(Requests|Request)"
+- assertVisible: "Profile"
+
+- takeScreenshot: "05-features-verified"

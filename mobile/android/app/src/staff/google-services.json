@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "693446696076",
+    "project_id": "map-hms-29dd1",
+    "storage_bucket": "map-hms-29dd1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693446696076:android:4d0541a6d277dee0b5efa9",
+        "android_client_info": {
+          "package_name": "com.mapmars.hmsstaff"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATpIp4l4m1z48LaXtRCXaDnrOwioHVoWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

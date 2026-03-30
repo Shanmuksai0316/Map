@@ -1,0 +1,92 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Forms Home" [ref=e7] [cursor=pointer]:
+          - img [ref=e11]
+        - textbox "Document title" [ref=e21]
+      - generic [ref=e24]:
+        - button "Customize Theme" [ref=e26] [cursor=pointer]
+        - link "Preview" [ref=e32] [cursor=pointer]
+        - button "Undo" [ref=e38] [cursor=pointer]
+        - button "Redo" [ref=e44] [cursor=pointer]
+        - button "Copy responder link" [ref=e50] [cursor=pointer]
+        - button "Share" [ref=e56] [cursor=pointer]
+        - button "Publish" [ref=e63] [cursor=pointer]:
+          - generic [ref=e66]: Publish
+        - button "More" [ref=e68] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e79] [cursor=pointer]':
+          - img [ref=e81]
+    - tablist [ref=e85]:
+      - tab "Questions" [selected] [ref=e86] [cursor=pointer]:
+        - generic [ref=e87]: Questions
+      - tab "Responses" [ref=e88] [cursor=pointer]:
+        - generic [ref=e90]: Responses
+      - tab "Settings" [ref=e91] [cursor=pointer]:
+        - generic [ref=e92]: Settings
+  - generic [ref=e98]:
+    - generic [ref=e100]:
+      - button "Add question" [ref=e102] [cursor=pointer]
+      - button "Import questions" [ref=e108] [cursor=pointer]
+      - button "Add title and description" [ref=e114] [cursor=pointer]
+      - button "Add image" [ref=e120] [cursor=pointer]
+      - button "Add video" [ref=e126] [cursor=pointer]
+      - button "Add section" [ref=e132] [cursor=pointer]
+    - generic [ref=e139]:
+      - generic [ref=e143]:
+        - generic [ref=e146]:
+          - textbox "Form title" [ref=e148]
+          - toolbar "Formatting options":
+            - button "Bold" [disabled] [ref=e150]:
+              - generic [ref=e153]: 
+            - button "Italic" [disabled] [ref=e154]:
+              - generic [ref=e157]: 
+            - button "Underline" [disabled] [ref=e158]:
+              - generic [ref=e161]: 
+            - button "Insert link" [disabled] [ref=e162]:
+              - generic [ref=e165]: 
+            - button "Remove formatting" [disabled] [ref=e166]:
+              - generic [ref=e169]: 
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic: Form description
+            - textbox "Form description" [ref=e174]
+          - toolbar "Formatting options":
+            - button "Bold" [disabled] [ref=e176]:
+              - generic [ref=e179]: 
+            - button "Italic" [disabled] [ref=e180]:
+              - generic [ref=e183]: 
+            - button "Underline" [disabled] [ref=e184]:
+              - generic [ref=e187]: 
+            - button "Insert link" [disabled] [ref=e188]:
+              - generic [ref=e191]: 
+            - button "Numbered list" [disabled] [ref=e192]:
+              - generic [ref=e195]: 
+            - button "Bulleted list" [disabled] [ref=e196]:
+              - generic [ref=e199]: 
+            - button "Remove formatting" [disabled] [ref=e200]:
+              - generic [ref=e203]: 
+      - generic [ref=e210]:
+        - generic [ref=e217]:
+          - textbox "Question" [ref=e219]
+          - toolbar "Formatting options":
+            - button "Bold" [disabled] [ref=e221]:
+              - generic [ref=e224]: 
+            - button "Italic" [disabled] [ref=e225]:
+              - generic [ref=e228]: 
+            - button "Underline" [disabled] [ref=e229]:
+              - generic [ref=e232]: 
+            - button "Insert link" [disabled] [ref=e233]:
+              - generic [ref=e236]: 
+            - button "Remove formatting" [disabled] [ref=e237]:
+              - generic [ref=e240]: 
+        - list "question options" [ref=e246]:
+          - generic [ref=e247]:
+            - generic [ref=e248]:
+              - generic:
+                - radio [disabled]
+            - generic [ref=e249]: Option 1
+  - button "Help and feedback" [ref=e252] [cursor=pointer]
+  - iframe [ref=e257]:
+    
+  - generic [ref=e259]: .

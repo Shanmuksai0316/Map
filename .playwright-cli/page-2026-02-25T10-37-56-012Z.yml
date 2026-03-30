@@ -1,0 +1,473 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Test Rector" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - navigation [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - link "Out Passes" [ref=e19] [cursor=pointer]:
+                    - /url: https://ppcu.mapservices.in/rector/out-passes
+                - listitem [ref=e20]:
+                  - img [ref=e21]
+                  - generic [ref=e23]: List
+            - heading "Out Passes" [level=1] [ref=e24]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - generic [ref=e32]:
+                - generic [ref=e33]:
+                  - generic [ref=e34]: Search
+                  - generic [ref=e35]:
+                    - img [ref=e37]
+                    - searchbox "Search" [ref=e40]
+                - button "Filter 0" [ref=e43] [cursor=pointer]:
+                  - generic [ref=e44]: Filter
+                  - img [ref=e45]
+                  - generic [ref=e50]: "0"
+                - button "Toggle columns" [ref=e53] [cursor=pointer]:
+                  - generic [ref=e54]: Toggle columns
+                  - img [ref=e55]
+              - table [ref=e58]:
+                - rowgroup [ref=e59]:
+                  - row "Select/deselect all items for bulk actions. Request ID Name Room Number Purpose Going Out Date SLA Status Actions" [ref=e60]:
+                    - columnheader "Select/deselect all items for bulk actions." [ref=e61]:
+                      - generic [ref=e63]:
+                        - checkbox "Select/deselect all items for bulk actions." [ref=e64]
+                        - generic [ref=e65]: Select/deselect all items for bulk actions.
+                    - columnheader "Request ID" [ref=e66]:
+                      - button "Request ID" [ref=e67] [cursor=pointer]:
+                        - generic [ref=e68]: Request ID
+                        - img [ref=e69]
+                    - columnheader "Name" [ref=e71]:
+                      - button "Name" [ref=e72] [cursor=pointer]:
+                        - generic [ref=e73]: Name
+                        - img [ref=e74]
+                    - columnheader "Room Number" [ref=e76]:
+                      - generic [ref=e78]: Room Number
+                    - columnheader "Purpose" [ref=e79]:
+                      - generic [ref=e81]: Purpose
+                    - columnheader "Going Out Date" [ref=e82]:
+                      - button "Going Out Date" [ref=e83] [cursor=pointer]:
+                        - generic [ref=e84]: Going Out Date
+                        - img [ref=e85]
+                    - columnheader "SLA Status" [ref=e87]:
+                      - generic [ref=e89]: SLA Status
+                    - columnheader "Actions" [ref=e90]
+                - rowgroup [ref=e91]:
+                  - row "Select/deselect item 1 for bulk actions. tulip student -- Normal 20 Jan 2026 View" [ref=e92]:
+                    - cell "Select/deselect item 1 for bulk actions." [ref=e93]:
+                      - generic [ref=e95]:
+                        - checkbox "Select/deselect item 1 for bulk actions." [ref=e96]
+                        - generic [ref=e97]: Select/deselect item 1 for bulk actions.
+                    - cell [ref=e98]:
+                      - link [ref=e100] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                    - cell "tulip student" [ref=e102]:
+                      - link "tulip student" [ref=e104] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                        - generic [ref=e109]: tulip student
+                    - cell "--" [ref=e110]:
+                      - link "--" [ref=e112] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                        - generic [ref=e117]: "--"
+                    - cell "Normal" [ref=e118]:
+                      - link "Normal" [ref=e120] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                        - generic [ref=e126]: Normal
+                    - cell "20 Jan 2026" [ref=e127]:
+                      - link "20 Jan 2026" [ref=e129] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                        - generic [ref=e134]: 20 Jan 2026
+                    - cell [ref=e135]:
+                      - link [ref=e137] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                    - cell "View" [ref=e139]:
+                      - link "View" [ref=e142] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/1
+                        - img [ref=e143]
+                        - generic [ref=e146]: View
+                  - row "Select/deselect item 2 for bulk actions. tulip student -- Normal 21 Jan 2026 View" [ref=e147]:
+                    - cell "Select/deselect item 2 for bulk actions." [ref=e148]:
+                      - generic [ref=e150]:
+                        - checkbox "Select/deselect item 2 for bulk actions." [ref=e151]
+                        - generic [ref=e152]: Select/deselect item 2 for bulk actions.
+                    - cell [ref=e153]:
+                      - link [ref=e155] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                    - cell "tulip student" [ref=e157]:
+                      - link "tulip student" [ref=e159] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                        - generic [ref=e164]: tulip student
+                    - cell "--" [ref=e165]:
+                      - link "--" [ref=e167] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                        - generic [ref=e172]: "--"
+                    - cell "Normal" [ref=e173]:
+                      - link "Normal" [ref=e175] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                        - generic [ref=e181]: Normal
+                    - cell "21 Jan 2026" [ref=e182]:
+                      - link "21 Jan 2026" [ref=e184] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                        - generic [ref=e189]: 21 Jan 2026
+                    - cell [ref=e190]:
+                      - link [ref=e192] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                    - cell "View" [ref=e194]:
+                      - link "View" [ref=e197] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/2
+                        - img [ref=e198]
+                        - generic [ref=e201]: View
+                  - row "Select/deselect item 3 for bulk actions. tulip student -- Normal 21 Jan 2026 View" [ref=e202]:
+                    - cell "Select/deselect item 3 for bulk actions." [ref=e203]:
+                      - generic [ref=e205]:
+                        - checkbox "Select/deselect item 3 for bulk actions." [ref=e206]
+                        - generic [ref=e207]: Select/deselect item 3 for bulk actions.
+                    - cell [ref=e208]:
+                      - link [ref=e210] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                    - cell "tulip student" [ref=e212]:
+                      - link "tulip student" [ref=e214] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                        - generic [ref=e219]: tulip student
+                    - cell "--" [ref=e220]:
+                      - link "--" [ref=e222] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                        - generic [ref=e227]: "--"
+                    - cell "Normal" [ref=e228]:
+                      - link "Normal" [ref=e230] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                        - generic [ref=e236]: Normal
+                    - cell "21 Jan 2026" [ref=e237]:
+                      - link "21 Jan 2026" [ref=e239] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                        - generic [ref=e244]: 21 Jan 2026
+                    - cell [ref=e245]:
+                      - link [ref=e247] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                    - cell "View" [ref=e249]:
+                      - link "View" [ref=e252] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/3
+                        - img [ref=e253]
+                        - generic [ref=e256]: View
+                  - row "Select/deselect item 4 for bulk actions. tulip student -- Leave 22 Jan 2026 View" [ref=e257]:
+                    - cell "Select/deselect item 4 for bulk actions." [ref=e258]:
+                      - generic [ref=e260]:
+                        - checkbox "Select/deselect item 4 for bulk actions." [ref=e261]
+                        - generic [ref=e262]: Select/deselect item 4 for bulk actions.
+                    - cell [ref=e263]:
+                      - link [ref=e265] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                    - cell "tulip student" [ref=e267]:
+                      - link "tulip student" [ref=e269] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                        - generic [ref=e274]: tulip student
+                    - cell "--" [ref=e275]:
+                      - link "--" [ref=e277] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                        - generic [ref=e282]: "--"
+                    - cell "Leave" [ref=e283]:
+                      - link "Leave" [ref=e285] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                        - generic [ref=e291]: Leave
+                    - cell "22 Jan 2026" [ref=e292]:
+                      - link "22 Jan 2026" [ref=e294] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                        - generic [ref=e299]: 22 Jan 2026
+                    - cell [ref=e300]:
+                      - link [ref=e302] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                    - cell "View" [ref=e304]:
+                      - link "View" [ref=e307] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/4
+                        - img [ref=e308]
+                        - generic [ref=e311]: View
+                  - row "Select/deselect item 5 for bulk actions. tulip student -- Sick 23 Jan 2026 View" [ref=e312]:
+                    - cell "Select/deselect item 5 for bulk actions." [ref=e313]:
+                      - generic [ref=e315]:
+                        - checkbox "Select/deselect item 5 for bulk actions." [ref=e316]
+                        - generic [ref=e317]: Select/deselect item 5 for bulk actions.
+                    - cell [ref=e318]:
+                      - link [ref=e320] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                    - cell "tulip student" [ref=e322]:
+                      - link "tulip student" [ref=e324] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                        - generic [ref=e329]: tulip student
+                    - cell "--" [ref=e330]:
+                      - link "--" [ref=e332] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                        - generic [ref=e337]: "--"
+                    - cell "Sick" [ref=e338]:
+                      - link "Sick" [ref=e340] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                        - generic [ref=e346]: Sick
+                    - cell "23 Jan 2026" [ref=e347]:
+                      - link "23 Jan 2026" [ref=e349] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                        - generic [ref=e354]: 23 Jan 2026
+                    - cell [ref=e355]:
+                      - link [ref=e357] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                    - cell "View" [ref=e359]:
+                      - link "View" [ref=e362] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/5
+                        - img [ref=e363]
+                        - generic [ref=e366]: View
+                  - row "Select/deselect item 8 for bulk actions. tulip student -- Normal View" [ref=e367]:
+                    - cell "Select/deselect item 8 for bulk actions." [ref=e368]:
+                      - generic [ref=e370]:
+                        - checkbox "Select/deselect item 8 for bulk actions." [ref=e371]
+                        - generic [ref=e372]: Select/deselect item 8 for bulk actions.
+                    - cell [ref=e373]:
+                      - link [ref=e375] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                    - cell "tulip student" [ref=e377]:
+                      - link "tulip student" [ref=e379] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                        - generic [ref=e384]: tulip student
+                    - cell "--" [ref=e385]:
+                      - link "--" [ref=e387] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                        - generic [ref=e392]: "--"
+                    - cell "Normal" [ref=e393]:
+                      - link "Normal" [ref=e395] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                        - generic [ref=e401]: Normal
+                    - cell [ref=e402]:
+                      - link [ref=e404] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                    - cell [ref=e406]:
+                      - link [ref=e408] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                    - cell "View" [ref=e410]:
+                      - link "View" [ref=e413] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/8
+                        - img [ref=e414]
+                        - generic [ref=e417]: View
+                  - row "Select/deselect item 6 for bulk actions. tulip student -- Normal 24 Jan 2026 View" [ref=e418]:
+                    - cell "Select/deselect item 6 for bulk actions." [ref=e419]:
+                      - generic [ref=e421]:
+                        - checkbox "Select/deselect item 6 for bulk actions." [ref=e422]
+                        - generic [ref=e423]: Select/deselect item 6 for bulk actions.
+                    - cell [ref=e424]:
+                      - link [ref=e426] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                    - cell "tulip student" [ref=e428]:
+                      - link "tulip student" [ref=e430] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                        - generic [ref=e435]: tulip student
+                    - cell "--" [ref=e436]:
+                      - link "--" [ref=e438] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                        - generic [ref=e443]: "--"
+                    - cell "Normal" [ref=e444]:
+                      - link "Normal" [ref=e446] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                        - generic [ref=e452]: Normal
+                    - cell "24 Jan 2026" [ref=e453]:
+                      - link "24 Jan 2026" [ref=e455] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                        - generic [ref=e460]: 24 Jan 2026
+                    - cell [ref=e461]:
+                      - link [ref=e463] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                    - cell "View" [ref=e465]:
+                      - link "View" [ref=e468] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/6
+                        - img [ref=e469]
+                        - generic [ref=e472]: View
+                  - row "Select/deselect item 7 for bulk actions. tulip student -- Leave 25 Jan 2026 View" [ref=e473]:
+                    - cell "Select/deselect item 7 for bulk actions." [ref=e474]:
+                      - generic [ref=e476]:
+                        - checkbox "Select/deselect item 7 for bulk actions." [ref=e477]
+                        - generic [ref=e478]: Select/deselect item 7 for bulk actions.
+                    - cell [ref=e479]:
+                      - link [ref=e481] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                    - cell "tulip student" [ref=e483]:
+                      - link "tulip student" [ref=e485] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                        - generic [ref=e490]: tulip student
+                    - cell "--" [ref=e491]:
+                      - link "--" [ref=e493] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                        - generic [ref=e498]: "--"
+                    - cell "Leave" [ref=e499]:
+                      - link "Leave" [ref=e501] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                        - generic [ref=e507]: Leave
+                    - cell "25 Jan 2026" [ref=e508]:
+                      - link "25 Jan 2026" [ref=e510] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                        - generic [ref=e515]: 25 Jan 2026
+                    - cell [ref=e516]:
+                      - link [ref=e518] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                    - cell "View" [ref=e520]:
+                      - link "View" [ref=e523] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/7
+                        - img [ref=e524]
+                        - generic [ref=e527]: View
+                  - row "Select/deselect item 9 for bulk actions. tulip student -- Normal View" [ref=e528]:
+                    - cell "Select/deselect item 9 for bulk actions." [ref=e529]:
+                      - generic [ref=e531]:
+                        - checkbox "Select/deselect item 9 for bulk actions." [ref=e532]
+                        - generic [ref=e533]: Select/deselect item 9 for bulk actions.
+                    - cell [ref=e534]:
+                      - link [ref=e536] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                    - cell "tulip student" [ref=e538]:
+                      - link "tulip student" [ref=e540] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                        - generic [ref=e545]: tulip student
+                    - cell "--" [ref=e546]:
+                      - link "--" [ref=e548] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                        - generic [ref=e553]: "--"
+                    - cell "Normal" [ref=e554]:
+                      - link "Normal" [ref=e556] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                        - generic [ref=e562]: Normal
+                    - cell [ref=e563]:
+                      - link [ref=e565] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                    - cell [ref=e567]:
+                      - link [ref=e569] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                    - cell "View" [ref=e571]:
+                      - link "View" [ref=e574] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/9
+                        - img [ref=e575]
+                        - generic [ref=e578]: View
+                  - row "Select/deselect item 10 for bulk actions. tulip student -- Normal View" [ref=e579]:
+                    - cell "Select/deselect item 10 for bulk actions." [ref=e580]:
+                      - generic [ref=e582]:
+                        - checkbox "Select/deselect item 10 for bulk actions." [ref=e583]
+                        - generic [ref=e584]: Select/deselect item 10 for bulk actions.
+                    - cell [ref=e585]:
+                      - link [ref=e587] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                    - cell "tulip student" [ref=e589]:
+                      - link "tulip student" [ref=e591] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                        - generic [ref=e596]: tulip student
+                    - cell "--" [ref=e597]:
+                      - link "--" [ref=e599] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                        - generic [ref=e604]: "--"
+                    - cell "Normal" [ref=e605]:
+                      - link "Normal" [ref=e607] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                        - generic [ref=e613]: Normal
+                    - cell [ref=e614]:
+                      - link [ref=e616] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                    - cell [ref=e618]:
+                      - link [ref=e620] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                    - cell "View" [ref=e622]:
+                      - link "View" [ref=e625] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/10
+                        - img [ref=e626]
+                        - generic [ref=e629]: View
+              - navigation "Pagination navigation" [ref=e630]:
+                - generic [ref=e633]:
+                  - generic [ref=e635]: Per page
+                  - combobox "Per page" [ref=e637]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+                - button "Next" [ref=e638] [cursor=pointer]:
+                  - generic [ref=e639]: Next
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e640]:
+      - generic [ref=e642]:
+        - link "Pimpri Chinchinwad University - Rector App logo" [ref=e644] [cursor=pointer]:
+          - /url: /rector
+          - img "Pimpri Chinchinwad University - Rector App logo" [ref=e645]
+        - button "Collapse sidebar" [ref=e646] [cursor=pointer]:
+          - generic [ref=e647]: Collapse sidebar
+          - img [ref=e648]
+      - navigation [ref=e650]:
+        - list [ref=e651]:
+          - listitem [ref=e652]:
+            - list [ref=e653]:
+              - listitem [ref=e654]:
+                - link "Rector Dashboard" [ref=e655] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector
+                  - img [ref=e656]
+                  - generic [ref=e658]: Rector Dashboard
+              - listitem [ref=e659]:
+                - link "Students" [ref=e660] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/students
+                  - img [ref=e661]
+                  - generic [ref=e663]: Students
+              - listitem [ref=e664]:
+                - link "Reports" [ref=e665] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/reports
+                  - img [ref=e666]
+                  - generic [ref=e668]: Reports
+          - listitem [ref=e669]:
+            - generic [ref=e670] [cursor=pointer]:
+              - generic [ref=e671]: Communications
+              - button "Communications" [expanded] [ref=e672]:
+                - generic [ref=e673]: Communications
+                - img [ref=e674]
+            - list [ref=e676]:
+              - listitem [ref=e677]:
+                - link "Comm Box" [ref=e678] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/comm-box
+                  - img [ref=e679]
+                  - generic [ref=e681]: Comm Box
+          - listitem [ref=e682]:
+            - generic [ref=e683] [cursor=pointer]:
+              - generic [ref=e684]: Approvals
+              - button "Approvals" [expanded] [ref=e685]:
+                - generic [ref=e686]: Approvals
+                - img [ref=e687]
+            - list [ref=e689]:
+              - listitem [ref=e690]:
+                - link "Out-Pass Approvals" [ref=e691] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/out-passes
+                  - img [ref=e692]
+                  - generic [ref=e694]: Out-Pass Approvals
+              - listitem [ref=e695]:
+                - link "Leave Approvals" [ref=e696] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/leaves
+                  - img [ref=e697]
+                  - generic [ref=e699]: Leave Approvals
+              - listitem [ref=e700]:
+                - link "Approval History" [ref=e701] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/approval-history
+                  - img [ref=e702]
+                  - generic [ref=e704]: Approval History
+          - listitem [ref=e705]:
+            - generic [ref=e706] [cursor=pointer]:
+              - generic [ref=e707]: Requests
+              - button "Requests" [expanded] [ref=e708]:
+                - generic [ref=e709]: Requests
+                - img [ref=e710]
+            - list [ref=e712]:
+              - listitem [ref=e713]:
+                - link "Guest Entry" [ref=e714] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/guest-entry-requests
+                  - img [ref=e715]
+                  - generic [ref=e717]: Guest Entry
+  - generic:
+    - status

@@ -1,0 +1,219 @@
+appId: com.maphms.student
+name: "Student App Refined E2E Test"
+tags:
+  - student-app
+  - refined
+  - e2e
+---
+# Refined test based on actual UI elements observed
+# This flow now handles tenant selection + login before running UI checks.
+
+# Step 1: Tenant selection (if shown)
+- runFlow:
+    when:
+      visible: "(Select.*Tenant|Choose.*Institution|Tenant.*Selection)"
+    commands:
+      - tapOn: "${tenant_code}"
+      - waitForAnimationToEnd
+
+# Step 2: Login flow (phone + OTP) - only if login screen is visible
+- runFlow:
+    when:
+      visible: "(Phone|Mobile|Number|Login|Sign.*In)"
+    commands:
+      - inputText: "${phone}"
+      - tapOn: "(Send.*OTP|Get.*OTP|Request.*OTP|Continue)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(OTP|Verification|Enter.*Code|6.*digit)"
+          timeout: 10000
+      - inputText: "${otp}"
+      - tapOn: "(Verify|Submit|Continue|Login)"
+      - waitForAnimationToEnd
+
+# Step 3: Verify dashboard / home is visible
+- extendedWaitUntil:
+    visible: "(Welcome|Dashboard|Home|Quick.*Actions|Actions|VIDYARTHI)"
+    timeout: 20000
+- takeScreenshot: "student/refined/00_dashboard_after_login"
+
+# Navigate to home/dashboard by pressing back multiple times if needed
+- runFlow:
+    when:
+      visible: "(Back|Sports|Booking|Leave|Outpass|Complaint|Ticket)"
+    commands:
+      - pressKey: Back
+      - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Back)"
+          commands:
+            - pressKey: Back
+            - waitForAnimationToEnd
+            - runFlow:
+                when:
+                  visible: "(Back)"
+                commands:
+                  - pressKey: Back
+                  - waitForAnimationToEnd
+
+# Try to find dashboard/home - be flexible with selectors
+- extendedWaitUntil:
+    visible: "(Home|Dashboard|Welcome|Quick|Actions|My Profile|Out-pass|Outpass|Leave|Attendance|Complaints|Tickets|Notices|VIDYARTHI)"
+    timeout: 15000
+- takeScreenshot: "student/refined/01_current_screen"
+
+# Test Profile - try multiple ways to access
+- runFlow:
+    when:
+      visible: "(My Profile|Profile|person)"
+    commands:
+      - tapOn: "(My Profile|Profile)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Profile|Name|Phone|Email|Room|Logout|Sign)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/02_profile"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Outpass - flexible selector
+- runFlow:
+    when:
+      visible: "(Out-pass|Outpass|Gate Pass|GatePass)"
+    commands:
+      - tapOn: "(Out-pass|Outpass|Gate Pass|GatePass)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Gate|Outpass|Create|New|Request|History|List)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/03_outpass"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Leave
+- runFlow:
+    when:
+      visible: "Leave"
+    commands:
+      - tapOn: "Leave"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Leave|Regular|Sick|Create|New|Request|History)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/04_leave"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Attendance (might be bottom tab)
+- runFlow:
+    when:
+      visible: "Attendance"
+    commands:
+      - tapOn: "Attendance"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Attendance|Present|Absent|History|Statistics)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/05_attendance"
+      # Try to go back to home
+      - runFlow:
+          when:
+            visible: "(Home|Dashboard)"
+          commands:
+            - tapOn: "(Home|Dashboard)"
+            - waitForAnimationToEnd
+      - runFlow:
+          when:
+            visible: "(Back)"
+          commands:
+            - pressKey: Back
+            - waitForAnimationToEnd
+
+# Test Complaints
+- runFlow:
+    when:
+      visible: "Complaints"
+    commands:
+      - tapOn: "Complaints"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Complaints|Complaint|Create|New|Submit|History)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/06_complaints"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Tickets
+- runFlow:
+    when:
+      visible: "Tickets"
+    commands:
+      - tapOn: "Tickets"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Tickets|Ticket|Support|Create|New|History)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/07_tickets"
+      - pressKey: Back
+      - waitForAnimationToEnd
+
+# Test Notices (bottom tab or dashboard shortcut)
+- runFlow:
+    when:
+      visible: "Notices"
+    commands:
+      - tapOn: "Notices"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Notices|Notice|Announcement|Board)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/08_notices"
+      - runFlow:
+          when:
+            visible: "(Home|Dashboard)"
+          commands:
+            - tapOn: "(Home|Dashboard)"
+            - waitForAnimationToEnd
+
+# Footer navigation sanity check - ensure bottom tabs work
+- runFlow:
+    when:
+      visible: "(Attendance)"
+    commands:
+      # Attendance tab
+      - tapOn: "Attendance"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(My Attendance|Attendance)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/09_footer_attendance"
+      # Social Media tab
+      - tapOn: "(Social Media|Social)"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Social Media|Stay connected)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/10_footer_social"
+      # Profile tab
+      - tapOn: "Profile"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Profile|ID:)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/11_footer_profile"
+      # Home tab
+      - tapOn: "Home"
+      - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "(Actions|VIDYARTHI|Welcome)"
+          timeout: 10000
+      - takeScreenshot: "student/refined/12_footer_home"
+
+# Final verification - check if we're back at a main screen
+- extendedWaitUntil:
+    visible: "(Home|Dashboard|Welcome|Quick|Actions|My Profile|Out-pass|Outpass|Leave|Attendance|Complaints|Tickets|Notices|VIDYARTHI)"
+    timeout: 10000
+- takeScreenshot: "student/refined/09_final_screen"
+
+

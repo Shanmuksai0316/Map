@@ -1,0 +1,17 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - heading "Student Bulk Upload Intake" [level=1] [ref=e7]: Student Bulk Upload Intake
+    - generic [ref=e8]: Your response has been recorded.
+    - link "Submit another response" [ref=e10] [cursor=pointer]:
+      - /url: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/viewform?usp=form_confirm
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - text: This form was created inside of Rorko.com. - Contact form owner
+      - paragraph [ref=e13]:
+        - text: Does this form look suspicious?
+        - link "Report" [ref=e14] [cursor=pointer]:
+          - /url: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLSdImEn5_P08-DhSKorZwhRdiu-4OgBDrDiiQjD_N6GtAJWCbg/viewform
+    - link "Google Forms" [ref=e16] [cursor=pointer]:
+      - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+      - img "Google" [ref=e17]
+      - text: Forms

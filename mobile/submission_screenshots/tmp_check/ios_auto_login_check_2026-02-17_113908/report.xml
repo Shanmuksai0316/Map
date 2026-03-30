@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="iPhone 17 Pro Max - iOS 26.2 - A2FCDB57-C92E-4D6E-AEC5-9322175CF4C7" tests="1" failures="1" time="49.0">
+    <testcase id="iOS Auto Login Check" name="iOS Auto Login Check" classname="iOS Auto Login Check" time="49.0" status="ERROR">
+      <properties/>
+      <failure>Assertion is false: "My Profile" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

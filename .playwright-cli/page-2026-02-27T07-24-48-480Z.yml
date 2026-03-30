@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - main [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - img "Campus Manager Dashboard logo" [ref=e8]
+          - heading "Sign in" [level=1] [ref=e9]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - img "MAP - Streamline Your Institute Operations" [ref=e14]
+            - generic [ref=e15]:
+              - heading "Streamline Your Institute Operations." [level=1] [ref=e16]
+              - paragraph [ref=e17]: The most advanced hostel management system designed for scale, powering institutions across India.
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - generic [ref=e21]: Campus Manager Login
+              - paragraph [ref=e22]: Enter your registered phone number and OTP to access the campus manager dashboard.
+            - paragraph [ref=e23]:
+              - text: "Enter your registered phone number and OTP (or use bypass code:"
+              - code [ref=e24]: "123456"
+              - text: )
+            - generic [ref=e25]:
+              - generic [ref=e26]:
+                - generic [ref=e29]:
+                  - generic [ref=e32]:
+                    - text: Phone Number
+                    - superscript [ref=e33]: "*"
+                  - generic [ref=e34]:
+                    - textbox "Phone Number*" [ref=e37]:
+                      - /placeholder: "+919900000999"
+                      - text: "7975452363"
+                    - generic [ref=e38]: Enter your registered phone number
+                - generic [ref=e41]:
+                  - generic [ref=e44]:
+                    - text: Enter OTP
+                    - superscript [ref=e45]: "*"
+                  - generic [ref=e46]:
+                    - spinbutton "Enter OTP*" [ref=e49]: "123456"
+                    - generic [ref=e50]: "Enter the 6-digit OTP or use bypass code: 123456"
+              - button "Login with Bypass Code" [ref=e52] [cursor=pointer]:
+                - generic [ref=e53]: Login with Bypass Code
+            - paragraph [ref=e55]: Secure OTP-based authentication
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+      - generic:
+        - dialog
+  - generic:
+    - status

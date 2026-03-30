@@ -1,0 +1,26 @@
+appId: com.mapmars.hmsstaff
+name: "Staff iOS (Send OTP|Get OTP) Wait Check"
+---
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+- waitForAnimationToEnd
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+- tapOn: "Enter your registered phone number"
+- inputText: "7975452363"
+- hideKeyboard
+- tapOn: "(Send OTP|Get OTP)"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "staff/diag/04_after_send_wait_short"
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter 6-digit code|Verify & Login|Error|Success|Institution not detected)"
+    timeout: 90000
+- takeScreenshot: "staff/diag/05_after_send_wait_long"

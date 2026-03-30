@@ -1,0 +1,253 @@
+﻿<?php
+
+/**
+ * TicketController
+ * 
+ * Module: Tickets
+ * Purpose: Handle support ticket management including creation, assignment, and status updates
+ * Key routes: GET /tickets, POST /tickets, GET /tickets/{id}, POST /tickets/{id}/assign, POST /tickets/{id}/status
+ * Policies: TicketPolicy@view, TicketPolicy@create, TicketPolicy@assign
+ * @tenant-scope: All operations scoped to user's tenant_id
+ * Feature flags: None (core functionality)
+ * Side effects: Audit logging, metrics collection, notifications via TicketNotifier
+ * Owner: MAP Co-Pilot
+ */
+
+namespace App\Http\Controllers;
+
+use App\Domain\Tickets\Models\Ticket;
+use App\Models\Hostel;
+use App\Http\Requests\TicketAssignRequest;
+use App\Http\Requests\TicketStatusRequest;
+use App\Http\Requests\TicketStoreRequest;
+use App\Http\Resources\TicketResource;
+use App\Services\AuditLogger;
+use App\Services\Metrics\Metrics;
+use App\Services\Tickets\TicketNotifier;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class TicketController extends Controller
+{
+    /**
+     * List tickets with filtering and pagination
+     * 
+     * @param Request $request HTTP request with optional filters (status, category, priority, hostel_id, mine, q)
+     * @return JsonResponse Paginated list of tickets
+     * @tenant-scope: Automatically filtered by user's tenant_id
+     * @policy: TicketPolicy@viewAny
+     * @perf: Uses eager loading to prevent N+1 queries
+     */
+    public function index(Request $request): JsonResponse
+    {
+        $query = Ticket::query()
+            ->with(['hostel', 'reporterStudent.user', 'reporterUser', 'assigneeUser'])
+            ->where('tenant_id', $request->user()->tenant_id);
+
+        // Apply filters
+        if ($request->filled('status')) {
+            $statuses = is_array($request->status) ? $request->status : [$request->status];
+            $query->byStatus($statuses);
+        }
+
+        if ($request->filled('category')) {
+            $categories = is_array($request->category) ? $request->category : [$request->category];
+            $query->byCategory($categories);
+        }
+
+        if ($request->filled('priority')) {
+            $priorities = is_array($request->priority) ? $request->priority : [$request->priority];
+            $query->byPriority($priorities);
+        }
+
+        if ($request->filled('hostel_id')) {
+            $query->where('hostel_id', $request->hostel_id);
+        }
+
+        if ($request->filled('mine') && $request->boolean('mine')) {
+            $query->mine($request->user());
+        }
+
+        if ($request->filled('q')) {
+            $query->search($request->q);
+        }
+
+        // Apply scoping based on user role
+        $hostelIds = \App\Support\HostelScope::idsFor($request->user());
+        if (!empty($hostelIds)) {
+            $query->inHostels($hostelIds);
+        }
+
+        $tickets = $query->orderBy('created_at', 'desc')
+            ->paginate($request->get('per_page', 15));
+
+        return response()->json([
+            'data' => TicketResource::collection($tickets->items()),
+            'meta' => [
+                'current_page' => $tickets->currentPage(),
+                'last_page' => $tickets->lastPage(),
+                'per_page' => $tickets->perPage(),
+                'total' => $tickets->total(),
+            ],
+        ]);
+    }
+
+    /**
+     * Create a new support ticket
+     * 
+     * @param TicketStoreRequest $request Validated ticket creation request
+     * @return JsonResponse Created ticket resource
+     * @tenant-scope: Ticket created for user's tenant
+     * @policy: TicketPolicy@create
+     * @audit: ticket.created event logged with ticket details
+     * @notifications: TicketNotifier@onCreated sends notifications
+     * @metrics: TicketCreated counter incremented
+     */
+    public function store(TicketStoreRequest $request): JsonResponse
+    {
+        $user = $request->user();
+        
+        $ticket = Ticket::create([
+            'tenant_id' => $user->tenant_id,
+            'hostel_id' => $request->hostel_id,
+            'location' => Hostel::find($request->hostel_id)?->name ?? 'Hostel '.$request->hostel_id,
+            'category' => $request->category,
+            'priority' => $request->priority ?? 'medium',
+            'status' => 'open',
+            'reporter_student_id' => $user->hasRole('Student') ? $user->student?->id : null,
+            'reporter_user_id' => $user->hasRole('Student') ? null : $user->id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'photos' => $request->photos,
+            'sla_due_at' => now()->addHours(4), // Configurable SLA
+            'sla_deadline' => now()->addHours(4),
+            'created_by_user_id' => $user->id,
+            'created_by' => $user->id,
+        ]);
+
+        // Log audit
+        AuditLogger::logEvent('ticket.created', [
+            'ticket_id' => $ticket->id,
+            'tenant_id' => $ticket->tenant_id,
+            'actor_user_id' => $user->id,
+            'category' => $ticket->category,
+            'priority' => $ticket->priority,
+            'hostel_id' => $ticket->hostel_id,
+            'status' => $ticket->status,
+        ], $user);
+
+        // Send notification
+        app(TicketNotifier::class)->onCreated($ticket);
+
+        // Send metrics
+        Metrics::count('TicketCreated', 1, [
+            'tenant_id' => $ticket->tenant_id,
+            'hostel_id' => $ticket->hostel_id,
+            'category' => $ticket->category,
+            'priority' => $ticket->priority,
+        ]);
+
+        return response()->json([
+            'data' => new TicketResource($ticket->load(['hostel', 'reporterStudent.user', 'reporterUser'])),
+            'message' => 'Ticket created successfully',
+        ], 201);
+    }
+
+    public function show(Ticket $ticket): JsonResponse
+    {
+        $this->authorize('view', $ticket);
+
+        $ticket->load(['hostel', 'reporterStudent.user', 'reporterUser', 'assigneeUser', 'comments.user']);
+
+        return response()->json([
+            'data' => new TicketResource($ticket),
+        ]);
+    }
+
+    public function assign(TicketAssignRequest $request, Ticket $ticket): JsonResponse
+    {
+        $user = $request->user();
+        
+        $oldAssignee = $ticket->assignee_user_id;
+        
+        $ticket->update([
+            'assignee_user_id' => $request->assignee_user_id,
+            'updated_by_user_id' => $user->id,
+        ]);
+
+        // Log audit
+        AuditLogger::logEvent('ticket.assigned', [
+            'ticket_id' => $ticket->id,
+            'tenant_id' => $ticket->tenant_id,
+            'actor_user_id' => $user->id,
+            'assignee_user_id' => $request->assignee_user_id,
+            'old_assignee_id' => $oldAssignee,
+            'new_assignee_id' => $request->assignee_user_id,
+            'status' => $ticket->status,
+            'priority' => $ticket->priority,
+        ], $user);
+
+        // Send notification
+        app(TicketNotifier::class)->onAssigned($ticket, $oldAssignee);
+
+        return response()->json([
+            'data' => new TicketResource($ticket->fresh(['assigneeUser'])),
+            'message' => 'Ticket assigned successfully',
+        ]);
+    }
+
+    public function updateStatus(TicketStatusRequest $request, Ticket $ticket): JsonResponse
+    {
+        $user = $request->user();
+        
+        $oldStatus = $ticket->status;
+        $newStatus = $request->status;
+        
+        $updateData = [
+            'status' => $newStatus,
+            'updated_by_user_id' => $user->id,
+        ];
+
+        // Set closed_at if closing
+        if (in_array($newStatus, ['resolved', 'closed'])) {
+            $updateData['closed_at'] = now();
+        }
+
+        $ticket->update($updateData);
+
+        // Log audit
+        AuditLogger::logEvent('ticket.status_changed', [
+            'ticket_id' => $ticket->id,
+            'tenant_id' => $ticket->tenant_id,
+            'actor_user_id' => $user->id,
+            'old_status' => $oldStatus,
+            'new_status' => $newStatus,
+            'status' => $newStatus,
+            'priority' => $ticket->priority,
+        ], $user);
+
+        // Send notifications for resolved/closed
+        if ($newStatus === 'resolved') {
+            app(TicketNotifier::class)->onResolved($ticket, $oldStatus);
+        } elseif ($newStatus === 'closed') {
+            app(TicketNotifier::class)->onClosed($ticket, $oldStatus);
+        }
+
+        // Send metrics for resolved/closed tickets
+        if (in_array($newStatus, ['resolved', 'closed'])) {
+            Metrics::count('TicketResolved', 1, [
+                'tenant_id' => $ticket->tenant_id,
+                'hostel_id' => $ticket->hostel_id,
+                'category' => $ticket->category,
+                'priority' => $ticket->priority,
+                'status' => $newStatus,
+            ]);
+        }
+
+        return response()->json([
+            'data' => new TicketResource($ticket->fresh()),
+            'message' => 'Ticket status updated successfully',
+        ]);
+    }
+}

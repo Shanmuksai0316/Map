@@ -1,0 +1,509 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - navigation [ref=e16]:
+                - list [ref=e17]:
+                  - listitem [ref=e18]:
+                    - link "Staff Members" [ref=e19] [cursor=pointer]:
+                      - /url: https://admin.mapservices.in/admin/staff-managements
+                  - listitem [ref=e20]:
+                    - img [ref=e21]
+                    - generic [ref=e23]: List
+              - heading "Staff Members" [level=1] [ref=e24]
+            - link "Create New Staff" [ref=e27] [cursor=pointer]:
+              - /url: https://admin.mapservices.in/admin/staff-managements/create
+              - img [ref=e28]
+              - generic [ref=e30]: Create New Staff
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - generic [ref=e38]:
+                - generic [ref=e39]:
+                  - generic [ref=e40]: Search
+                  - generic [ref=e41]:
+                    - img [ref=e43]
+                    - searchbox "Search" [ref=e46]
+                - button "Filter 0" [ref=e49] [cursor=pointer]:
+                  - generic [ref=e50]: Filter
+                  - img [ref=e51]
+                  - generic [ref=e56]: "0"
+              - table [ref=e58]:
+                - rowgroup [ref=e59]:
+                  - row "Name Phone Tenant Role Assigned Hostel Since Actions" [ref=e60]:
+                    - columnheader "Name" [ref=e61]:
+                      - button "Name" [ref=e62] [cursor=pointer]:
+                        - generic [ref=e63]: Name
+                        - img [ref=e64]
+                    - columnheader "Phone" [ref=e66]:
+                      - generic [ref=e68]: Phone
+                    - columnheader "Tenant" [ref=e69]:
+                      - button "Tenant" [ref=e70] [cursor=pointer]:
+                        - generic [ref=e71]: Tenant
+                        - img [ref=e72]
+                    - columnheader "Role" [ref=e74]:
+                      - generic [ref=e76]: Role
+                    - columnheader "Assigned Hostel" [ref=e77]:
+                      - generic [ref=e79]: Assigned Hostel
+                    - columnheader "Since" [ref=e80]:
+                      - generic [ref=e82]: Since
+                    - columnheader "Actions" [ref=e83]
+                - rowgroup [ref=e84]:
+                  - row "Campus Manager MAP-CLI1771835108 9800750001 CLI Auto Tenant 17718351082 Campus Manager Unassigned - View Edit" [ref=e85]:
+                    - cell "Campus Manager MAP-CLI1771835108" [ref=e86]:
+                      - link "Campus Manager MAP-CLI1771835108" [ref=e88] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/265
+                        - generic [ref=e93]: Campus Manager MAP-CLI1771835108
+                    - cell "9800750001" [ref=e94]:
+                      - generic [ref=e101] [cursor=pointer]: "9800750001"
+                    - cell "CLI Auto Tenant 17718351082" [ref=e102]:
+                      - link "CLI Auto Tenant 17718351082" [ref=e104] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/265
+                        - generic [ref=e110]: CLI Auto Tenant 17718351082
+                    - cell "Campus Manager" [ref=e111]:
+                      - link "Campus Manager" [ref=e113] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/265
+                        - generic [ref=e119]: Campus Manager
+                    - cell "Unassigned" [ref=e120]:
+                      - link "Unassigned" [ref=e122] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/265
+                        - generic [ref=e128]: Unassigned
+                    - cell "-" [ref=e129]:
+                      - link "-" [ref=e131] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/265
+                        - generic [ref=e136]: "-"
+                    - cell "View Edit" [ref=e137]:
+                      - generic [ref=e139]:
+                        - link "View" [ref=e140] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/265
+                          - img [ref=e141]
+                          - generic [ref=e144]: View
+                        - link "Edit" [ref=e145] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/265/edit
+                          - img [ref=e146]
+                          - generic [ref=e148]: Edit
+                        - button [ref=e151] [cursor=pointer]:
+                          - img [ref=e152]
+                  - row "Campus Manager MAP-CLI1771835173 9800750004 CLI Auto Tenant 17718351735 Campus Manager Unassigned - View Edit" [ref=e154]:
+                    - cell "Campus Manager MAP-CLI1771835173" [ref=e155]:
+                      - link "Campus Manager MAP-CLI1771835173" [ref=e157] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/268
+                        - generic [ref=e162]: Campus Manager MAP-CLI1771835173
+                    - cell "9800750004" [ref=e163]:
+                      - generic [ref=e170] [cursor=pointer]: "9800750004"
+                    - cell "CLI Auto Tenant 17718351735" [ref=e171]:
+                      - link "CLI Auto Tenant 17718351735" [ref=e173] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/268
+                        - generic [ref=e179]: CLI Auto Tenant 17718351735
+                    - cell "Campus Manager" [ref=e180]:
+                      - link "Campus Manager" [ref=e182] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/268
+                        - generic [ref=e188]: Campus Manager
+                    - cell "Unassigned" [ref=e189]:
+                      - link "Unassigned" [ref=e191] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/268
+                        - generic [ref=e197]: Unassigned
+                    - cell "-" [ref=e198]:
+                      - link "-" [ref=e200] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/268
+                        - generic [ref=e205]: "-"
+                    - cell "View Edit" [ref=e206]:
+                      - generic [ref=e208]:
+                        - link "View" [ref=e209] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/268
+                          - img [ref=e210]
+                          - generic [ref=e213]: View
+                        - link "Edit" [ref=e214] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/268/edit
+                          - img [ref=e215]
+                          - generic [ref=e217]: Edit
+                        - button [ref=e220] [cursor=pointer]:
+                          - img [ref=e221]
+                  - row "Campus Manager MAP-CLI1771835152 9800750003 CLI Auto Tenant 17718351524 Campus Manager Unassigned - View Edit" [ref=e223]:
+                    - cell "Campus Manager MAP-CLI1771835152" [ref=e224]:
+                      - link "Campus Manager MAP-CLI1771835152" [ref=e226] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/267
+                        - generic [ref=e231]: Campus Manager MAP-CLI1771835152
+                    - cell "9800750003" [ref=e232]:
+                      - generic [ref=e239] [cursor=pointer]: "9800750003"
+                    - cell "CLI Auto Tenant 17718351524" [ref=e240]:
+                      - link "CLI Auto Tenant 17718351524" [ref=e242] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/267
+                        - generic [ref=e248]: CLI Auto Tenant 17718351524
+                    - cell "Campus Manager" [ref=e249]:
+                      - link "Campus Manager" [ref=e251] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/267
+                        - generic [ref=e257]: Campus Manager
+                    - cell "Unassigned" [ref=e258]:
+                      - link "Unassigned" [ref=e260] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/267
+                        - generic [ref=e266]: Unassigned
+                    - cell "-" [ref=e267]:
+                      - link "-" [ref=e269] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/267
+                        - generic [ref=e274]: "-"
+                    - cell "View Edit" [ref=e275]:
+                      - generic [ref=e277]:
+                        - link "View" [ref=e278] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/267
+                          - img [ref=e279]
+                          - generic [ref=e282]: View
+                        - link "Edit" [ref=e283] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/267/edit
+                          - img [ref=e284]
+                          - generic [ref=e286]: Edit
+                        - button [ref=e289] [cursor=pointer]:
+                          - img [ref=e290]
+                  - row "Campus Manager MAP-CLI1771835130 9800750002 CLI Auto Tenant 17718351303 Campus Manager Unassigned - View Edit" [ref=e292]:
+                    - cell "Campus Manager MAP-CLI1771835130" [ref=e293]:
+                      - link "Campus Manager MAP-CLI1771835130" [ref=e295] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/266
+                        - generic [ref=e300]: Campus Manager MAP-CLI1771835130
+                    - cell "9800750002" [ref=e301]:
+                      - generic [ref=e308] [cursor=pointer]: "9800750002"
+                    - cell "CLI Auto Tenant 17718351303" [ref=e309]:
+                      - link "CLI Auto Tenant 17718351303" [ref=e311] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/266
+                        - generic [ref=e317]: CLI Auto Tenant 17718351303
+                    - cell "Campus Manager" [ref=e318]:
+                      - link "Campus Manager" [ref=e320] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/266
+                        - generic [ref=e326]: Campus Manager
+                    - cell "Unassigned" [ref=e327]:
+                      - link "Unassigned" [ref=e329] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/266
+                        - generic [ref=e335]: Unassigned
+                    - cell "-" [ref=e336]:
+                      - link "-" [ref=e338] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/266
+                        - generic [ref=e343]: "-"
+                    - cell "View Edit" [ref=e344]:
+                      - generic [ref=e346]:
+                        - link "View" [ref=e347] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/266
+                          - img [ref=e348]
+                          - generic [ref=e351]: View
+                        - link "Edit" [ref=e352] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/266/edit
+                          - img [ref=e353]
+                          - generic [ref=e355]: Edit
+                        - button [ref=e358] [cursor=pointer]:
+                          - img [ref=e359]
+                  - row "Campus Manager MAP-CLI1771835087 9800750000 CLI Auto Tenant 17718350871 Campus Manager Unassigned - View Edit" [ref=e361]:
+                    - cell "Campus Manager MAP-CLI1771835087" [ref=e362]:
+                      - link "Campus Manager MAP-CLI1771835087" [ref=e364] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/264
+                        - generic [ref=e369]: Campus Manager MAP-CLI1771835087
+                    - cell "9800750000" [ref=e370]:
+                      - generic [ref=e377] [cursor=pointer]: "9800750000"
+                    - cell "CLI Auto Tenant 17718350871" [ref=e378]:
+                      - link "CLI Auto Tenant 17718350871" [ref=e380] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/264
+                        - generic [ref=e386]: CLI Auto Tenant 17718350871
+                    - cell "Campus Manager" [ref=e387]:
+                      - link "Campus Manager" [ref=e389] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/264
+                        - generic [ref=e395]: Campus Manager
+                    - cell "Unassigned" [ref=e396]:
+                      - link "Unassigned" [ref=e398] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/264
+                        - generic [ref=e404]: Unassigned
+                    - cell "-" [ref=e405]:
+                      - link "-" [ref=e407] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/264
+                        - generic [ref=e412]: "-"
+                    - cell "View Edit" [ref=e413]:
+                      - generic [ref=e415]:
+                        - link "View" [ref=e416] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/264
+                          - img [ref=e417]
+                          - generic [ref=e420]: View
+                        - link "Edit" [ref=e421] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/264/edit
+                          - img [ref=e422]
+                          - generic [ref=e424]: Edit
+                        - button [ref=e427] [cursor=pointer]:
+                          - img [ref=e428]
+                  - row "Arjun 9988776655 Unassigned - Unassigned - View Edit" [ref=e430]:
+                    - cell "Arjun" [ref=e431]:
+                      - link "Arjun" [ref=e433] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/263
+                        - generic [ref=e438]: Arjun
+                    - cell "9988776655" [ref=e439]:
+                      - generic [ref=e446] [cursor=pointer]: "9988776655"
+                    - cell "Unassigned" [ref=e447]:
+                      - link "Unassigned" [ref=e449] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/263
+                        - generic [ref=e455]: Unassigned
+                    - cell "-" [ref=e456]:
+                      - link "-" [ref=e458] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/263
+                        - generic [ref=e464]: "-"
+                    - cell "Unassigned" [ref=e465]:
+                      - link "Unassigned" [ref=e467] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/263
+                        - generic [ref=e473]: Unassigned
+                    - cell "-" [ref=e474]:
+                      - link "-" [ref=e476] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/263
+                        - generic [ref=e481]: "-"
+                    - cell "View Edit" [ref=e482]:
+                      - generic [ref=e484]:
+                        - link "View" [ref=e485] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/263
+                          - img [ref=e486]
+                          - generic [ref=e489]: View
+                        - link "Edit" [ref=e490] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/263/edit
+                          - img [ref=e491]
+                          - generic [ref=e493]: Edit
+                        - button [ref=e496] [cursor=pointer]:
+                          - img [ref=e497]
+                  - row "Ram 8082833909 Unassigned - Unassigned - View Edit" [ref=e499]:
+                    - cell "Ram" [ref=e500]:
+                      - link "Ram" [ref=e502] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/262
+                        - generic [ref=e507]: Ram
+                    - cell "8082833909" [ref=e508]:
+                      - generic [ref=e515] [cursor=pointer]: "8082833909"
+                    - cell "Unassigned" [ref=e516]:
+                      - link "Unassigned" [ref=e518] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/262
+                        - generic [ref=e524]: Unassigned
+                    - cell "-" [ref=e525]:
+                      - link "-" [ref=e527] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/262
+                        - generic [ref=e533]: "-"
+                    - cell "Unassigned" [ref=e534]:
+                      - link "Unassigned" [ref=e536] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/262
+                        - generic [ref=e542]: Unassigned
+                    - cell "-" [ref=e543]:
+                      - link "-" [ref=e545] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/262
+                        - generic [ref=e550]: "-"
+                    - cell "View Edit" [ref=e551]:
+                      - generic [ref=e553]:
+                        - link "View" [ref=e554] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/262
+                          - img [ref=e555]
+                          - generic [ref=e558]: View
+                        - link "Edit" [ref=e559] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/262/edit
+                          - img [ref=e560]
+                          - generic [ref=e562]: Edit
+                        - button [ref=e565] [cursor=pointer]:
+                          - img [ref=e566]
+                  - row "Rector MAP-DU +919849290647 University of Delhi - Boys Hostel A 14 Feb 2026 View Edit" [ref=e568]:
+                    - cell "Rector MAP-DU" [ref=e569]:
+                      - link "Rector MAP-DU" [ref=e571] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/49
+                        - generic [ref=e576]: Rector MAP-DU
+                    - cell "+919849290647" [ref=e577]:
+                      - generic [ref=e584] [cursor=pointer]: "+919849290647"
+                    - cell "University of Delhi" [ref=e585]:
+                      - link "University of Delhi" [ref=e587] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/49
+                        - generic [ref=e593]: University of Delhi
+                    - cell "-" [ref=e594]:
+                      - link "-" [ref=e596] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/49
+                        - generic [ref=e602]: "-"
+                    - cell "Boys Hostel A" [ref=e603]:
+                      - link "Boys Hostel A" [ref=e605] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/49
+                        - generic [ref=e611]: Boys Hostel A
+                    - cell "14 Feb 2026" [ref=e612]:
+                      - link "14 Feb 2026" [ref=e614] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/49
+                        - generic [ref=e619]: 14 Feb 2026
+                    - cell "View Edit" [ref=e620]:
+                      - generic [ref=e622]:
+                        - link "View" [ref=e623] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/49
+                          - img [ref=e624]
+                          - generic [ref=e627]: View
+                        - link "Edit" [ref=e628] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/49/edit
+                          - img [ref=e629]
+                          - generic [ref=e631]: Edit
+                        - button [ref=e634] [cursor=pointer]:
+                          - img [ref=e635]
+                  - row "College Admin MAP-DU +918665710327 University of Delhi - Boys Hostel A 14 Feb 2026 View Edit" [ref=e637]:
+                    - cell "College Admin MAP-DU" [ref=e638]:
+                      - link "College Admin MAP-DU" [ref=e640] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/50
+                        - generic [ref=e645]: College Admin MAP-DU
+                    - cell "+918665710327" [ref=e646]:
+                      - generic [ref=e653] [cursor=pointer]: "+918665710327"
+                    - cell "University of Delhi" [ref=e654]:
+                      - link "University of Delhi" [ref=e656] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/50
+                        - generic [ref=e662]: University of Delhi
+                    - cell "-" [ref=e663]:
+                      - link "-" [ref=e665] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/50
+                        - generic [ref=e671]: "-"
+                    - cell "Boys Hostel A" [ref=e672]:
+                      - link "Boys Hostel A" [ref=e674] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/50
+                        - generic [ref=e680]: Boys Hostel A
+                    - cell "14 Feb 2026" [ref=e681]:
+                      - link "14 Feb 2026" [ref=e683] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/50
+                        - generic [ref=e688]: 14 Feb 2026
+                    - cell "View Edit" [ref=e689]:
+                      - generic [ref=e691]:
+                        - link "View" [ref=e692] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/50
+                          - img [ref=e693]
+                          - generic [ref=e696]: View
+                        - link "Edit" [ref=e697] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/50/edit
+                          - img [ref=e698]
+                          - generic [ref=e700]: Edit
+                        - button [ref=e703] [cursor=pointer]:
+                          - img [ref=e704]
+                  - row "College Admin MAP-NITK +917403609474 National Institute of Technology Karnataka - Boys Hostel A 14 Feb 2026 View Edit" [ref=e706]:
+                    - cell "College Admin MAP-NITK" [ref=e707]:
+                      - link "College Admin MAP-NITK" [ref=e709] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/44
+                        - generic [ref=e714]: College Admin MAP-NITK
+                    - cell "+917403609474" [ref=e715]:
+                      - generic [ref=e722] [cursor=pointer]: "+917403609474"
+                    - cell "National Institute of Technology Karnataka" [ref=e723]:
+                      - link "National Institute of Technology Karnataka" [ref=e725] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/44
+                        - generic [ref=e731]: National Institute of Technology Karnataka
+                    - cell "-" [ref=e732]:
+                      - link "-" [ref=e734] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/44
+                        - generic [ref=e740]: "-"
+                    - cell "Boys Hostel A" [ref=e741]:
+                      - link "Boys Hostel A" [ref=e743] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/44
+                        - generic [ref=e749]: Boys Hostel A
+                    - cell "14 Feb 2026" [ref=e750]:
+                      - link "14 Feb 2026" [ref=e752] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/staff-managements/44
+                        - generic [ref=e757]: 14 Feb 2026
+                    - cell "View Edit" [ref=e758]:
+                      - generic [ref=e760]:
+                        - link "View" [ref=e761] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/44
+                          - img [ref=e762]
+                          - generic [ref=e765]: View
+                        - link "Edit" [ref=e766] [cursor=pointer]:
+                          - /url: https://admin.mapservices.in/admin/staff-managements/44/edit
+                          - img [ref=e767]
+                          - generic [ref=e769]: Edit
+                        - button [ref=e772] [cursor=pointer]:
+                          - img [ref=e773]
+              - navigation "Pagination navigation" [ref=e775]:
+                - generic [ref=e778]:
+                  - generic [ref=e780]: Per page
+                  - combobox "Per page" [ref=e782]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+                - button "Next" [ref=e783] [cursor=pointer]:
+                  - generic [ref=e784]: Next
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e785]:
+      - generic [ref=e787]:
+        - link "Super Admin logo" [ref=e789] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e790]
+        - button "Collapse sidebar" [ref=e791] [cursor=pointer]:
+          - generic [ref=e792]: Collapse sidebar
+          - img [ref=e793]
+      - navigation [ref=e795]:
+        - list [ref=e796]:
+          - listitem [ref=e797]:
+            - list [ref=e798]:
+              - listitem [ref=e799]:
+                - link "Dashboard" [ref=e800] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e801]
+                  - generic [ref=e803]: Dashboard
+          - listitem [ref=e804]:
+            - generic [ref=e805] [cursor=pointer]:
+              - img [ref=e806]
+              - generic [ref=e808]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e809]:
+                - generic [ref=e810]: Tenant Management
+                - img [ref=e811]
+            - list [ref=e813]:
+              - listitem [ref=e814]:
+                - link "New Tenant Onboarding" [ref=e815] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e819]: New Tenant Onboarding
+              - listitem [ref=e820]:
+                - link "All Tenants" [ref=e821] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e826]: All Tenants
+              - listitem [ref=e827]:
+                - link "Archived Tenants" [ref=e828] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e832]: Archived Tenants
+          - listitem [ref=e833]:
+            - generic [ref=e834] [cursor=pointer]:
+              - img [ref=e835]
+              - generic [ref=e837]: Staff Management
+              - button "Staff Management" [expanded] [ref=e838]:
+                - generic [ref=e839]: Staff Management
+                - img [ref=e840]
+            - list [ref=e842]:
+              - listitem [ref=e843]:
+                - link "All Staff" [ref=e844] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/staff-managements
+                  - generic [ref=e848]: All Staff
+              - listitem [ref=e849]:
+                - link "Assigned Staff" [ref=e850] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/assigned-staff
+                  - generic [ref=e855]: Assigned Staff
+              - listitem [ref=e856]:
+                - link "Unassigned Staff" [ref=e857] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/unassigned-staff
+                  - generic [ref=e862]: Unassigned Staff
+              - listitem [ref=e863]:
+                - link "Archived Staff" [ref=e864] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-staff
+                  - generic [ref=e868]: Archived Staff
+          - listitem [ref=e869]:
+            - generic [ref=e870] [cursor=pointer]:
+              - img [ref=e871]
+              - generic [ref=e874]: Operations
+              - button "Operations" [ref=e875]:
+                - generic [ref=e876]: Operations
+                - img [ref=e877]
+          - listitem [ref=e879]:
+            - generic [ref=e880] [cursor=pointer]:
+              - img [ref=e881]
+              - generic [ref=e883]: Reports
+              - button "Reports" [expanded] [ref=e884]:
+                - generic [ref=e885]: Reports
+                - img [ref=e886]
+            - list [ref=e888]:
+              - listitem [ref=e889]:
+                - link "Report Center" [ref=e890] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e893]: Report Center
+  - generic:
+    - status

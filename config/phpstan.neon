@@ -1,0 +1,9 @@
+parameters:
+  level: 6
+  paths:
+    - api/app
+    - api/tests
+  checkGenericClassInNonGenericObjectType: false
+  checkMissingIterableValueType: false
+includes:
+  - vendor/nunomaduro/larastan/extension.neon

@@ -1,0 +1,159 @@
+# MAP HMS Staff App - HK Supervisor Role Full Test Suite
+# Tests Housekeeping Supervisor functionality per US-SUP-01, US-SUP-02
+#
+# Prerequisites:
+# - Staff app installed (com.mapmars.hmsstaff)
+# - Demo token generated for HK Supervisor role
+#
+# Usage:
+#   maestro test hk-supervisor-full-test.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=hk_supervisor"
+
+appId: com.mapmars.hmsstaff
+name: "HK Supervisor Full Test Suite"
+tags:
+  - hk-supervisor
+  - housekeeping
+  - checklist
+  - tickets
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=129%7CAtgHx7jUMcPKa1PaP1tY8lIQsgTOIA7jt9dvHV5t73444242&role=hk_supervisor&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=358&userName=Lakshmi+HK&userPhone=%2B919876543691&userEmail=hk1%40stxaviers.edu"
+      phone: "8555903456"
+      otp: "123456"
+      dashboardRegex: "(hk supervisor|Actions|Checklist|Requests|Notice Board|Profile)"
+
+- takeScreenshot: "hk_supervisor/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD TESTS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(hk supervisor|Actions|Checklist|Requests|Notice Board|Profile)"
+    timeout: 15000
+
+- takeScreenshot: "hk_supervisor/02_dashboard"
+
+# Verify HK Supervisor dashboard components
+- assertVisible: "(Checklist|Requests|Notice Board|Profile)"
+
+- takeScreenshot: "hk_supervisor/03_dashboard_verified"
+
+# ============================================
+# PART 3: CHECKLIST TAB TESTS (US-SUP-01)
+# ============================================
+
+# Navigate to Checklist tab
+- tapOn: "Checklist"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "hk_supervisor/04_checklist"
+
+# Verify Checklist screen elements
+- assertVisible: "(Daily Checklist|No checklist available|No checklist assigned for today)"
+
+# Test checklist item interaction if available
+- runFlow:
+    when:
+      visible: "(Complete|Pending|In Progress)"
+    commands:
+      - tapOn:
+          text: "(Pending|In Progress|Complete)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "hk_supervisor/05_checklist_detail"
+      # Verify checklist detail/list components (support both task-list and item-detail layouts)
+      - runFlow:
+          when:
+            visible: "(Photo|Note|Submit|Complete)"
+          commands:
+            - assertVisible: "(Photo|Note|Submit|Complete)"
+            - back
+      - runFlow:
+          when:
+            visible: "(Tasks|Submit Checklist|HKSupervisor Daily Checklist)"
+          commands:
+            - assertVisible: "(Tasks|Submit Checklist)"
+
+# Return to dashboard before opening Requests
+- back
+
+# ============================================
+# PART 4: REQUESTS/TICKETS TAB (US-SUP-02)
+# ============================================
+
+# Navigate to Requests tab
+- tapOn: "(Requests|Tickets)"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "hk_supervisor/06_requests"
+
+# Verify Requests/Tickets screen
+- assertVisible: "(Requests|Tickets|Open|In Progress|No requests)"
+
+# Test ticket detail if available
+- runFlow:
+    when:
+      visible: "(View Details|Open|Ticket|Room)"
+    commands:
+      - tapOn:
+          text: "(View Details|Open|Ticket)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "hk_supervisor/07_ticket_detail"
+      # Verify ticket detail elements (US-SUP-02)
+      - assertVisible: "(Status|Update status|Update Status|Request|Room|Category)"
+      - back
+
+# ============================================
+# PART 5: CREATE TICKET WORKFLOW (US-SUP-02)
+# ============================================
+
+# Look for create ticket button
+- runFlow:
+    when:
+      visible: "(Create|\\+|New Ticket)"
+    commands:
+      - tapOn:
+          text: "(Create|New Ticket)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "hk_supervisor/08_create_ticket"
+      # Verify create form
+      - assertVisible: "(Description|Room|Photo|Submit)"
+      - back
+
+# ============================================
+# PART 6: FINAL VERIFICATION
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Dashboard"
+    commands:
+      - tapOn: "Dashboard"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "hk_supervisor/09_final_dashboard"
+
+# Verify still logged in
+- assertVisible: "(Checklist|Requests|Notice Board|Profile)"

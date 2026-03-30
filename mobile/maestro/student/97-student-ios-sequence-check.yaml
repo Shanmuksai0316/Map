@@ -1,0 +1,28 @@
+appId: com.maphms.student
+name: "Student iOS Sequence Check"
+env:
+  phone: "9886179767"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "seq/01"
+
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "seq/02"
+
+- tapOn:
+    id: "phone-input"
+    optional: true
+- inputText: ${phone}
+- takeScreenshot: "seq/03"
+
+- tapOn:
+    id: "send-otp-button"
+    optional: true
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "seq/04"

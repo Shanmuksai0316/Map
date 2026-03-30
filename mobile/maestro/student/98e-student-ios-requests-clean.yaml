@@ -1,0 +1,46 @@
+appId: com.maphms.student
+name: "Student iOS Requests Clean"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "My Profile"
+    timeout: 30000
+- tapOn: "Requests"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Close stacked toast banners if present
+- tapOn:
+    point: "92%,94%"
+    optional: true
+- tapOn:
+    point: "92%,88%"
+    optional: true
+- waitForAnimationToEnd
+
+- takeScreenshot: "student/ios_store/06_requests_clean"

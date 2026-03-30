@@ -1,0 +1,9 @@
+appId: com.maphms.student
+name: "iOS Back Check"
+---
+- launchApp
+- waitForAnimationToEnd
+- pressKey: Back
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "backcheck/after_back"

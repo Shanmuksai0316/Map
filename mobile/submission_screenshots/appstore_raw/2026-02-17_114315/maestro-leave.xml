@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="iPhone 17 Pro Max - iOS 26.2 - A2FCDB57-C92E-4D6E-AEC5-9322175CF4C7" tests="1" failures="0" time="33.0">
+    <testcase id="Student iOS Store Leave" name="Student iOS Store Leave" classname="Student iOS Store Leave" time="33.0" status="SUCCESS">
+      <properties/>
+    </testcase>
+  </testsuite>
+</testsuites>

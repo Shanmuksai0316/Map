@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="1" time="64.0">
+    <testcase id="Campus Manager Full Test Suite" name="Campus Manager Full Test Suite" classname="Campus Manager Full Test Suite" time="64.0" status="ERROR">
+      <properties>
+        <property name="tags" value="campus-manager, room-allocation, reports, staff"/>
+      </properties>
+      <failure>Assertion is false: "(Dashboard|Campus|Manager)" is visible</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

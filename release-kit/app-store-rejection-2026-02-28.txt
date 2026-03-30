@@ -1,0 +1,16 @@
+Submission ID: cb6d675b-c9d6-4424-834e-2597d9fc1689
+Review date: February 28, 2026
+Review Device: iPad Air 11-inch (M3)
+Version reviewed: 1.0
+
+Guideline 4.3(a) - Design - Spam
+This app duplicates the content and functionality of other apps on the App Store, considered spam.
+Specifically, this app is available in the same locations as another identical app.
+Next Steps: Restrict available storefronts so selected storefronts do not overlap.
+
+Guideline 2.1 - Performance - App Completeness
+Bug description: post notice button was unresponsive.
+Review device: iPad Air 11-inch (M3), iPadOS 26.3.
+
+Guideline 1.5 - Safety
+Support URL in App Store Connect (https://mapservices.in) is not functional and/or displays an error.

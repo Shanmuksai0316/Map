@@ -1,0 +1,51 @@
+- generic [ref=e1]:
+  - iframe [ref=e1230]:
+    
+  - generic [ref=e1232]: Screen reader support enabled.
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Forms Home" [ref=e1727] [cursor=pointer]:
+          - img [ref=e11]
+        - textbox "Document title" [ref=e1728]: Student Bulk Upload Intake
+        - button "Move to folder" [ref=e1729] [cursor=pointer]
+        - checkbox "Star" [ref=e1730] [cursor=pointer]
+      - generic [ref=e24]:
+        - button "Customize Theme" [ref=e1731] [cursor=pointer]
+        - link "Preview" [ref=e1732] [cursor=pointer]
+        - button "Undo" [ref=e1733] [cursor=pointer]
+        - button "Redo" [ref=e1734] [cursor=pointer]
+        - button "Copy responder link" [ref=e1735] [cursor=pointer]
+        - button "Share" [ref=e1736] [cursor=pointer]
+        - button "Open published form settings" [ref=e1737] [cursor=pointer]:
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - generic [ref=e69]: Published
+        - button "More" [ref=e1738] [cursor=pointer]
+        - 'button "Google Account: Nagraj YR (nagraj@rorko.com)" [ref=e1739] [cursor=pointer]':
+          - img [ref=e84]
+    - tablist [ref=e88]:
+      - tab "Questions" [ref=e1740] [cursor=pointer]:
+        - generic [ref=e90]: Questions
+      - tab "Responses" [selected] [ref=e1741] [cursor=pointer]:
+        - generic [ref=e93]: Responses
+      - tab "Settings" [ref=e1742] [cursor=pointer]:
+        - generic [ref=e95]: Settings
+  - generic [ref=e1594]:
+    - generic [ref=e1596]:
+      - generic [ref=e1597]: 0 responses
+      - generic [ref=e1598]:
+        - button "View in Sheets. Opens linked spreadsheet" [ref=e1744] [cursor=pointer]:
+          - generic [ref=e1751]: View in Sheets
+        - button "More options for responses" [ref=e1752] [cursor=pointer]
+    - status [ref=e1620]:
+      - generic [ref=e1621]: No responses yet. Please check back later.
+  - button "Help and feedback" [ref=e1753] [cursor=pointer]
+  - iframe [ref=e1226]:
+    
+  - generic [ref=e1228]: .
+  - generic [ref=e1582]: Banner hidden
+  - generic [ref=e1754]: Linking to spreadsheet
+  - generic [ref=e1756]:
+    - generic [ref=e1757]: Spreadsheet linked
+    - button "open" [active] [ref=e1758] [cursor=pointer]

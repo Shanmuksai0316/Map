@@ -1,0 +1,15 @@
+"Tenant Code","Tenant Name",Status,Hostels,Students,Staff,"Subscription Plan","Subscription Ends"
+MAP-DEMO-COLLEGE,"Demo College Hostel",active,0,0,1,—,—
+MAP-TEST,"Test Hostel",active,0,1,7,—,—
+MAP-IITD,"Indian Institute of Technology Delhi",active,2,50,3,—,—
+MAP-TEST1,"test college",provisioning,1,0,0,—,—
+MAP-GANG,gangotri,provisioning,1,0,0,—,—
+MAP-JFJERE,dfvdfvefvervev,provisioning,1,0,0,—,—
+MAP-PPCU,"Pimpri Chinchinwad University",active,1,1,17,—,—
+MAP-NITK,"National Institute of Technology Karnataka",active,2,50,3,—,—
+MAP-JNU,"Jawaharlal Nehru University",active,2,50,3,—,—
+MAP-DU,"University of Delhi",active,2,50,3,—,—
+MAP-JMB,"JMB College Test ",provisioning,2,0,0,—,—
+MAP-SVCE,"SVCE College",provisioning,2,0,0,—,—
+MAP-PCJ,PCJ,provisioning,1,0,0,—,—
+MAP-SMBT,SMBT,provisioning,1,0,0,—,—

@@ -1,0 +1,18 @@
+appId: com.maphms.student
+name: "iOS Dismiss Toast Current"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "92%,94%"
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    point: "92%,94%"
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    point: "92%,94%"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/06_requests_clean2"

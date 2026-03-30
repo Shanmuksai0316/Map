@@ -1,0 +1,2 @@
+student_uid,full_name,email_address,mobile_number,gender,date_of_birth,map_id,erp_number,department,year_of_study,father_name,father_mobile_number,mother_name,mother_mobile_number,local_guardian_name,local_guardian_contact,local_relationship,local_address,blood_group,medical_information
+STD-2026-0001,Alex Johnson,alex.johnson@example.com,+919876543210,male,2005-03-14,MAP-001,ERP-001,Computer Science,1,John Johnson,+919812345678,Jane Johnson,+919823456789,Sam Guardian,+919834567890,Uncle,"123, MG Road, City",A+,Peanut allergy

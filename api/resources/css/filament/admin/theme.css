@@ -1,0 +1,416 @@
+@config '../../../../tailwind.config.js';
+
+/**
+ * MAP-HMS Design System v1.0
+ * Filament Admin Theme - Military Green & Golden Yellow
+ * 
+ * Brand Colors:
+ * - Primary: Military Green (#2F4F2F)
+ * - Accent: Golden Yellow (#D4AF37)
+ * - Background: Pure White (#FFFFFF)
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Primary - Military Green */
+  --map-primary: #2F4F2F;
+  --map-primary-dark: #1A3A1A;
+  --map-primary-light: #4A6B4A;
+  --map-primary-muted: #5C7A5C;
+  
+  /* Accent - Golden Yellow */
+  --map-accent: #D4AF37;
+  --map-accent-dark: #B8962D;
+  --map-accent-light: #E8C859;
+  --map-accent-muted: #F5E6B8;
+  
+  /* Backgrounds */
+  --map-background: #FFFFFF;
+  --map-surface: #FFFFFF;
+  --map-surface-elevated: #FAFAFA;
+  --map-surface-muted: #F3F4F6;
+  
+  /* Text */
+  --map-text-heading: #2F4F2F;
+  --map-text-body: #374151;
+  --map-text-secondary: #6B7280;
+  --map-text-muted: #9CA3AF;
+  
+  /* Borders */
+  --map-border: #E5E7EB;
+  --map-border-focused: #2F4F2F;
+  --map-divider: #F3F4F6;
+  
+  /* Status Colors */
+  --map-success: #059669;
+  --map-success-light: #D1FAE5;
+  --map-warning: #D97706;
+  --map-warning-light: #FEF3C7;
+  --map-error: #DC2626;
+  --map-error-light: #FEE2E2;
+  --map-info: #0284C7;
+  --map-info-light: #E0F2FE;
+  
+  /* Shadows */
+  --map-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --map-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --map-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Page headings - Military Green */
+.fi-header-heading,
+.fi-section-header-heading,
+.fi-modal-heading,
+.fi-wi-stats-overview-stat-label {
+  color: var(--map-text-heading) !important;
+}
+
+/* Body text - Neutral gray for readability */
+.fi-section-content,
+.fi-ta-text,
+.fi-fo-field-wrp p,
+.fi-modal-description {
+  color: var(--map-text-body);
+}
+
+/* Secondary text */
+.fi-section-header-description,
+.fi-fo-field-wrp .fi-fo-field-wrp-hint {
+  color: var(--map-text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION SIDEBAR
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Sidebar background – unified white (all panels) */
+.fi-sidebar,
+.fi-sidebar .fi-sidebar-content,
+nav.fi-sidebar-nav {
+  background-color: #ffffff !important;
+}
+
+/* Sidebar header logo height */
+.fi-sidebar-header .fi-logo {
+  height: 55px !important;
+  max-height: 55px !important;
+  width: auto !important;
+}
+
+/* Sidebar active item styling */
+.fi-sidebar-nav-item.fi-active {
+  background-color: rgba(47, 79, 47, 0.04);
+  border-left: 3px solid var(--map-primary);
+}
+
+.fi-sidebar-nav-item.fi-active .fi-sidebar-nav-item-label {
+  color: var(--map-primary);
+  font-weight: 600;
+}
+
+/* Sidebar inactive hover */
+.fi-sidebar-nav-item:not(.fi-active):hover {
+  background-color: rgba(47, 79, 47, 0.02);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Primary button - match Student Get Started CTA */
+.fi-btn-primary {
+  background-color: #D79F24 !important;          /* Get Started yellow */
+  color: var(--map-primary) !important;          /* Military Green text */
+  border-radius: 20px !important;                /* theme.borderRadius.lg */
+  min-width: 200px !important;
+  padding-block: 16px !important;                /* theme.spacing.md */
+  padding-inline: 48px !important;               /* theme.spacing.xxl */
+  font-size: 18px !important;                    /* theme.fontSize.lg */
+  font-weight: 600 !important;                   /* semibold */
+  box-shadow: var(--map-shadow-md) !important;   /* medium elevation */
+  border: none !important;
+}
+
+.fi-btn-primary:hover,
+.fi-btn-primary:focus-visible {
+  background-color: #c08d1f !important;          /* slightly darker yellow */
+}
+
+/* Secondary button styling - subtle outline */
+.fi-btn-secondary {
+  background-color: transparent !important;
+  border-color: var(--map-primary) !important;
+  color: var(--map-primary) !important;
+  border-width: 1px !important;
+  border-radius: 20px !important;
+  min-height: 48px !important;
+}
+
+.fi-btn-secondary:hover {
+  background-color: rgba(47, 79, 47, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CARDS & WIDGETS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Stats widget - Golden Yellow accent for values */
+.fi-wi-stats-overview-stat-value {
+  color: var(--map-text-heading);
+  font-weight: 700;
+}
+
+/* Card styling */
+.fi-section {
+  border-radius: 14px;
+  box-shadow: var(--map-shadow-sm);
+}
+
+/* Widget card headers */
+.fi-wi-stats-overview-stat {
+  border-radius: 12px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORM INPUTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Input focus state */
+.fi-input:focus,
+.fi-select:focus,
+.fi-textarea:focus {
+  border-color: var(--map-primary) !important;
+  box-shadow: 0 0 0 1px var(--map-primary) !important;
+}
+
+/* Form labels - Military Green */
+.fi-fo-field-wrp-label {
+  color: var(--map-text-heading);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STATUS BADGES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Success badge */
+.fi-badge-success {
+  background-color: var(--map-success-light) !important;
+  color: var(--map-success) !important;
+}
+
+/* Warning badge */
+.fi-badge-warning {
+  background-color: var(--map-warning-light) !important;
+  color: var(--map-warning) !important;
+}
+
+/* Danger badge */
+.fi-badge-danger {
+  background-color: var(--map-error-light) !important;
+  color: var(--map-error) !important;
+}
+
+/* Info badge */
+.fi-badge-info {
+  background-color: var(--map-info-light) !important;
+  color: var(--map-info) !important;
+}
+
+/* Primary badge - Golden Yellow accent */
+.fi-badge-primary {
+  background-color: var(--map-accent-muted) !important;
+  color: var(--map-accent-dark) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABLES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Table header - Military Green */
+.fi-ta-header-cell {
+  color: var(--map-text-heading);
+  font-weight: 600;
+}
+
+/* Table row hover */
+.fi-ta-row:hover {
+  background-color: var(--map-surface-muted);
+}
+
+/* Alternating row colors (zebra striping) */
+.fi-ta-row:nth-child(even) {
+  background-color: var(--map-surface-elevated);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MODALS & NOTIFICATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Modal styling */
+.fi-modal-window {
+  border-radius: 16px;
+  box-shadow: var(--map-shadow-lg);
+}
+
+/* Notification styling */
+.fi-notification {
+  border-radius: 12px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Active tab - Military Green underline */
+.fi-tabs-tab.fi-active {
+  border-bottom-color: var(--map-primary);
+  color: var(--map-primary);
+}
+
+.fi-tabs-tab:hover:not(.fi-active) {
+  color: var(--map-primary-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ICON COLORS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Primary icons - Military Green */
+.fi-icon-btn-icon,
+.fi-sidebar-nav-item-icon {
+  color: var(--map-primary);
+}
+
+/* Accent icons - Golden Yellow (for key metrics) */
+.fi-wi-stats-overview-stat-icon {
+  color: var(--map-accent);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CUSTOM UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Golden Yellow highlight text */
+.text-map-accent {
+  color: var(--map-accent);
+}
+
+/* Military Green text */
+.text-map-primary {
+  color: var(--map-primary);
+}
+
+/* Golden Yellow background pill */
+.bg-map-accent-light {
+  background-color: var(--map-accent-muted);
+  color: var(--map-accent-dark);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Success pill */
+.bg-map-success-light {
+  background-color: var(--map-success-light);
+  color: var(--map-success);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Warning pill */
+.bg-map-warning-light {
+  background-color: var(--map-warning-light);
+  color: var(--map-warning);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Error pill */
+.bg-map-error-light {
+  background-color: var(--map-error-light);
+  color: var(--map-error);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CHARTS & DATA VISUALIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Chart primary color */
+.fi-chart-primary {
+  --chart-color: var(--map-primary);
+}
+
+/* Chart accent color */
+.fi-chart-accent {
+  --chart-color: var(--map-accent);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR STYLING
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--map-surface-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--map-primary-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--map-primary-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LOADING & EMPTY STATES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Loading spinner */
+.fi-loading-indicator {
+  color: var(--map-primary);
+}
+
+/* Empty state icon */
+.fi-ta-empty-state-icon {
+  color: var(--map-text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS STATES (Accessibility)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Focus ring - Military Green */
+*:focus-visible {
+  outline: 2px solid var(--map-primary);
+  outline-offset: 2px;
+}
+
+/* Button focus */
+.fi-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(47, 79, 47, 0.3);
+}

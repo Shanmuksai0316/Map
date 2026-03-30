@@ -1,0 +1,56 @@
+# MAP HMS Apps Appfile
+# App identifiers and credentials configuration for both Student and Staff apps
+
+# iOS Configuration (defaults)
+apple_id(ENV["APPLE_ID"])
+itc_team_id(ENV["ITC_TEAM_ID"])
+team_id(ENV["APPLE_TEAM_ID"])
+
+# Android Configuration - Google Play JSON key (required for all Android deployments)
+json_key_file(ENV["GOOGLE_PLAY_JSON_KEY_PATH"])
+
+# Default identifiers (overridden per-lane below)
+app_identifier("com.mapmars.hmsstaff")
+package_name("com.mapmars.hmsstaff")
+
+# iOS Lane-specific configurations
+for_platform :ios do
+  # Staff iOS
+  for_lane :deploy_staff_testflight do
+    app_identifier("com.mapmars.hmsstaff")
+  end
+  
+  for_lane :deploy_staff_appstore do
+    app_identifier("com.mapmars.hmsstaff")
+  end
+
+  # Student iOS (Vidyarthi)
+  for_lane :deploy_student_testflight do
+    app_identifier("com.maphms.student")
+  end
+
+  for_lane :deploy_student_appstore do
+    app_identifier("com.maphms.student")
+  end
+end
+
+# Android Lane-specific package names
+for_platform :android do
+  # Staff app lanes
+  for_lane :deploy_staff_internal do
+    package_name("com.mapmars.hmsstaff")
+  end
+  
+  for_lane :deploy_staff_production do
+    package_name("com.mapmars.hmsstaff")
+  end
+
+  # Student app lanes
+  for_lane :deploy_student_internal do
+    package_name("com.maphms.student")
+  end
+  
+  for_lane :deploy_student_production do
+    package_name("com.maphms.student")
+  end
+end

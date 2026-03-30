@@ -1,0 +1,213 @@
+{
+  "generated_at": "2026-02-25T10:55:19.135493+00:00",
+  "app_id": "com.maphms.student",
+  "app_slug": "com-maphms-student",
+  "app_root": "/Users/nagrajyr/Downloads/mapmars/mobile",
+  "frameworks": [
+    "react-native-cli"
+  ],
+  "facts": {
+    "project_root": "/Users/nagrajyr/Downloads/mapmars",
+    "app_root": "/Users/nagrajyr/Downloads/mapmars/mobile",
+    "frameworks": [
+      "react-native-cli"
+    ],
+    "release_config_path": "",
+    "release_config_present": false,
+    "android_build_file": "/Users/nagrajyr/Downloads/mapmars/mobile/android/app/build.gradle",
+    "android_application_id": "com.maphms.student",
+    "android_version_code": "4",
+    "android_version_name": "1.0.3",
+    "android_target_sdk": "35",
+    "ios_info_plist": "/Users/nagrajyr/Downloads/mapmars/mobile/ios/rn082template/Info.plist",
+    "ios_bundle_id": "com.maphms.student",
+    "ios_version": "1.0",
+    "ios_build": "1",
+    "fastlane_fastfiles": [
+      "/Users/nagrajyr/Downloads/mapmars/mobile/fastlane/Fastfile"
+    ],
+    "fastlane_has_ios_lane": true,
+    "fastlane_has_android_lane": true,
+    "fastlane_mode": "full",
+    "maestro_flows": [
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/config/test-config.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/app-launch.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/demo-token-login.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/role-otp-login.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/staff-api-login.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/staff-otp-login.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/flows/student-otp-login.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/01-guard-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/02-warden-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/03-campus-manager-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/04-rector-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/05-hk-supervisor-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/06-rm-supervisor-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/07-laundry-manager-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/08-sports-manager-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/97-ios-phone-entry-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/97-ios-sendotp-wait-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/98-ios-role-dashboard-screenshot.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/99-playstore-role-screenshot.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/all-roles-otp-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/campus-manager-e2e-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/campus-manager-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/guard-api-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/guard-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/guard-smoke-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/hk-supervisor-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/laundry-manager-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/laundry-manager-ui-validation-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/rector-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/rm-supervisor-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-campus-manager-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-guard-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-hk-supervisor-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-laundry-manager-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-rector-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-rm-supervisor-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-sports-manager-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/role-warden-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/run-all-role-tests.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/run-all-roles.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/sports-manager-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/universal-staff-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/warden-comprehensive-demo-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/warden-comprehensive-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/staff/warden-full-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/00-student-complete-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/01-student-comprehensive-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/02-student-login-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/03-student-dashboard-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/04-student-outpass-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/05-student-leave-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/06-student-features-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/07-student-refined-test.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-auto-login-check-v2.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-auto-login-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-auto-otp-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-back-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-dismiss-toast-on-current-screen.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-id-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-login-dev-bypass-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-sendotp-coordinate-validation.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-ios-sendotp-validation-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-coordinate-probe-v4.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-coordinate-probe-v5.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-coordinate-probe-v6.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-coordinate-probe-v7.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-coordinate-probe.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-login-by-id.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-login-diagnostic-v2.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-login-diagnostic-v3.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-login-diagnostic.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-login-no-clear.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-send-otp-only.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/97-student-ios-sequence-check.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98-student-ios-store-screenshots.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98-student-store-screenshots-robust.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98b-student-ios-store-requests.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98c-student-ios-store-outpass.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98d-student-ios-store-leave.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98e-student-ios-requests-clean.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98f-student-ios-store-final-screen.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98g-student-ios-store-housekeeping.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98h-student-ios-store-profile-details.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98i-student-ios-store-outpass-approved.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/98j-student-ios-store-otp-clean.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student/99-student-store-screenshots.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student_dashboard_only.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/student_smoke.yaml",
+      "/Users/nagrajyr/Downloads/mapmars/mobile/maestro/test-student-prod-login.yaml"
+    ]
+  },
+  "gate": "blocked",
+  "readiness_score": 38,
+  "severity_counts": {
+    "P0": 0,
+    "P1": 3,
+    "P2": 3,
+    "P3": 1
+  },
+  "findings": [
+    {
+      "id": "ACC-001",
+      "severity": "P1",
+      "title": "No reviewer test account path configured",
+      "description": "App requires login but no provisioning command or fallback credentials were supplied.",
+      "remediation": "Configure test_account.provision_command or fallback_accounts in release config.",
+      "tags": [
+        "accounts",
+        "review"
+      ]
+    },
+    {
+      "id": "POL-001",
+      "severity": "P1",
+      "title": "Privacy policy URL missing",
+      "description": "Reviewer-facing privacy policy URL is not configured.",
+      "remediation": "Add public privacy policy URL in release config and store listing.",
+      "tags": [
+        "policy"
+      ]
+    },
+    {
+      "id": "POL-003",
+      "severity": "P1",
+      "title": "Release contact email missing",
+      "description": "Contact email is required for reviewer clarifications.",
+      "remediation": "Add contact.email in release config.",
+      "tags": [
+        "policy",
+        "contact"
+      ]
+    },
+    {
+      "id": "CONFIG-000",
+      "severity": "P2",
+      "title": "Release config not found",
+      "description": "No .release/release.config.json or release.config.json file found.",
+      "remediation": "Create release config from assets/templates/release-config.example.json.",
+      "tags": [
+        "config"
+      ]
+    },
+    {
+      "id": "POL-002",
+      "severity": "P2",
+      "title": "Support URL missing",
+      "description": "Support URL is absent; this often delays metadata approval.",
+      "remediation": "Provide support URL in release config and store metadata.",
+      "tags": [
+        "policy"
+      ]
+    },
+    {
+      "id": "TEST-002",
+      "severity": "P2",
+      "title": "Screen-size/device matrix coverage is thin",
+      "description": "Configured device matrix has fewer than four target profiles.",
+      "remediation": "Test on small, medium, and large phones plus one tablet profile for each platform.",
+      "tags": [
+        "testing",
+        "screens"
+      ]
+    },
+    {
+      "id": "IOS-006",
+      "severity": "P3",
+      "title": "Encryption usage flag not declared",
+      "description": "ITSAppUsesNonExemptEncryption key is not explicitly declared.",
+      "remediation": "Set the key explicitly to avoid review clarification delays.",
+      "file": "/Users/nagrajyr/Downloads/mapmars/mobile/ios/rn082template/Info.plist",
+      "tags": [
+        "ios",
+        "compliance"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Resolve P1 issues before uploading binaries to avoid predictable review loops.",
+    "Guarantee reviewer login access via provisioning command and fallback credentials."
+  ]
+}

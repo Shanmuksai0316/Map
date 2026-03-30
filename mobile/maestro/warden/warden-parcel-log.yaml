@@ -1,0 +1,71 @@
+appId: com.mapmars.hmsstaff
+name: Warden parcel log (MAP-PPCU)
+---
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: false
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      phone: "9739557963"
+      otp: "123456"
+      dashboardRegex: "(Warden|Attendance|Students|My Hostel|Notice Board|Requests|Parcels)"
+
+- takeScreenshot: "warden/parcel/01_dashboard"
+
+# Open Parcels tile (scroll if needed)
+- scroll
+- scroll
+- tapOn:
+    text: "Parcels"
+    optional: true
+- runFlow:
+    when:
+      visible: "Parcels"
+    commands:
+      - tapOn: "Parcels"
+
+- extendedWaitUntil:
+    visible: "(Log parcel|Receive|Search by room or phone)"
+    timeout: 15000
+- takeScreenshot: "warden/parcel/02_parcel_screen"
+
+# Log parcel
+- tapOn:
+    text: "Phone number"
+    optional: true
+- inputText: "8888888800"
+- hideKeyboard
+- tapOn: "Search"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "warden/parcel/03_search_results"
+
+- runFlow:
+    when:
+      visible: "(No students|No students found)"
+    commands:
+      - tapOn: "OK"
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "Select student to inform"
+    timeout: 10000
+
+- tapOn:
+    text: "8888888800"
+    optional: true
+- tapOn:
+    text: "Inform student"
+    optional: true
+
+# Handle success alert
+- runFlow:
+    when:
+      visible: "Student informed"
+    commands:
+      - tapOn: "OK"
+
+- takeScreenshot: "warden/parcel/04_informed"

@@ -1,0 +1,32 @@
+# Rejection Triage Report
+
+## Source Excerpt
+
+```text
+Guideline 4.3(a) - Design - Spam
+This app duplicates the content and functionality of other apps on the App Store.
+Specifically, this app is available in the same locations as another identical app you submitted to the App Store.
+
+Guideline 2.1 - Performance - App Completeness
+Bug description: specifically, the post notice button was unresponsive.
+Review device details: iPad Air 11-inch (M3), iPadOS 26.3.
+
+Guideline 1.5 - Safety
+The Support URL provided in App Store Connect, https://mapservices.in, is currently not functional and/or displays an error.
+```
+
+## Matched Patterns
+
+| Rule | Platform | Severity | Confidence |
+|---|---|---|---:|
+| IOS-GUIDELINE-001 | ios | P1 | 1.0 |
+
+## Recommended Remediation
+
+1. [P1] Apple guideline functional issue
+   - Reproduce reviewer scenario and patch stability/flow issues.
+   - Add deterministic repro and test steps to review notes.
+   - Confirm fixed behavior on release candidate build.
+   - Evidence to include:
+     - Crash-free smoke test output.
+     - Release notes listing corrected reviewer path.

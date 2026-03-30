@@ -1,0 +1,74 @@
+appId: com.maphms.student
+name: "Student iOS Store Screenshots"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Splash -> Login
+- takeScreenshot: "student/ios_store/01_splash"
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/02_login"
+
+# Dev bypass: entering this phone auto-reveals OTP input
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/03_otp_screen"
+
+# Dev bypass in auth.store treats this as test-mode verify
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+# Auto-verify effect logs in when OTP is complete
+- extendedWaitUntil:
+    visible: "My Profile"
+    timeout: 30000
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/04_dashboard"
+
+- tapOn: "My Profile"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/05_profile"
+- tapOn:
+    point: "8%,6%"
+- waitForAnimationToEnd
+
+- tapOn: "Requests"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/06_requests"
+- tapOn:
+    point: "8%,6%"
+- waitForAnimationToEnd
+
+- tapOn: "Out-pass"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/07_outpass"
+- tapOn:
+    point: "8%,6%"
+- waitForAnimationToEnd
+
+- tapOn: "Leave"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/08_leave"

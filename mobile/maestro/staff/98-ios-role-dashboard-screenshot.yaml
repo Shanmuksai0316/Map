@@ -1,0 +1,68 @@
+appId: com.mapmars.hmsstaff
+name: "Staff iOS Role Dashboard Screenshot"
+env:
+  ROLE: "campus_manager"
+  PHONE: "7975452363"
+  OTP: "123456"
+---
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "(Get Started|Get Started →)"
+    commands:
+      - tapOn: "(Get Started|Get Started →)"
+      - waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "(Phone Number|Enter your registered phone number|(Send OTP|Get OTP))"
+    timeout: 30000
+
+- takeScreenshot: "staff/ios_roles/${ROLE}/01_login"
+
+- tapOn:
+    text: "Enter your registered phone number"
+- inputText: ${PHONE}
+- hideKeyboard
+
+- takeScreenshot: "staff/ios_roles/${ROLE}/02_phone"
+
+- extendedWaitUntil:
+    visible: "(Verification Code|Enter 6-digit code|Verify & Login)"
+    timeout: 30000
+
+- tapOn:
+    text: "Enter 6-digit code"
+- inputText: ${OTP}
+- hideKeyboard
+
+- takeScreenshot: "staff/ios_roles/${ROLE}/03_otp"
+
+- tapOn:
+    id: "verify-otp-button"
+    optional: true
+- tapOn:
+    text: "(Verify & Login|Verify|Submit|Login)"
+    optional: true
+
+- runFlow:
+    when:
+      visible: "(Select Institution|Select Tenant|Choose your)"
+    commands:
+      - tapOn:
+          text: "(Demo College Hostel|Demo College|Demo|College)"
+          optional: true
+
+- extendedWaitUntil:
+    visible: "(Good Morning|Good Afternoon|Good Evening|Dashboard|Requests|Checklists|My Staff|Notice Board|Profile|Outpass|Students)"
+    timeout: 45000
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "staff/ios_roles/${ROLE}/04_dashboard"

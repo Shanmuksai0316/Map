@@ -1,0 +1,66 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of College Management" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - heading "Good morning, College Management" [level=1] [ref=e16]
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e24]:
+      - generic [ref=e26]:
+        - link "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e28] [cursor=pointer]:
+          - /url: /college-mgmt
+          - img "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e29]
+        - button "Collapse sidebar" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: Collapse sidebar
+          - img [ref=e32]
+      - navigation [ref=e34]:
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - link "College Management Dashboard" [ref=e39] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt
+                  - img [ref=e40]
+                  - generic [ref=e42]: College Management Dashboard
+              - listitem [ref=e43]:
+                - link "Students" [ref=e44] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/students
+                  - img [ref=e45]
+                  - generic [ref=e47]: Students
+          - listitem [ref=e48]:
+            - generic [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]: Operations
+              - button "Operations" [expanded] [ref=e51]:
+                - generic [ref=e52]: Operations
+                - img [ref=e53]
+            - list [ref=e55]:
+              - listitem [ref=e56]:
+                - link "Out-Passes" [ref=e57] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/out-passes
+                  - img [ref=e58]
+                  - generic [ref=e60]: Out-Passes
+              - listitem [ref=e61]:
+                - link "Tickets" [ref=e62] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                  - img [ref=e63]
+                  - generic [ref=e65]: Tickets
+              - listitem [ref=e66]:
+                - link "Attendance" [ref=e67] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/attendance-sessions
+                  - img [ref=e68]
+                  - generic [ref=e70]: Attendance
+              - listitem [ref=e71]:
+                - link "Reports" [ref=e72] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/report-center
+                  - img [ref=e73]
+                  - generic [ref=e75]: Reports
+  - generic:
+    - status

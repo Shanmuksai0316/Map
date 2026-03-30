@@ -1,0 +1,153 @@
+# MAP HMS Staff App - Campus Manager Role Full Test Suite
+# Tests Campus Manager mobile functionality per US-CM-* stories
+#
+# Prerequisites:
+# - Staff app installed (com.mapmars.hmsstaff)
+# - Demo token generated for Campus Manager role
+#
+# Usage:
+#   maestro test campus-manager-full-test.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=campus_manager"
+
+appId: com.mapmars.hmsstaff
+name: "Campus Manager Full Test Suite"
+tags:
+  - campus-manager
+  - room-allocation
+  - reports
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=125%7CTwsJa27mt5LWfNyAZIhZ3vkH3tPHg5odfIS634zd12e76a8c&role=campus_manager&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=27&userName=John+Stxaviers&userPhone=%2B919876543677&userEmail=cm1%40stxaviers.edu"
+      phone: "7975452363"
+      otp: "123456"
+      dashboardRegex: "(campus man|Quick Actions|Checklists|Requests|Emergency|My Staff|Profile)"
+
+- takeScreenshot: "campus_manager/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD TESTS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(campus man|Quick Actions|Checklists|Requests|Emergency|My Staff|Profile)"
+    timeout: 15000
+
+- takeScreenshot: "campus_manager/02_dashboard"
+
+# Verify Campus Manager dashboard components
+- assertVisible: "(Checklists|Requests|Notice Board|Emergency|My Staff|Profile)"
+
+- takeScreenshot: "campus_manager/03_dashboard_verified"
+
+# ============================================
+# PART 3: ROOM ALLOCATION (US-CM-03, US-CM-04)
+# ============================================
+
+# Navigate to Room Allocation
+- runFlow:
+    when:
+      visible: "(Room|Allocation|Inventory)"
+    commands:
+      - tapOn:
+          text: "(Room|Allocation|Room Allocation)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "campus_manager/04_room_allocation"
+      # Verify room elements
+      - assertVisible: "(Block|Floor|Room|Bed)"
+
+# ============================================
+# PART 4: STUDENT MANAGEMENT
+# ============================================
+
+# Navigate to Student Management
+- runFlow:
+    when:
+      visible: "(Student|Students|Management)"
+    commands:
+      - tapOn:
+          text: "(Student|Students|Student Management)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "campus_manager/05_student_management"
+      # Verify student management elements
+      - assertVisible: "(Search|Student|Room)"
+
+# ============================================
+# PART 5: DISPUTE QUEUE (US-CM-10)
+# ============================================
+
+# Navigate to Disputes
+- runFlow:
+    when:
+      visible: "(Dispute|Queue|Issues)"
+    commands:
+      - tapOn:
+          text: "(Dispute|Queue|Disputes)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "campus_manager/06_dispute_queue"
+      # Verify dispute elements (US-CM-10)
+      - assertVisible: "(Dispute|Pending|Respond|SLA)"
+
+# ============================================
+# PART 6: NOTICES (US-CM-07)
+# ============================================
+
+# Navigate to Notices
+- runFlow:
+    when:
+      visible: "(Notice|Notices|Announcements)"
+    commands:
+      - tapOn:
+          text: "(Notice|Notices|Notices)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "campus_manager/07_notices"
+      # Verify notice management (US-CM-07)
+      - assertVisible: "(Create|Notice|Schedule|Active)"
+
+# ============================================
+# PART 7: REPORTS
+# ============================================
+
+# Navigate to Reports
+- runFlow:
+    when:
+      visible: "(Report|Reports|Analytics)"
+    commands:
+      - tapOn:
+          text: "(Report|Reports|Reports)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "campus_manager/08_reports"
+      # Verify reports elements
+      - assertVisible: "(Report|Export|Download|CSV)"
+
+# ============================================
+# PART 8: FINAL VERIFICATION
+# ============================================
+
+- runFlow:
+    when:
+      visible: "Dashboard"
+    commands:
+      - tapOn: "Dashboard"
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "campus_manager/09_final_dashboard"
+
+# Verify still logged in
+- assertVisible: "(Checklists|Requests|Notice Board|Emergency|My Staff|Profile)"

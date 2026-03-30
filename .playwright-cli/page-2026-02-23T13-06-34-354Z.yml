@@ -1,0 +1,220 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Tenant Onboarding Wizard" [level=1] [ref=e753]
+            - generic [ref=e756]:
+              - generic [ref=e757]:
+                - generic [ref=e758]:
+                  - generic [ref=e759]:
+                    - generic [ref=e760]: Onboarding Progress
+                    - generic [ref=e761]: 67%
+                  - generic [ref=e762]:
+                    - generic [ref=e763]: ✔ Tenant Info
+                    - generic [ref=e764]: ✔ Hostels
+                    - generic [ref=e765]: ✔ Staff
+                    - generic [ref=e766]: ✔ Rooms
+                    - generic [ref=e767]: • Amenities
+                    - generic [ref=e768]: • Confirmation
+                - generic [ref=e769]:
+                  - button "Save Draft" [ref=e770] [cursor=pointer]:
+                    - generic [ref=e771]: Save Draft
+                  - button "Save & Exit" [ref=e772] [cursor=pointer]:
+                    - generic [ref=e773]: Save & Exit
+              - generic [ref=e778]:
+                - generic [ref=e781]:
+                  - list [ref=e782]:
+                    - listitem [ref=e783]:
+                      - button "Tenant Information Create the tenant and its single campus" [ref=e784] [cursor=pointer]:
+                        - img [ref=e1031]
+                        - generic [ref=e788]:
+                          - generic [ref=e789]: Tenant Information
+                          - generic [ref=e790]: Create the tenant and its single campus
+                      - img [ref=e792]
+                    - listitem [ref=e794]:
+                      - button "Hostel Details Add hostel information and address" [ref=e795] [cursor=pointer]:
+                        - img [ref=e1118]
+                        - generic [ref=e799]:
+                          - generic [ref=e800]: Hostel Details
+                          - generic [ref=e801]: Add hostel information and address
+                      - img [ref=e803]
+                    - listitem [ref=e805]:
+                      - button "Staff Assignment Assign Campus Manager (tenant-level) and hostel staff per hostel" [ref=e806] [cursor=pointer]:
+                        - img [ref=e1312]
+                        - generic [ref=e810]:
+                          - generic [ref=e811]: Staff Assignment
+                          - generic [ref=e812]: Assign Campus Manager (tenant-level) and hostel staff per hostel
+                      - img [ref=e814]
+                    - listitem [ref=e816]:
+                      - button "Hostel Configuration Configure floors, rooms, and beds for each hostel" [disabled] [ref=e817]:
+                        - img [ref=e819]
+                        - generic [ref=e821]:
+                          - generic [ref=e822]: Hostel Configuration
+                          - generic [ref=e823]: Configure floors, rooms, and beds for each hostel
+                      - img [ref=e825]
+                    - listitem [ref=e827]:
+                      - button "Amenities Select available amenities for the hostel(s)" [disabled] [ref=e828]:
+                        - img [ref=e830]
+                        - generic [ref=e832]:
+                          - generic [ref=e833]: Amenities
+                          - generic [ref=e834]: Select available amenities for the hostel(s)
+                      - img [ref=e836]
+                    - listitem [ref=e838]:
+                      - button "Confirmation Review all details and activate tenant" [disabled] [ref=e839]:
+                        - img [ref=e841]
+                        - generic [ref=e843]:
+                          - generic [ref=e844]: Confirmation
+                          - generic [ref=e845]: Review all details and activate tenant
+                  - option "Select an option"
+                  - option "Boys Hostel" [selected]
+                  - option "Girls Hostel"
+                  - option "Co-Ed Hostel"
+                  - 'tabpanel "Config info Configure the room layout for each hostel. Add floors, specify room capacity (number of beds), and the quantity of rooms for each type. Room numbers will be auto-generated. Hostel Configurations Move Delete Select Hostel* Floors Move Delete Floor #* Room Capacity* Double (2 beds) Number of Rooms* Room Numbering Auto-generate Add Floor Configure Hostel" [ref=e1452]':
+                    - generic [ref=e1315]:
+                      - generic [ref=e1318]:
+                        - generic [ref=e1321]: Config info
+                        - paragraph [ref=e1325]: Configure the room layout for each hostel. Add floors, specify room capacity (number of beds), and the quantity of rooms for each type. Room numbers will be auto-generated.
+                      - generic [ref=e1328]:
+                        - generic [ref=e1331]: Hostel Configurations
+                        - generic [ref=e1333]:
+                          - list [ref=e1338]:
+                            - listitem [ref=e1340]:
+                              - generic [ref=e1341]:
+                                - list [ref=e1342]:
+                                  - listitem [ref=e1343]:
+                                    - button "Move" [ref=e1344] [cursor=pointer]:
+                                      - generic [ref=e1345]: Move
+                                      - img [ref=e1346]
+                                - list [ref=e1348]:
+                                  - listitem [ref=e1349]:
+                                    - button "Delete" [ref=e1350] [cursor=pointer]:
+                                      - generic [ref=e1351]: Delete
+                                      - img [ref=e1352]
+                              - generic [ref=e1355]:
+                                - generic [ref=e1358]:
+                                  - generic [ref=e1361]:
+                                    - text: Select Hostel
+                                    - superscript [ref=e1362]: "*"
+                                  - combobox [active] [ref=e1367]:
+                                    - generic [ref=e1453]:
+                                      - text: ONB Hostel Alpha
+                                      - 'button "Remove item: ''0''" [ref=e1454] [cursor=pointer]': Remove item
+                                - generic [ref=e1373]:
+                                  - generic [ref=e1376]: Floors
+                                  - generic [ref=e1378]:
+                                    - list [ref=e1379]:
+                                      - listitem [ref=e1381]:
+                                        - generic [ref=e1382]:
+                                          - list [ref=e1383]:
+                                            - listitem [ref=e1384]:
+                                              - button "Move" [ref=e1385] [cursor=pointer]:
+                                                - generic [ref=e1386]: Move
+                                                - img [ref=e1387]
+                                          - list [ref=e1389]:
+                                            - listitem [ref=e1390]:
+                                              - button "Delete" [ref=e1391] [cursor=pointer]:
+                                                - generic [ref=e1392]: Delete
+                                                - img [ref=e1393]
+                                        - generic [ref=e1399]:
+                                          - generic [ref=e1402]:
+                                            - generic [ref=e1405]:
+                                              - text: "Floor #"
+                                              - superscript [ref=e1406]: "*"
+                                            - 'spinbutton "Floor #*" [ref=e1410]': "1"
+                                          - generic [ref=e1413]:
+                                            - generic [ref=e1416]:
+                                              - text: Room Capacity
+                                              - superscript [ref=e1417]: "*"
+                                            - combobox "Room Capacity*" [ref=e1421]:
+                                              - option "Select an option"
+                                              - option "Single (1 bed)"
+                                              - option "Double (2 beds)" [selected]
+                                              - option "Triple (3 beds)"
+                                              - option "Quad (4 beds)"
+                                              - option "Quint (5 beds)"
+                                              - option "Six (6 beds)"
+                                          - generic [ref=e1424]:
+                                            - generic [ref=e1427]:
+                                              - text: Number of Rooms
+                                              - superscript [ref=e1428]: "*"
+                                            - spinbutton "Number of Rooms*" [ref=e1432]: "10"
+                                          - generic [ref=e1435]:
+                                            - generic [ref=e1438]: Room Numbering
+                                            - combobox "Room Numbering" [ref=e1442]:
+                                              - option "Select an option"
+                                              - option "Auto-generate" [selected]
+                                              - option "Manual"
+                                    - button "Add Floor" [ref=e1444] [cursor=pointer]:
+                                      - generic [ref=e1445]: Add Floor
+                          - button "Configure Hostel" [ref=e1335] [cursor=pointer]:
+                            - generic [ref=e1336]: Configure Hostel
+                  - generic [ref=e1023]:
+                    - button "Back" [ref=e1116] [cursor=pointer]:
+                      - generic [ref=e1117]: Back
+                    - button "Next" [ref=e1025] [cursor=pointer]:
+                      - generic [ref=e1026]: Next
+                - button "Activate Tenant" [ref=e1029] [cursor=pointer]:
+                  - generic [ref=e1030]: Activate Tenant
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e297]:
+      - generic [ref=e299]:
+        - link "Super Admin logo" [ref=e301] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e302]
+        - button "Collapse sidebar" [ref=e303] [cursor=pointer]:
+          - generic [ref=e304]: Collapse sidebar
+          - img [ref=e305]
+      - navigation [ref=e307]:
+        - list [ref=e308]:
+          - listitem [ref=e309]:
+            - list [ref=e310]:
+              - listitem [ref=e311]:
+                - link "Dashboard" [ref=e312] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e313]
+                  - generic [ref=e315]: Dashboard
+          - listitem [ref=e316]:
+            - generic [ref=e317] [cursor=pointer]:
+              - img [ref=e318]
+              - generic [ref=e320]: Tenant Management
+              - button "Tenant Management" [ref=e321]:
+                - generic [ref=e322]: Tenant Management
+                - img [ref=e323]
+          - listitem [ref=e325]:
+            - generic [ref=e326] [cursor=pointer]:
+              - img [ref=e327]
+              - generic [ref=e329]: Staff Management
+              - button "Staff Management" [ref=e330]:
+                - generic [ref=e331]: Staff Management
+                - img [ref=e332]
+          - listitem [ref=e334]:
+            - generic [ref=e335] [cursor=pointer]:
+              - img [ref=e336]
+              - generic [ref=e339]: Operations
+              - button "Operations" [ref=e340]:
+                - generic [ref=e341]: Operations
+                - img [ref=e342]
+          - listitem [ref=e344]:
+            - generic [ref=e345] [cursor=pointer]:
+              - img [ref=e346]
+              - generic [ref=e348]: Reports
+              - button "Reports" [expanded] [ref=e349]:
+                - generic [ref=e350]: Reports
+                - img [ref=e351]
+            - list [ref=e353]:
+              - listitem [ref=e354]:
+                - link "Report Center" [ref=e355] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e358]: Report Center
+  - generic:
+    - status

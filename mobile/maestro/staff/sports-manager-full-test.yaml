@@ -1,0 +1,154 @@
+# MAP HMS Staff App - Sports Manager Role Full Test Suite
+# Tests Sports Manager functionality per US-SPM-01, US-SPM-02
+#
+# Prerequisites:
+# - Staff app installed (com.mapmars.hmsstaff)
+# - Demo token generated for Sports Manager role
+#
+# Usage:
+#   maestro test sports-manager-full-test.yaml --env deepLink="maphms://demo?token=xxx&tenant=STXAV&role=sports_manager"
+
+appId: com.mapmars.hmsstaff
+name: "Sports Manager Full Test Suite"
+tags:
+  - sports-manager
+  - sports
+  - blockouts
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=132%7CztYNVsPvylPsrHfNjHMIcRT7idjitS1UB0TY830L98bd8a4d&role=sports_manager&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=361&userName=Vikram+Sports&userPhone=%2B919876543694&userEmail=sports1%40stxaviers.edu"
+      phone: "7676000129"
+      otp: "123456"
+      dashboardRegex: "(Actions|Raise Request|Active Requests|Checklist|Sports)"
+
+- takeScreenshot: "sports_manager/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD TESTS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(Actions|Profile|Raise Request|Active Requests|Checklist)"
+    timeout: 15000
+
+- takeScreenshot: "sports_manager/02_dashboard"
+
+# Verify Sports Manager dashboard components
+- assertVisible: "(Actions|Profile|Raise Request|Active Requests|Checklist)"
+
+- takeScreenshot: "sports_manager/03_dashboard_verified"
+
+# ============================================
+# PART 3: BLOCKOUTS TEST (US-SPM-01)
+# ============================================
+
+# Navigate to Blockouts
+- runFlow:
+    when:
+      visible: "(Blockout|Schedule)"
+    commands:
+      - tapOn:
+          text: "(Blockout|Schedule)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "sports_manager/04_blockouts"
+      # Verify blockout screen elements
+      - assertVisible: "(Blockout|Create|Date|Time|Facility)"
+
+# Test create blockout (US-SPM-01)
+- runFlow:
+    when:
+      visible: "(Create|\\+|Add Blockout)"
+    commands:
+      - tapOn:
+          text: "(Create|Add Blockout)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "sports_manager/05_create_blockout"
+      # Verify form elements
+      - assertVisible: "(Start|End|Facility|Reason)"
+      - back
+
+# ============================================
+# PART 4: FACILITY MONITORING (US-SPM-02)
+# ============================================
+
+# Navigate to Facility Monitoring
+- runFlow:
+    when:
+      visible: "(Monitoring|Facilities|Slots)"
+    commands:
+      - tapOn: "(Monitoring|Facilities|Slots)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "sports_manager/06_facility_monitoring"
+      # Verify monitoring screen (US-SPM-02: View slot occupancy)
+      - assertVisible: "(Occupancy|Slots|Bookings|Available|Waitlist)"
+
+# Test slot detail if available
+- runFlow:
+    when:
+      visible: "(Booked|Occupied|Slot)"
+    commands:
+      - tapOn:
+          text: "(Booked|Slot)"
+          index: 0
+      - waitForAnimationToEnd
+      - takeScreenshot: "sports_manager/07_slot_detail"
+      # Verify read-only (US-SPM-02: cannot create bookings)
+      - assertNotVisible:
+          text: "Book"
+          optional: true
+      - back
+
+# ============================================
+# PART 5: CHECKLIST TEST
+# ============================================
+
+# Navigate to Checklist if available
+- runFlow:
+    when:
+      visible: "(Checklist|Tasks)"
+    commands:
+      - tapOn:
+          text: "(Checklist|Tasks)"
+      - waitForAnimationToEnd
+      - takeScreenshot: "sports_manager/08_checklist"
+
+# ============================================
+# PART 6: NO-SHOW ALERTS (US-SPM-02)
+# ============================================
+
+# Check for no-show alerts
+- runFlow:
+    when:
+      visible: "(No-show|Alert|Missed)"
+    commands:
+      - takeScreenshot: "sports_manager/09_noshow_alerts"
+
+# ============================================
+# PART 7: FINAL VERIFICATION
+# ============================================
+
+- back
+
+- waitForAnimationToEnd
+
+- takeScreenshot: "sports_manager/10_final_dashboard"
+
+# Verify still logged in
+- assertVisible: "(Actions|Profile|Raise Request|Active Requests|Checklist)"

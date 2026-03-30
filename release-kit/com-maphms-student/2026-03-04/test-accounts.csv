@@ -1,0 +1,3 @@
+username,password,role,notes
+9876543210,123456,student-reviewer,"Primary App Review account (student). Login: enter phone, tap Send OTP, then use 123456."
+9999999999,123456,student-reviewer-fallback,Fallback reviewer account if primary phone is unavailable.

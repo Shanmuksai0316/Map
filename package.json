@@ -1,0 +1,29 @@
+{
+  "name": "mapmars",
+  "version": "1.0.0",
+  "description": "MapMars monorepo test tooling",
+  "main": "playwright.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:rector:re": "PW_HTML_REPORT_DIR=output/playwright/rector-re/html PW_OUTPUT_DIR=output/playwright/rector-re/test-results playwright test playwright/tests/rector-re-regression.spec.js --workers=1",
+    "test:e2e:campus:student-import": "PW_HTML_REPORT_DIR=output/playwright/campus-student-import/html PW_OUTPUT_DIR=output/playwright/campus-student-import/test-results playwright test playwright/tests/campus-manager-student-import.spec.js --workers=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paragmasteh/mapmars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paragmasteh/mapmars/issues"
+  },
+  "homepage": "https://github.com/paragmasteh/mapmars#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

@@ -1,0 +1,152 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of College Management" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Good morning, College Management" [level=1] [ref=e16]
+            - generic [ref=e76]:
+              - 'link "Occupancy 1.3% 1/80 beds | Boys: 1 (100%) | Girls: 0 (0%)" [ref=e77] [cursor=pointer]':
+                - /url: https://ppcu.mapservices.in/college-mgmt/students
+                - generic [ref=e78]:
+                  - generic [ref=e79]:
+                    - img [ref=e80]
+                    - generic [ref=e82]: Occupancy
+                  - generic [ref=e83]: 1.3%
+                  - generic [ref=e85]: "1/80 beds | Boys: 1 (100%) | Girls: 0 (0%)"
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - img [ref=e89]
+                  - generic [ref=e91]: Approval Median
+                - generic [ref=e92]: 0h
+                - generic [ref=e94]: Last 7 days
+              - link "Late Returns 0 Overdue" [ref=e95] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/out-passes
+                - generic [ref=e96]:
+                  - generic [ref=e97]:
+                    - img [ref=e98]
+                    - generic [ref=e100]: Late Returns
+                  - generic [ref=e101]: "0"
+                  - generic [ref=e103]: Overdue
+              - link "Ticket Aging 0d Median resolution time" [ref=e104] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                - generic [ref=e105]:
+                  - generic [ref=e106]:
+                    - img [ref=e107]
+                    - generic [ref=e110]: Ticket Aging
+                  - generic [ref=e111]: 0d
+                  - generic [ref=e113]: Median resolution time
+              - link "Checklist Compliance 0% Today" [ref=e114] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/report-center
+                - generic [ref=e115]:
+                  - generic [ref=e116]:
+                    - img [ref=e117]
+                    - generic [ref=e119]: Checklist Compliance
+                  - generic [ref=e120]: 0%
+                  - generic [ref=e122]: Today
+              - link "Total Students 1 Current occupancy" [ref=e123] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/students
+                - generic [ref=e124]:
+                  - generic [ref=e125]:
+                    - img [ref=e126]
+                    - generic [ref=e128]: Total Students
+                  - generic [ref=e129]: "1"
+                  - generic [ref=e131]: Current occupancy
+              - generic [ref=e133]:
+                - generic [ref=e134]:
+                  - img [ref=e135]
+                  - generic [ref=e137]: Total Hostels
+                - generic [ref=e138]: "1"
+                - generic [ref=e140]: Managed hostels
+              - link "Requests Total 9 All tickets" [ref=e141] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                - generic [ref=e142]:
+                  - generic [ref=e143]:
+                    - img [ref=e144]
+                    - generic [ref=e147]: Requests Total
+                  - generic [ref=e148]: "9"
+                  - generic [ref=e150]: All tickets
+              - link "Pending 7 Open + On Hold" [ref=e151] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                - generic [ref=e152]:
+                  - generic [ref=e153]:
+                    - img [ref=e154]
+                    - generic [ref=e156]: Pending
+                  - generic [ref=e157]: "7"
+                  - generic [ref=e159]: Open + On Hold
+              - link "In Progress 0 Work in progress" [ref=e160] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                - generic [ref=e161]:
+                  - generic [ref=e162]:
+                    - img [ref=e163]
+                    - generic [ref=e165]: In Progress
+                  - generic [ref=e166]: "0"
+                  - generic [ref=e168]: Work in progress
+              - link "Completed 2 Resolved + Closed" [ref=e169] [cursor=pointer]:
+                - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                - generic [ref=e170]:
+                  - generic [ref=e171]:
+                    - img [ref=e172]
+                    - generic [ref=e174]: Completed
+                  - generic [ref=e175]: "2"
+                  - generic [ref=e177]: Resolved + Closed
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e24]:
+      - generic [ref=e26]:
+        - link "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e28] [cursor=pointer]:
+          - /url: /college-mgmt
+          - img "Pimpri Chinchinwad University - MAP HMS (Management) logo" [ref=e29]
+        - button "Collapse sidebar" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: Collapse sidebar
+          - img [ref=e32]
+      - navigation [ref=e34]:
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - link "College Management Dashboard" [ref=e39] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt
+                  - img [ref=e40]
+                  - generic [ref=e42]: College Management Dashboard
+              - listitem [ref=e43]:
+                - link "Students" [ref=e44] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/students
+                  - img [ref=e45]
+                  - generic [ref=e47]: Students
+          - listitem [ref=e48]:
+            - generic [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]: Operations
+              - button "Operations" [expanded] [ref=e51]:
+                - generic [ref=e52]: Operations
+                - img [ref=e53]
+            - list [ref=e55]:
+              - listitem [ref=e56]:
+                - link "Out-Passes" [ref=e57] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/out-passes
+                  - img [ref=e58]
+                  - generic [ref=e60]: Out-Passes
+              - listitem [ref=e61]:
+                - link "Tickets" [ref=e62] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/tickets
+                  - img [ref=e63]
+                  - generic [ref=e65]: Tickets
+              - listitem [ref=e66]:
+                - link "Attendance" [ref=e67] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/attendance-sessions
+                  - img [ref=e68]
+                  - generic [ref=e70]: Attendance
+              - listitem [ref=e71]:
+                - link "Reports" [ref=e72] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/college-mgmt/report-center
+                  - img [ref=e73]
+                  - generic [ref=e75]: Reports
+  - generic:
+    - status

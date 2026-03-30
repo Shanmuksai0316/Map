@@ -1,0 +1,37 @@
+# MAP HMS Staff App - Maestro Test Configuration
+# This file contains shared configuration for all test flows
+
+appId: com.mapmars.hmsstaff
+tags:
+  - staff-app
+  - android
+  - e2e-tests
+
+env:
+  # API Configuration
+  API_BASE_URL: ${API_BASE_URL:-https://stxaviers.mapservices.in}
+  TENANT_CODE: ${TENANT_CODE:-STXAV}
+  
+  # Test Timeouts
+  DEFAULT_TIMEOUT: 10000
+  LONG_TIMEOUT: 30000
+  ANIMATION_DELAY: 500
+  
+  # Test Data - These should be populated via demo tokens
+  # Usage: maestro test flow.yaml --env deepLink="<DEEP_LINK>"
+  WARDEN_DEEP_LINK: ${WARDEN_DEEP_LINK:-}
+  GUARD_DEEP_LINK: ${GUARD_DEEP_LINK:-}
+  HK_SUPERVISOR_DEEP_LINK: ${HK_SUPERVISOR_DEEP_LINK:-}
+  RM_SUPERVISOR_DEEP_LINK: ${RM_SUPERVISOR_DEEP_LINK:-}
+  LAUNDRY_MANAGER_DEEP_LINK: ${LAUNDRY_MANAGER_DEEP_LINK:-}
+  SPORTS_MANAGER_DEEP_LINK: ${SPORTS_MANAGER_DEEP_LINK:-}
+  RECTOR_DEEP_LINK: ${RECTOR_DEEP_LINK:-}
+  CAMPUS_MANAGER_DEEP_LINK: ${CAMPUS_MANAGER_DEEP_LINK:-}
+
+# Test Device Configuration
+device:
+  platform: android
+  resolution: 
+    width: 1080
+    height: 2400
+

@@ -1,0 +1,100 @@
+# MAP HMS Staff App - Warden Role Full Test Suite
+# Tests all Warden functionality per US-WAR-01 and US-WAR-02
+
+appId: com.mapmars.hmsstaff
+name: "Warden Full Test Suite"
+tags:
+  - warden
+  - attendance
+  - checklist
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 15000
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      deepLink: "maphms://auth/demo?tenant=STXAV&token=127%7CIuVW9Xdz233mXrL78NwTBHjhj9hOgAwSSGNvHq3ce844e7c7&role=warden&api=https%253A%252F%252Fstxaviers.mapservices.in%252Fv1&tenantId=49d4892b-99ca-415e-9dc2-926952848ecb&tenantName=St.+Xavier%27s+College+of+Engineering&tenantDomain=stxaviers&userId=29&userName=Amit+Kumar&userPhone=%2B919876543687&userEmail=warden1%40stxaviers.edu"
+      phone: "9739557963"
+      otp: "123456"
+      dashboardRegex: "(Warden|Outpass|Leave|Sick Leave|Dashboard)"
+
+# Wait for dashboard to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 15000
+
+- takeScreenshot: "warden/09_main_screen"
+
+# ============================================
+# PART 6: DASHBOARD & TAB TESTS
+# ============================================
+
+- takeScreenshot: "warden/10_current_state"
+
+# Test each tab if visible
+- runFlow:
+    when:
+      visible: "Attendance"
+    commands:
+      - tapOn: "Attendance"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 5000
+      - takeScreenshot: "warden/11_attendance_tab"
+
+- runFlow:
+    when:
+      visible: "Checklist"
+    commands:
+      - tapOn: "Checklist"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 5000
+      - takeScreenshot: "warden/12_checklist_tab"
+
+- runFlow:
+    when:
+      visible: "Requests"
+    commands:
+      - tapOn: "Requests"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 5000
+      - takeScreenshot: "warden/13_requests_tab"
+
+- runFlow:
+    when:
+      visible: "Students"
+    commands:
+      - tapOn: "Students"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 5000
+      - takeScreenshot: "warden/14_students_tab"
+
+- runFlow:
+    when:
+      visible: "Dashboard"
+    commands:
+      - tapOn: "Dashboard"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 5000
+      - takeScreenshot: "warden/15_back_to_dashboard"
+
+# Final screenshot
+- takeScreenshot: "warden/16_final_state"

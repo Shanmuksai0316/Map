@@ -1,0 +1,69 @@
+# MAP HMS Staff App - Guard Role Full Test Suite
+# Tests all Guard functionality. Guard: 9739143498, OTP: 123456
+
+appId: com.mapmars.hmsstaff
+name: "Guard Full Test Suite"
+tags:
+  - guard
+  - gate-entry
+  - qr-scanner
+  - staff
+
+---
+
+# ============================================
+# PART 1: APP LAUNCH & LOGIN
+# ============================================
+
+- launchApp:
+    appId: com.mapmars.hmsstaff
+    clearState: true
+    clearKeychain: true
+
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- runFlow:
+    file: ../flows/role-otp-login.yaml
+    env:
+      phone: "9739143498"
+      otp: "123456"
+      dashboardRegex: "(Guard|Actions|QR Code|Checklist|Notice Board)"
+
+- takeScreenshot: "guard/01_launch"
+
+# ============================================
+# PART 2: DASHBOARD & KEY ACTIONS
+# ============================================
+
+- extendedWaitUntil:
+    visible: "(Guard|Actions|QR Code|Checklist|Notice Board)"
+    timeout: 20000
+
+- assertVisible: "(QR Code|Checklist|Notice Board)"
+
+- takeScreenshot: "guard/02_dashboard"
+
+# QR Code flow
+- tapOn: "QR Code"
+- extendedWaitUntil:
+    visible: "(QR Scanner|Scan student QR code|Scan QR Code|Verify Code|Outpass|Outpasses)"
+    timeout: 15000
+- takeScreenshot: "guard/03_verify_time"
+- back
+
+# Checklist flow
+- tapOn: "Checklist"
+- extendedWaitUntil:
+    visible: "(Checklist|Tasks|Daily|My Checklist)"
+    timeout: 15000
+- takeScreenshot: "guard/04_checklist"
+- back
+
+# Notice Board flow
+- tapOn: "Notice Board"
+- extendedWaitUntil:
+    visible: "(Notice Board|Notices|Messages)"
+    timeout: 15000
+- takeScreenshot: "guard/05_comm_box"
+- back

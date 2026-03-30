@@ -1,0 +1,13 @@
+{
+  "app_id": "com.mapmars.hmsstaff",
+  "date": "2026-03-14",
+  "project_type": "react-native-cli",
+  "blocking_issues": [
+    {"severity": "P0", "issue": "App Store 4.3(a) duplication / overlapping storefronts rejection"},
+    {"severity": "P1", "issue": "Storefront split between Student and Staff apps not confirmed"},
+    {"severity": "P1", "issue": "Reviewer test accounts missing for Staff app"},
+    {"severity": "P1", "issue": "Staff release config missing (policy URLs and reviewer contact not declared)"}
+  ],
+  "fastlane_detected": true,
+  "script_used": false
+}

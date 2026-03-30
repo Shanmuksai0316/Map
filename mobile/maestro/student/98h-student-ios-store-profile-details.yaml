@@ -1,0 +1,41 @@
+appId: com.maphms.student
+name: "Student iOS Store Profile Details"
+env:
+  phone: "9886179767"
+  otp: "123456"
+---
+- launchApp
+- waitForAnimationToEnd
+- tapOn:
+    point: "50%,89%"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "phone-input"
+- eraseText
+- inputText: ${phone}
+- hideKeyboard
+- waitForAnimationToEnd
+
+- tapOn:
+    id: "otp-input"
+- eraseText
+- inputText: ${otp}
+- hideKeyboard
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+
+- extendedWaitUntil:
+    visible: "My Profile"
+    timeout: 30000
+- waitForAnimationToEnd
+
+- tapOn: "My Profile"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- tapOn: "My Profile"
+- waitForAnimationToEnd
+- waitForAnimationToEnd
+- takeScreenshot: "student/ios_store/08_leave"

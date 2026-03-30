@@ -1,0 +1,59 @@
+appId: com.mapmars.hmsstaff
+---
+- launchApp:
+    clearState: true
+
+- extendedWaitUntil:
+    visible: "Get Started"
+    timeout: 30000
+
+- takeScreenshot: "${ROLE}-01-splash"
+
+- tapOn: "Get Started"
+
+- extendedWaitUntil:
+    visible:
+      id: "phone-input"
+    timeout: 20000
+
+- tapOn:
+    id: "phone-input"
+
+- inputText: "${PHONE}"
+- hideKeyboard
+- tapOn:
+    point: "50%,68%"
+
+- runFlow:
+    when:
+      visible: "OK"
+    commands:
+      - tapOn: "OK"
+
+- extendedWaitUntil:
+    visible:
+      id: "otp-input"
+    timeout: 20000
+
+- tapOn:
+    id: "otp-input"
+- inputText: "123456"
+- hideKeyboard
+- tapOn:
+    point: "50%,68%"
+
+- extendedWaitUntil:
+    visible: "${EXPECT_CARD}"
+    timeout: 45000
+
+- takeScreenshot: "${ROLE}-02-dashboard"
+
+- tapOn: "${EXPECT_CARD}"
+- waitForAnimationToEnd
+
+- takeScreenshot: "${ROLE}-03-primary-screen"
+
+- back
+- waitForAnimationToEnd
+
+- takeScreenshot: "${ROLE}-04-dashboard-return"

@@ -1,0 +1,220 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "Expand sidebar" [ref=e6] [cursor=pointer]:
+          - generic [ref=e7]: Expand sidebar
+          - img [ref=e8]
+        - button "User menu" [ref=e13] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e14]
+      - main [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - heading "Tenant Onboarding Wizard" [level=1] [ref=e20]
+            - generic [ref=e23]:
+              - generic [ref=e24]:
+                - generic [ref=e25]:
+                  - generic [ref=e26]:
+                    - generic [ref=e27]: Onboarding Progress
+                    - generic [ref=e28]: 33%
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: ✔ Tenant Info
+                    - generic [ref=e31]: ✔ Hostels
+                    - generic [ref=e32]: • Staff
+                    - generic [ref=e33]: • Rooms
+                    - generic [ref=e34]: • Amenities
+                    - generic [ref=e35]: • Confirmation
+                - generic [ref=e36]:
+                  - button "Save Draft" [ref=e37] [cursor=pointer]:
+                    - generic [ref=e38]: Save Draft
+                  - button "Save & Exit" [ref=e39] [cursor=pointer]:
+                    - generic [ref=e40]: Save & Exit
+              - generic [ref=e41]:
+                - generic [ref=e42]: Validation summary
+                - list [ref=e43]:
+                  - listitem [ref=e44]: Assign a Campus Manager in Step 3.
+                  - listitem [ref=e45]: Configure rooms in Step 4.
+              - generic [ref=e48]:
+                - generic [ref=e51]:
+                  - list [ref=e52]:
+                    - listitem [ref=e53]:
+                      - button "Tenant Information Create the tenant and its single campus" [ref=e54] [cursor=pointer]:
+                        - img [ref=e336]
+                        - generic [ref=e58]:
+                          - generic [ref=e59]: Tenant Information
+                          - generic [ref=e60]: Create the tenant and its single campus
+                    - listitem [ref=e61]:
+                      - button "Hostel Details Add hostel information and address" [ref=e62] [cursor=pointer]:
+                        - img [ref=e440]
+                        - generic [ref=e66]:
+                          - generic [ref=e67]: Hostel Details
+                          - generic [ref=e68]: Add hostel information and address
+                    - listitem [ref=e69]:
+                      - button "Staff Assignment Assign Campus Manager (tenant-level) and hostel staff per hostel" [disabled] [ref=e70]:
+                        - img [ref=e72]
+                        - generic [ref=e74]:
+                          - generic [ref=e75]: Staff Assignment
+                          - generic [ref=e76]: Assign Campus Manager (tenant-level) and hostel staff per hostel
+                    - listitem [ref=e77]:
+                      - button "Hostel Configuration Configure floors, rooms, and beds for each hostel" [disabled] [ref=e78]:
+                        - img [ref=e80]
+                        - generic [ref=e82]:
+                          - generic [ref=e83]: Hostel Configuration
+                          - generic [ref=e84]: Configure floors, rooms, and beds for each hostel
+                    - listitem [ref=e85]:
+                      - button "Amenities Select available amenities for the hostel(s)" [disabled] [ref=e86]:
+                        - img [ref=e88]
+                        - generic [ref=e90]:
+                          - generic [ref=e91]: Amenities
+                          - generic [ref=e92]: Select available amenities for the hostel(s)
+                    - listitem [ref=e93]:
+                      - button "Confirmation Review all details and activate tenant" [disabled] [ref=e94]:
+                        - img [ref=e96]
+                        - generic [ref=e98]:
+                          - generic [ref=e99]: Confirmation
+                          - generic [ref=e100]: Review all details and activate tenant
+                  - option "Select an option"
+                  - option "Boys Hostel" [selected]
+                  - option "Girls Hostel"
+                  - option "Co-Ed Hostel"
+                  - tabpanel "Staff info + Create New Staff Member | Refresh Staff List Campus Manager (Tenant-Level) Campus Manager manages all hostels under this tenant. Campus Manager* Select from unassigned staff pool Hostel Staff Assignments Move Delete Hostel* Warden* Required Guard* Required HK Supervisor* Required RM Supervisor* Required Laundry Manager Optional (add-on module) Sports Manager Optional (add-on module) Assign Staff for Hostel" [ref=e683]:
+                    - generic [ref=e443]:
+                      - generic [ref=e446]:
+                        - generic [ref=e449]: Staff info
+                        - generic [ref=e452]:
+                          - link "+ Create New Staff Member" [ref=e453] [cursor=pointer]:
+                            - /url: https://admin.mapservices.in/admin/unassigned-staff
+                          - text: "|"
+                          - button "Refresh Staff List" [ref=e454] [cursor=pointer]
+                      - generic [ref=e456]:
+                        - generic [ref=e459]:
+                          - heading "Campus Manager (Tenant-Level)" [level=3] [ref=e460]
+                          - paragraph [ref=e461]: Campus Manager manages all hostels under this tenant.
+                        - generic [ref=e467]:
+                          - generic [ref=e470]:
+                            - text: Campus Manager
+                            - superscript [ref=e471]: "*"
+                          - generic [ref=e472]:
+                            - combobox [ref=e476]:
+                              - generic [ref=e505]:
+                                - text: M sports
+                                - 'button "Remove item: ''35''" [ref=e506] [cursor=pointer]': Remove item
+                            - generic [ref=e480]: Select from unassigned staff pool
+                      - generic [ref=e483]:
+                        - generic [ref=e486]: Hostel Staff Assignments
+                        - generic [ref=e488]:
+                          - list [ref=e508]:
+                            - listitem [ref=e510]:
+                              - generic [ref=e511]:
+                                - list [ref=e512]:
+                                  - listitem [ref=e513]:
+                                    - button "Move" [ref=e514] [cursor=pointer]:
+                                      - generic [ref=e515]: Move
+                                      - img [ref=e516]
+                                - list [ref=e518]:
+                                  - listitem [ref=e519]:
+                                    - button "Delete" [ref=e520] [cursor=pointer]:
+                                      - generic [ref=e521]: Delete
+                                      - img [ref=e522]
+                              - generic [ref=e525]:
+                                - generic [ref=e528]:
+                                  - generic [ref=e531]:
+                                    - text: Hostel
+                                    - superscript [ref=e532]: "*"
+                                  - combobox [ref=e537]:
+                                    - generic [ref=e654]:
+                                      - text: Hostel A 1771849234
+                                      - 'button "Remove item: ''41''" [ref=e655] [cursor=pointer]': Remove item
+                                - generic [ref=e543]:
+                                  - generic [ref=e546]:
+                                    - generic [ref=e549]:
+                                      - text: Warden
+                                      - superscript [ref=e550]: "*"
+                                    - generic [ref=e551]:
+                                      - combobox [ref=e555]:
+                                        - generic [ref=e669]:
+                                          - text: M Campus manager
+                                          - 'button "Remove item: ''29''" [ref=e670] [cursor=pointer]': Remove item
+                                      - generic [ref=e559]: Required
+                                  - generic [ref=e562]:
+                                    - generic [ref=e565]:
+                                      - text: Guard
+                                      - superscript [ref=e566]: "*"
+                                    - generic [ref=e567]:
+                                      - combobox [active] [ref=e571]:
+                                        - generic [ref=e684]:
+                                          - text: m - security
+                                          - 'button "Remove item: ''34''" [ref=e685] [cursor=pointer]': Remove item
+                                      - generic [ref=e575]: Required
+                                - generic [ref=e578]:
+                                  - generic [ref=e581]:
+                                    - generic [ref=e584]:
+                                      - text: HK Supervisor
+                                      - superscript [ref=e585]: "*"
+                                    - generic [ref=e586]:
+                                      - combobox [ref=e590]:
+                                        - generic [ref=e593]: Select an option
+                                      - generic [ref=e594]: Required
+                                  - generic [ref=e597]:
+                                    - generic [ref=e600]:
+                                      - text: RM Supervisor
+                                      - superscript [ref=e601]: "*"
+                                    - generic [ref=e602]:
+                                      - combobox [ref=e606]:
+                                        - generic [ref=e609]: Select an option
+                                      - generic [ref=e610]: Required
+                                - generic [ref=e613]:
+                                  - generic [ref=e616]:
+                                    - generic [ref=e619]: Laundry Manager
+                                    - generic [ref=e620]:
+                                      - combobox [ref=e624]:
+                                        - generic [ref=e627]: Select an option
+                                      - generic [ref=e628]: Optional (add-on module)
+                                  - generic [ref=e631]:
+                                    - generic [ref=e634]: Sports Manager
+                                    - generic [ref=e635]:
+                                      - combobox [ref=e639]:
+                                        - generic [ref=e642]: Select an option
+                                      - generic [ref=e643]: Optional (add-on module)
+                          - button "Assign Staff for Hostel" [ref=e645] [cursor=pointer]:
+                            - generic [ref=e646]: Assign Staff for Hostel
+                  - generic [ref=e272]:
+                    - button "Back" [ref=e352] [cursor=pointer]:
+                      - generic [ref=e353]: Back
+                    - button "Next" [ref=e324] [cursor=pointer]:
+                      - generic [ref=e325]: Next
+                - generic [ref=e274]:
+                  - button "Activate Tenant" [disabled]:
+                    - generic: Activate Tenant
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e275]:
+      - button "Expand sidebar" [ref=e278] [cursor=pointer]:
+        - generic [ref=e279]: Expand sidebar
+        - img [ref=e280]
+      - navigation [ref=e282]:
+        - list [ref=e283]:
+          - listitem [ref=e284]:
+            - list [ref=e285]:
+              - listitem [ref=e286]:
+                - link [ref=e287] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e288]
+          - listitem [ref=e290]:
+            - button [ref=e293] [cursor=pointer]:
+              - img [ref=e294]
+          - listitem [ref=e296]:
+            - button [ref=e299] [cursor=pointer]:
+              - img [ref=e300]
+          - listitem [ref=e302]:
+            - button [ref=e305] [cursor=pointer]:
+              - img [ref=e306]
+          - listitem [ref=e309]:
+            - button [ref=e312] [cursor=pointer]:
+              - img [ref=e313]
+  - generic:
+    - status

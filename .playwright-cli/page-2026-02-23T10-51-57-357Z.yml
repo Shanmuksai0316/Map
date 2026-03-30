@@ -1,0 +1,182 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Super Admin" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e14]:
+              - generic [ref=e15]:
+                - navigation [ref=e16]:
+                  - list [ref=e17]:
+                    - listitem [ref=e18]:
+                      - link "Tenants" [ref=e19] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants
+                    - listitem [ref=e20]:
+                      - img [ref=e21]
+                      - link "ONB DR2365225" [ref=e23] [cursor=pointer]:
+                        - /url: https://admin.mapservices.in/admin/tenants/21cafdff-f87b-436c-b3ac-cb5eb91ca56e
+                    - listitem [ref=e24]:
+                      - img [ref=e25]
+                      - generic [ref=e27]: View
+                - heading "View ONB DR2365225" [level=1] [ref=e28]
+              - generic [ref=e30]:
+                - link "Edit" [ref=e31] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants/21cafdff-f87b-436c-b3ac-cb5eb91ca56e/edit
+                  - generic [ref=e32]: Edit
+                - button "Edit Campus" [ref=e337] [cursor=pointer]:
+                  - img [ref=e34]
+                  - generic [ref=e36]: Edit Campus
+                - link "Resume Onboarding" [ref=e37] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard?tenant_id=21cafdff-f87b-436c-b3ac-cb5eb91ca56e
+                  - img [ref=e38]
+                  - generic [ref=e40]: Resume Onboarding
+                - button "Activate Tenant" [ref=e41] [cursor=pointer]:
+                  - img [ref=e42]
+                  - generic [ref=e44]: Activate Tenant
+            - generic [ref=e46]:
+              - generic [ref=e48]:
+                - generic [ref=e50]:
+                  - heading "Tenant Details" [level=3] [ref=e54]
+                  - generic [ref=e58]:
+                    - generic [ref=e61]:
+                      - term [ref=e63]:
+                        - generic [ref=e64]: Code
+                      - definition [ref=e66]:
+                        - generic [ref=e73]: MAP-M5225
+                    - generic [ref=e76]:
+                      - term [ref=e78]:
+                        - generic [ref=e79]: Name
+                      - definition [ref=e81]:
+                        - generic [ref=e88]: ONB DR2365225
+                - generic [ref=e90]:
+                  - heading "Branding" [level=3] [ref=e94]
+                  - generic [ref=e101]:
+                    - term [ref=e103]:
+                      - generic [ref=e104]: Logo
+                    - definition [ref=e106]:
+                      - img [ref=e109]
+                - generic [ref=e111]:
+                  - heading "Contact & Address" [level=3] [ref=e115]
+                  - generic [ref=e119]:
+                    - generic [ref=e122]:
+                      - term [ref=e124]:
+                        - generic [ref=e125]: Contact Person
+                      - generic:
+                        - definition
+                    - generic [ref=e128]:
+                      - term [ref=e130]:
+                        - generic [ref=e131]: Email
+                      - generic:
+                        - definition
+                    - generic [ref=e134]:
+                      - term [ref=e136]:
+                        - generic [ref=e137]: Phone
+                      - generic:
+                        - definition
+                    - generic [ref=e140]:
+                      - term [ref=e142]:
+                        - generic [ref=e143]: Street
+                      - generic:
+                        - definition
+                    - generic [ref=e146]:
+                      - term [ref=e148]:
+                        - generic [ref=e149]: City
+                      - generic:
+                        - definition
+                    - generic [ref=e152]:
+                      - term [ref=e154]:
+                        - generic [ref=e155]: State
+                      - generic:
+                        - definition
+                    - generic [ref=e158]:
+                      - term [ref=e160]:
+                        - generic [ref=e161]: Pincode
+                      - generic:
+                        - definition
+                    - generic [ref=e164]:
+                      - term [ref=e166]:
+                        - generic [ref=e167]: Country
+                      - generic:
+                        - definition
+              - generic [ref=e168]:
+                - tablist [ref=e169]:
+                  - tab "Hostels" [ref=e170] [cursor=pointer]:
+                    - img [ref=e171]
+                    - generic [ref=e173]: Hostels
+                  - tab "Campuses" [ref=e174] [cursor=pointer]:
+                    - generic [ref=e175]: Campuses
+                - tabpanel [ref=e176]
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+          - generic:
+            - dialog
+    - complementary [ref=e181]:
+      - generic [ref=e183]:
+        - link "Super Admin logo" [ref=e185] [cursor=pointer]:
+          - /url: https://admin.mapservices.in/admin
+          - img "Super Admin logo" [ref=e186]
+        - button "Collapse sidebar" [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]: Collapse sidebar
+          - img [ref=e189]
+      - navigation [ref=e191]:
+        - list [ref=e192]:
+          - listitem [ref=e193]:
+            - list [ref=e194]:
+              - listitem [ref=e195]:
+                - link "Dashboard" [ref=e196] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin
+                  - img [ref=e197]
+                  - generic [ref=e199]: Dashboard
+          - listitem [ref=e200]:
+            - generic [ref=e201] [cursor=pointer]:
+              - img [ref=e202]
+              - generic [ref=e204]: Tenant Management
+              - button "Tenant Management" [expanded] [ref=e205]:
+                - generic [ref=e206]: Tenant Management
+                - img [ref=e207]
+            - list [ref=e209]:
+              - listitem [ref=e210]:
+                - link "New Tenant Onboarding" [ref=e211] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenant-onboarding-wizard
+                  - generic [ref=e215]: New Tenant Onboarding
+              - listitem [ref=e216]:
+                - link "All Tenants" [ref=e217] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/tenants
+                  - generic [ref=e222]: All Tenants
+              - listitem [ref=e223]:
+                - link "Archived Tenants" [ref=e224] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/archived-tenants
+                  - generic [ref=e228]: Archived Tenants
+          - listitem [ref=e229]:
+            - generic [ref=e230] [cursor=pointer]:
+              - img [ref=e231]
+              - generic [ref=e233]: Staff Management
+              - button "Staff Management" [ref=e234]:
+                - generic [ref=e235]: Staff Management
+                - img [ref=e236]
+          - listitem [ref=e238]:
+            - generic [ref=e239] [cursor=pointer]:
+              - img [ref=e240]
+              - generic [ref=e243]: Operations
+              - button "Operations" [ref=e244]:
+                - generic [ref=e245]: Operations
+                - img [ref=e246]
+          - listitem [ref=e248]:
+            - generic [ref=e249] [cursor=pointer]:
+              - img [ref=e250]
+              - generic [ref=e252]: Reports
+              - button "Reports" [expanded] [ref=e253]:
+                - generic [ref=e254]: Reports
+                - img [ref=e255]
+            - list [ref=e257]:
+              - listitem [ref=e258]:
+                - link "Report Center" [ref=e259] [cursor=pointer]:
+                  - /url: https://admin.mapservices.in/admin/super-admin-report-center
+                  - generic [ref=e262]: Report Center
+  - generic:
+    - status

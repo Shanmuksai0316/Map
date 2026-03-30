@@ -1,0 +1,261 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e5]:
+        - button "User menu" [ref=e9] [cursor=pointer]:
+          - img "Avatar of Test Rector" [ref=e10]
+      - main [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - navigation [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - link "Out Passes" [ref=e19] [cursor=pointer]:
+                    - /url: https://ppcu.mapservices.in/rector/out-passes
+                - listitem [ref=e20]:
+                  - img [ref=e21]
+                  - generic [ref=e23]: List
+            - heading "Out Passes" [level=1] [ref=e24]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - generic [ref=e32]:
+                - generic [ref=e33]:
+                  - generic [ref=e34]: Search
+                  - generic [ref=e35]:
+                    - img [ref=e37]
+                    - searchbox "Search" [ref=e40]
+                - button "Filter 1" [ref=e775] [cursor=pointer]:
+                  - generic [ref=e44]: Filter
+                  - img [ref=e45]
+                  - generic [ref=e50]: "1"
+                - button "Toggle columns" [ref=e53] [cursor=pointer]:
+                  - generic [ref=e54]: Toggle columns
+                  - img [ref=e55]
+              - generic [ref=e776]:
+                - generic [ref=e777]:
+                  - generic [ref=e778]: Active filters
+                  - generic [ref=e780]:
+                    - generic [ref=e782]: "Status: Pending"
+                    - button "Remove filter" [ref=e783] [cursor=pointer]:
+                      - img [ref=e784]
+                      - generic [ref=e786]: Remove filter
+                - button [ref=e788] [cursor=pointer]:
+                  - img [ref=e789]
+              - table [ref=e58]:
+                - rowgroup [ref=e59]:
+                  - row "Select/deselect all items for bulk actions. Request ID Name Room Number Purpose Going Out Date SLA Status Actions" [ref=e60]:
+                    - columnheader "Select/deselect all items for bulk actions." [ref=e61]:
+                      - generic [ref=e63]:
+                        - checkbox "Select/deselect all items for bulk actions." [ref=e920]
+                        - generic [ref=e65]: Select/deselect all items for bulk actions.
+                    - columnheader "Request ID" [ref=e66]:
+                      - button "Request ID" [ref=e67] [cursor=pointer]:
+                        - generic [ref=e68]: Request ID
+                        - img [ref=e69]
+                    - columnheader "Name" [ref=e71]:
+                      - button "Name" [ref=e72] [cursor=pointer]:
+                        - generic [ref=e73]: Name
+                        - img [ref=e74]
+                    - columnheader "Room Number" [ref=e76]:
+                      - generic [ref=e78]: Room Number
+                    - columnheader "Purpose" [ref=e79]:
+                      - generic [ref=e81]: Purpose
+                    - columnheader "Going Out Date" [ref=e82]:
+                      - button "Going Out Date" [ref=e83] [cursor=pointer]:
+                        - generic [ref=e84]: Going Out Date
+                        - img [ref=e85]
+                    - columnheader "SLA Status" [ref=e87]:
+                      - generic [ref=e89]: SLA Status
+                    - columnheader "Actions" [ref=e90]
+                - rowgroup [ref=e91]:
+                  - row "Select/deselect item 15 for bulk actions. tulip student -- Normal 146.11990214h left View Approve Decline" [ref=e921]:
+                    - cell "Select/deselect item 15 for bulk actions." [ref=e793]:
+                      - generic [ref=e795]:
+                        - checkbox "Select/deselect item 15 for bulk actions." [ref=e796]
+                        - generic [ref=e797]: Select/deselect item 15 for bulk actions.
+                    - cell [ref=e798]:
+                      - link [ref=e800] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                    - cell "tulip student" [ref=e802]:
+                      - link "tulip student" [ref=e804] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                        - generic [ref=e809]: tulip student
+                    - cell "--" [ref=e810]:
+                      - link "--" [ref=e812] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                        - generic [ref=e817]: "--"
+                    - cell "Normal" [ref=e818]:
+                      - link "Normal" [ref=e820] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                        - generic [ref=e826]: Normal
+                    - cell [ref=e827]:
+                      - link [ref=e829] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                    - cell "146.11990214h left" [ref=e922]:
+                      - link "146.11990214h left" [ref=e923] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                        - generic [ref=e839]: 146.11990214h left
+                    - cell "View Approve Decline" [ref=e840]:
+                      - generic [ref=e842]:
+                        - link "View" [ref=e843] [cursor=pointer]:
+                          - /url: https://ppcu.mapservices.in/rector/out-passes/15
+                          - img [ref=e844]
+                          - generic [ref=e847]: View
+                        - button "Approve" [ref=e848] [cursor=pointer]:
+                          - img [ref=e849]
+                          - generic [ref=e851]: Approve
+                        - button "Decline" [ref=e852] [cursor=pointer]:
+                          - img [ref=e853]
+                          - generic [ref=e855]: Decline
+                  - row "Select/deselect item 16 for bulk actions. tulip student -- Normal 146.11962579361h left View Approve Decline" [ref=e924]:
+                    - cell "Select/deselect item 16 for bulk actions." [ref=e857]:
+                      - generic [ref=e859]:
+                        - checkbox "Select/deselect item 16 for bulk actions." [ref=e860]
+                        - generic [ref=e861]: Select/deselect item 16 for bulk actions.
+                    - cell [ref=e862]:
+                      - link [ref=e864] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                    - cell "tulip student" [ref=e866]:
+                      - link "tulip student" [ref=e868] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                        - generic [ref=e873]: tulip student
+                    - cell "--" [ref=e874]:
+                      - link "--" [ref=e876] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                        - generic [ref=e881]: "--"
+                    - cell "Normal" [ref=e882]:
+                      - link "Normal" [ref=e884] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                        - generic [ref=e890]: Normal
+                    - cell [ref=e891]:
+                      - link [ref=e893] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                    - cell "146.11962579361h left" [ref=e925]:
+                      - link "146.11962579361h left" [ref=e926] [cursor=pointer]:
+                        - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                        - generic [ref=e903]: 146.11962579361h left
+                    - cell "View Approve Decline" [ref=e904]:
+                      - generic [ref=e906]:
+                        - link "View" [ref=e907] [cursor=pointer]:
+                          - /url: https://ppcu.mapservices.in/rector/out-passes/16
+                          - img [ref=e908]
+                          - generic [ref=e911]: View
+                        - button "Approve" [ref=e912] [cursor=pointer]:
+                          - img [ref=e913]
+                          - generic [ref=e915]: Approve
+                        - button "Decline" [ref=e916] [cursor=pointer]:
+                          - img [ref=e917]
+                          - generic [ref=e919]: Decline
+              - navigation "Pagination navigation" [ref=e630]:
+                - generic [ref=e633]:
+                  - generic [ref=e635]: Per page
+                  - combobox "Per page" [ref=e637]:
+                    - option "5"
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "All"
+            - generic:
+              - dialog
+            - generic:
+              - dialog:
+                - generic [ref=e930]:
+                  - generic [ref=e931]:
+                    - button "Close" [ref=e933] [cursor=pointer]:
+                      - generic [ref=e934]: Close
+                      - img [ref=e935]
+                    - img [ref=e939]
+                    - generic [ref=e941]:
+                      - heading "Decline Out-Pass" [level=2] [ref=e942]
+                      - paragraph [ref=e943]: Are you sure you would like to do this?
+                  - generic [ref=e948]:
+                    - generic [ref=e951]:
+                      - text: Decline Reason
+                      - superscript [ref=e952]: "*"
+                    - textbox "Decline Reason*" [active] [ref=e957]
+                  - generic [ref=e959]:
+                    - button "Cancel" [ref=e960] [cursor=pointer]:
+                      - generic [ref=e961]: Cancel
+                    - button "Confirm" [ref=e962] [cursor=pointer]:
+                      - generic [ref=e963]: Confirm
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+            - generic:
+              - dialog
+    - complementary [ref=e640]:
+      - generic [ref=e642]:
+        - link "Pimpri Chinchinwad University - Rector App logo" [ref=e644] [cursor=pointer]:
+          - /url: /rector
+          - img "Pimpri Chinchinwad University - Rector App logo" [ref=e645]
+        - button "Collapse sidebar" [ref=e646] [cursor=pointer]:
+          - generic [ref=e647]: Collapse sidebar
+          - img [ref=e648]
+      - navigation [ref=e650]:
+        - list [ref=e651]:
+          - listitem [ref=e652]:
+            - list [ref=e653]:
+              - listitem [ref=e654]:
+                - link "Rector Dashboard" [ref=e655] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector
+                  - img [ref=e656]
+                  - generic [ref=e658]: Rector Dashboard
+              - listitem [ref=e659]:
+                - link "Students" [ref=e660] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/students
+                  - img [ref=e661]
+                  - generic [ref=e663]: Students
+              - listitem [ref=e664]:
+                - link "Reports" [ref=e665] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/reports
+                  - img [ref=e666]
+                  - generic [ref=e668]: Reports
+          - listitem [ref=e669]:
+            - generic [ref=e670] [cursor=pointer]:
+              - generic [ref=e671]: Communications
+              - button "Communications" [expanded] [ref=e672]:
+                - generic [ref=e673]: Communications
+                - img [ref=e674]
+            - list [ref=e676]:
+              - listitem [ref=e677]:
+                - link "Comm Box" [ref=e678] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/comm-box
+                  - img [ref=e679]
+                  - generic [ref=e681]: Comm Box
+          - listitem [ref=e682]:
+            - generic [ref=e683] [cursor=pointer]:
+              - generic [ref=e684]: Approvals
+              - button "Approvals" [expanded] [ref=e685]:
+                - generic [ref=e686]: Approvals
+                - img [ref=e687]
+            - list [ref=e689]:
+              - listitem [ref=e690]:
+                - link "Out-Pass Approvals" [ref=e691] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/out-passes
+                  - img [ref=e692]
+                  - generic [ref=e694]: Out-Pass Approvals
+              - listitem [ref=e695]:
+                - link "Leave Approvals" [ref=e696] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/leaves
+                  - img [ref=e697]
+                  - generic [ref=e699]: Leave Approvals
+              - listitem [ref=e700]:
+                - link "Approval History" [ref=e701] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/approval-history
+                  - img [ref=e702]
+                  - generic [ref=e704]: Approval History
+          - listitem [ref=e705]:
+            - generic [ref=e706] [cursor=pointer]:
+              - generic [ref=e707]: Requests
+              - button "Requests" [expanded] [ref=e708]:
+                - generic [ref=e709]: Requests
+                - img [ref=e710]
+            - list [ref=e712]:
+              - listitem [ref=e713]:
+                - link "Guest Entry" [ref=e714] [cursor=pointer]:
+                  - /url: https://ppcu.mapservices.in/rector/guest-entry-requests
+                  - img [ref=e715]
+                  - generic [ref=e717]: Guest Entry
+  - generic:
+    - status

@@ -1,0 +1,3 @@
+app_id,role,username,password,otp,notes
+com.maphms.student,student-reviewer,9876543210,123456,123456,Primary App Review account (student). Login: enter phone, tap Send OTP, then use 123456.
+com.maphms.student,student-reviewer-fallback,9999999999,123456,123456,Fallback reviewer account if primary phone is unavailable.

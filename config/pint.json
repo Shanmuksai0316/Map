@@ -1,0 +1,7 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "ordered_imports": true,
+    "single_quote": true
+  }
+}

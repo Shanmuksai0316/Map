@@ -1,0 +1,12 @@
+{
+  "app_id": "com.maphms.student",
+  "date": "2026-03-10",
+  "project_type": "react-native-cli",
+  "blocking_issues": [
+    {"severity": "P0", "issue": "App Store 4.3(a) duplication / overlapping storefronts rejection"},
+    {"severity": "P1", "issue": "Reviewer test accounts missing"},
+    {"severity": "P1", "issue": "Policy URLs not confirmed"}
+  ],
+  "fastlane_detected": true,
+  "script_used": false
+}

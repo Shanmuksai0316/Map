@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="Medium_Phone_API_36.1" tests="1" failures="0" time="57.0">
+    <testcase id="Warden Full Test Suite" name="Warden Full Test Suite" classname="Warden Full Test Suite" time="57.0" status="SUCCESS">
+      <properties>
+        <property name="tags" value="warden, attendance, checklist, staff"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>
