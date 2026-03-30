@@ -36,6 +36,20 @@
   color: #2F4F2F !important;
   fill: transparent !important;
 }
+[class*="fi-panel-"] li.fi-sidebar-item:hover > a.fi-sidebar-item-button .fi-sidebar-item-icon svg,
+[class*="fi-panel-"] li.fi-sidebar-item > a.fi-sidebar-item-button:hover .fi-sidebar-item-icon svg,
+[class*="fi-panel-"] li.fi-sidebar-item.fi-active > a.fi-sidebar-item-button .fi-sidebar-item-icon svg,
+[class*="fi-panel-"] li.fi-sidebar-item.fi-active.fi-sidebar-item-active > a.fi-sidebar-item-button .fi-sidebar-item-icon svg {
+  color: #2F4F2F !important;
+  stroke: #2F4F2F !important;
+}
+[class*="fi-panel-"] .fi-sidebar-group-button:hover .fi-sidebar-group-icon,
+[class*="fi-panel-"] .fi-sidebar-group-button:hover svg,
+[class*="fi-panel-"] .fi-sidebar-group-button:focus-visible .fi-sidebar-group-icon,
+[class*="fi-panel-"] .fi-sidebar-group-button:focus-visible svg {
+  color: #2F4F2F !important;
+  stroke: #2F4F2F !important;
+}
 [class*="fi-panel-"] li.fi-sidebar-item:hover .bg-primary-600,
 [class*="fi-panel-"] li.fi-sidebar-item.fi-active .bg-primary-600 {
   background-color: #2f4f2f !important;
@@ -681,6 +695,16 @@
   background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
   border-radius: 5px !important;
 }
+/* Ensure submenu items get the same highlight treatment */
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item:hover > a.fi-sidebar-item-button,
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item:hover > button.fi-sidebar-item-button,
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item > a.fi-sidebar-item-button:hover,
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item > button.fi-sidebar-item-button:hover,
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item.fi-active > a.fi-sidebar-item-button,
+[class*="fi-panel-"] .fi-sidebar-group-items .fi-sidebar-item.fi-active > button.fi-sidebar-item-button {
+  background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+  border-radius: 5px !important;
+}
 [class*="fi-panel-"] li.fi-sidebar-item:hover > a.fi-sidebar-item-button .fi-sidebar-item-label,
 [class*="fi-panel-"] li.fi-sidebar-item:hover > button.fi-sidebar-item-button .fi-sidebar-item-label,
 [class*="fi-panel-"] li.fi-sidebar-item:hover > a.fi-sidebar-item-button .fi-sidebar-item-icon,
@@ -700,6 +724,21 @@
 [class*="fi-panel-"] .fi-sidebar-group-button:focus-visible {
   background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
   border-radius: 5px !important;
+}
+
+/* Collapsed sidebar: highlight active group trigger the same way */
+@media (min-width: 1024px) {
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active .fi-dropdown-trigger > button,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group .fi-dropdown-trigger > button:hover,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group .fi-dropdown-trigger > button:focus-visible {
+    background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+    border-radius: 5px !important;
+  }
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active .fi-dropdown-trigger > button .fi-sidebar-group-icon,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active .fi-dropdown-trigger > button svg {
+    color: #2F4F2F !important;
+    stroke: #2F4F2F !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -726,6 +765,10 @@
     background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
     border-radius: 5px !important;
   }
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active > .fi-sidebar-group-button {
+    background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+    border-radius: 5px !important;
+  }
   [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item.fi-active > a.fi-sidebar-item-button .fi-sidebar-item-label,
   [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item.fi-active > button.fi-sidebar-item-button .fi-sidebar-item-label,
   [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item.fi-active > a.fi-sidebar-item-button .fi-sidebar-item-icon,
@@ -734,6 +777,45 @@
   [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item > button.fi-sidebar-item-button[aria-current="page"] .fi-sidebar-item-label {
     color: #2F4F2F !important;
   }
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active > .fi-sidebar-group-button .fi-sidebar-group-label,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group.fi-active > .fi-sidebar-group-button .fi-sidebar-group-icon {
+    color: #2F4F2F !important;
+    stroke: #2F4F2F !important;
+  }
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item:hover > a.fi-sidebar-item-button,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item:hover > button.fi-sidebar-item-button,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item > a.fi-sidebar-item-button:hover,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-item > button.fi-sidebar-item-button:hover {
+    background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+    border-radius: 5px !important;
+  }
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group .fi-dropdown-trigger > button:hover,
+  [class*="fi-panel-"] .fi-sidebar:not(.fi-sidebar-open) .fi-sidebar-group .fi-dropdown-trigger > button:focus-visible {
+    background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+    border-radius: 5px !important;
+  }
+}
+
+/* Collapsed sidebar dropdown items (submenu list): apply same highlight + icon color */
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:hover,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:focus-visible,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item[aria-current="page"] {
+  background: radial-gradient(143.2% 143.2% at 30% 30%, #F6C32E 0%, #F0B90B 50%, #D99E00 100%) !important;
+  border-radius: 5px !important;
+}
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:hover .fi-dropdown-list-item-label,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:focus-visible .fi-dropdown-list-item-label,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item[aria-current="page"] .fi-dropdown-list-item-label {
+  color: #2F4F2F !important;
+}
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:hover .fi-dropdown-list-item-icon,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:focus-visible .fi-dropdown-list-item-icon,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item[aria-current="page"] .fi-dropdown-list-item-icon,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:hover .fi-dropdown-list-item-icon svg,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item:focus-visible .fi-dropdown-list-item-icon svg,
+[class*="fi-panel-"] .fi-sidebar .fi-dropdown-panel .fi-dropdown-list-item[aria-current="page"] .fi-dropdown-list-item-icon svg {
+  color: #2F4F2F !important;
+  stroke: #2F4F2F !important;
 }
 
 /* Campus Manager dashboard filters: active Hostel/Time Range button style */
